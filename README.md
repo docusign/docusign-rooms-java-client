@@ -6,7 +6,7 @@
 ## Requirements
 
 - Java 1.9+
-- Free [Developer Sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
+- Free [Developer Account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
 
 ## Compatibility
 

@@ -36,25 +36,20 @@ public class UsersApi {
    * 
    * @param accountId  (required)
    * @param userId  (required)
-   * @param designatedOffice  (required)
+   * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
-  public void addUserToOffice(String accountId, Integer userId, DesignatedOffice designatedOffice) throws ApiException {
-    Object localVarPostBody = designatedOffice;
-    
-    // verify the required parameter 'userId' is set
-    if (userId == null) {
-      throw new ApiException(400, "Missing the required parameter 'userId' when calling addUserToOffice");
-    }
-    
-    // verify the required parameter 'designatedOffice' is set
-    if (designatedOffice == null) {
-      throw new ApiException(400, "Missing the required parameter 'designatedOffice' when calling addUserToOffice");
-    }
+  public void addUserToOffice(String accountId, Integer userId, DesignatedOffice body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling addUserToOffice");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling addUserToOffice");
     }
     
     // create path and map variables
@@ -75,12 +70,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -95,25 +90,20 @@ public class UsersApi {
    * 
    * @param accountId  (required)
    * @param userId  (required)
-   * @param designatedRegion  (required)
+   * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
-  public void addUserToRegion(String accountId, Integer userId, DesignatedRegion designatedRegion) throws ApiException {
-    Object localVarPostBody = designatedRegion;
-    
-    // verify the required parameter 'userId' is set
-    if (userId == null) {
-      throw new ApiException(400, "Missing the required parameter 'userId' when calling addUserToRegion");
-    }
-    
-    // verify the required parameter 'designatedRegion' is set
-    if (designatedRegion == null) {
-      throw new ApiException(400, "Missing the required parameter 'designatedRegion' when calling addUserToRegion");
-    }
+  public void addUserToRegion(String accountId, Integer userId, DesignatedRegion body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling addUserToRegion");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling addUserToRegion");
     }
     
     // create path and map variables
@@ -134,12 +124,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -188,7 +178,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -203,7 +193,7 @@ public class UsersApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Gets a paged-list of users. Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
+  /// Gets a paged-list of  Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
   /// </summary>
   public class GetUsersOptions
   {
@@ -320,7 +310,7 @@ public class UsersApi {
   }
 
    /**
-   * Gets a paged-list of users.
+   * Gets a paged-list of 
    * Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
    * @param accountId  (required)
    * @return UserSummaryList
@@ -330,7 +320,7 @@ public class UsersApi {
   }
 
   /**
-   * Gets a paged-list of users.
+   * Gets a paged-list of 
    * Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
    * @param accountId  (required)
    * @param options for modifying the method behavior.
@@ -382,7 +372,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -401,17 +391,12 @@ public class UsersApi {
    * CLASSIC COMPANY ONLY. Send an invitation to join the company as an admin.
    * 
    * @param accountId  (required)
-   * @param invitee Invitee information. (required)
+   * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
-  public User inviteClassicAdmin(String accountId, ClassicAdminToInvite invitee) throws ApiException {
-    Object localVarPostBody = invitee;
-    
-    // verify the required parameter 'invitee' is set
-    if (invitee == null) {
-      throw new ApiException(400, "Missing the required parameter 'invitee' when calling inviteClassicAdmin");
-    }
+  public User inviteClassicAdmin(String accountId, ClassicAdminToInvite body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -435,12 +420,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -454,17 +439,12 @@ public class UsersApi {
    * CLASSIC COMPANY ONLY. Send an invitation to join the company as an agent.
    * 
    * @param accountId  (required)
-   * @param invitee Invitee information. (required)
+   * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
-  public User inviteClassicAgent(String accountId, ClassicAgentToInvite invitee) throws ApiException {
-    Object localVarPostBody = invitee;
-    
-    // verify the required parameter 'invitee' is set
-    if (invitee == null) {
-      throw new ApiException(400, "Missing the required parameter 'invitee' when calling inviteClassicAgent");
-    }
+  public User inviteClassicAgent(String accountId, ClassicAgentToInvite body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -488,12 +468,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -507,17 +487,12 @@ public class UsersApi {
    * CLASSIC COMPANY ONLY. Send an invitation to join the company as a manager.
    * 
    * @param accountId  (required)
-   * @param invitee Invitee information. (required)
+   * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
-  public User inviteClassicManager(String accountId, ClassicManagerToInvite invitee) throws ApiException {
-    Object localVarPostBody = invitee;
-    
-    // verify the required parameter 'invitee' is set
-    if (invitee == null) {
-      throw new ApiException(400, "Missing the required parameter 'invitee' when calling inviteClassicManager");
-    }
+  public User inviteClassicManager(String accountId, ClassicManagerToInvite body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -541,12 +516,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -560,17 +535,12 @@ public class UsersApi {
    * NON-CLASSIC COMPANY ONLY. Send an invitation to the user or non-user having the given email.
    * 
    * @param accountId  (required)
-   * @param invitee Invitee information (required)
+   * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
-  public User inviteUser(String accountId, UserToInvite invitee) throws ApiException {
-    Object localVarPostBody = invitee;
-    
-    // verify the required parameter 'invitee' is set
-    if (invitee == null) {
-      throw new ApiException(400, "Missing the required parameter 'invitee' when calling inviteUser");
-    }
+  public User inviteUser(String accountId, UserToInvite body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -594,12 +564,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -614,25 +584,20 @@ public class UsersApi {
    * 
    * @param accountId  (required)
    * @param userId User Id of the user attempting to be locked. (required)
-   * @param details Details containing the reason the user is being locked out (required)
+   * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
-  public void lockUser(String accountId, Integer userId, LockedOutDetails details) throws ApiException {
-    Object localVarPostBody = details;
-    
-    // verify the required parameter 'userId' is set
-    if (userId == null) {
-      throw new ApiException(400, "Missing the required parameter 'userId' when calling lockUser");
-    }
-    
-    // verify the required parameter 'details' is set
-    if (details == null) {
-      throw new ApiException(400, "Missing the required parameter 'details' when calling lockUser");
-    }
+  public void lockUser(String accountId, Integer userId, LockedOutDetails body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling lockUser");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling lockUser");
     }
     
     // create path and map variables
@@ -653,12 +618,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -706,7 +671,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -759,7 +724,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -779,25 +744,20 @@ public class UsersApi {
    * 
    * @param accountId  (required)
    * @param userId  (required)
-   * @param designatedOffice  (required)
+   * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
-  public void removeUserFromOffice(String accountId, Integer userId, DesignatedOffice designatedOffice) throws ApiException {
-    Object localVarPostBody = designatedOffice;
-    
-    // verify the required parameter 'userId' is set
-    if (userId == null) {
-      throw new ApiException(400, "Missing the required parameter 'userId' when calling removeUserFromOffice");
-    }
-    
-    // verify the required parameter 'designatedOffice' is set
-    if (designatedOffice == null) {
-      throw new ApiException(400, "Missing the required parameter 'designatedOffice' when calling removeUserFromOffice");
-    }
+  public void removeUserFromOffice(String accountId, Integer userId, DesignatedOffice body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling removeUserFromOffice");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling removeUserFromOffice");
     }
     
     // create path and map variables
@@ -818,12 +778,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -838,25 +798,20 @@ public class UsersApi {
    * 
    * @param accountId  (required)
    * @param userId  (required)
-   * @param designatedRegion  (required)
+   * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
-  public void removeUserFromRegion(String accountId, Integer userId, DesignatedRegion designatedRegion) throws ApiException {
-    Object localVarPostBody = designatedRegion;
-    
-    // verify the required parameter 'userId' is set
-    if (userId == null) {
-      throw new ApiException(400, "Missing the required parameter 'userId' when calling removeUserFromRegion");
-    }
-    
-    // verify the required parameter 'designatedRegion' is set
-    if (designatedRegion == null) {
-      throw new ApiException(400, "Missing the required parameter 'designatedRegion' when calling removeUserFromRegion");
-    }
+  public void removeUserFromRegion(String accountId, Integer userId, DesignatedRegion body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling removeUserFromRegion");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling removeUserFromRegion");
     }
     
     // create path and map variables
@@ -877,12 +832,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -930,7 +885,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -950,26 +905,21 @@ public class UsersApi {
    * 
    * @param accountId  (required)
    * @param userId  (required)
-   * @param userForUpdate  (required)
+   * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
-  public User updateUser(String accountId, Integer userId, UserForUpdate userForUpdate) throws ApiException {
-    Object localVarPostBody = userForUpdate;
-    
-    // verify the required parameter 'userId' is set
-    if (userId == null) {
-      throw new ApiException(400, "Missing the required parameter 'userId' when calling updateUser");
-    }
-    
-    // verify the required parameter 'userForUpdate' is set
-    if (userForUpdate == null) {
-      throw new ApiException(400, "Missing the required parameter 'userForUpdate' when calling updateUser");
-    }
+  public User updateUser(String accountId, Integer userId, UserForUpdate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateUser");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling updateUser");
     }
     
     // create path and map variables
@@ -990,12 +940,12 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

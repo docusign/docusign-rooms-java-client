@@ -2,6 +2,7 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.rooms.model.AccessLevel;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -31,49 +32,8 @@ public class UserSummary {
   @JsonProperty("status")
   private String status = null;
 
-  /**
-   * Gets or Sets accessLevel
-   */
-  public enum AccessLevelEnum {
-    CONTRIBUTOR("Contributor"),
-    
-    OFFICE("Office"),
-    
-    REGION("Region"),
-    
-    COMPANY("Company"),
-    
-    ADMIN("Admin");
-
-    private String value;
-
-    AccessLevelEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static AccessLevelEnum fromValue(String text) {
-      for (AccessLevelEnum b : AccessLevelEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("accessLevel")
-  private AccessLevelEnum accessLevel = null;
+  private AccessLevel accessLevel = null;
 
   @JsonProperty("defaultOfficeId")
   private Integer defaultOfficeId = null;
@@ -141,13 +101,22 @@ public class UserSummary {
     return status;
   }
 
+  public UserSummary accessLevel(AccessLevel accessLevel) {
+    this.accessLevel = accessLevel;
+    return this;
+  }
+
    /**
    * Get accessLevel
    * @return accessLevel
   **/
   @ApiModelProperty(value = "")
-  public AccessLevelEnum getAccessLevel() {
+  public AccessLevel getAccessLevel() {
     return accessLevel;
+  }
+
+  public void setAccessLevel(AccessLevel accessLevel) {
+    this.accessLevel = accessLevel;
   }
 
    /**

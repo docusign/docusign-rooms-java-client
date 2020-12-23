@@ -49,11 +49,26 @@ public class Permissions {
   @JsonProperty("canEditInvitedRoomRole")
   private Boolean canEditInvitedRoomRole = null;
 
+  @JsonProperty("canEditRoomSide")
+  private Boolean canEditRoomSide = null;
+
   @JsonProperty("canManageAnyUserRoomAccess")
   private Boolean canManageAnyUserRoomAccess = null;
 
   @JsonProperty("canManageInvitedUserRoomAccess")
   private Boolean canManageInvitedUserRoomAccess = null;
+
+  @JsonProperty("isHiddenInRoom")
+  private Boolean isHiddenInRoom = null;
+
+  @JsonProperty("canManageRoomOwners")
+  private Boolean canManageRoomOwners = null;
+
+  @JsonProperty("canDeleteRooms")
+  private Boolean canDeleteRooms = null;
+
+  @JsonProperty("canConnectToMortgageCadence")
+  private Boolean canConnectToMortgageCadence = null;
 
   @JsonProperty("canViewRoomDetails")
   private Boolean canViewRoomDetails = null;
@@ -133,8 +148,11 @@ public class Permissions {
   @JsonProperty("canAddTasksToRooms")
   private Boolean canAddTasksToRooms = null;
 
-  @JsonProperty("canCreateAndManagePackages")
-  private Boolean canCreateAndManagePackages = null;
+  @JsonProperty("canReviewAnyTask")
+  private Boolean canReviewAnyTask = null;
+
+  @JsonProperty("canManageDocsOnAnyTask")
+  private Boolean canManageDocsOnAnyTask = null;
 
   @JsonProperty("canAddMemberAndSetRoleLowerAccessLevel")
   private Boolean canAddMemberAndSetRoleLowerAccessLevel = null;
@@ -165,6 +183,9 @@ public class Permissions {
 
   @JsonProperty("canManageLogo")
   private Boolean canManageLogo = null;
+
+  @JsonProperty("canManageRolesAndPermissions")
+  private Boolean canManageRolesAndPermissions = null;
 
   @JsonProperty("canManageRoomDetails")
   private Boolean canManageRoomDetails = null;
@@ -391,6 +412,24 @@ public class Permissions {
     this.canEditInvitedRoomRole = canEditInvitedRoomRole;
   }
 
+  public Permissions canEditRoomSide(Boolean canEditRoomSide) {
+    this.canEditRoomSide = canEditRoomSide;
+    return this;
+  }
+
+   /**
+   * Get canEditRoomSide
+   * @return canEditRoomSide
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isCanEditRoomSide() {
+    return canEditRoomSide;
+  }
+
+  public void setCanEditRoomSide(Boolean canEditRoomSide) {
+    this.canEditRoomSide = canEditRoomSide;
+  }
+
   public Permissions canManageAnyUserRoomAccess(Boolean canManageAnyUserRoomAccess) {
     this.canManageAnyUserRoomAccess = canManageAnyUserRoomAccess;
     return this;
@@ -425,6 +464,78 @@ public class Permissions {
 
   public void setCanManageInvitedUserRoomAccess(Boolean canManageInvitedUserRoomAccess) {
     this.canManageInvitedUserRoomAccess = canManageInvitedUserRoomAccess;
+  }
+
+  public Permissions isHiddenInRoom(Boolean isHiddenInRoom) {
+    this.isHiddenInRoom = isHiddenInRoom;
+    return this;
+  }
+
+   /**
+   * Get isHiddenInRoom
+   * @return isHiddenInRoom
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsHiddenInRoom() {
+    return isHiddenInRoom;
+  }
+
+  public void setIsHiddenInRoom(Boolean isHiddenInRoom) {
+    this.isHiddenInRoom = isHiddenInRoom;
+  }
+
+  public Permissions canManageRoomOwners(Boolean canManageRoomOwners) {
+    this.canManageRoomOwners = canManageRoomOwners;
+    return this;
+  }
+
+   /**
+   * Get canManageRoomOwners
+   * @return canManageRoomOwners
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isCanManageRoomOwners() {
+    return canManageRoomOwners;
+  }
+
+  public void setCanManageRoomOwners(Boolean canManageRoomOwners) {
+    this.canManageRoomOwners = canManageRoomOwners;
+  }
+
+  public Permissions canDeleteRooms(Boolean canDeleteRooms) {
+    this.canDeleteRooms = canDeleteRooms;
+    return this;
+  }
+
+   /**
+   * Get canDeleteRooms
+   * @return canDeleteRooms
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isCanDeleteRooms() {
+    return canDeleteRooms;
+  }
+
+  public void setCanDeleteRooms(Boolean canDeleteRooms) {
+    this.canDeleteRooms = canDeleteRooms;
+  }
+
+  public Permissions canConnectToMortgageCadence(Boolean canConnectToMortgageCadence) {
+    this.canConnectToMortgageCadence = canConnectToMortgageCadence;
+    return this;
+  }
+
+   /**
+   * Get canConnectToMortgageCadence
+   * @return canConnectToMortgageCadence
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isCanConnectToMortgageCadence() {
+    return canConnectToMortgageCadence;
+  }
+
+  public void setCanConnectToMortgageCadence(Boolean canConnectToMortgageCadence) {
+    this.canConnectToMortgageCadence = canConnectToMortgageCadence;
   }
 
   public Permissions canViewRoomDetails(Boolean canViewRoomDetails) {
@@ -895,22 +1006,40 @@ public class Permissions {
     this.canAddTasksToRooms = canAddTasksToRooms;
   }
 
-  public Permissions canCreateAndManagePackages(Boolean canCreateAndManagePackages) {
-    this.canCreateAndManagePackages = canCreateAndManagePackages;
+  public Permissions canReviewAnyTask(Boolean canReviewAnyTask) {
+    this.canReviewAnyTask = canReviewAnyTask;
     return this;
   }
 
    /**
-   * Get canCreateAndManagePackages
-   * @return canCreateAndManagePackages
+   * Get canReviewAnyTask
+   * @return canReviewAnyTask
   **/
   @ApiModelProperty(value = "")
-  public Boolean isCanCreateAndManagePackages() {
-    return canCreateAndManagePackages;
+  public Boolean isCanReviewAnyTask() {
+    return canReviewAnyTask;
   }
 
-  public void setCanCreateAndManagePackages(Boolean canCreateAndManagePackages) {
-    this.canCreateAndManagePackages = canCreateAndManagePackages;
+  public void setCanReviewAnyTask(Boolean canReviewAnyTask) {
+    this.canReviewAnyTask = canReviewAnyTask;
+  }
+
+  public Permissions canManageDocsOnAnyTask(Boolean canManageDocsOnAnyTask) {
+    this.canManageDocsOnAnyTask = canManageDocsOnAnyTask;
+    return this;
+  }
+
+   /**
+   * Get canManageDocsOnAnyTask
+   * @return canManageDocsOnAnyTask
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isCanManageDocsOnAnyTask() {
+    return canManageDocsOnAnyTask;
+  }
+
+  public void setCanManageDocsOnAnyTask(Boolean canManageDocsOnAnyTask) {
+    this.canManageDocsOnAnyTask = canManageDocsOnAnyTask;
   }
 
   public Permissions canAddMemberAndSetRoleLowerAccessLevel(Boolean canAddMemberAndSetRoleLowerAccessLevel) {
@@ -1093,6 +1222,24 @@ public class Permissions {
     this.canManageLogo = canManageLogo;
   }
 
+  public Permissions canManageRolesAndPermissions(Boolean canManageRolesAndPermissions) {
+    this.canManageRolesAndPermissions = canManageRolesAndPermissions;
+    return this;
+  }
+
+   /**
+   * Get canManageRolesAndPermissions
+   * @return canManageRolesAndPermissions
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isCanManageRolesAndPermissions() {
+    return canManageRolesAndPermissions;
+  }
+
+  public void setCanManageRolesAndPermissions(Boolean canManageRolesAndPermissions) {
+    this.canManageRolesAndPermissions = canManageRolesAndPermissions;
+  }
+
   public Permissions canManageRoomDetails(Boolean canManageRoomDetails) {
     this.canManageRoomDetails = canManageRoomDetails;
     return this;
@@ -1169,8 +1316,13 @@ public class Permissions {
         Objects.equals(this.canCopyRoomDetails, permissions.canCopyRoomDetails) &&
         Objects.equals(this.canEditAnyRoomRole, permissions.canEditAnyRoomRole) &&
         Objects.equals(this.canEditInvitedRoomRole, permissions.canEditInvitedRoomRole) &&
+        Objects.equals(this.canEditRoomSide, permissions.canEditRoomSide) &&
         Objects.equals(this.canManageAnyUserRoomAccess, permissions.canManageAnyUserRoomAccess) &&
         Objects.equals(this.canManageInvitedUserRoomAccess, permissions.canManageInvitedUserRoomAccess) &&
+        Objects.equals(this.isHiddenInRoom, permissions.isHiddenInRoom) &&
+        Objects.equals(this.canManageRoomOwners, permissions.canManageRoomOwners) &&
+        Objects.equals(this.canDeleteRooms, permissions.canDeleteRooms) &&
+        Objects.equals(this.canConnectToMortgageCadence, permissions.canConnectToMortgageCadence) &&
         Objects.equals(this.canViewRoomDetails, permissions.canViewRoomDetails) &&
         Objects.equals(this.canViewAndEditRoomDetails, permissions.canViewAndEditRoomDetails) &&
         Objects.equals(this.canSendRoomDetailsToLoneWolf, permissions.canSendRoomDetailsToLoneWolf) &&
@@ -1197,7 +1349,8 @@ public class Permissions {
         Objects.equals(this.canManageTaskTemplatesForAllRegionsAllOffices, permissions.canManageTaskTemplatesForAllRegionsAllOffices) &&
         Objects.equals(this.canApplyRoomTemplates, permissions.canApplyRoomTemplates) &&
         Objects.equals(this.canAddTasksToRooms, permissions.canAddTasksToRooms) &&
-        Objects.equals(this.canCreateAndManagePackages, permissions.canCreateAndManagePackages) &&
+        Objects.equals(this.canReviewAnyTask, permissions.canReviewAnyTask) &&
+        Objects.equals(this.canManageDocsOnAnyTask, permissions.canManageDocsOnAnyTask) &&
         Objects.equals(this.canAddMemberAndSetRoleLowerAccessLevel, permissions.canAddMemberAndSetRoleLowerAccessLevel) &&
         Objects.equals(this.canAddMemberAndSetRoleSameAccessLevel, permissions.canAddMemberAndSetRoleSameAccessLevel) &&
         Objects.equals(this.canChangeMemberRoleLowerAccessLevel, permissions.canChangeMemberRoleLowerAccessLevel) &&
@@ -1208,6 +1361,7 @@ public class Permissions {
         Objects.equals(this.canRemoveCompanyMemberSameAccessLevel, permissions.canRemoveCompanyMemberSameAccessLevel) &&
         Objects.equals(this.canManageAccount, permissions.canManageAccount) &&
         Objects.equals(this.canManageLogo, permissions.canManageLogo) &&
+        Objects.equals(this.canManageRolesAndPermissions, permissions.canManageRolesAndPermissions) &&
         Objects.equals(this.canManageRoomDetails, permissions.canManageRoomDetails) &&
         Objects.equals(this.canManageRoomTemplates, permissions.canManageRoomTemplates) &&
         Objects.equals(this.canManageIntegrationSettings, permissions.canManageIntegrationSettings);
@@ -1215,7 +1369,7 @@ public class Permissions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(canAddUsersToRooms, canCreateRooms, canSubmitRoomsForReview, canCloseRooms, canReopenRooms, canDeleteOwnedRooms, autoAccessToRooms, canExportRoomActivityDetailsPeople, isVisibleInRooms, canCopyRoomDetails, canEditAnyRoomRole, canEditInvitedRoomRole, canManageAnyUserRoomAccess, canManageInvitedUserRoomAccess, canViewRoomDetails, canViewAndEditRoomDetails, canSendRoomDetailsToLoneWolf, canAddDocuments, canAddDocumentsFromFormGroups, canAddDocumentsFromFormLibraries, documentsViewableByOthersInRoomFromOffice, documentsAutoOwnedByPeers, canDeleteOwnedDocuments, canManageSharedDocs, canManageFormGroups, canShareDocsNotOwned, canAddTasksToAnyTaskLists, canEditEditableTasks, canEditAnyTasks, canDeleteDeletableTasks, canDeleteAnyTasks, canApplyTaskList, canRemoveAnyTaskList, canSubmitTaskList, canAutoSubmitTaskList, canReviewTaskList, canAutoApproveTaskList, canManageTaskTemplatesForAllRegionsAllOffices, canApplyRoomTemplates, canAddTasksToRooms, canCreateAndManagePackages, canAddMemberAndSetRoleLowerAccessLevel, canAddMemberAndSetRoleSameAccessLevel, canChangeMemberRoleLowerAccessLevel, canChangeMemberRoleSameAccessLevel, canManageMemberLowerAccessLevel, canManageMemberSameAccessLevel, canRemoveCompanyMemberLowerAccessLevel, canRemoveCompanyMemberSameAccessLevel, canManageAccount, canManageLogo, canManageRoomDetails, canManageRoomTemplates, canManageIntegrationSettings);
+    return Objects.hash(canAddUsersToRooms, canCreateRooms, canSubmitRoomsForReview, canCloseRooms, canReopenRooms, canDeleteOwnedRooms, autoAccessToRooms, canExportRoomActivityDetailsPeople, isVisibleInRooms, canCopyRoomDetails, canEditAnyRoomRole, canEditInvitedRoomRole, canEditRoomSide, canManageAnyUserRoomAccess, canManageInvitedUserRoomAccess, isHiddenInRoom, canManageRoomOwners, canDeleteRooms, canConnectToMortgageCadence, canViewRoomDetails, canViewAndEditRoomDetails, canSendRoomDetailsToLoneWolf, canAddDocuments, canAddDocumentsFromFormGroups, canAddDocumentsFromFormLibraries, documentsViewableByOthersInRoomFromOffice, documentsAutoOwnedByPeers, canDeleteOwnedDocuments, canManageSharedDocs, canManageFormGroups, canShareDocsNotOwned, canAddTasksToAnyTaskLists, canEditEditableTasks, canEditAnyTasks, canDeleteDeletableTasks, canDeleteAnyTasks, canApplyTaskList, canRemoveAnyTaskList, canSubmitTaskList, canAutoSubmitTaskList, canReviewTaskList, canAutoApproveTaskList, canManageTaskTemplatesForAllRegionsAllOffices, canApplyRoomTemplates, canAddTasksToRooms, canReviewAnyTask, canManageDocsOnAnyTask, canAddMemberAndSetRoleLowerAccessLevel, canAddMemberAndSetRoleSameAccessLevel, canChangeMemberRoleLowerAccessLevel, canChangeMemberRoleSameAccessLevel, canManageMemberLowerAccessLevel, canManageMemberSameAccessLevel, canRemoveCompanyMemberLowerAccessLevel, canRemoveCompanyMemberSameAccessLevel, canManageAccount, canManageLogo, canManageRolesAndPermissions, canManageRoomDetails, canManageRoomTemplates, canManageIntegrationSettings);
   }
 
 
@@ -1236,8 +1390,13 @@ public class Permissions {
     sb.append("    canCopyRoomDetails: ").append(toIndentedString(canCopyRoomDetails)).append("\n");
     sb.append("    canEditAnyRoomRole: ").append(toIndentedString(canEditAnyRoomRole)).append("\n");
     sb.append("    canEditInvitedRoomRole: ").append(toIndentedString(canEditInvitedRoomRole)).append("\n");
+    sb.append("    canEditRoomSide: ").append(toIndentedString(canEditRoomSide)).append("\n");
     sb.append("    canManageAnyUserRoomAccess: ").append(toIndentedString(canManageAnyUserRoomAccess)).append("\n");
     sb.append("    canManageInvitedUserRoomAccess: ").append(toIndentedString(canManageInvitedUserRoomAccess)).append("\n");
+    sb.append("    isHiddenInRoom: ").append(toIndentedString(isHiddenInRoom)).append("\n");
+    sb.append("    canManageRoomOwners: ").append(toIndentedString(canManageRoomOwners)).append("\n");
+    sb.append("    canDeleteRooms: ").append(toIndentedString(canDeleteRooms)).append("\n");
+    sb.append("    canConnectToMortgageCadence: ").append(toIndentedString(canConnectToMortgageCadence)).append("\n");
     sb.append("    canViewRoomDetails: ").append(toIndentedString(canViewRoomDetails)).append("\n");
     sb.append("    canViewAndEditRoomDetails: ").append(toIndentedString(canViewAndEditRoomDetails)).append("\n");
     sb.append("    canSendRoomDetailsToLoneWolf: ").append(toIndentedString(canSendRoomDetailsToLoneWolf)).append("\n");
@@ -1264,7 +1423,8 @@ public class Permissions {
     sb.append("    canManageTaskTemplatesForAllRegionsAllOffices: ").append(toIndentedString(canManageTaskTemplatesForAllRegionsAllOffices)).append("\n");
     sb.append("    canApplyRoomTemplates: ").append(toIndentedString(canApplyRoomTemplates)).append("\n");
     sb.append("    canAddTasksToRooms: ").append(toIndentedString(canAddTasksToRooms)).append("\n");
-    sb.append("    canCreateAndManagePackages: ").append(toIndentedString(canCreateAndManagePackages)).append("\n");
+    sb.append("    canReviewAnyTask: ").append(toIndentedString(canReviewAnyTask)).append("\n");
+    sb.append("    canManageDocsOnAnyTask: ").append(toIndentedString(canManageDocsOnAnyTask)).append("\n");
     sb.append("    canAddMemberAndSetRoleLowerAccessLevel: ").append(toIndentedString(canAddMemberAndSetRoleLowerAccessLevel)).append("\n");
     sb.append("    canAddMemberAndSetRoleSameAccessLevel: ").append(toIndentedString(canAddMemberAndSetRoleSameAccessLevel)).append("\n");
     sb.append("    canChangeMemberRoleLowerAccessLevel: ").append(toIndentedString(canChangeMemberRoleLowerAccessLevel)).append("\n");
@@ -1275,6 +1435,7 @@ public class Permissions {
     sb.append("    canRemoveCompanyMemberSameAccessLevel: ").append(toIndentedString(canRemoveCompanyMemberSameAccessLevel)).append("\n");
     sb.append("    canManageAccount: ").append(toIndentedString(canManageAccount)).append("\n");
     sb.append("    canManageLogo: ").append(toIndentedString(canManageLogo)).append("\n");
+    sb.append("    canManageRolesAndPermissions: ").append(toIndentedString(canManageRolesAndPermissions)).append("\n");
     sb.append("    canManageRoomDetails: ").append(toIndentedString(canManageRoomDetails)).append("\n");
     sb.append("    canManageRoomTemplates: ").append(toIndentedString(canManageRoomTemplates)).append("\n");
     sb.append("    canManageIntegrationSettings: ").append(toIndentedString(canManageIntegrationSettings)).append("\n");

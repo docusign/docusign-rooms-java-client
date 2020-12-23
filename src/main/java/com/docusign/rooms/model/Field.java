@@ -44,7 +44,7 @@ public class Field {
    * Get fieldId
    * @return fieldId
   **/
-  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "")
+  @ApiModelProperty(value = "")
   public java.util.UUID getFieldId() {
     return fieldId;
   }
@@ -53,7 +53,7 @@ public class Field {
    * Get fieldDefinitionId
    * @return fieldDefinitionId
   **/
-  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "")
+  @ApiModelProperty(value = "")
   public java.util.UUID getFieldDefinitionId() {
     return fieldDefinitionId;
   }
@@ -94,6 +94,11 @@ public class Field {
     return fields;
   }
 
+  public Field _configuration(FieldConfiguration _configuration) {
+    this._configuration = _configuration;
+    return this;
+  }
+
    /**
    * Get _configuration
    * @return _configuration
@@ -103,6 +108,15 @@ public class Field {
     return _configuration;
   }
 
+  public void setConfiguration(FieldConfiguration _configuration) {
+    this._configuration = _configuration;
+  }
+
+  public Field customData(CustomData customData) {
+    this.customData = customData;
+    return this;
+  }
+
    /**
    * Get customData
    * @return customData
@@ -110,6 +124,10 @@ public class Field {
   @ApiModelProperty(value = "")
   public CustomData getCustomData() {
     return customData;
+  }
+
+  public void setCustomData(CustomData customData) {
+    this.customData = customData;
   }
 
 

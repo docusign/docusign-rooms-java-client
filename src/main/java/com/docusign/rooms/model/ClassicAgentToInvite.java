@@ -25,6 +25,9 @@ public class ClassicAgentToInvite {
   @JsonProperty("officeId")
   private Integer officeId = null;
 
+  @JsonProperty("companyTypeId")
+  private String companyTypeId = null;
+
   @JsonProperty("eSignPermissionProfileId")
   private String eSignPermissionProfileId = null;
 
@@ -100,6 +103,24 @@ public class ClassicAgentToInvite {
     this.officeId = officeId;
   }
 
+  public ClassicAgentToInvite companyTypeId(String companyTypeId) {
+    this.companyTypeId = companyTypeId;
+    return this;
+  }
+
+   /**
+   * Get companyTypeId
+   * @return companyTypeId
+  **/
+  @ApiModelProperty(value = "")
+  public String getCompanyTypeId() {
+    return companyTypeId;
+  }
+
+  public void setCompanyTypeId(String companyTypeId) {
+    this.companyTypeId = companyTypeId;
+  }
+
   public ClassicAgentToInvite eSignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
     return this;
@@ -132,12 +153,13 @@ public class ClassicAgentToInvite {
         Objects.equals(this.lastName, classicAgentToInvite.lastName) &&
         Objects.equals(this.email, classicAgentToInvite.email) &&
         Objects.equals(this.officeId, classicAgentToInvite.officeId) &&
+        Objects.equals(this.companyTypeId, classicAgentToInvite.companyTypeId) &&
         Objects.equals(this.eSignPermissionProfileId, classicAgentToInvite.eSignPermissionProfileId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, lastName, email, officeId, eSignPermissionProfileId);
+    return Objects.hash(firstName, lastName, email, officeId, companyTypeId, eSignPermissionProfileId);
   }
 
 
@@ -150,6 +172,7 @@ public class ClassicAgentToInvite {
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    officeId: ").append(toIndentedString(officeId)).append("\n");
+    sb.append("    companyTypeId: ").append(toIndentedString(companyTypeId)).append("\n");
     sb.append("    eSignPermissionProfileId: ").append(toIndentedString(eSignPermissionProfileId)).append("\n");
     sb.append("}");
     return sb.toString();

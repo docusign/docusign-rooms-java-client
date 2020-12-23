@@ -2,6 +2,7 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.rooms.model.RoomDocumentOwner;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -37,6 +38,15 @@ public class RoomDocument {
 
   @JsonProperty("docuSignFormId")
   private String docuSignFormId = null;
+
+  @JsonProperty("isArchived")
+  private Boolean isArchived = null;
+
+  @JsonProperty("isVirtual")
+  private Boolean isVirtual = null;
+
+  @JsonProperty("owner")
+  private RoomDocumentOwner owner = null;
 
   public RoomDocument documentId(Integer documentId) {
     this.documentId = documentId;
@@ -182,6 +192,60 @@ public class RoomDocument {
     this.docuSignFormId = docuSignFormId;
   }
 
+  public RoomDocument isArchived(Boolean isArchived) {
+    this.isArchived = isArchived;
+    return this;
+  }
+
+   /**
+   * Get isArchived
+   * @return isArchived
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsArchived() {
+    return isArchived;
+  }
+
+  public void setIsArchived(Boolean isArchived) {
+    this.isArchived = isArchived;
+  }
+
+  public RoomDocument isVirtual(Boolean isVirtual) {
+    this.isVirtual = isVirtual;
+    return this;
+  }
+
+   /**
+   * Get isVirtual
+   * @return isVirtual
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsVirtual() {
+    return isVirtual;
+  }
+
+  public void setIsVirtual(Boolean isVirtual) {
+    this.isVirtual = isVirtual;
+  }
+
+  public RoomDocument owner(RoomDocumentOwner owner) {
+    this.owner = owner;
+    return this;
+  }
+
+   /**
+   * Get owner
+   * @return owner
+  **/
+  @ApiModelProperty(value = "")
+  public RoomDocumentOwner getOwner() {
+    return owner;
+  }
+
+  public void setOwner(RoomDocumentOwner owner) {
+    this.owner = owner;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -199,12 +263,15 @@ public class RoomDocument {
         Objects.equals(this.folderId, roomDocument.folderId) &&
         Objects.equals(this.createdDate, roomDocument.createdDate) &&
         Objects.equals(this.isSigned, roomDocument.isSigned) &&
-        Objects.equals(this.docuSignFormId, roomDocument.docuSignFormId);
+        Objects.equals(this.docuSignFormId, roomDocument.docuSignFormId) &&
+        Objects.equals(this.isArchived, roomDocument.isArchived) &&
+        Objects.equals(this.isVirtual, roomDocument.isVirtual) &&
+        Objects.equals(this.owner, roomDocument.owner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentId, name, ownerId, size, folderId, createdDate, isSigned, docuSignFormId);
+    return Objects.hash(documentId, name, ownerId, size, folderId, createdDate, isSigned, docuSignFormId, isArchived, isVirtual, owner);
   }
 
 
@@ -221,6 +288,9 @@ public class RoomDocument {
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    isSigned: ").append(toIndentedString(isSigned)).append("\n");
     sb.append("    docuSignFormId: ").append(toIndentedString(docuSignFormId)).append("\n");
+    sb.append("    isArchived: ").append(toIndentedString(isArchived)).append("\n");
+    sb.append("    isVirtual: ").append(toIndentedString(isVirtual)).append("\n");
+    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("}");
     return sb.toString();
   }

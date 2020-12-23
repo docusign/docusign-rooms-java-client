@@ -50,6 +50,11 @@ public class Office {
   @JsonProperty("createdDate")
   private DateTime createdDate = null;
 
+  public Office officeId(Integer officeId) {
+    this.officeId = officeId;
+    return this;
+  }
+
    /**
    * Get officeId
    * @return officeId
@@ -57,6 +62,10 @@ public class Office {
   @ApiModelProperty(value = "")
   public Integer getOfficeId() {
     return officeId;
+  }
+
+  public void setOfficeId(Integer officeId) {
+    this.officeId = officeId;
   }
 
   public Office name(String name) {
@@ -239,6 +248,11 @@ public class Office {
     this.phone = phone;
   }
 
+  public Office createdDate(DateTime createdDate) {
+    this.createdDate = createdDate;
+    return this;
+  }
+
    /**
    * Get createdDate
    * @return createdDate
@@ -246,6 +260,10 @@ public class Office {
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
+  }
+
+  public void setCreatedDate(DateTime createdDate) {
+    this.createdDate = createdDate;
   }
 
 

@@ -34,6 +34,12 @@ public class RoomUserSummary {
   @JsonProperty("titleId")
   private Integer titleId = null;
 
+  @JsonProperty("companyName")
+  private String companyName = null;
+
+  @JsonProperty("roleName")
+  private String roleName = null;
+
    /**
    * Get userId
    * @return userId
@@ -97,6 +103,24 @@ public class RoomUserSummary {
     return titleId;
   }
 
+   /**
+   * Get companyName
+   * @return companyName
+  **/
+  @ApiModelProperty(value = "")
+  public String getCompanyName() {
+    return companyName;
+  }
+
+   /**
+   * Get roleName
+   * @return roleName
+  **/
+  @ApiModelProperty(value = "")
+  public String getRoleName() {
+    return roleName;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -113,12 +137,14 @@ public class RoomUserSummary {
         Objects.equals(this.lastName, roomUserSummary.lastName) &&
         Objects.equals(this.transactionSideId, roomUserSummary.transactionSideId) &&
         Objects.equals(this.roleId, roomUserSummary.roleId) &&
-        Objects.equals(this.titleId, roomUserSummary.titleId);
+        Objects.equals(this.titleId, roomUserSummary.titleId) &&
+        Objects.equals(this.companyName, roomUserSummary.companyName) &&
+        Objects.equals(this.roleName, roomUserSummary.roleName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, email, firstName, lastName, transactionSideId, roleId, titleId);
+    return Objects.hash(userId, email, firstName, lastName, transactionSideId, roleId, titleId, companyName, roleName);
   }
 
 
@@ -134,6 +160,8 @@ public class RoomUserSummary {
     sb.append("    transactionSideId: ").append(toIndentedString(transactionSideId)).append("\n");
     sb.append("    roleId: ").append(toIndentedString(roleId)).append("\n");
     sb.append("    titleId: ").append(toIndentedString(titleId)).append("\n");
+    sb.append("    companyName: ").append(toIndentedString(companyName)).append("\n");
+    sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -2,7 +2,7 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.rooms.model.NullablePermissions;
+import com.docusign.rooms.model.Permissions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -37,7 +37,7 @@ public class Role {
   private Boolean isAssigned = null;
 
   @JsonProperty("permissions")
-  private NullablePermissions permissions = null;
+  private Permissions permissions = null;
 
   public Role roleId(Integer roleId) {
     this.roleId = roleId;
@@ -165,7 +165,7 @@ public class Role {
     this.isAssigned = isAssigned;
   }
 
-  public Role permissions(NullablePermissions permissions) {
+  public Role permissions(Permissions permissions) {
     this.permissions = permissions;
     return this;
   }
@@ -175,11 +175,11 @@ public class Role {
    * @return permissions
   **/
   @ApiModelProperty(value = "")
-  public NullablePermissions getPermissions() {
+  public Permissions getPermissions() {
     return permissions;
   }
 
-  public void setPermissions(NullablePermissions permissions) {
+  public void setPermissions(Permissions permissions) {
     this.permissions = permissions;
   }
 

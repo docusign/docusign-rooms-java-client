@@ -19,6 +19,11 @@ public class OfficeReferenceCount {
   @JsonProperty("referencedCount")
   private Integer referencedCount = null;
 
+  public OfficeReferenceCount referenceType(String referenceType) {
+    this.referenceType = referenceType;
+    return this;
+  }
+
    /**
    * Get referenceType
    * @return referenceType
@@ -26,6 +31,10 @@ public class OfficeReferenceCount {
   @ApiModelProperty(value = "")
   public String getReferenceType() {
     return referenceType;
+  }
+
+  public void setReferenceType(String referenceType) {
+    this.referenceType = referenceType;
   }
 
    /**

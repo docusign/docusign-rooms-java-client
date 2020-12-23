@@ -35,17 +35,12 @@ public class RegionsApi {
    * Creates a new region for a company
    * 
    * @param accountId  (required)
-   * @param region The information required to create a new region for the caller&#39;s company (required)
+   * @param body  (optional)
    * @return Region
    * @throws ApiException if fails to make API call
    */
-  public Region createRegion(String accountId, Region region) throws ApiException {
-    Object localVarPostBody = region;
-    
-    // verify the required parameter 'region' is set
-    if (region == null) {
-      throw new ApiException(400, "Missing the required parameter 'region' when calling createRegion");
-    }
+  public Region createRegion(String accountId, Region body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -69,12 +64,12 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -122,7 +117,7 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -176,7 +171,7 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -230,7 +225,7 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -245,7 +240,7 @@ public class RegionsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Get account regions. 
+  /// Get account  
   /// </summary>
   public class GetRegionsOptions
   {
@@ -285,7 +280,7 @@ public class RegionsApi {
   }
 
    /**
-   * Get account regions.
+   * Get account 
    * 
    * @param accountId  (required)
    * @return RegionSummaryList
@@ -295,7 +290,7 @@ public class RegionsApi {
   }
 
   /**
-   * Get account regions.
+   * Get account 
    * 
    * @param accountId  (required)
    * @param options for modifying the method behavior.
@@ -333,7 +328,7 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

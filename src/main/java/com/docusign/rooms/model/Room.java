@@ -2,7 +2,7 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.rooms.model.NullableFieldData;
+import com.docusign.rooms.model.FieldData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -49,7 +49,7 @@ public class Room {
   private String closedStatusId = null;
 
   @JsonProperty("fieldData")
-  private NullableFieldData fieldData = null;
+  private FieldData fieldData = null;
 
   public Room roomId(Integer roomId) {
     this.roomId = roomId;
@@ -249,7 +249,7 @@ public class Room {
     this.closedStatusId = closedStatusId;
   }
 
-  public Room fieldData(NullableFieldData fieldData) {
+  public Room fieldData(FieldData fieldData) {
     this.fieldData = fieldData;
     return this;
   }
@@ -259,11 +259,11 @@ public class Room {
    * @return fieldData
   **/
   @ApiModelProperty(value = "")
-  public NullableFieldData getFieldData() {
+  public FieldData getFieldData() {
     return fieldData;
   }
 
-  public void setFieldData(NullableFieldData fieldData) {
+  public void setFieldData(FieldData fieldData) {
     this.fieldData = fieldData;
   }
 

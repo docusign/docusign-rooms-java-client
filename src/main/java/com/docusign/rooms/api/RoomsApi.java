@@ -32,30 +32,25 @@ public class RoomsApi {
 
 
   /**
-   * Add a document to a room.
+   * Add a document to a 
    * 
    * @param accountId  (required)
    * @param roomId  (required)
-   * @param document  (required)
+   * @param body  (optional)
    * @return RoomDocument
    * @throws ApiException if fails to make API call
    */
-  public RoomDocument addDocumentToRoom(String accountId, Integer roomId, Document document) throws ApiException {
-    Object localVarPostBody = document;
-    
-    // verify the required parameter 'roomId' is set
-    if (roomId == null) {
-      throw new ApiException(400, "Missing the required parameter 'roomId' when calling addDocumentToRoom");
-    }
-    
-    // verify the required parameter 'document' is set
-    if (document == null) {
-      throw new ApiException(400, "Missing the required parameter 'document' when calling addDocumentToRoom");
-    }
+  public RoomDocument addDocumentToRoom(String accountId, Integer roomId, Document body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling addDocumentToRoom");
+    }
+    
+    // verify the required parameter 'roomId' is set
+    if (roomId == null) {
+      throw new ApiException(400, "Missing the required parameter 'roomId' when calling addDocumentToRoom");
     }
     
     // create path and map variables
@@ -76,12 +71,12 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -96,6 +91,7 @@ public class RoomsApi {
    * 
    * @param accountId  (required)
    * @param roomId  (required)
+   * @param file  (optional)
    * @return RoomDocument
    * @throws ApiException if fails to make API call
    */
@@ -110,11 +106,6 @@ public class RoomsApi {
     // verify the required parameter 'roomId' is set
     if (roomId == null) {
       throw new ApiException(400, "Missing the required parameter 'roomId' when calling addDocumentToRoomViaFileUpload");
-    }
-    
-    // verify the required parameter 'file' is set
-    if (file == null) {
-      throw new ApiException(400, "Missing the required parameter 'file' when calling addDocumentToRoomViaFileUpload");
     }
     
     // create path and map variables
@@ -137,12 +128,12 @@ public class RoomsApi {
     }
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/form-data"
+      "multipart/form-data"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -157,26 +148,21 @@ public class RoomsApi {
    * 
    * @param accountId  (required)
    * @param roomId Id of the room to which the DocuSign Form is being added (required)
-   * @param formForAdd Contains information about the form being added (required)
+   * @param body  (optional)
    * @return RoomDocument
    * @throws ApiException if fails to make API call
    */
-  public RoomDocument addFormToRoom(String accountId, Integer roomId, FormForAdd formForAdd) throws ApiException {
-    Object localVarPostBody = formForAdd;
-    
-    // verify the required parameter 'roomId' is set
-    if (roomId == null) {
-      throw new ApiException(400, "Missing the required parameter 'roomId' when calling addFormToRoom");
-    }
-    
-    // verify the required parameter 'formForAdd' is set
-    if (formForAdd == null) {
-      throw new ApiException(400, "Missing the required parameter 'formForAdd' when calling addFormToRoom");
-    }
+  public RoomDocument addFormToRoom(String accountId, Integer roomId, FormForAdd body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling addFormToRoom");
+    }
+    
+    // verify the required parameter 'roomId' is set
+    if (roomId == null) {
+      throw new ApiException(400, "Missing the required parameter 'roomId' when calling addFormToRoom");
     }
     
     // create path and map variables
@@ -197,12 +183,12 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -216,17 +202,12 @@ public class RoomsApi {
    * Creates a new Room
    * 
    * @param accountId  (required)
-   * @param roomForCreate The properties of the new room (required)
+   * @param body  (optional)
    * @return Room
    * @throws ApiException if fails to make API call
    */
-  public Room createRoom(String accountId, RoomForCreate roomForCreate) throws ApiException {
-    Object localVarPostBody = roomForCreate;
-    
-    // verify the required parameter 'roomForCreate' is set
-    if (roomForCreate == null) {
-      throw new ApiException(400, "Missing the required parameter 'roomForCreate' when calling createRoom");
-    }
+  public Room createRoom(String accountId, RoomForCreate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -250,12 +231,12 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -303,7 +284,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -427,7 +408,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -525,7 +506,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -540,7 +521,7 @@ public class RoomsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Gets information about the given room. 
+  /// Gets information about the given  
   /// </summary>
   public class GetRoomOptions
   {
@@ -558,7 +539,7 @@ public class RoomsApi {
   }
 
    /**
-   * Gets information about the given room.
+   * Gets information about the given 
    * 
    * @param accountId  (required)
    * @param roomId  (required)
@@ -569,7 +550,7 @@ public class RoomsApi {
   }
 
   /**
-   * Gets information about the given room.
+   * Gets information about the given 
    * 
    * @param accountId  (required)
    * @param roomId  (required)
@@ -610,7 +591,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -664,7 +645,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -680,7 +661,7 @@ public class RoomsApi {
       }
 
   /**
-   * Gets the field set associated with the room.
+   * Gets the field set associated with the 
    * 
    * @param accountId  (required)
    * @param roomId  (required)
@@ -718,7 +699,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -733,7 +714,7 @@ public class RoomsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Retrieves the list of users in the given room. 
+  /// Retrieves the list of users in the given  
   /// </summary>
   public class GetRoomUsersOptions
   {
@@ -784,7 +765,7 @@ public class RoomsApi {
   }
 
    /**
-   * Retrieves the list of users in the given room.
+   * Retrieves the list of users in the given 
    * 
    * @param accountId  (required)
    * @param roomId  (required)
@@ -795,7 +776,7 @@ public class RoomsApi {
   }
 
   /**
-   * Retrieves the list of users in the given room.
+   * Retrieves the list of users in the given 
    * 
    * @param accountId  (required)
    * @param roomId  (required)
@@ -842,7 +823,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -1010,7 +991,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -1030,26 +1011,21 @@ public class RoomsApi {
    * 
    * @param accountId  (required)
    * @param roomId  (required)
-   * @param roomInviteRequest  (required)
+   * @param body  (optional)
    * @return RoomInviteResponse
    * @throws ApiException if fails to make API call
    */
-  public RoomInviteResponse inviteUser(String accountId, Integer roomId, RoomInvite roomInviteRequest) throws ApiException {
-    Object localVarPostBody = roomInviteRequest;
-    
-    // verify the required parameter 'roomId' is set
-    if (roomId == null) {
-      throw new ApiException(400, "Missing the required parameter 'roomId' when calling inviteUser");
-    }
-    
-    // verify the required parameter 'roomInviteRequest' is set
-    if (roomInviteRequest == null) {
-      throw new ApiException(400, "Missing the required parameter 'roomInviteRequest' when calling inviteUser");
-    }
+  public RoomInviteResponse inviteUser(String accountId, Integer roomId, RoomInvite body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling inviteUser");
+    }
+    
+    // verify the required parameter 'roomId' is set
+    if (roomId == null) {
+      throw new ApiException(400, "Missing the required parameter 'roomId' when calling inviteUser");
     }
     
     // create path and map variables
@@ -1070,12 +1046,12 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1091,12 +1067,17 @@ public class RoomsApi {
    * @param accountId  (required)
    * @param roomId  (required)
    * @param userId  (required)
-   * @param roomUserForUpdate  (required)
+   * @param body  (optional)
    * @return RoomUser
    * @throws ApiException if fails to make API call
    */
-  public RoomUser putRoomUser(String accountId, Integer roomId, Integer userId, RoomUserForUpdate roomUserForUpdate) throws ApiException {
-    Object localVarPostBody = roomUserForUpdate;
+  public RoomUser putRoomUser(String accountId, Integer roomId, Integer userId, RoomUserForUpdate body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling putRoomUser");
+    }
     
     // verify the required parameter 'roomId' is set
     if (roomId == null) {
@@ -1106,16 +1087,6 @@ public class RoomsApi {
     // verify the required parameter 'userId' is set
     if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling putRoomUser");
-    }
-    
-    // verify the required parameter 'roomUserForUpdate' is set
-    if (roomUserForUpdate == null) {
-      throw new ApiException(400, "Missing the required parameter 'roomUserForUpdate' when calling putRoomUser");
-    }
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling putRoomUser");
     }
     
     // create path and map variables
@@ -1137,12 +1108,12 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1153,7 +1124,7 @@ public class RoomsApi {
       }
 
   /**
-   * Restores the specified user&#39;s access to the room.
+   * Restores the specified user&#39;s access to the 
    * 
    * @param accountId  (required)
    * @param roomId The room Id to restore access (required)
@@ -1197,7 +1168,7 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -1213,16 +1184,21 @@ public class RoomsApi {
   }
 
   /**
-   * Revokes the specified user&#39;s access to the room.
+   * Revokes the specified user&#39;s access to the 
    * 
    * @param accountId  (required)
    * @param roomId The room Id to revoke access from (required)
    * @param userId The user Id getting revoked from the room (required)
-   * @param roomUserRemovalDetail Contains the date on which the users room access should be revoked (optional)
+   * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
-  public void revokeRoomUserAccess(String accountId, Integer roomId, Integer userId, RoomUserRemovalDetail roomUserRemovalDetail) throws ApiException {
-    Object localVarPostBody = roomUserRemovalDetail;
+  public void revokeRoomUserAccess(String accountId, Integer roomId, Integer userId, RoomUserRemovalDetail body) throws ApiException {
+    Object localVarPostBody = body;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling revokeRoomUserAccess");
+    }
     
     // verify the required parameter 'roomId' is set
     if (roomId == null) {
@@ -1232,11 +1208,6 @@ public class RoomsApi {
     // verify the required parameter 'userId' is set
     if (userId == null) {
       throw new ApiException(400, "Missing the required parameter 'userId' when calling revokeRoomUserAccess");
-    }
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling revokeRoomUserAccess");
     }
     
     // create path and map variables
@@ -1258,12 +1229,12 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1274,14 +1245,15 @@ public class RoomsApi {
   }
 
   /**
-   * Update the picture for a room.
+   * Update the picture for a 
    * This endpoint supports the following content types, application/json as JSON PictureForUpdate{\&quot;fileName\&quot;:\&quot;string\&quot;, \&quot;Base64Contents\&quot;:\&quot;string\&quot;}, multipart/formdata and any other streamed binary content type (as long as either query parameter fileName or request header ContentDisposition filename is included).
    * @param accountId  (required)
    * @param roomId ID of the room the picture is for. (required)
+   * @param file  (optional)
    * @return RoomPicture
    * @throws ApiException if fails to make API call
    */
-  public RoomPicture updatePicture(String accountId, Integer roomId) throws ApiException {
+  public RoomPicture updatePicture(String accountId, Integer roomId, byte[] file) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -1309,7 +1281,9 @@ public class RoomsApi {
 
     
 
-    
+    if (file != null) {
+      localVarFormParams.put("file", file);
+    }
 
     final String[] localVarAccepts = {
       "application/json"
@@ -1317,7 +1291,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "multipart/form-data"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1332,26 +1306,21 @@ public class RoomsApi {
    * 
    * @param accountId  (required)
    * @param roomId  (required)
-   * @param fieldDataForUpdate  (required)
+   * @param body  (optional)
    * @return FieldData
    * @throws ApiException if fails to make API call
    */
-  public FieldData updateRoomFieldData(String accountId, Integer roomId, FieldDataForUpdate fieldDataForUpdate) throws ApiException {
-    Object localVarPostBody = fieldDataForUpdate;
-    
-    // verify the required parameter 'roomId' is set
-    if (roomId == null) {
-      throw new ApiException(400, "Missing the required parameter 'roomId' when calling updateRoomFieldData");
-    }
-    
-    // verify the required parameter 'fieldDataForUpdate' is set
-    if (fieldDataForUpdate == null) {
-      throw new ApiException(400, "Missing the required parameter 'fieldDataForUpdate' when calling updateRoomFieldData");
-    }
+  public FieldData updateRoomFieldData(String accountId, Integer roomId, FieldDataForUpdate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRoomFieldData");
+    }
+    
+    // verify the required parameter 'roomId' is set
+    if (roomId == null) {
+      throw new ApiException(400, "Missing the required parameter 'roomId' when calling updateRoomFieldData");
     }
     
     // create path and map variables
@@ -1372,12 +1341,12 @@ public class RoomsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

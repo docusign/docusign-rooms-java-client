@@ -6,7 +6,7 @@
 ## Requirements
 
 - Java 1.9+
-- Free [Developer Account](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
+- Free [Developer Sandbox](https://go.docusign.com/sandbox/productshot/?elqCampaignId=16531)
 
 ## Compatibility
 
@@ -35,7 +35,7 @@ Note: DocuSign uses **Eclipse** with **Maven** for testing purposes.
 <dependency>
   <groupId>com.docusign</groupId>
   <artifactId>docusign-rooms-java</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0-RC1</version>
 </dependency>
 ```
 

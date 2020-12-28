@@ -38,8 +38,16 @@ public class Document {
   @JsonProperty("isSigned")
   private Boolean isSigned = null;
 
+  @JsonProperty("contentType")
+  private String contentType = null;
+
   @JsonProperty("base64Contents")
   private String base64Contents = null;
+
+  public Document documentId(Integer documentId) {
+    this.documentId = documentId;
+    return this;
+  }
 
    /**
    * Get documentId
@@ -48,6 +56,10 @@ public class Document {
   @ApiModelProperty(value = "")
   public Integer getDocumentId() {
     return documentId;
+  }
+
+  public void setDocumentId(Integer documentId) {
+    this.documentId = documentId;
   }
 
   public Document name(String name) {
@@ -68,6 +80,11 @@ public class Document {
     this.name = name;
   }
 
+  public Document roomId(Integer roomId) {
+    this.roomId = roomId;
+    return this;
+  }
+
    /**
    * Get roomId
    * @return roomId
@@ -75,6 +92,15 @@ public class Document {
   @ApiModelProperty(value = "")
   public Integer getRoomId() {
     return roomId;
+  }
+
+  public void setRoomId(Integer roomId) {
+    this.roomId = roomId;
+  }
+
+  public Document ownerId(Integer ownerId) {
+    this.ownerId = ownerId;
+    return this;
   }
 
    /**
@@ -86,6 +112,15 @@ public class Document {
     return ownerId;
   }
 
+  public void setOwnerId(Integer ownerId) {
+    this.ownerId = ownerId;
+  }
+
+  public Document size(Long size) {
+    this.size = size;
+    return this;
+  }
+
    /**
    * Get size
    * @return size
@@ -93,6 +128,10 @@ public class Document {
   @ApiModelProperty(value = "")
   public Long getSize() {
     return size;
+  }
+
+  public void setSize(Long size) {
+    this.size = size;
   }
 
   public Document folderId(Integer folderId) {
@@ -113,6 +152,11 @@ public class Document {
     this.folderId = folderId;
   }
 
+  public Document createdDate(DateTime createdDate) {
+    this.createdDate = createdDate;
+    return this;
+  }
+
    /**
    * Get createdDate
    * @return createdDate
@@ -122,6 +166,15 @@ public class Document {
     return createdDate;
   }
 
+  public void setCreatedDate(DateTime createdDate) {
+    this.createdDate = createdDate;
+  }
+
+  public Document isSigned(Boolean isSigned) {
+    this.isSigned = isSigned;
+    return this;
+  }
+
    /**
    * Get isSigned
    * @return isSigned
@@ -129,6 +182,28 @@ public class Document {
   @ApiModelProperty(value = "")
   public Boolean isIsSigned() {
     return isSigned;
+  }
+
+  public void setIsSigned(Boolean isSigned) {
+    this.isSigned = isSigned;
+  }
+
+  public Document contentType(String contentType) {
+    this.contentType = contentType;
+    return this;
+  }
+
+   /**
+   * Get contentType
+   * @return contentType
+  **/
+  @ApiModelProperty(value = "")
+  public String getContentType() {
+    return contentType;
+  }
+
+  public void setContentType(String contentType) {
+    this.contentType = contentType;
   }
 
   public Document base64Contents(String base64Contents) {
@@ -167,12 +242,13 @@ public class Document {
         Objects.equals(this.folderId, document.folderId) &&
         Objects.equals(this.createdDate, document.createdDate) &&
         Objects.equals(this.isSigned, document.isSigned) &&
+        Objects.equals(this.contentType, document.contentType) &&
         Objects.equals(this.base64Contents, document.base64Contents);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentId, name, roomId, ownerId, size, folderId, createdDate, isSigned, base64Contents);
+    return Objects.hash(documentId, name, roomId, ownerId, size, folderId, createdDate, isSigned, contentType, base64Contents);
   }
 
 
@@ -189,6 +265,7 @@ public class Document {
     sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    isSigned: ").append(toIndentedString(isSigned)).append("\n");
+    sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    base64Contents: ").append(toIndentedString(base64Contents)).append("\n");
     sb.append("}");
     return sb.toString();

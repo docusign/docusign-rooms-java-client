@@ -2,6 +2,7 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.rooms.model.ProductVersion;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -19,43 +20,8 @@ public class AccountSummary {
   @JsonProperty("name")
   private String name = null;
 
-  /**
-   * Gets or Sets companyVersion
-   */
-  public enum CompanyVersionEnum {
-    V5("v5"),
-    
-    V6("v6");
-
-    private String value;
-
-    CompanyVersionEnum(String value) {
-      this.value = value;
-    }
-
-    @JsonValue
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    @JsonCreator
-    public static CompanyVersionEnum fromValue(String text) {
-      for (CompanyVersionEnum b : CompanyVersionEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
-          return b;
-        }
-      }
-      return null;
-    }
-  }
-
   @JsonProperty("companyVersion")
-  private CompanyVersionEnum companyVersion = null;
+  private ProductVersion companyVersion = null;
 
   @JsonProperty("docuSignAccountGuid")
   private String docuSignAccountGuid = null;
@@ -84,13 +50,22 @@ public class AccountSummary {
     return name;
   }
 
+  public AccountSummary companyVersion(ProductVersion companyVersion) {
+    this.companyVersion = companyVersion;
+    return this;
+  }
+
    /**
    * Get companyVersion
    * @return companyVersion
   **/
   @ApiModelProperty(value = "")
-  public CompanyVersionEnum getCompanyVersion() {
+  public ProductVersion getCompanyVersion() {
     return companyVersion;
+  }
+
+  public void setCompanyVersion(ProductVersion companyVersion) {
+    this.companyVersion = companyVersion;
   }
 
    /**
@@ -106,7 +81,7 @@ public class AccountSummary {
    * Get defaultFieldSetId
    * @return defaultFieldSetId
   **/
-  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "")
+  @ApiModelProperty(value = "")
   public java.util.UUID getDefaultFieldSetId() {
     return defaultFieldSetId;
   }

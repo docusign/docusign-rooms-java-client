@@ -93,7 +93,7 @@ public class FieldsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fieldsCustomDataFilters", options.fieldsCustomDataFilters));
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("csv", "fieldsCustomDataFilters", options.fieldsCustomDataFilters));
     }
 
     
@@ -101,7 +101,7 @@ public class FieldsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

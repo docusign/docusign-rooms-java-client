@@ -32,6 +32,9 @@ public class FormSummaryList {
   @JsonProperty("priorUri")
   private String priorUri = null;
 
+  @JsonProperty("totalRowCount")
+  private Integer totalRowCount = null;
+
   public FormSummaryList forms(java.util.List<FormSummary> forms) {
     this.forms = forms;
     return this;
@@ -139,6 +142,24 @@ public class FormSummaryList {
     this.priorUri = priorUri;
   }
 
+  public FormSummaryList totalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+    return this;
+  }
+
+   /**
+   * Get totalRowCount
+   * @return totalRowCount
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getTotalRowCount() {
+    return totalRowCount;
+  }
+
+  public void setTotalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -154,12 +175,13 @@ public class FormSummaryList {
         Objects.equals(this.startPosition, formSummaryList.startPosition) &&
         Objects.equals(this.endPosition, formSummaryList.endPosition) &&
         Objects.equals(this.nextUri, formSummaryList.nextUri) &&
-        Objects.equals(this.priorUri, formSummaryList.priorUri);
+        Objects.equals(this.priorUri, formSummaryList.priorUri) &&
+        Objects.equals(this.totalRowCount, formSummaryList.totalRowCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(forms, resultSetSize, startPosition, endPosition, nextUri, priorUri);
+    return Objects.hash(forms, resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount);
   }
 
 
@@ -174,6 +196,7 @@ public class FormSummaryList {
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    priorUri: ").append(toIndentedString(priorUri)).append("\n");
+    sb.append("    totalRowCount: ").append(toIndentedString(totalRowCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

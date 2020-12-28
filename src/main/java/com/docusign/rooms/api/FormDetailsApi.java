@@ -70,7 +70,7 @@ public class FormDetailsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

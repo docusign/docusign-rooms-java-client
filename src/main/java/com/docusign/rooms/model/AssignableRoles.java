@@ -35,6 +35,9 @@ public class AssignableRoles {
   @JsonProperty("priorUri")
   private String priorUri = null;
 
+  @JsonProperty("totalRowCount")
+  private Integer totalRowCount = null;
+
   public AssignableRoles currentRoleId(Integer currentRoleId) {
     this.currentRoleId = currentRoleId;
     return this;
@@ -160,6 +163,24 @@ public class AssignableRoles {
     this.priorUri = priorUri;
   }
 
+  public AssignableRoles totalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+    return this;
+  }
+
+   /**
+   * Get totalRowCount
+   * @return totalRowCount
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getTotalRowCount() {
+    return totalRowCount;
+  }
+
+  public void setTotalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -176,12 +197,13 @@ public class AssignableRoles {
         Objects.equals(this.startPosition, assignableRoles.startPosition) &&
         Objects.equals(this.endPosition, assignableRoles.endPosition) &&
         Objects.equals(this.nextUri, assignableRoles.nextUri) &&
-        Objects.equals(this.priorUri, assignableRoles.priorUri);
+        Objects.equals(this.priorUri, assignableRoles.priorUri) &&
+        Objects.equals(this.totalRowCount, assignableRoles.totalRowCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(currentRoleId, roles, resultSetSize, startPosition, endPosition, nextUri, priorUri);
+    return Objects.hash(currentRoleId, roles, resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount);
   }
 
 
@@ -197,6 +219,7 @@ public class AssignableRoles {
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    priorUri: ").append(toIndentedString(priorUri)).append("\n");
+    sb.append("    totalRowCount: ").append(toIndentedString(totalRowCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

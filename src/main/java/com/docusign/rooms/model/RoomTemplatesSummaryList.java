@@ -32,6 +32,9 @@ public class RoomTemplatesSummaryList {
   @JsonProperty("priorUri")
   private String priorUri = null;
 
+  @JsonProperty("totalRowCount")
+  private Integer totalRowCount = null;
+
   public RoomTemplatesSummaryList roomTemplates(java.util.List<RoomTemplate> roomTemplates) {
     this.roomTemplates = roomTemplates;
     return this;
@@ -139,6 +142,24 @@ public class RoomTemplatesSummaryList {
     this.priorUri = priorUri;
   }
 
+  public RoomTemplatesSummaryList totalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+    return this;
+  }
+
+   /**
+   * Get totalRowCount
+   * @return totalRowCount
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getTotalRowCount() {
+    return totalRowCount;
+  }
+
+  public void setTotalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -154,12 +175,13 @@ public class RoomTemplatesSummaryList {
         Objects.equals(this.startPosition, roomTemplatesSummaryList.startPosition) &&
         Objects.equals(this.endPosition, roomTemplatesSummaryList.endPosition) &&
         Objects.equals(this.nextUri, roomTemplatesSummaryList.nextUri) &&
-        Objects.equals(this.priorUri, roomTemplatesSummaryList.priorUri);
+        Objects.equals(this.priorUri, roomTemplatesSummaryList.priorUri) &&
+        Objects.equals(this.totalRowCount, roomTemplatesSummaryList.totalRowCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(roomTemplates, resultSetSize, startPosition, endPosition, nextUri, priorUri);
+    return Objects.hash(roomTemplates, resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount);
   }
 
 
@@ -174,6 +196,7 @@ public class RoomTemplatesSummaryList {
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    priorUri: ").append(toIndentedString(priorUri)).append("\n");
+    sb.append("    totalRowCount: ").append(toIndentedString(totalRowCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -29,6 +29,9 @@ public class RoomDocumentList {
   @JsonProperty("priorUri")
   private String priorUri = null;
 
+  @JsonProperty("totalRowCount")
+  private Integer totalRowCount = null;
+
   @JsonProperty("documents")
   private java.util.List<RoomDocument> documents = null;
 
@@ -113,6 +116,24 @@ public class RoomDocumentList {
     this.priorUri = priorUri;
   }
 
+  public RoomDocumentList totalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+    return this;
+  }
+
+   /**
+   * Get totalRowCount
+   * @return totalRowCount
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getTotalRowCount() {
+    return totalRowCount;
+  }
+
+  public void setTotalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+  }
+
   public RoomDocumentList documents(java.util.List<RoomDocument> documents) {
     this.documents = documents;
     return this;
@@ -154,12 +175,13 @@ public class RoomDocumentList {
         Objects.equals(this.endPosition, roomDocumentList.endPosition) &&
         Objects.equals(this.nextUri, roomDocumentList.nextUri) &&
         Objects.equals(this.priorUri, roomDocumentList.priorUri) &&
+        Objects.equals(this.totalRowCount, roomDocumentList.totalRowCount) &&
         Objects.equals(this.documents, roomDocumentList.documents);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(resultSetSize, startPosition, endPosition, nextUri, priorUri, documents);
+    return Objects.hash(resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount, documents);
   }
 
 
@@ -173,6 +195,7 @@ public class RoomDocumentList {
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    priorUri: ").append(toIndentedString(priorUri)).append("\n");
+    sb.append("    totalRowCount: ").append(toIndentedString(totalRowCount)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("}");
     return sb.toString();

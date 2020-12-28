@@ -35,17 +35,12 @@ public class OfficesApi {
    * Create an office.
    * 
    * @param accountId  (required)
-   * @param office  (required)
+   * @param body  (optional)
    * @return Office
    * @throws ApiException if fails to make API call
    */
-  public Office createOffice(String accountId, OfficeForCreate office) throws ApiException {
-    Object localVarPostBody = office;
-    
-    // verify the required parameter 'office' is set
-    if (office == null) {
-      throw new ApiException(400, "Missing the required parameter 'office' when calling createOffice");
-    }
+  public Office createOffice(String accountId, OfficeForCreate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -69,12 +64,12 @@ public class OfficesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -122,7 +117,7 @@ public class OfficesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -176,7 +171,7 @@ public class OfficesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -191,7 +186,7 @@ public class OfficesApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Get all offices. 
+  /// Get all  
   /// </summary>
   public class GetOfficesOptions
   {
@@ -242,7 +237,7 @@ public class OfficesApi {
   }
 
    /**
-   * Get all offices.
+   * Get all 
    * 
    * @param accountId  (required)
    * @return OfficeSummaryList
@@ -252,7 +247,7 @@ public class OfficesApi {
   }
 
   /**
-   * Get all offices.
+   * Get all 
    * 
    * @param accountId  (required)
    * @param options for modifying the method behavior.
@@ -292,7 +287,7 @@ public class OfficesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -346,7 +341,7 @@ public class OfficesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

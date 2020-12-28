@@ -16,6 +16,11 @@ public class ExternalFormFillSession {
   @JsonProperty("url")
   private String url = null;
 
+  public ExternalFormFillSession url(String url) {
+    this.url = url;
+    return this;
+  }
+
    /**
    * Get url
    * @return url
@@ -23,6 +28,10 @@ public class ExternalFormFillSession {
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
   }
 
 

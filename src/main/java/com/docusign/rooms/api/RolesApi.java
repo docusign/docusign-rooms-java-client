@@ -35,17 +35,12 @@ public class RolesApi {
    * Creates a role.
    * 
    * @param accountId  (required)
-   * @param role  (required)
+   * @param body  (optional)
    * @return Role
    * @throws ApiException if fails to make API call
    */
-  public Role createRole(String accountId, RoleForCreate role) throws ApiException {
-    Object localVarPostBody = role;
-    
-    // verify the required parameter 'role' is set
-    if (role == null) {
-      throw new ApiException(400, "Missing the required parameter 'role' when calling createRole");
-    }
+  public Role createRole(String accountId, RoleForCreate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -69,12 +64,12 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -122,7 +117,7 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -207,7 +202,7 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -323,7 +318,7 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -343,26 +338,21 @@ public class RolesApi {
    * 
    * @param accountId  (required)
    * @param roleId  (required)
-   * @param role  (required)
+   * @param body  (optional)
    * @return Role
    * @throws ApiException if fails to make API call
    */
-  public Role updateRole(String accountId, Integer roleId, RoleForUpdate role) throws ApiException {
-    Object localVarPostBody = role;
-    
-    // verify the required parameter 'roleId' is set
-    if (roleId == null) {
-      throw new ApiException(400, "Missing the required parameter 'roleId' when calling updateRole");
-    }
-    
-    // verify the required parameter 'role' is set
-    if (role == null) {
-      throw new ApiException(400, "Missing the required parameter 'role' when calling updateRole");
-    }
+  public Role updateRole(String accountId, Integer roleId, RoleForUpdate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRole");
+    }
+    
+    // verify the required parameter 'roleId' is set
+    if (roleId == null) {
+      throw new ApiException(400, "Missing the required parameter 'roleId' when calling updateRole");
     }
     
     // create path and map variables
@@ -383,12 +373,12 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

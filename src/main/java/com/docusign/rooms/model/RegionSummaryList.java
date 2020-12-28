@@ -32,6 +32,9 @@ public class RegionSummaryList {
   @JsonProperty("priorUri")
   private String priorUri = null;
 
+  @JsonProperty("totalRowCount")
+  private Integer totalRowCount = null;
+
   public RegionSummaryList regionSummaries(java.util.List<RegionSummary> regionSummaries) {
     this.regionSummaries = regionSummaries;
     return this;
@@ -139,6 +142,24 @@ public class RegionSummaryList {
     this.priorUri = priorUri;
   }
 
+  public RegionSummaryList totalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+    return this;
+  }
+
+   /**
+   * Get totalRowCount
+   * @return totalRowCount
+  **/
+  @ApiModelProperty(value = "")
+  public Integer getTotalRowCount() {
+    return totalRowCount;
+  }
+
+  public void setTotalRowCount(Integer totalRowCount) {
+    this.totalRowCount = totalRowCount;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -154,12 +175,13 @@ public class RegionSummaryList {
         Objects.equals(this.startPosition, regionSummaryList.startPosition) &&
         Objects.equals(this.endPosition, regionSummaryList.endPosition) &&
         Objects.equals(this.nextUri, regionSummaryList.nextUri) &&
-        Objects.equals(this.priorUri, regionSummaryList.priorUri);
+        Objects.equals(this.priorUri, regionSummaryList.priorUri) &&
+        Objects.equals(this.totalRowCount, regionSummaryList.totalRowCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(regionSummaries, resultSetSize, startPosition, endPosition, nextUri, priorUri);
+    return Objects.hash(regionSummaries, resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount);
   }
 
 
@@ -174,6 +196,7 @@ public class RegionSummaryList {
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    priorUri: ").append(toIndentedString(priorUri)).append("\n");
+    sb.append("    totalRowCount: ").append(toIndentedString(totalRowCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

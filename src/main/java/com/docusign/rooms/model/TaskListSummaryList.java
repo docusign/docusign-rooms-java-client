@@ -17,6 +17,19 @@ public class TaskListSummaryList {
   @JsonProperty("taskListSummaries")
   private java.util.List<TaskListSummary> taskListSummaries = null;
 
+  public TaskListSummaryList taskListSummaries(java.util.List<TaskListSummary> taskListSummaries) {
+    this.taskListSummaries = taskListSummaries;
+    return this;
+  }
+
+  public TaskListSummaryList addTaskListSummariesItem(TaskListSummary taskListSummariesItem) {
+    if (this.taskListSummaries == null) {
+      this.taskListSummaries = new java.util.ArrayList<TaskListSummary>();
+    }
+    this.taskListSummaries.add(taskListSummariesItem);
+    return this;
+  }
+
    /**
    * Get taskListSummaries
    * @return taskListSummaries
@@ -24,6 +37,10 @@ public class TaskListSummaryList {
   @ApiModelProperty(value = "")
   public java.util.List<TaskListSummary> getTaskListSummaries() {
     return taskListSummaries;
+  }
+
+  public void setTaskListSummaries(java.util.List<TaskListSummary> taskListSummaries) {
+    this.taskListSummaries = taskListSummaries;
   }
 
 

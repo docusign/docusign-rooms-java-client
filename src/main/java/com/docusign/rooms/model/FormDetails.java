@@ -42,7 +42,7 @@ public class FormDetails {
    * Get formId
    * @return formId
   **/
-  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "")
+  @ApiModelProperty(value = "")
   public java.util.UUID getFormId() {
     return formId;
   }

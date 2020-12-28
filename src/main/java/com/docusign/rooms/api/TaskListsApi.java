@@ -36,26 +36,21 @@ public class TaskListsApi {
    * 
    * @param accountId  (required)
    * @param roomId Room ID. (required)
-   * @param taskList Details for task list creation. (required)
+   * @param body  (optional)
    * @return TaskList
    * @throws ApiException if fails to make API call
    */
-  public TaskList createTaskList(String accountId, Integer roomId, TaskListForCreate taskList) throws ApiException {
-    Object localVarPostBody = taskList;
-    
-    // verify the required parameter 'roomId' is set
-    if (roomId == null) {
-      throw new ApiException(400, "Missing the required parameter 'roomId' when calling createTaskList");
-    }
-    
-    // verify the required parameter 'taskList' is set
-    if (taskList == null) {
-      throw new ApiException(400, "Missing the required parameter 'taskList' when calling createTaskList");
-    }
+  public TaskList createTaskList(String accountId, Integer roomId, TaskListForCreate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createTaskList");
+    }
+    
+    // verify the required parameter 'roomId' is set
+    if (roomId == null) {
+      throw new ApiException(400, "Missing the required parameter 'roomId' when calling createTaskList");
     }
     
     // create path and map variables
@@ -76,12 +71,12 @@ public class TaskListsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -92,7 +87,7 @@ public class TaskListsApi {
       }
 
   /**
-   * Deletes a task list. If there are attached documents they will remain in the associated room.
+   * Deletes a task list. If there are attached documents they will remain in the associated 
    * 
    * @param accountId  (required)
    * @param taskListId Task List ID (required)
@@ -129,7 +124,7 @@ public class TaskListsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -145,7 +140,7 @@ public class TaskListsApi {
   }
 
   /**
-   * Returns the summary for all viewable task lists in a room.
+   * Returns the summary for all viewable task lists in a 
    * 
    * @param accountId  (required)
    * @param roomId Room ID (required)
@@ -183,7 +178,7 @@ public class TaskListsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

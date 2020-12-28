@@ -37,10 +37,11 @@ public class RoomTemplatesApi {
   {
   private Integer officeId = null;
   private Boolean onlyAssignable = null;
+  private Boolean onlyEnabled = null;
   private Integer count = null;
   private Integer startPosition = null;
   /*
-   * Get all room templates you have access to for this office. Response includes Company and Region level templates. If onlyAssignable is true, and no officeId is provided, user&#39;s default office is assumed. 
+   * Get all room templates you have access to for this office. Response includes Company and Region level  If onlyAssignable is true, and no officeId is provided, user&#39;s default office is assumed. 
    */
   public void setOfficeId(Integer officeId) {
     this.officeId = officeId;
@@ -58,6 +59,16 @@ public class RoomTemplatesApi {
 
   public Boolean getOnlyAssignable() {
     return this.onlyAssignable;
+  }
+  /*
+   * When set to true, only returns room templates that are not disabled. 
+   */
+  public void setOnlyEnabled(Boolean onlyEnabled) {
+    this.onlyEnabled = onlyEnabled;
+  }
+
+  public Boolean getOnlyEnabled() {
+    return this.onlyEnabled;
   }
   /*
    * Number of room templates to return. Defaults to the maximum which is 100. 
@@ -122,6 +133,8 @@ public class RoomTemplatesApi {
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("onlyAssignable", options.onlyAssignable));
     }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("onlyEnabled", options.onlyEnabled));
+    }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("startPosition", options.startPosition));
@@ -132,7 +145,7 @@ public class RoomTemplatesApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

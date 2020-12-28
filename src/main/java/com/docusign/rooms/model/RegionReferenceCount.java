@@ -19,6 +19,11 @@ public class RegionReferenceCount {
   @JsonProperty("referenceCount")
   private Integer referenceCount = null;
 
+  public RegionReferenceCount referenceType(String referenceType) {
+    this.referenceType = referenceType;
+    return this;
+  }
+
    /**
    * Get referenceType
    * @return referenceType
@@ -28,6 +33,15 @@ public class RegionReferenceCount {
     return referenceType;
   }
 
+  public void setReferenceType(String referenceType) {
+    this.referenceType = referenceType;
+  }
+
+  public RegionReferenceCount referenceCount(Integer referenceCount) {
+    this.referenceCount = referenceCount;
+    return this;
+  }
+
    /**
    * Get referenceCount
    * @return referenceCount
@@ -35,6 +49,10 @@ public class RegionReferenceCount {
   @ApiModelProperty(value = "")
   public Integer getReferenceCount() {
     return referenceCount;
+  }
+
+  public void setReferenceCount(Integer referenceCount) {
+    this.referenceCount = referenceCount;
   }
 
 

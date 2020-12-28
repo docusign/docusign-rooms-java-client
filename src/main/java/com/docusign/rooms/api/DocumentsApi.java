@@ -36,26 +36,21 @@ public class DocumentsApi {
    * 
    * @param accountId  (required)
    * @param documentId  (required)
-   * @param documentUserForCreate  (required)
+   * @param body  (optional)
    * @return DocumentUser
    * @throws ApiException if fails to make API call
    */
-  public DocumentUser createDocumentUser(String accountId, Integer documentId, DocumentUserForCreate documentUserForCreate) throws ApiException {
-    Object localVarPostBody = documentUserForCreate;
-    
-    // verify the required parameter 'documentId' is set
-    if (documentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'documentId' when calling createDocumentUser");
-    }
-    
-    // verify the required parameter 'documentUserForCreate' is set
-    if (documentUserForCreate == null) {
-      throw new ApiException(400, "Missing the required parameter 'documentUserForCreate' when calling createDocumentUser");
-    }
+  public DocumentUser createDocumentUser(String accountId, Integer documentId, DocumentUserForCreate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(400, "Missing the required parameter 'accountId' when calling createDocumentUser");
+    }
+    
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling createDocumentUser");
     }
     
     // create path and map variables
@@ -76,12 +71,12 @@ public class DocumentsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -129,7 +124,7 @@ public class DocumentsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -214,7 +209,7 @@ public class DocumentsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

@@ -27,7 +27,7 @@ public class FormSummary {
    * Get libraryFormId
    * @return libraryFormId
   **/
-  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "")
+  @ApiModelProperty(value = "")
   public java.util.UUID getLibraryFormId() {
     return libraryFormId;
   }

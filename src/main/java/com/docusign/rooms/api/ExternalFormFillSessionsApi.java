@@ -35,17 +35,12 @@ public class ExternalFormFillSessionsApi {
    * Creates an external form fill session.
    * 
    * @param accountId  (required)
-   * @param formFillSessionForCreate  (required)
+   * @param body  (optional)
    * @return ExternalFormFillSession
    * @throws ApiException if fails to make API call
    */
-  public ExternalFormFillSession createExternalFormFillSession(String accountId, ExternalFormFillSessionForCreate formFillSessionForCreate) throws ApiException {
-    Object localVarPostBody = formFillSessionForCreate;
-    
-    // verify the required parameter 'formFillSessionForCreate' is set
-    if (formFillSessionForCreate == null) {
-      throw new ApiException(400, "Missing the required parameter 'formFillSessionForCreate' when calling createExternalFormFillSession");
-    }
+  public ExternalFormFillSession createExternalFormFillSession(String accountId, ExternalFormFillSessionForCreate body) throws ApiException {
+    Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -69,12 +64,12 @@ public class ExternalFormFillSessionsApi {
     
 
     final String[] localVarAccepts = {
-      "application/json"
+      "text/plain", "application/json", "text/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

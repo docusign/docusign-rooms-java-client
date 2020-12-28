@@ -23,6 +23,11 @@ public class Region {
   @JsonProperty("createdDate")
   private DateTime createdDate = null;
 
+  public Region regionId(Integer regionId) {
+    this.regionId = regionId;
+    return this;
+  }
+
    /**
    * Get regionId
    * @return regionId
@@ -30,6 +35,10 @@ public class Region {
   @ApiModelProperty(value = "")
   public Integer getRegionId() {
     return regionId;
+  }
+
+  public void setRegionId(Integer regionId) {
+    this.regionId = regionId;
   }
 
   public Region name(String name) {
@@ -50,6 +59,11 @@ public class Region {
     this.name = name;
   }
 
+  public Region createdDate(DateTime createdDate) {
+    this.createdDate = createdDate;
+    return this;
+  }
+
    /**
    * Get createdDate
    * @return createdDate
@@ -57,6 +71,10 @@ public class Region {
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
+  }
+
+  public void setCreatedDate(DateTime createdDate) {
+    this.createdDate = createdDate;
   }
 
 

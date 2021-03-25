@@ -20,10 +20,7 @@ import org.glassfish.jersey.client.spi.Connector;
 import org.glassfish.jersey.client.spi.ConnectorProvider;
 import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.logging.LoggingFeature;
-import org.glassfish.jersey.media.multipart.FormDataBodyPart;
-import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
-import org.glassfish.jersey.media.multipart.MultiPart;
-import org.glassfish.jersey.media.multipart.MultiPartFeature;
+import org.glassfish.jersey.media.multipart.*;
 
 import javax.net.ssl.*;
 import javax.ws.rs.client.*;
@@ -41,11 +38,7 @@ import java.net.*;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import org.glassfish.jersey.logging.LoggingFeature;
-
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import java.security.Security;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.text.DateFormat;
@@ -91,7 +84,7 @@ public class ApiClient {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/1.1.0-RC1/java");
+    setUserAgent("Swagger-Codegen/1.1.0/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -738,28 +731,11 @@ public class ApiClient {
    * @return the OAuth JWT grant uri as a String
    */
   public String getJWTUri(String clientId, String redirectURI, String oAuthBasePath) {
-    return getJWTUri(clientId, redirectURI, oAuthBasePath, null);
-  }
-
-  /**
-   * Helper method to build the OAuth JWT grant uri (used once to get a user consent for impersonation)
-   * @param clientId OAuth2 client ID
-   * @param redirectURI OAuth2 redirect uri
-   * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
-   * @return the OAuth JWT grant uri as a String
-   */
-  public String getJWTUri(String clientId, String redirectURI, String oAuthBasePath, java.util.List<String> scopes) {
-    String formattedScopes = (scopes == null || scopes.size() < 1) ? "signature%20impersonation" : scopes.get(0);
-    StringBuilder sb = new StringBuilder(formattedScopes);
-    for (int i = 1; i < scopes.size(); i++) {
-      sb.append(" " + scopes.get(i));
-    }
-
     return UriBuilder.fromUri(oAuthBasePath)
     .scheme("https")
     .path("/oauth/auth")
     .queryParam("response_type", "code")
-    .queryParam("scope", sb.toString())
+    .queryParam("scope", "signature%20impersonation")
     .queryParam("client_id", clientId)
     .queryParam("redirect_uri", redirectURI)
     .build().toString();
@@ -847,7 +823,7 @@ public class ApiClient {
    * @throws ApiException if there is an error while exchanging the JWT with an access token
    * @throws IOException if there is an issue with either the public or private file
    */
-  public OAuth.OAuthToken requestJWTUserToken(String clientId, String userId, java.util.List<String> scopes, byte[] rsaPrivateKey, long expiresIn) throws IllegalArgumentException, ApiException, IOException {
+  public OAuth.OAuthToken requestJWTUserToken(String clientId, String userId, java.util.List<String>scopes, byte[] rsaPrivateKey, long expiresIn) throws IllegalArgumentException, ApiException, IOException {
     String formattedScopes = (scopes == null || scopes.size() < 1) ? "" : scopes.get(0);
     StringBuilder sb = new StringBuilder(formattedScopes);
     for (int i = 1; i < scopes.size(); i++) {
@@ -1197,7 +1173,13 @@ public class ApiClient {
     if (contentType.startsWith("multipart/form-data")) {
       MultiPart multiPart = new MultiPart();
       for (Entry<String, Object> param: formParams.entrySet()) {
-        if (param.getValue() instanceof File) {
+        if (param.getValue() instanceof byte[]) {
+          byte[] bytes = (byte[]) param.getValue();	
+          FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
+              .fileName(param.getKey()).size(bytes.length).build();	
+
+          multiPart.bodyPart(new FormDataBodyPart(contentDisp, bytes, MediaType.APPLICATION_OCTET_STREAM_TYPE));	
+        } else if (param.getValue() instanceof File) {
           File file = (File) param.getValue();
           FormDataContentDisposition contentDisp = FormDataContentDisposition.name(param.getKey())
               .fileName(file.getName()).size(file.length()).build();
@@ -1347,9 +1329,7 @@ public class ApiClient {
       }
     }
 
-    Invocation.Builder invocationBuilder = target.request().accept(accept)
-            .header("Cache-Control", "no-store")
-            .header("Pragma", "no-cache");
+    Invocation.Builder invocationBuilder = target.request().accept(accept);
 
     for (Entry<String, String> entry : headerParams.entrySet()) {
       String value = entry.getValue();
@@ -1368,7 +1348,32 @@ public class ApiClient {
       }
     }
 
-    Entity<?> entity = serialize(body, formParams, contentType);
+    Entity<?> entity = (body == null && formParams.isEmpty()) ? Entity.json("{}") : serialize(body, formParams, contentType);
+
+    // Generate and add Content-Disposition header as per RFC 6266	
+    if (contentType.startsWith("multipart/form-data")) {	
+      for (Entry<String, Object> param : formParams.entrySet()) {	
+        if (param.getValue() instanceof byte[]) {	
+          MultiPart mp = ((MultiPart) entity.getEntity());	
+          List<BodyPart> bodyParts = mp.getBodyParts();	
+          if (!bodyParts.isEmpty()) {	
+            BodyPart bodyPart = bodyParts.get(0);	
+            if (bodyPart.getContentDisposition() != null) {	
+              String contentDispositionValue = bodyPart.getContentDisposition().toString();	
+              invocationBuilder = invocationBuilder.header("Content-Disposition", contentDispositionValue);	
+              entity = Entity.entity(param.getValue(), "application/octet-stream");	
+            }	
+          }	
+        }	
+      }	
+    }
+
+    // Add DocuSign Tracking Header
+    invocationBuilder = invocationBuilder.header("X-DocuSign-SDK", "Java");
+
+    if (body == null && formParams.isEmpty()) {
+        invocationBuilder = invocationBuilder.header("Content-Length", "0");	
+    }	
 
     Response response = null;
     String message = "error";
@@ -1382,7 +1387,7 @@ public class ApiClient {
       } else if ("PUT".equals(method)) {
         response = invocationBuilder.put(entity);
       } else if ("DELETE".equals(method)) {
-        response = invocationBuilder.delete();
+        response = invocationBuilder.method("DELETE", entity);
       } else if ("PATCH".equals(method)) {
         response = invocationBuilder.method("PATCH", entity);
       } else if ("HEAD".equals(method)) {
@@ -1534,14 +1539,17 @@ public class ApiClient {
     clientConfig.register(MultiPartFeature.class);
     clientConfig.register(json);
     clientConfig.register(JacksonFeature.class);
-    clientConfig.property(ClientProperties.SUPPRESS_HTTP_COMPLIANCE_VALIDATION, true);
     clientConfig.property(HttpUrlConnectorProvider.SET_METHOD_WORKAROUND, true);
-    Security.setProperty("ssl.SocketFactory.provider", CustomSSLSocketFactory.class.getCanonicalName());
+    // turn off compliance validation to be able to send payloads with DELETE calls
+    clientConfig.property(ClientProperties.SUPPRESS_HTTP_COMPLIANCE_VALIDATION, true);
     if (debugging) {
       clientConfig.register(new LoggingFeature(java.util.logging.Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME), java.util.logging.Level.INFO, LoggingFeature.Verbosity.PAYLOAD_ANY, 1024*50 /* Log payloads up to 50K */));
       clientConfig.property(LoggingFeature.LOGGING_FEATURE_VERBOSITY, LoggingFeature.Verbosity.PAYLOAD_ANY);
       // Set logger to ALL
       java.util.logging.Logger.getLogger(LoggingFeature.DEFAULT_LOGGER_NAME).setLevel(java.util.logging.Level.ALL);
+    } else {
+      // suppress warnings for payloads with DELETE calls:
+      java.util.logging.Logger.getLogger("org.glassfish.jersey.client").setLevel(java.util.logging.Level.SEVERE);
     }
     performAdditionalClientConfiguration(clientConfig);
 
@@ -1560,11 +1568,7 @@ public class ApiClient {
 	    } catch (final Exception ex) {
 	      System.err.println("failed to initialize SSL context");
 	    }
-	    try {
-	    	HttpsURLConnection.setDefaultSSLSocketFactory(new CustomSSLSocketFactory());
-	    } catch (Exception ex) {
-	    	HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
-	    }
+	    HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
     }
 
     clientConfig.connectorProvider(new ConnectorProvider() {
@@ -1611,12 +1615,8 @@ public class ApiClient {
                 }
         
                 if (isNonProxyHost(url.getHost(), System.getProperty("http.nonProxyHosts"))) {
-                  HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-                  try {
-                    connection.setSSLSocketFactory(new CustomSSLSocketFactory());
-                  } catch (Exception ex) {
-                    connection.setSSLSocketFactory(sslContext.getSocketFactory());
-                  }
+                  HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(Proxy.NO_PROXY);
+                  connection.setSSLSocketFactory(sslContext.getSocketFactory());
                   return connection;
                 }
         
@@ -1673,13 +1673,8 @@ public class ApiClient {
         
                 HostnameVerifier allHostsValid = new InsecureHostnameVerifier();
                 HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(p);
-                try {
-                  connection.setSSLSocketFactory(new CustomSSLSocketFactory());
-                } catch (Exception ex) {
-                  connection.setSSLSocketFactory(sslContext.getSocketFactory());
-                }
+                connection.setSSLSocketFactory(sslContext.getSocketFactory());
                 connection.setHostnameVerifier(allHostsValid);
-                connection.setUseCaches(false);
                 return connection;
             }
         });
@@ -1689,7 +1684,6 @@ public class ApiClient {
 
     return ClientBuilder.newBuilder().
               sslContext(sslContext).
-              hostnameVerifier(new InsecureHostnameVerifier()).
               withConfig(clientConfig).build();
   }
 
@@ -1729,57 +1723,6 @@ public class ApiClient {
           return true;
       }
 
-  }
-  
-  private class CustomSSLSocketFactory extends SSLSocketFactory {
-    private CustomSSLSocketFactory() throws NoSuchAlgorithmException, KeyManagementException {
-      sslContext.init(null, new TrustManager[] { new SecureTrustManager() }, new SecureRandom());
-    }
-
-    @Override
-    public Socket createSocket(Socket socket, String host, int port, boolean autoClose)
-            throws IOException {
-      socket.setKeepAlive(true);
-      socket.setSoTimeout(0);
-      socket.connect(new InetSocketAddress(host, port), 0);
-      return sslContext.getSocketFactory().createSocket(socket, host, port, autoClose);
-    }
-
-    @Override
-    public String[] getDefaultCipherSuites() {
-      return sslContext.getSocketFactory().getDefaultCipherSuites();
-    }
-
-    @Override
-    public String[] getSupportedCipherSuites() {
-      return sslContext.getSocketFactory().getSupportedCipherSuites();
-    }
-
-    @Override
-    public Socket createSocket(String host, int port)
-            throws IOException {
-      return this.createSocket(new Socket(), host, port, true);
-    }
-
-    @Override
-    public Socket createSocket(InetAddress address, int port)
-            throws IOException {
-      return this.createSocket(new Socket(), address.getHostAddress(), port, true);
-    }
-
-
-    @Override
-    public Socket createSocket(String host, int port, InetAddress localHost, int localPort)
-            throws IOException {
-      return this.createSocket(new Socket(), host, port, true);
-    }
-
-
-    @Override
-    public Socket createSocket(InetAddress address, int port, InetAddress localAddress, int localPort)
-            throws IOException {
-      return this.createSocket(new Socket(), address.getHostAddress(), port, true);
-    }
   }
 
   protected Map<String, List<String>> buildResponseHeaders(Response response) {

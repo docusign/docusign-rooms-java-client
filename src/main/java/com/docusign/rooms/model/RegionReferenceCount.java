@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RegionReferenceCount
+ * RegionReferenceCount.
+ *
  */
 
 public class RegionReferenceCount {
@@ -19,43 +20,66 @@ public class RegionReferenceCount {
   @JsonProperty("referenceCount")
   private Integer referenceCount = null;
 
+
+  /**
+   * referenceType.
+   *
+   * @return RegionReferenceCount
+   **/
   public RegionReferenceCount referenceType(String referenceType) {
     this.referenceType = referenceType;
     return this;
   }
 
-   /**
-   * Get referenceType
+  /**
+   * Get referenceType.
    * @return referenceType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReferenceType() {
     return referenceType;
   }
 
+  /**
+   * setReferenceType.
+   **/
   public void setReferenceType(String referenceType) {
     this.referenceType = referenceType;
   }
 
+
+  /**
+   * referenceCount.
+   *
+   * @return RegionReferenceCount
+   **/
   public RegionReferenceCount referenceCount(Integer referenceCount) {
     this.referenceCount = referenceCount;
     return this;
   }
 
-   /**
-   * Get referenceCount
+  /**
+   * Get referenceCount.
    * @return referenceCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getReferenceCount() {
     return referenceCount;
   }
 
+  /**
+   * setReferenceCount.
+   **/
   public void setReferenceCount(Integer referenceCount) {
     this.referenceCount = referenceCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class RegionReferenceCount {
         Objects.equals(this.referenceCount, regionReferenceCount.referenceCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(referenceType, referenceCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

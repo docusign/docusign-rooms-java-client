@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClassicAgentToInvite
+ * ClassicAgentToInvite.
+ *
  */
 
 public class ClassicAgentToInvite {
@@ -31,115 +32,174 @@ public class ClassicAgentToInvite {
   @JsonProperty("eSignPermissionProfileId")
   private String eSignPermissionProfileId = null;
 
+
+  /**
+   * firstName.
+   *
+   * @return ClassicAgentToInvite
+   **/
   public ClassicAgentToInvite firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return ClassicAgentToInvite
+   **/
   public ClassicAgentToInvite lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * email.
+   *
+   * @return ClassicAgentToInvite
+   **/
   public ClassicAgentToInvite email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * officeId.
+   *
+   * @return ClassicAgentToInvite
+   **/
   public ClassicAgentToInvite officeId(Integer officeId) {
     this.officeId = officeId;
     return this;
   }
 
-   /**
-   * Get officeId
+  /**
+   * Get officeId.
    * @return officeId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getOfficeId() {
     return officeId;
   }
 
+  /**
+   * setOfficeId.
+   **/
   public void setOfficeId(Integer officeId) {
     this.officeId = officeId;
   }
 
+
+  /**
+   * companyTypeId.
+   *
+   * @return ClassicAgentToInvite
+   **/
   public ClassicAgentToInvite companyTypeId(String companyTypeId) {
     this.companyTypeId = companyTypeId;
     return this;
   }
 
-   /**
-   * Get companyTypeId
+  /**
+   * Get companyTypeId.
    * @return companyTypeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCompanyTypeId() {
     return companyTypeId;
   }
 
+  /**
+   * setCompanyTypeId.
+   **/
   public void setCompanyTypeId(String companyTypeId) {
     this.companyTypeId = companyTypeId;
   }
 
+
+  /**
+   * eSignPermissionProfileId.
+   *
+   * @return ClassicAgentToInvite
+   **/
   public ClassicAgentToInvite eSignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
     return this;
   }
 
-   /**
-   * Required when the company is tightly bound to an eSign account; otherwise ignored.
+  /**
+   * Required when the company is tightly bound to an eSign account; otherwise ignored..
    * @return eSignPermissionProfileId
-  **/
+   **/
   @ApiModelProperty(value = "Required when the company is tightly bound to an eSign account; otherwise ignored.")
   public String getESignPermissionProfileId() {
     return eSignPermissionProfileId;
   }
 
+  /**
+   * setESignPermissionProfileId.
+   **/
   public void setESignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -157,12 +217,18 @@ public class ClassicAgentToInvite {
         Objects.equals(this.eSignPermissionProfileId, classicAgentToInvite.eSignPermissionProfileId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(firstName, lastName, email, officeId, companyTypeId, eSignPermissionProfileId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

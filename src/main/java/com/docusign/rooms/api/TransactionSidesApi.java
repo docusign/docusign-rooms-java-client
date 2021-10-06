@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * TransactionSidesApi class.
+ *
+ **/
 public class TransactionSidesApi {
   private ApiClient apiClient;
 
+ /**
+  * TransactionSidesApi.
+  *
+  **/
   public TransactionSidesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * TransactionSidesApi.
+  *
+  **/
   public TransactionSidesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid transaction sides.
-   * 
+   * Retrieves the list of valid transaction sides..
+   * Returns a list of valid transaction sides.
    * @return GlobalTransactionSides
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class TransactionSidesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

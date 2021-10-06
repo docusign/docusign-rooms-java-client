@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomUser
+ * RoomUser.
+ *
  */
 
 public class RoomUser {
@@ -37,151 +38,228 @@ public class RoomUser {
   @JsonProperty("invitedByUserId")
   private Integer invitedByUserId = null;
 
+
+  /**
+   * userId.
+   *
+   * @return RoomUser
+   **/
   public RoomUser userId(Integer userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * Get userId
+  /**
+   * Get userId.
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(Integer userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * email.
+   *
+   * @return RoomUser
+   **/
   public RoomUser email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * firstName.
+   *
+   * @return RoomUser
+   **/
   public RoomUser firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return RoomUser
+   **/
   public RoomUser lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * transactionSideId.
+   *
+   * @return RoomUser
+   **/
   public RoomUser transactionSideId(String transactionSideId) {
     this.transactionSideId = transactionSideId;
     return this;
   }
 
-   /**
-   * Get transactionSideId
+  /**
+   * Get transactionSideId.
    * @return transactionSideId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTransactionSideId() {
     return transactionSideId;
   }
 
+  /**
+   * setTransactionSideId.
+   **/
   public void setTransactionSideId(String transactionSideId) {
     this.transactionSideId = transactionSideId;
   }
 
+
+  /**
+   * roleId.
+   *
+   * @return RoomUser
+   **/
   public RoomUser roleId(Integer roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
+  /**
+   * setRoleId.
+   **/
   public void setRoleId(Integer roleId) {
     this.roleId = roleId;
   }
 
+
+  /**
+   * isRevoked.
+   *
+   * @return RoomUser
+   **/
   public RoomUser isRevoked(Boolean isRevoked) {
     this.isRevoked = isRevoked;
     return this;
   }
 
-   /**
-   * Get isRevoked
+  /**
+   * Get isRevoked.
    * @return isRevoked
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsRevoked() {
     return isRevoked;
   }
 
+  /**
+   * setIsRevoked.
+   **/
   public void setIsRevoked(Boolean isRevoked) {
     this.isRevoked = isRevoked;
   }
 
+
+  /**
+   * invitedByUserId.
+   *
+   * @return RoomUser
+   **/
   public RoomUser invitedByUserId(Integer invitedByUserId) {
     this.invitedByUserId = invitedByUserId;
     return this;
   }
 
-   /**
-   * Get invitedByUserId
+  /**
+   * Get invitedByUserId.
    * @return invitedByUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getInvitedByUserId() {
     return invitedByUserId;
   }
 
+  /**
+   * setInvitedByUserId.
+   **/
   public void setInvitedByUserId(Integer invitedByUserId) {
     this.invitedByUserId = invitedByUserId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -201,12 +279,18 @@ public class RoomUser {
         Objects.equals(this.invitedByUserId, roomUser.invitedByUserId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(userId, email, firstName, lastName, transactionSideId, roleId, isRevoked, invitedByUserId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

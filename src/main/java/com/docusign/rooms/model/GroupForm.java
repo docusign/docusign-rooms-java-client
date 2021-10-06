@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * GroupForm
+ * GroupForm.
+ *
  */
 
 public class GroupForm {
@@ -26,43 +27,48 @@ public class GroupForm {
   @JsonProperty("lastUpdatedDate")
   private DateTime lastUpdatedDate = null;
 
-   /**
-   * Get formId
+  /**
+   * Get formId.
    * @return formId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getFormId() {
     return formId;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-   /**
-   * Get isRequired
+  /**
+   * Get isRequired.
    * @return isRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsRequired() {
     return isRequired;
   }
 
-   /**
-   * Get lastUpdatedDate
+  /**
+   * Get lastUpdatedDate.
    * @return lastUpdatedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getLastUpdatedDate() {
     return lastUpdatedDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -78,12 +84,18 @@ public class GroupForm {
         Objects.equals(this.lastUpdatedDate, groupForm.lastUpdatedDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(formId, name, isRequired, lastUpdatedDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

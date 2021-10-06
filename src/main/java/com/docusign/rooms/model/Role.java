@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * Role
+ * Role.
+ *
  */
 
 public class Role {
@@ -39,151 +40,228 @@ public class Role {
   @JsonProperty("permissions")
   private Permissions permissions = null;
 
+
+  /**
+   * roleId.
+   *
+   * @return Role
+   **/
   public Role roleId(Integer roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
+  /**
+   * setRoleId.
+   **/
   public void setRoleId(Integer roleId) {
     this.roleId = roleId;
   }
 
+
+  /**
+   * legacyRoleId.
+   *
+   * @return Role
+   **/
   public Role legacyRoleId(String legacyRoleId) {
     this.legacyRoleId = legacyRoleId;
     return this;
   }
 
-   /**
-   * Get legacyRoleId
+  /**
+   * Get legacyRoleId.
    * @return legacyRoleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLegacyRoleId() {
     return legacyRoleId;
   }
 
+  /**
+   * setLegacyRoleId.
+   **/
   public void setLegacyRoleId(String legacyRoleId) {
     this.legacyRoleId = legacyRoleId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Role
+   **/
   public Role name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * isDefaultForAdmin.
+   *
+   * @return Role
+   **/
   public Role isDefaultForAdmin(Boolean isDefaultForAdmin) {
     this.isDefaultForAdmin = isDefaultForAdmin;
     return this;
   }
 
-   /**
-   * Get isDefaultForAdmin
+  /**
+   * Get isDefaultForAdmin.
    * @return isDefaultForAdmin
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsDefaultForAdmin() {
     return isDefaultForAdmin;
   }
 
+  /**
+   * setIsDefaultForAdmin.
+   **/
   public void setIsDefaultForAdmin(Boolean isDefaultForAdmin) {
     this.isDefaultForAdmin = isDefaultForAdmin;
   }
 
+
+  /**
+   * isExternal.
+   *
+   * @return Role
+   **/
   public Role isExternal(Boolean isExternal) {
     this.isExternal = isExternal;
     return this;
   }
 
-   /**
-   * Get isExternal
+  /**
+   * Get isExternal.
    * @return isExternal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsExternal() {
     return isExternal;
   }
 
+  /**
+   * setIsExternal.
+   **/
   public void setIsExternal(Boolean isExternal) {
     this.isExternal = isExternal;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return Role
+   **/
   public Role createdDate(DateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(DateTime createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * isAssigned.
+   *
+   * @return Role
+   **/
   public Role isAssigned(Boolean isAssigned) {
     this.isAssigned = isAssigned;
     return this;
   }
 
-   /**
-   * Get isAssigned
+  /**
+   * Get isAssigned.
    * @return isAssigned
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsAssigned() {
     return isAssigned;
   }
 
+  /**
+   * setIsAssigned.
+   **/
   public void setIsAssigned(Boolean isAssigned) {
     this.isAssigned = isAssigned;
   }
 
+
+  /**
+   * permissions.
+   *
+   * @return Role
+   **/
   public Role permissions(Permissions permissions) {
     this.permissions = permissions;
     return this;
   }
 
-   /**
-   * Get permissions
+  /**
+   * Get permissions.
    * @return permissions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Permissions getPermissions() {
     return permissions;
   }
 
+  /**
+   * setPermissions.
+   **/
   public void setPermissions(Permissions permissions) {
     this.permissions = permissions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -203,12 +281,18 @@ public class Role {
         Objects.equals(this.permissions, role.permissions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(roleId, legacyRoleId, name, isDefaultForAdmin, isExternal, createdDate, isAssigned, permissions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

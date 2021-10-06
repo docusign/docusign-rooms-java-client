@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ExternalFormFillSession
+ * ExternalFormFillSession.
+ *
  */
 
 public class ExternalFormFillSession {
   @JsonProperty("url")
   private String url = null;
 
+
+  /**
+   * url.
+   *
+   * @return ExternalFormFillSession
+   **/
   public ExternalFormFillSession url(String url) {
     this.url = url;
     return this;
   }
 
-   /**
-   * Get url
+  /**
+   * Get url.
    * @return url
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getUrl() {
     return url;
   }
 
+  /**
+   * setUrl.
+   **/
   public void setUrl(String url) {
     this.url = url;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class ExternalFormFillSession {
     return Objects.equals(this.url, externalFormFillSession.url);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(url);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FieldConfiguration
+ * FieldConfiguration.
+ *
  */
 
 public class FieldConfiguration {
@@ -42,88 +43,93 @@ public class FieldConfiguration {
   @JsonProperty("options")
   private java.util.List<SelectListFieldOption> options = null;
 
-   /**
-   * Get maxValue
+  /**
+   * Get maxValue.
    * @return maxValue
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Double getMaxValue() {
     return maxValue;
   }
 
-   /**
-   * Get minValue
+  /**
+   * Get minValue.
    * @return minValue
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Double getMinValue() {
     return minValue;
   }
 
-   /**
-   * Get multipleOf
+  /**
+   * Get multipleOf.
    * @return multipleOf
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Double getMultipleOf() {
     return multipleOf;
   }
 
-   /**
-   * Get maxLength
+  /**
+   * Get maxLength.
    * @return maxLength
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getMaxLength() {
     return maxLength;
   }
 
-   /**
-   * Get minLength
+  /**
+   * Get minLength.
    * @return minLength
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getMinLength() {
     return minLength;
   }
 
-   /**
-   * Get pattern
+  /**
+   * Get pattern.
    * @return pattern
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPattern() {
     return pattern;
   }
 
-   /**
-   * Get isPublisher
+  /**
+   * Get isPublisher.
    * @return isPublisher
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsPublisher() {
     return isPublisher;
   }
 
-   /**
-   * Get dependsOn
+  /**
+   * Get dependsOn.
    * @return dependsOn
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<DependsOn> getDependsOn() {
     return dependsOn;
   }
 
-   /**
-   * Get options
+  /**
+   * Get options.
    * @return options
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SelectListFieldOption> getOptions() {
     return options;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -144,12 +150,18 @@ public class FieldConfiguration {
         Objects.equals(this.options, fieldConfiguration.options);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(maxValue, minValue, multipleOf, maxLength, minLength, pattern, isPublisher, dependsOn, options);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

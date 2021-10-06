@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ExternalFormFillSessionForCreate
+ * ExternalFormFillSessionForCreate.
+ *
  */
 
 public class ExternalFormFillSessionForCreate {
@@ -22,61 +23,93 @@ public class ExternalFormFillSessionForCreate {
   @JsonProperty("xFrameAllowedUrl")
   private String xFrameAllowedUrl = null;
 
+
+  /**
+   * formId.
+   *
+   * @return ExternalFormFillSessionForCreate
+   **/
   public ExternalFormFillSessionForCreate formId(String formId) {
     this.formId = formId;
     return this;
   }
 
-   /**
-   * Get formId
+  /**
+   * Get formId.
    * @return formId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getFormId() {
     return formId;
   }
 
+  /**
+   * setFormId.
+   **/
   public void setFormId(String formId) {
     this.formId = formId;
   }
 
+
+  /**
+   * roomId.
+   *
+   * @return ExternalFormFillSessionForCreate
+   **/
   public ExternalFormFillSessionForCreate roomId(Integer roomId) {
     this.roomId = roomId;
     return this;
   }
 
-   /**
-   * Get roomId
+  /**
+   * Get roomId.
    * @return roomId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getRoomId() {
     return roomId;
   }
 
+  /**
+   * setRoomId.
+   **/
   public void setRoomId(Integer roomId) {
     this.roomId = roomId;
   }
 
+
+  /**
+   * xFrameAllowedUrl.
+   *
+   * @return ExternalFormFillSessionForCreate
+   **/
   public ExternalFormFillSessionForCreate xFrameAllowedUrl(String xFrameAllowedUrl) {
     this.xFrameAllowedUrl = xFrameAllowedUrl;
     return this;
   }
 
-   /**
-   * Get xFrameAllowedUrl
+  /**
+   * Get xFrameAllowedUrl.
    * @return xFrameAllowedUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getXFrameAllowedUrl() {
     return xFrameAllowedUrl;
   }
 
+  /**
+   * setXFrameAllowedUrl.
+   **/
   public void setXFrameAllowedUrl(String xFrameAllowedUrl) {
     this.xFrameAllowedUrl = xFrameAllowedUrl;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class ExternalFormFillSessionForCreate {
         Objects.equals(this.xFrameAllowedUrl, externalFormFillSessionForCreate.xFrameAllowedUrl);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(formId, roomId, xFrameAllowedUrl);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

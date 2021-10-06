@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * SellerDecisionTypesApi class.
+ *
+ **/
 public class SellerDecisionTypesApi {
   private ApiClient apiClient;
 
+ /**
+  * SellerDecisionTypesApi.
+  *
+  **/
   public SellerDecisionTypesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * SellerDecisionTypesApi.
+  *
+  **/
   public SellerDecisionTypesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid seller decision types.
-   * 
+   * Retrieves the list of valid seller decision types..
+   * Returns a list of valid seller decision types.
    * @return GlobalSellerDecisionTypes
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class SellerDecisionTypesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

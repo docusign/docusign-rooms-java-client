@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomInviteResponse
+ * RoomInviteResponse.
+ *
  */
 
 public class RoomInviteResponse {
@@ -34,70 +35,75 @@ public class RoomInviteResponse {
   @JsonProperty("roleId")
   private Integer roleId = null;
 
-   /**
-   * Get userId
+  /**
+   * Get userId.
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
 
-   /**
-   * Get roomId
+  /**
+   * Get roomId.
    * @return roomId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoomId() {
     return roomId;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFirstName() {
     return firstName;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
-   /**
-   * Get transactionSideId
+  /**
+   * Get transactionSideId.
    * @return transactionSideId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTransactionSideId() {
     return transactionSideId;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -116,12 +122,18 @@ public class RoomInviteResponse {
         Objects.equals(this.roleId, roomInviteResponse.roleId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(userId, roomId, email, firstName, lastName, transactionSideId, roleId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

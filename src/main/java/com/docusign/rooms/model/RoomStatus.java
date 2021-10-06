@@ -36,9 +36,9 @@ public enum RoomStatus {
   }
 
   @JsonCreator
-  public static RoomStatus fromValue(String text) {
+  public static RoomStatus fromValue(String value) {
     for (RoomStatus b : RoomStatus.values()) {
-      if (String.valueOf(b.value).equals(text)) {
+      if (b.value.equals(value)) {
         return b;
       }
     }

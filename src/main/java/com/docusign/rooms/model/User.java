@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * User
+ * User.
+ *
  */
 
 public class User {
@@ -57,209 +58,319 @@ public class User {
   @JsonProperty("permissions")
   private ClassicManagerPermissions permissions = null;
 
+
+  /**
+   * userId.
+   *
+   * @return User
+   **/
   public User userId(Integer userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * Get userId
+  /**
+   * Get userId.
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(Integer userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * email.
+   *
+   * @return User
+   **/
   public User email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * firstName.
+   *
+   * @return User
+   **/
   public User firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return User
+   **/
   public User lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * isLockedOut.
+   *
+   * @return User
+   **/
   public User isLockedOut(Boolean isLockedOut) {
     this.isLockedOut = isLockedOut;
     return this;
   }
 
-   /**
-   * Get isLockedOut
+  /**
+   * Get isLockedOut.
    * @return isLockedOut
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsLockedOut() {
     return isLockedOut;
   }
 
+  /**
+   * setIsLockedOut.
+   **/
   public void setIsLockedOut(Boolean isLockedOut) {
     this.isLockedOut = isLockedOut;
   }
 
+
+  /**
+   * status.
+   *
+   * @return User
+   **/
   public User status(String status) {
     this.status = status;
     return this;
   }
 
-   /**
-   * Get status
+  /**
+   * Get status.
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatus() {
     return status;
   }
 
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
 
+
+  /**
+   * accessLevel.
+   *
+   * @return User
+   **/
   public User accessLevel(AccessLevel accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
 
-   /**
-   * Get accessLevel
+  /**
+   * Get accessLevel.
    * @return accessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccessLevel getAccessLevel() {
     return accessLevel;
   }
 
+  /**
+   * setAccessLevel.
+   **/
   public void setAccessLevel(AccessLevel accessLevel) {
     this.accessLevel = accessLevel;
   }
 
+
+  /**
+   * defaultOfficeId.
+   *
+   * @return User
+   **/
   public User defaultOfficeId(Integer defaultOfficeId) {
     this.defaultOfficeId = defaultOfficeId;
     return this;
   }
 
-   /**
-   * Get defaultOfficeId
+  /**
+   * Get defaultOfficeId.
    * @return defaultOfficeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getDefaultOfficeId() {
     return defaultOfficeId;
   }
 
+  /**
+   * setDefaultOfficeId.
+   **/
   public void setDefaultOfficeId(Integer defaultOfficeId) {
     this.defaultOfficeId = defaultOfficeId;
   }
 
+
+  /**
+   * titleId.
+   *
+   * @return User
+   **/
   public User titleId(Integer titleId) {
     this.titleId = titleId;
     return this;
   }
 
-   /**
-   * Get titleId
+  /**
+   * Get titleId.
    * @return titleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTitleId() {
     return titleId;
   }
 
+  /**
+   * setTitleId.
+   **/
   public void setTitleId(Integer titleId) {
     this.titleId = titleId;
   }
 
+
+  /**
+   * roleId.
+   *
+   * @return User
+   **/
   public User roleId(Integer roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
+  /**
+   * setRoleId.
+   **/
   public void setRoleId(Integer roleId) {
     this.roleId = roleId;
   }
 
+
+  /**
+   * profileImageUrl.
+   *
+   * @return User
+   **/
   public User profileImageUrl(String profileImageUrl) {
     this.profileImageUrl = profileImageUrl;
     return this;
   }
 
-   /**
-   * Get profileImageUrl
+  /**
+   * Get profileImageUrl.
    * @return profileImageUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getProfileImageUrl() {
     return profileImageUrl;
   }
 
+  /**
+   * setProfileImageUrl.
+   **/
   public void setProfileImageUrl(String profileImageUrl) {
     this.profileImageUrl = profileImageUrl;
   }
 
+
+  /**
+   * offices.
+   *
+   * @return User
+   **/
   public User offices(java.util.List<Integer> offices) {
     this.offices = offices;
     return this;
   }
-
+  
+  /**
+   * addOfficesItem.
+   *
+   * @return User
+   **/
   public User addOfficesItem(Integer officesItem) {
     if (this.offices == null) {
       this.offices = new java.util.ArrayList<Integer>();
@@ -268,24 +379,38 @@ public class User {
     return this;
   }
 
-   /**
-   * Get offices
+  /**
+   * Get offices.
    * @return offices
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Integer> getOffices() {
     return offices;
   }
 
+  /**
+   * setOffices.
+   **/
   public void setOffices(java.util.List<Integer> offices) {
     this.offices = offices;
   }
 
+
+  /**
+   * regions.
+   *
+   * @return User
+   **/
   public User regions(java.util.List<Integer> regions) {
     this.regions = regions;
     return this;
   }
-
+  
+  /**
+   * addRegionsItem.
+   *
+   * @return User
+   **/
   public User addRegionsItem(Integer regionsItem) {
     if (this.regions == null) {
       this.regions = new java.util.ArrayList<Integer>();
@@ -294,38 +419,55 @@ public class User {
     return this;
   }
 
-   /**
-   * Get regions
+  /**
+   * Get regions.
    * @return regions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Integer> getRegions() {
     return regions;
   }
 
+  /**
+   * setRegions.
+   **/
   public void setRegions(java.util.List<Integer> regions) {
     this.regions = regions;
   }
 
+
+  /**
+   * permissions.
+   *
+   * @return User
+   **/
   public User permissions(ClassicManagerPermissions permissions) {
     this.permissions = permissions;
     return this;
   }
 
-   /**
-   * Get permissions
+  /**
+   * Get permissions.
    * @return permissions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ClassicManagerPermissions getPermissions() {
     return permissions;
   }
 
+  /**
+   * setPermissions.
+   **/
   public void setPermissions(ClassicManagerPermissions permissions) {
     this.permissions = permissions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -351,12 +493,18 @@ public class User {
         Objects.equals(this.permissions, user.permissions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(userId, email, firstName, lastName, isLockedOut, status, accessLevel, defaultOfficeId, titleId, roleId, profileImageUrl, offices, regions, permissions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

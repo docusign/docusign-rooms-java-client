@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoleForCreate
+ * RoleForCreate.
+ *
  */
 
 public class RoleForCreate {
@@ -23,61 +24,93 @@ public class RoleForCreate {
   @JsonProperty("permissions")
   private Permissions permissions = null;
 
+
+  /**
+   * name.
+   *
+   * @return RoleForCreate
+   **/
   public RoleForCreate name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * isExternal.
+   *
+   * @return RoleForCreate
+   **/
   public RoleForCreate isExternal(Boolean isExternal) {
     this.isExternal = isExternal;
     return this;
   }
 
-   /**
-   * Get isExternal
+  /**
+   * Get isExternal.
    * @return isExternal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsExternal() {
     return isExternal;
   }
 
+  /**
+   * setIsExternal.
+   **/
   public void setIsExternal(Boolean isExternal) {
     this.isExternal = isExternal;
   }
 
+
+  /**
+   * permissions.
+   *
+   * @return RoleForCreate
+   **/
   public RoleForCreate permissions(Permissions permissions) {
     this.permissions = permissions;
     return this;
   }
 
-   /**
-   * Get permissions
+  /**
+   * Get permissions.
    * @return permissions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Permissions getPermissions() {
     return permissions;
   }
 
+  /**
+   * setPermissions.
+   **/
   public void setPermissions(Permissions permissions) {
     this.permissions = permissions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class RoleForCreate {
         Objects.equals(this.permissions, roleForCreate.permissions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(name, isExternal, permissions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

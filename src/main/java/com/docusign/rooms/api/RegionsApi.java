@@ -11,30 +11,52 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * RegionsApi class.
+ *
+ **/
 public class RegionsApi {
   private ApiClient apiClient;
 
+ /**
+  * RegionsApi.
+  *
+  **/
   public RegionsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * RegionsApi.
+  *
+  **/
   public RegionsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
+   * Creates a new region for a company.
    * Creates a new region for a company
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return Region
    * @throws ApiException if fails to make API call
@@ -80,9 +102,9 @@ public class RegionsApi {
       }
 
   /**
+   * Delete a region..
    * Delete a region.
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param regionId Id of the desired region (required)
    * @throws ApiException if fails to make API call
    */
@@ -122,7 +144,7 @@ public class RegionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -133,9 +155,9 @@ public class RegionsApi {
   }
 
   /**
+   * Get information about the region with the given regionId.
    * Get information about the region with the given regionId
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param regionId Id of the desired region (required)
    * @return Region
    * @throws ApiException if fails to make API call
@@ -176,7 +198,7 @@ public class RegionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -187,9 +209,9 @@ public class RegionsApi {
       }
 
   /**
-   * Get region reference counts.
-   * 
-   * @param accountId  (required)
+   * Get region reference counts..
+   * This method returns a list of each type of object and the number of objects of that type referencing the specified region.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param regionId Id of the desired region (required)
    * @return RegionReferenceCountList
    * @throws ApiException if fails to make API call
@@ -230,7 +252,7 @@ public class RegionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -240,49 +262,72 @@ public class RegionsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Get account  
+  /// Get account regions. Returns a list of regions that are associated with a Rooms account.
   /// </summary>
+
+ /**
+  * GetRegionsOptions Class.
+  *
+  **/
   public class GetRegionsOptions
   {
   private Integer count = null;
   private Integer startPosition = null;
   private Boolean managedOnly = null;
-  /*
-   * Number of regions to include in the response, (Default 100). 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Position in the overall list of regions to begin results. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * When true, the response only includes regions that the calling user can manage. 
-   */
+  
+ /**
+  * setManagedOnly method.
+  */
   public void setManagedOnly(Boolean managedOnly) {
     this.managedOnly = managedOnly;
   }
 
+ /**
+  * getManagedOnly method.
+  *
+  * @return Boolean
+  */
   public Boolean getManagedOnly() {
     return this.managedOnly;
   }
   }
 
    /**
-   * Get account 
-   * 
-   * @param accountId  (required)
+   * Get account regions..
+   * Returns a list of regions that are associated with a Rooms account.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return RegionSummaryList
    */ 
   public RegionSummaryList getRegions(String accountId) throws ApiException {
@@ -290,9 +335,9 @@ public class RegionsApi {
   }
 
   /**
-   * Get account 
-   * 
-   * @param accountId  (required)
+   * Get account regions..
+   * Returns a list of regions that are associated with a Rooms account.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return RegionSummaryList
    * @throws ApiException if fails to make API call
@@ -333,7 +378,7 @@ public class RegionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

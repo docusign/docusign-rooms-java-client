@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoleSummaryList
+ * RoleSummaryList.
+ *
  */
 
 public class RoleSummaryList {
@@ -35,11 +36,22 @@ public class RoleSummaryList {
   @JsonProperty("totalRowCount")
   private Integer totalRowCount = null;
 
+
+  /**
+   * roles.
+   *
+   * @return RoleSummaryList
+   **/
   public RoleSummaryList roles(java.util.List<RoleSummary> roles) {
     this.roles = roles;
     return this;
   }
-
+  
+  /**
+   * addRolesItem.
+   *
+   * @return RoleSummaryList
+   **/
   public RoleSummaryList addRolesItem(RoleSummary rolesItem) {
     if (this.roles == null) {
       this.roles = new java.util.ArrayList<RoleSummary>();
@@ -48,119 +60,172 @@ public class RoleSummaryList {
     return this;
   }
 
-   /**
-   * Get roles
+  /**
+   * Get roles.
    * @return roles
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RoleSummary> getRoles() {
     return roles;
   }
 
+  /**
+   * setRoles.
+   **/
   public void setRoles(java.util.List<RoleSummary> roles) {
     this.roles = roles;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return RoleSummaryList
+   **/
   public RoleSummaryList resultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * Get resultSetSize
+  /**
+   * Get resultSetSize.
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return RoleSummaryList
+   **/
   public RoleSummaryList startPosition(Integer startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Get startPosition
+  /**
+   * Get startPosition.
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
-   /**
-   * Get endPosition
+  /**
+   * Get endPosition.
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getEndPosition() {
     return endPosition;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return RoleSummaryList
+   **/
   public RoleSummaryList nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * Get nextUri
+  /**
+   * Get nextUri.
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * priorUri.
+   *
+   * @return RoleSummaryList
+   **/
   public RoleSummaryList priorUri(String priorUri) {
     this.priorUri = priorUri;
     return this;
   }
 
-   /**
-   * Get priorUri
+  /**
+   * Get priorUri.
    * @return priorUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPriorUri() {
     return priorUri;
   }
 
+  /**
+   * setPriorUri.
+   **/
   public void setPriorUri(String priorUri) {
     this.priorUri = priorUri;
   }
 
+
+  /**
+   * totalRowCount.
+   *
+   * @return RoleSummaryList
+   **/
   public RoleSummaryList totalRowCount(Integer totalRowCount) {
     this.totalRowCount = totalRowCount;
     return this;
   }
 
-   /**
-   * Get totalRowCount
+  /**
+   * Get totalRowCount.
    * @return totalRowCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTotalRowCount() {
     return totalRowCount;
   }
 
+  /**
+   * setTotalRowCount.
+   **/
   public void setTotalRowCount(Integer totalRowCount) {
     this.totalRowCount = totalRowCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -179,12 +244,18 @@ public class RoleSummaryList {
         Objects.equals(this.totalRowCount, roleSummaryList.totalRowCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(roles, resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

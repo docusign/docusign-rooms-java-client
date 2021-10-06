@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * Room
+ * Room.
+ *
  */
 
 public class Room {
@@ -51,223 +52,336 @@ public class Room {
   @JsonProperty("fieldData")
   private FieldData fieldData = null;
 
+
+  /**
+   * roomId.
+   *
+   * @return Room
+   **/
   public Room roomId(Integer roomId) {
     this.roomId = roomId;
     return this;
   }
 
-   /**
-   * Get roomId
+  /**
+   * Get roomId.
    * @return roomId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoomId() {
     return roomId;
   }
 
+  /**
+   * setRoomId.
+   **/
   public void setRoomId(Integer roomId) {
     this.roomId = roomId;
   }
 
+
+  /**
+   * companyId.
+   *
+   * @return Room
+   **/
   public Room companyId(Integer companyId) {
     this.companyId = companyId;
     return this;
   }
 
-   /**
-   * Get companyId
+  /**
+   * Get companyId.
    * @return companyId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getCompanyId() {
     return companyId;
   }
 
+  /**
+   * setCompanyId.
+   **/
   public void setCompanyId(Integer companyId) {
     this.companyId = companyId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Room
+   **/
   public Room name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * officeId.
+   *
+   * @return Room
+   **/
   public Room officeId(Integer officeId) {
     this.officeId = officeId;
     return this;
   }
 
-   /**
-   * Get officeId
+  /**
+   * Get officeId.
    * @return officeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOfficeId() {
     return officeId;
   }
 
+  /**
+   * setOfficeId.
+   **/
   public void setOfficeId(Integer officeId) {
     this.officeId = officeId;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return Room
+   **/
   public Room createdDate(DateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(DateTime createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * submittedForReviewDate.
+   *
+   * @return Room
+   **/
   public Room submittedForReviewDate(DateTime submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
     return this;
   }
 
-   /**
-   * Get submittedForReviewDate
+  /**
+   * Get submittedForReviewDate.
    * @return submittedForReviewDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
+  /**
+   * setSubmittedForReviewDate.
+   **/
   public void setSubmittedForReviewDate(DateTime submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
   }
 
+
+  /**
+   * closedDate.
+   *
+   * @return Room
+   **/
   public Room closedDate(DateTime closedDate) {
     this.closedDate = closedDate;
     return this;
   }
 
-   /**
-   * Get closedDate
+  /**
+   * Get closedDate.
    * @return closedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getClosedDate() {
     return closedDate;
   }
 
+  /**
+   * setClosedDate.
+   **/
   public void setClosedDate(DateTime closedDate) {
     this.closedDate = closedDate;
   }
 
+
+  /**
+   * rejectedDate.
+   *
+   * @return Room
+   **/
   public Room rejectedDate(DateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
 
-   /**
-   * Get rejectedDate
+  /**
+   * Get rejectedDate.
    * @return rejectedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getRejectedDate() {
     return rejectedDate;
   }
 
+  /**
+   * setRejectedDate.
+   **/
   public void setRejectedDate(DateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
+
+  /**
+   * createdByUserId.
+   *
+   * @return Room
+   **/
   public Room createdByUserId(Integer createdByUserId) {
     this.createdByUserId = createdByUserId;
     return this;
   }
 
-   /**
-   * Get createdByUserId
+  /**
+   * Get createdByUserId.
    * @return createdByUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getCreatedByUserId() {
     return createdByUserId;
   }
 
+  /**
+   * setCreatedByUserId.
+   **/
   public void setCreatedByUserId(Integer createdByUserId) {
     this.createdByUserId = createdByUserId;
   }
 
+
+  /**
+   * rejectedByUserId.
+   *
+   * @return Room
+   **/
   public Room rejectedByUserId(Integer rejectedByUserId) {
     this.rejectedByUserId = rejectedByUserId;
     return this;
   }
 
-   /**
-   * Get rejectedByUserId
+  /**
+   * Get rejectedByUserId.
    * @return rejectedByUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRejectedByUserId() {
     return rejectedByUserId;
   }
 
+  /**
+   * setRejectedByUserId.
+   **/
   public void setRejectedByUserId(Integer rejectedByUserId) {
     this.rejectedByUserId = rejectedByUserId;
   }
 
+
+  /**
+   * closedStatusId.
+   *
+   * @return Room
+   **/
   public Room closedStatusId(String closedStatusId) {
     this.closedStatusId = closedStatusId;
     return this;
   }
 
-   /**
-   * Get closedStatusId
+  /**
+   * Get closedStatusId.
    * @return closedStatusId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClosedStatusId() {
     return closedStatusId;
   }
 
+  /**
+   * setClosedStatusId.
+   **/
   public void setClosedStatusId(String closedStatusId) {
     this.closedStatusId = closedStatusId;
   }
 
+
+  /**
+   * fieldData.
+   *
+   * @return Room
+   **/
   public Room fieldData(FieldData fieldData) {
     this.fieldData = fieldData;
     return this;
   }
 
-   /**
-   * Get fieldData
+  /**
+   * Get fieldData.
    * @return fieldData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public FieldData getFieldData() {
     return fieldData;
   }
 
+  /**
+   * setFieldData.
+   **/
   public void setFieldData(FieldData fieldData) {
     this.fieldData = fieldData;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -291,12 +405,18 @@ public class Room {
         Objects.equals(this.fieldData, room.fieldData);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(roomId, companyId, name, officeId, createdDate, submittedForReviewDate, closedDate, rejectedDate, createdByUserId, rejectedByUserId, closedStatusId, fieldData);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

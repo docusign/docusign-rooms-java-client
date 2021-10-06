@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * RoleSummary
+ * RoleSummary.
+ *
  */
 
 public class RoleSummary {
@@ -32,115 +33,174 @@ public class RoleSummary {
   @JsonProperty("createdDate")
   private DateTime createdDate = null;
 
+
+  /**
+   * roleId.
+   *
+   * @return RoleSummary
+   **/
   public RoleSummary roleId(Integer roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
+  /**
+   * setRoleId.
+   **/
   public void setRoleId(Integer roleId) {
     this.roleId = roleId;
   }
 
+
+  /**
+   * legacyRoleId.
+   *
+   * @return RoleSummary
+   **/
   public RoleSummary legacyRoleId(String legacyRoleId) {
     this.legacyRoleId = legacyRoleId;
     return this;
   }
 
-   /**
-   * Get legacyRoleId
+  /**
+   * Get legacyRoleId.
    * @return legacyRoleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLegacyRoleId() {
     return legacyRoleId;
   }
 
+  /**
+   * setLegacyRoleId.
+   **/
   public void setLegacyRoleId(String legacyRoleId) {
     this.legacyRoleId = legacyRoleId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return RoleSummary
+   **/
   public RoleSummary name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * isDefaultForAdmin.
+   *
+   * @return RoleSummary
+   **/
   public RoleSummary isDefaultForAdmin(Boolean isDefaultForAdmin) {
     this.isDefaultForAdmin = isDefaultForAdmin;
     return this;
   }
 
-   /**
-   * Get isDefaultForAdmin
+  /**
+   * Get isDefaultForAdmin.
    * @return isDefaultForAdmin
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsDefaultForAdmin() {
     return isDefaultForAdmin;
   }
 
+  /**
+   * setIsDefaultForAdmin.
+   **/
   public void setIsDefaultForAdmin(Boolean isDefaultForAdmin) {
     this.isDefaultForAdmin = isDefaultForAdmin;
   }
 
+
+  /**
+   * isExternal.
+   *
+   * @return RoleSummary
+   **/
   public RoleSummary isExternal(Boolean isExternal) {
     this.isExternal = isExternal;
     return this;
   }
 
-   /**
-   * Get isExternal
+  /**
+   * Get isExternal.
    * @return isExternal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsExternal() {
     return isExternal;
   }
 
+  /**
+   * setIsExternal.
+   **/
   public void setIsExternal(Boolean isExternal) {
     this.isExternal = isExternal;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return RoleSummary
+   **/
   public RoleSummary createdDate(DateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(DateTime createdDate) {
     this.createdDate = createdDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -158,12 +218,18 @@ public class RoleSummary {
         Objects.equals(this.createdDate, roleSummary.createdDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(roleId, legacyRoleId, name, isDefaultForAdmin, isExternal, createdDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -11,30 +11,52 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * TaskListsApi class.
+ *
+ **/
 public class TaskListsApi {
   private ApiClient apiClient;
 
+ /**
+  * TaskListsApi.
+  *
+  **/
   public TaskListsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * TaskListsApi.
+  *
+  **/
   public TaskListsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Add a task list to a room based on a task list template.
-   * 
-   * @param accountId  (required)
+   * Add a task list to a room based on a task list template..
+   * Applies a task list to a room, based on the &#x60;taskTemplateId&#x60; that you specify in the &#x60;taskList&#x60; request body.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId Room ID. (required)
    * @param body  (optional)
    * @return TaskList
@@ -87,9 +109,9 @@ public class TaskListsApi {
       }
 
   /**
-   * Deletes a task list. If there are attached documents they will remain in the associated 
-   * 
-   * @param accountId  (required)
+   * Deletes a task list. If there are attached documents they will remain in the associated room..
+   * Deletes the specified task list from a room. If there are attached documents, they will remain in the associated room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param taskListId Task List ID (required)
    * @throws ApiException if fails to make API call
    */
@@ -129,7 +151,7 @@ public class TaskListsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -140,9 +162,9 @@ public class TaskListsApi {
   }
 
   /**
-   * Returns the summary for all viewable task lists in a 
-   * 
-   * @param accountId  (required)
+   * Returns the summary for all viewable task lists in a room..
+   * Returns the task lists associated with a room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId Room ID (required)
    * @return TaskListSummaryList
    * @throws ApiException if fails to make API call
@@ -183,7 +205,7 @@ public class TaskListsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

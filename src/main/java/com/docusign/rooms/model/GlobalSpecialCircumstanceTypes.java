@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalSpecialCircumstanceTypes
+ * GlobalSpecialCircumstanceTypes.
+ *
  */
 
 public class GlobalSpecialCircumstanceTypes {
   @JsonProperty("specialCircumstanceTypes")
   private java.util.List<SpecialCircumstanceType> specialCircumstanceTypes = null;
 
+
+  /**
+   * specialCircumstanceTypes.
+   *
+   * @return GlobalSpecialCircumstanceTypes
+   **/
   public GlobalSpecialCircumstanceTypes specialCircumstanceTypes(java.util.List<SpecialCircumstanceType> specialCircumstanceTypes) {
     this.specialCircumstanceTypes = specialCircumstanceTypes;
     return this;
   }
-
+  
+  /**
+   * addSpecialCircumstanceTypesItem.
+   *
+   * @return GlobalSpecialCircumstanceTypes
+   **/
   public GlobalSpecialCircumstanceTypes addSpecialCircumstanceTypesItem(SpecialCircumstanceType specialCircumstanceTypesItem) {
     if (this.specialCircumstanceTypes == null) {
       this.specialCircumstanceTypes = new java.util.ArrayList<SpecialCircumstanceType>();
@@ -30,20 +42,28 @@ public class GlobalSpecialCircumstanceTypes {
     return this;
   }
 
-   /**
-   * Get specialCircumstanceTypes
+  /**
+   * Get specialCircumstanceTypes.
    * @return specialCircumstanceTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SpecialCircumstanceType> getSpecialCircumstanceTypes() {
     return specialCircumstanceTypes;
   }
 
+  /**
+   * setSpecialCircumstanceTypes.
+   **/
   public void setSpecialCircumstanceTypes(java.util.List<SpecialCircumstanceType> specialCircumstanceTypes) {
     this.specialCircumstanceTypes = specialCircumstanceTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalSpecialCircumstanceTypes {
     return Objects.equals(this.specialCircumstanceTypes, globalSpecialCircumstanceTypes.specialCircumstanceTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(specialCircumstanceTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

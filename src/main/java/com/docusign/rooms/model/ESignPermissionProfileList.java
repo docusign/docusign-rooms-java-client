@@ -10,23 +10,29 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ESignPermissionProfileList
+ * ESignPermissionProfileList.
+ *
  */
 
 public class ESignPermissionProfileList {
   @JsonProperty("permissionProfiles")
   private java.util.List<ESignPermissionProfile> permissionProfiles = null;
 
-   /**
-   * Get permissionProfiles
+  /**
+   * Get permissionProfiles.
    * @return permissionProfiles
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ESignPermissionProfile> getPermissionProfiles() {
     return permissionProfiles;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -39,12 +45,18 @@ public class ESignPermissionProfileList {
     return Objects.equals(this.permissionProfiles, esignPermissionProfileList.permissionProfiles);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(permissionProfiles);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

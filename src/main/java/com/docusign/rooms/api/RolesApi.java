@@ -11,30 +11,52 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * RolesApi class.
+ *
+ **/
 public class RolesApi {
   private ApiClient apiClient;
 
+ /**
+  * RolesApi.
+  *
+  **/
   public RolesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * RolesApi.
+  *
+  **/
   public RolesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Creates a role.
-   * 
-   * @param accountId  (required)
+   * Creates a role..
+   * Creates a new company role in Rooms
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return Role
    * @throws ApiException if fails to make API call
@@ -80,10 +102,10 @@ public class RolesApi {
       }
 
   /**
-   * Deletes the role with the given roleId.
-   * 
-   * @param accountId  (required)
-   * @param roleId  (required)
+   * Deletes the role with the given roleId..
+   * Deletes a role from a company account in Rooms
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roleId The id of the role. (required)
    * @throws ApiException if fails to make API call
    */
   public void deleteRole(String accountId, Integer roleId) throws ApiException {
@@ -122,7 +144,7 @@ public class RolesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -132,28 +154,39 @@ public class RolesApi {
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
   /// <summary>
-  /// Get information about the role with the given roleId. 
+  /// Get information about the role with the given roleId. Get information about the role with the given roleId.
   /// </summary>
+
+ /**
+  * GetRoleOptions Class.
+  *
+  **/
   public class GetRoleOptions
   {
   private Boolean includeIsAssigned = null;
-  /*
-   *  
-   */
+  
+ /**
+  * setIncludeIsAssigned method.
+  */
   public void setIncludeIsAssigned(Boolean includeIsAssigned) {
     this.includeIsAssigned = includeIsAssigned;
   }
 
+ /**
+  * getIncludeIsAssigned method.
+  *
+  * @return Boolean
+  */
   public Boolean getIncludeIsAssigned() {
     return this.includeIsAssigned;
   }
   }
 
    /**
+   * Get information about the role with the given roleId..
    * Get information about the role with the given roleId.
-   * 
-   * @param accountId  (required)
-   * @param roleId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roleId The id of the role. (required)
    * @return Role
    */ 
   public Role getRole(String accountId, Integer roleId) throws ApiException {
@@ -161,10 +194,10 @@ public class RolesApi {
   }
 
   /**
+   * Get information about the role with the given roleId..
    * Get information about the role with the given roleId.
-   * 
-   * @param accountId  (required)
-   * @param roleId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roleId The id of the role. (required)
    * @param options for modifying the method behavior.
    * @return Role
    * @throws ApiException if fails to make API call
@@ -207,7 +240,7 @@ public class RolesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -217,60 +250,106 @@ public class RolesApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Gets a paged-list of roles in your company 
+  /// Gets a paged-list of roles in your company Returns a list of roles associated with a company account
   /// </summary>
+
+ /**
+  * GetRolesOptions Class.
+  *
+  **/
   public class GetRolesOptions
   {
   private Boolean onlyAssignable = null;
+  private String filterContext = null;
   private String filter = null;
   private Integer startPosition = null;
   private Integer count = null;
-  /*
-   *  
-   */
+  
+ /**
+  * setOnlyAssignable method.
+  */
   public void setOnlyAssignable(Boolean onlyAssignable) {
     this.onlyAssignable = onlyAssignable;
   }
 
+ /**
+  * getOnlyAssignable method.
+  *
+  * @return Boolean
+  */
   public Boolean getOnlyAssignable() {
     return this.onlyAssignable;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setFilterContext method.
+  */
+  public void setFilterContext(String filterContext) {
+    this.filterContext = filterContext;
+  }
+
+ /**
+  * getFilterContext method.
+  *
+  * @return String
+  */
+  public String getFilterContext() {
+    return this.filterContext;
+  }
+  
+ /**
+  * setFilter method.
+  */
   public void setFilter(String filter) {
     this.filter = filter;
   }
 
+ /**
+  * getFilter method.
+  *
+  * @return String
+  */
   public String getFilter() {
     return this.filter;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
   }
 
    /**
-   * Gets a paged-list of roles in your company
-   * 
-   * @param accountId  (required)
+   * Gets a paged-list of roles in your company.
+   * Returns a list of roles associated with a company account
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return RoleSummaryList
    */ 
   public RoleSummaryList getRoles(String accountId) throws ApiException {
@@ -278,9 +357,9 @@ public class RolesApi {
   }
 
   /**
-   * Gets a paged-list of roles in your company
-   * 
-   * @param accountId  (required)
+   * Gets a paged-list of roles in your company.
+   * Returns a list of roles associated with a company account
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return RoleSummaryList
    * @throws ApiException if fails to make API call
@@ -306,6 +385,8 @@ public class RolesApi {
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("onlyAssignable", options.onlyAssignable));
     }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("filterContext", options.filterContext));
+    }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("filter", options.filter));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("startPosition", options.startPosition));
@@ -323,7 +404,7 @@ public class RolesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -334,10 +415,10 @@ public class RolesApi {
       }
 
   /**
+   * Updates the role with the given roleId..
    * Updates the role with the given roleId.
-   * 
-   * @param accountId  (required)
-   * @param roleId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roleId The id of the role. (required)
    * @param body  (optional)
    * @return Role
    * @throws ApiException if fails to make API call

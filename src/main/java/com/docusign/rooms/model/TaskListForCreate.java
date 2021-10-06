@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TaskListForCreate
+ * TaskListForCreate.
+ *
  */
 
 public class TaskListForCreate {
   @JsonProperty("taskListTemplateId")
   private Integer taskListTemplateId = null;
 
+
+  /**
+   * taskListTemplateId.
+   *
+   * @return TaskListForCreate
+   **/
   public TaskListForCreate taskListTemplateId(Integer taskListTemplateId) {
     this.taskListTemplateId = taskListTemplateId;
     return this;
   }
 
-   /**
-   * Get taskListTemplateId
+  /**
+   * Get taskListTemplateId.
    * @return taskListTemplateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTaskListTemplateId() {
     return taskListTemplateId;
   }
 
+  /**
+   * setTaskListTemplateId.
+   **/
   public void setTaskListTemplateId(Integer taskListTemplateId) {
     this.taskListTemplateId = taskListTemplateId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class TaskListForCreate {
     return Objects.equals(this.taskListTemplateId, taskListForCreate.taskListTemplateId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(taskListTemplateId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * TimeZonesApi class.
+ *
+ **/
 public class TimeZonesApi {
   private ApiClient apiClient;
 
+ /**
+  * TimeZonesApi.
+  *
+  **/
   public TimeZonesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * TimeZonesApi.
+  *
+  **/
   public TimeZonesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid time zones.
-   * 
+   * Retrieves the list of valid time zones..
+   * Gets a list of time zones that you can assign to an office.
    * @return GlobalTimeZones
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class TimeZonesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

@@ -11,58 +11,97 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * RoomFoldersApi class.
+ *
+ **/
 public class RoomFoldersApi {
   private ApiClient apiClient;
 
+ /**
+  * RoomFoldersApi.
+  *
+  **/
   public RoomFoldersApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * RoomFoldersApi.
+  *
+  **/
   public RoomFoldersApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
   /// <summary>
-  /// Gets room folders accessible to the calling user. 
+  /// Gets room folders accessible to the calling user. Gets a list of room folders in the specified room that are accessible to the current user.
   /// </summary>
+
+ /**
+  * GetRoomFoldersOptions Class.
+  *
+  **/
   public class GetRoomFoldersOptions
   {
   private Integer startPosition = null;
   private Integer count = null;
-  /*
-   * Position of the first item in the total results. Defaults to 0. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * Number of room folders to return. Defaults to the maximum which is 100. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
   }
 
    /**
-   * Gets room folders accessible to the calling user.
-   * 
-   * @param accountId  (required)
+   * Gets room folders accessible to the calling user..
+   * Gets a list of room folders in the specified room that are accessible to the current user.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId The room id from which to retrieve folders. (required)
    * @return RoomFolderList
    */ 
@@ -71,9 +110,9 @@ public class RoomFoldersApi {
   }
 
   /**
-   * Gets room folders accessible to the calling user.
-   * 
-   * @param accountId  (required)
+   * Gets room folders accessible to the calling user..
+   * Gets a list of room folders in the specified room that are accessible to the current user.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId The room id from which to retrieve folders. (required)
    * @param options for modifying the method behavior.
    * @return RoomFolderList
@@ -119,7 +158,7 @@ public class RoomFoldersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

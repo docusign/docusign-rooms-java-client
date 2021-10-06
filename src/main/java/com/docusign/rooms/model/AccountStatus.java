@@ -32,9 +32,9 @@ public enum AccountStatus {
   }
 
   @JsonCreator
-  public static AccountStatus fromValue(String text) {
+  public static AccountStatus fromValue(String value) {
     for (AccountStatus b : AccountStatus.values()) {
-      if (String.valueOf(b.value).equals(text)) {
+      if (b.value.equals(value)) {
         return b;
       }
     }

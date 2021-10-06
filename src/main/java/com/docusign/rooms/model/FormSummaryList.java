@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FormSummaryList
+ * FormSummaryList.
+ *
  */
 
 public class FormSummaryList {
@@ -35,11 +36,22 @@ public class FormSummaryList {
   @JsonProperty("totalRowCount")
   private Integer totalRowCount = null;
 
+
+  /**
+   * forms.
+   *
+   * @return FormSummaryList
+   **/
   public FormSummaryList forms(java.util.List<FormSummary> forms) {
     this.forms = forms;
     return this;
   }
-
+  
+  /**
+   * addFormsItem.
+   *
+   * @return FormSummaryList
+   **/
   public FormSummaryList addFormsItem(FormSummary formsItem) {
     if (this.forms == null) {
       this.forms = new java.util.ArrayList<FormSummary>();
@@ -48,119 +60,172 @@ public class FormSummaryList {
     return this;
   }
 
-   /**
-   * Get forms
+  /**
+   * Get forms.
    * @return forms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<FormSummary> getForms() {
     return forms;
   }
 
+  /**
+   * setForms.
+   **/
   public void setForms(java.util.List<FormSummary> forms) {
     this.forms = forms;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return FormSummaryList
+   **/
   public FormSummaryList resultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * Get resultSetSize
+  /**
+   * Get resultSetSize.
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return FormSummaryList
+   **/
   public FormSummaryList startPosition(Integer startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Get startPosition
+  /**
+   * Get startPosition.
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
-   /**
-   * Get endPosition
+  /**
+   * Get endPosition.
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getEndPosition() {
     return endPosition;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return FormSummaryList
+   **/
   public FormSummaryList nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * Get nextUri
+  /**
+   * Get nextUri.
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * priorUri.
+   *
+   * @return FormSummaryList
+   **/
   public FormSummaryList priorUri(String priorUri) {
     this.priorUri = priorUri;
     return this;
   }
 
-   /**
-   * Get priorUri
+  /**
+   * Get priorUri.
    * @return priorUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPriorUri() {
     return priorUri;
   }
 
+  /**
+   * setPriorUri.
+   **/
   public void setPriorUri(String priorUri) {
     this.priorUri = priorUri;
   }
 
+
+  /**
+   * totalRowCount.
+   *
+   * @return FormSummaryList
+   **/
   public FormSummaryList totalRowCount(Integer totalRowCount) {
     this.totalRowCount = totalRowCount;
     return this;
   }
 
-   /**
-   * Get totalRowCount
+  /**
+   * Get totalRowCount.
    * @return totalRowCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTotalRowCount() {
     return totalRowCount;
   }
 
+  /**
+   * setTotalRowCount.
+   **/
   public void setTotalRowCount(Integer totalRowCount) {
     this.totalRowCount = totalRowCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -179,12 +244,18 @@ public class FormSummaryList {
         Objects.equals(this.totalRowCount, formSummaryList.totalRowCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(forms, resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

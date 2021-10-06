@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalPropertyTypes
+ * GlobalPropertyTypes.
+ *
  */
 
 public class GlobalPropertyTypes {
   @JsonProperty("propertyTypes")
   private java.util.List<PropertyType> propertyTypes = null;
 
+
+  /**
+   * propertyTypes.
+   *
+   * @return GlobalPropertyTypes
+   **/
   public GlobalPropertyTypes propertyTypes(java.util.List<PropertyType> propertyTypes) {
     this.propertyTypes = propertyTypes;
     return this;
   }
-
+  
+  /**
+   * addPropertyTypesItem.
+   *
+   * @return GlobalPropertyTypes
+   **/
   public GlobalPropertyTypes addPropertyTypesItem(PropertyType propertyTypesItem) {
     if (this.propertyTypes == null) {
       this.propertyTypes = new java.util.ArrayList<PropertyType>();
@@ -30,20 +42,28 @@ public class GlobalPropertyTypes {
     return this;
   }
 
-   /**
-   * Get propertyTypes
+  /**
+   * Get propertyTypes.
    * @return propertyTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<PropertyType> getPropertyTypes() {
     return propertyTypes;
   }
 
+  /**
+   * setPropertyTypes.
+   **/
   public void setPropertyTypes(java.util.List<PropertyType> propertyTypes) {
     this.propertyTypes = propertyTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalPropertyTypes {
     return Objects.equals(this.propertyTypes, globalPropertyTypes.propertyTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(propertyTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

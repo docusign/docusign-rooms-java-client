@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentUserForCreate
+ * DocumentUserForCreate.
+ *
  */
 
 public class DocumentUserForCreate {
   @JsonProperty("userId")
   private Integer userId = null;
 
+
+  /**
+   * userId.
+   *
+   * @return DocumentUserForCreate
+   **/
   public DocumentUserForCreate userId(Integer userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * Get userId
+  /**
+   * Get userId.
    * @return userId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(Integer userId) {
     this.userId = userId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class DocumentUserForCreate {
     return Objects.equals(this.userId, documentUserForCreate.userId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(userId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

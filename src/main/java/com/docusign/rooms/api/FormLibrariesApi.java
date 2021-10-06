@@ -11,58 +11,97 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * FormLibrariesApi class.
+ *
+ **/
 public class FormLibrariesApi {
   private ApiClient apiClient;
 
+ /**
+  * FormLibrariesApi.
+  *
+  **/
   public FormLibrariesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * FormLibrariesApi.
+  *
+  **/
   public FormLibrariesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
   /// <summary>
-  /// Gets a paged list of forms libraries. 
+  /// Gets a paged list of forms libraries. Returns a list of form libraries to which the current user has access.
   /// </summary>
+
+ /**
+  * GetFormLibrariesOptions Class.
+  *
+  **/
   public class GetFormLibrariesOptions
   {
   private Integer count = null;
   private Integer startPosition = null;
-  /*
-   * Default value is 100 and max value is 100 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Default value is 0 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Gets a paged list of forms libraries.
-   * 
-   * @param accountId  (required)
+   * Gets a paged list of forms libraries..
+   * Returns a list of form libraries to which the current user has access.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return FormLibrarySummaryList
    */ 
   public FormLibrarySummaryList getFormLibraries(String accountId) throws ApiException {
@@ -70,9 +109,9 @@ public class FormLibrariesApi {
   }
 
   /**
-   * Gets a paged list of forms libraries.
-   * 
-   * @param accountId  (required)
+   * Gets a paged list of forms libraries..
+   * Returns a list of form libraries to which the current user has access.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return FormLibrarySummaryList
    * @throws ApiException if fails to make API call
@@ -111,7 +150,7 @@ public class FormLibrariesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -121,38 +160,55 @@ public class FormLibrariesApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Gets a paged list of forms in a forms library. 
+  /// Gets a paged list of forms in a forms library. Returns a list of forms  to which the current user has access in the specified form library.
   /// </summary>
+
+ /**
+  * GetFormLibraryFormsOptions Class.
+  *
+  **/
   public class GetFormLibraryFormsOptions
   {
   private Integer count = null;
   private Integer startPosition = null;
-  /*
-   * Default value is 100 and max value is 100 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Default value is 0 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Gets a paged list of forms in a forms library.
-   * 
-   * @param accountId  (required)
+   * Gets a paged list of forms in a forms library..
+   * Returns a list of forms  to which the current user has access in the specified form library.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param formLibraryId Library Id (required)
    * @return FormSummaryList
    */ 
@@ -161,9 +217,9 @@ public class FormLibrariesApi {
   }
 
   /**
-   * Gets a paged list of forms in a forms library.
-   * 
-   * @param accountId  (required)
+   * Gets a paged list of forms in a forms library..
+   * Returns a list of forms  to which the current user has access in the specified form library.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param formLibraryId Library Id (required)
    * @param options for modifying the method behavior.
    * @return FormSummaryList
@@ -209,7 +265,7 @@ public class FormLibrariesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

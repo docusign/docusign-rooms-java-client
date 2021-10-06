@@ -11,31 +11,53 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * FormGroupsApi class.
+ *
+ **/
 public class FormGroupsApi {
   private ApiClient apiClient;
 
+ /**
+  * FormGroupsApi.
+  *
+  **/
   public FormGroupsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * FormGroupsApi.
+  *
+  **/
   public FormGroupsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Assigns a form to a form group.
-   * 
-   * @param accountId  (required)
-   * @param formGroupId  (required)
+   * Assigns a form to a form group..
+   * Assigns the form specified in the &#x60;formId&#x60; property of the request to the form group &#x60;formGroupId&#x60;.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
    * @param body  (optional)
    * @return FormGroupFormToAssign
    * @throws ApiException if fails to make API call
@@ -87,9 +109,9 @@ public class FormGroupsApi {
       }
 
   /**
-   * Creates a form group.
-   * 
-   * @param accountId  (required)
+   * Creates a form group..
+   * Creates a new form group with the name given in the &#x60;name&#x60; property of the request body.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return FormGroup
    * @throws ApiException if fails to make API call
@@ -135,10 +157,10 @@ public class FormGroupsApi {
       }
 
   /**
-   * Deletes a form group.
-   * 
-   * @param accountId  (required)
-   * @param formGroupId  (required)
+   * Deletes a form group..
+   * Deletes the specified form group.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
    * @throws ApiException if fails to make API call
    */
   public void deleteFormGroup(String accountId, java.util.UUID formGroupId) throws ApiException {
@@ -177,7 +199,7 @@ public class FormGroupsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -188,10 +210,10 @@ public class FormGroupsApi {
   }
 
   /**
-   * Gets a form group.
-   * 
-   * @param accountId  (required)
-   * @param formGroupId  (required)
+   * Gets a form group..
+   * Get the specified form group.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
    * @return FormGroup
    * @throws ApiException if fails to make API call
    */
@@ -231,7 +253,7 @@ public class FormGroupsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -241,38 +263,55 @@ public class FormGroupsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Get account Form Groups. 
+  /// Get account Form Groups. Returns the company form groups to which the current user has access.
   /// </summary>
+
+ /**
+  * GetFormGroupsOptions Class.
+  *
+  **/
   public class GetFormGroupsOptions
   {
   private Integer count = null;
   private Integer startPosition = null;
-  /*
-   * Number of Form Groups to include in the response, (Default 100). 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Position in the overall list of Form Groups to begin results. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Get account Form Groups.
-   * 
-   * @param accountId  (required)
+   * Get account Form Groups..
+   * Returns the company form groups to which the current user has access.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return FormGroupSummaryList
    */ 
   public FormGroupSummaryList getFormGroups(String accountId) throws ApiException {
@@ -280,9 +319,9 @@ public class FormGroupsApi {
   }
 
   /**
-   * Get account Form Groups.
-   * 
-   * @param accountId  (required)
+   * Get account Form Groups..
+   * Returns the company form groups to which the current user has access.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return FormGroupSummaryList
    * @throws ApiException if fails to make API call
@@ -321,7 +360,7 @@ public class FormGroupsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -332,11 +371,11 @@ public class FormGroupsApi {
       }
 
   /**
-   * Assign office to a form group so the specified office has access to the form group.
-   * 
-   * @param accountId  (required)
-   * @param formGroupId  (required)
-   * @param officeId  (required)
+   * Assign office to a form group so the specified office has access to the form group..
+   * \&quot;Grants the office &#x60;officeId&#x60; access to the form group &#x60;formGroupId&#x60;.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @param officeId The id of the office. This is the id that the system generated when you created the office. (required)
    * @throws ApiException if fails to make API call
    */
   public void grantOfficeAccessToFormGroup(String accountId, java.util.UUID formGroupId, Integer officeId) throws ApiException {
@@ -381,7 +420,7 @@ public class FormGroupsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -392,11 +431,11 @@ public class FormGroupsApi {
   }
 
   /**
-   * Removes a form from a form group.
-   * 
-   * @param accountId  (required)
-   * @param formGroupId  (required)
-   * @param formId  (required)
+   * Removes a form from a form group..
+   * Removes the form &#x60;formId&#x60; from the form group &#x60;formGroupId&#x60;.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @param formId The id of the form. (required)
    * @throws ApiException if fails to make API call
    */
   public void removeFormGroupForm(String accountId, java.util.UUID formGroupId, java.util.UUID formId) throws ApiException {
@@ -441,7 +480,7 @@ public class FormGroupsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -452,10 +491,10 @@ public class FormGroupsApi {
   }
 
   /**
-   * Renames a form group.
-   * 
-   * @param accountId  (required)
-   * @param formGroupId  (required)
+   * Renames a form group..
+   * Renames the specified form group with the name given in the &#x60;name&#x60; property of the request.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
    * @param body  (optional)
    * @return FormGroup
    * @throws ApiException if fails to make API call
@@ -507,11 +546,11 @@ public class FormGroupsApi {
       }
 
   /**
-   * Remove office to a form group so the specified office doesn&#39;t have access to the form group.
-   * 
-   * @param accountId  (required)
-   * @param formGroupId  (required)
-   * @param officeId  (required)
+   * Remove office to a form group so the specified office doesn&#39;t have access to the form group..
+   * Revoke access to the form group &#x60;formGroupId&#x60; from the office &#x60;officeId&#x60;.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @param officeId The id of the office. This is the id that the system generated when you created the office. (required)
    * @throws ApiException if fails to make API call
    */
   public void revokeOfficeAccessFromFormGroup(String accountId, java.util.UUID formGroupId, Integer officeId) throws ApiException {
@@ -556,7 +595,7 @@ public class FormGroupsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

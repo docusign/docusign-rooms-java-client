@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * TaskList
+ * TaskList.
+ *
  */
 
 public class TaskList {
@@ -48,191 +49,292 @@ public class TaskList {
   @JsonProperty("tasks")
   private java.util.List<TaskSummary> tasks = null;
 
+
+  /**
+   * taskListId.
+   *
+   * @return TaskList
+   **/
   public TaskList taskListId(Integer taskListId) {
     this.taskListId = taskListId;
     return this;
   }
 
-   /**
-   * Get taskListId
+  /**
+   * Get taskListId.
    * @return taskListId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTaskListId() {
     return taskListId;
   }
 
+  /**
+   * setTaskListId.
+   **/
   public void setTaskListId(Integer taskListId) {
     this.taskListId = taskListId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return TaskList
+   **/
   public TaskList name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * taskListTemplateId.
+   *
+   * @return TaskList
+   **/
   public TaskList taskListTemplateId(Integer taskListTemplateId) {
     this.taskListTemplateId = taskListTemplateId;
     return this;
   }
 
-   /**
-   * Get taskListTemplateId
+  /**
+   * Get taskListTemplateId.
    * @return taskListTemplateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTaskListTemplateId() {
     return taskListTemplateId;
   }
 
+  /**
+   * setTaskListTemplateId.
+   **/
   public void setTaskListTemplateId(Integer taskListTemplateId) {
     this.taskListTemplateId = taskListTemplateId;
   }
 
+
+  /**
+   * submittedForReviewDate.
+   *
+   * @return TaskList
+   **/
   public TaskList submittedForReviewDate(DateTime submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
     return this;
   }
 
-   /**
-   * Get submittedForReviewDate
+  /**
+   * Get submittedForReviewDate.
    * @return submittedForReviewDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
+  /**
+   * setSubmittedForReviewDate.
+   **/
   public void setSubmittedForReviewDate(DateTime submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
   }
 
+
+  /**
+   * approvalDate.
+   *
+   * @return TaskList
+   **/
   public TaskList approvalDate(DateTime approvalDate) {
     this.approvalDate = approvalDate;
     return this;
   }
 
-   /**
-   * Get approvalDate
+  /**
+   * Get approvalDate.
    * @return approvalDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getApprovalDate() {
     return approvalDate;
   }
 
+  /**
+   * setApprovalDate.
+   **/
   public void setApprovalDate(DateTime approvalDate) {
     this.approvalDate = approvalDate;
   }
 
+
+  /**
+   * rejectedDate.
+   *
+   * @return TaskList
+   **/
   public TaskList rejectedDate(DateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
 
-   /**
-   * Get rejectedDate
+  /**
+   * Get rejectedDate.
    * @return rejectedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getRejectedDate() {
     return rejectedDate;
   }
 
+  /**
+   * setRejectedDate.
+   **/
   public void setRejectedDate(DateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return TaskList
+   **/
   public TaskList createdDate(DateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(DateTime createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * approvedByUserId.
+   *
+   * @return TaskList
+   **/
   public TaskList approvedByUserId(Integer approvedByUserId) {
     this.approvedByUserId = approvedByUserId;
     return this;
   }
 
-   /**
-   * Get approvedByUserId
+  /**
+   * Get approvedByUserId.
    * @return approvedByUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getApprovedByUserId() {
     return approvedByUserId;
   }
 
+  /**
+   * setApprovedByUserId.
+   **/
   public void setApprovedByUserId(Integer approvedByUserId) {
     this.approvedByUserId = approvedByUserId;
   }
 
+
+  /**
+   * rejectedByUserId.
+   *
+   * @return TaskList
+   **/
   public TaskList rejectedByUserId(Integer rejectedByUserId) {
     this.rejectedByUserId = rejectedByUserId;
     return this;
   }
 
-   /**
-   * Get rejectedByUserId
+  /**
+   * Get rejectedByUserId.
    * @return rejectedByUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRejectedByUserId() {
     return rejectedByUserId;
   }
 
+  /**
+   * setRejectedByUserId.
+   **/
   public void setRejectedByUserId(Integer rejectedByUserId) {
     this.rejectedByUserId = rejectedByUserId;
   }
 
+
+  /**
+   * comment.
+   *
+   * @return TaskList
+   **/
   public TaskList comment(String comment) {
     this.comment = comment;
     return this;
   }
 
-   /**
-   * Get comment
+  /**
+   * Get comment.
    * @return comment
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getComment() {
     return comment;
   }
 
+  /**
+   * setComment.
+   **/
   public void setComment(String comment) {
     this.comment = comment;
   }
 
+
+  /**
+   * tasks.
+   *
+   * @return TaskList
+   **/
   public TaskList tasks(java.util.List<TaskSummary> tasks) {
     this.tasks = tasks;
     return this;
   }
-
+  
+  /**
+   * addTasksItem.
+   *
+   * @return TaskList
+   **/
   public TaskList addTasksItem(TaskSummary tasksItem) {
     if (this.tasks == null) {
       this.tasks = new java.util.ArrayList<TaskSummary>();
@@ -241,20 +343,28 @@ public class TaskList {
     return this;
   }
 
-   /**
-   * Get tasks
+  /**
+   * Get tasks.
    * @return tasks
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TaskSummary> getTasks() {
     return tasks;
   }
 
+  /**
+   * setTasks.
+   **/
   public void setTasks(java.util.List<TaskSummary> tasks) {
     this.tasks = tasks;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -277,12 +387,18 @@ public class TaskList {
         Objects.equals(this.tasks, taskList.tasks);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(taskListId, name, taskListTemplateId, submittedForReviewDate, approvalDate, rejectedDate, createdDate, approvedByUserId, rejectedByUserId, comment, tasks);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

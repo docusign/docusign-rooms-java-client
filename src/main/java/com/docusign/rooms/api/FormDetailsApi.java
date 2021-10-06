@@ -11,30 +11,52 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * FormDetailsApi class.
+ *
+ **/
 public class FormDetailsApi {
   private ApiClient apiClient;
 
+ /**
+  * FormDetailsApi.
+  *
+  **/
   public FormDetailsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * FormDetailsApi.
+  *
+  **/
   public FormDetailsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Gets form based on Id.
-   * 
-   * @param accountId  (required)
+   * Gets form based on Id..
+   * Returns details about a specific form, such as the date it was created and last updated, the number of pages, the form owner, and other information.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param formId Form ID (required)
    * @return FormDetails
    * @throws ApiException if fails to make API call
@@ -75,7 +97,7 @@ public class FormDetailsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

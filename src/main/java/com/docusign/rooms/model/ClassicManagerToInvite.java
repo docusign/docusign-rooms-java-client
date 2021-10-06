@@ -11,7 +11,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClassicManagerToInvite
+ * ClassicManagerToInvite.
+ *
  */
 
 public class ClassicManagerToInvite {
@@ -45,137 +46,211 @@ public class ClassicManagerToInvite {
   @JsonProperty("eSignPermissionProfileId")
   private String eSignPermissionProfileId = null;
 
+
+  /**
+   * firstName.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * email.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * defaultOfficeId.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite defaultOfficeId(Integer defaultOfficeId) {
     this.defaultOfficeId = defaultOfficeId;
     return this;
   }
 
-   /**
-   * Get defaultOfficeId
+  /**
+   * Get defaultOfficeId.
    * @return defaultOfficeId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getDefaultOfficeId() {
     return defaultOfficeId;
   }
 
+  /**
+   * setDefaultOfficeId.
+   **/
   public void setDefaultOfficeId(Integer defaultOfficeId) {
     this.defaultOfficeId = defaultOfficeId;
   }
 
+
+  /**
+   * titleId.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite titleId(Integer titleId) {
     this.titleId = titleId;
     return this;
   }
 
-   /**
-   * Get titleId
+  /**
+   * Get titleId.
    * @return titleId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getTitleId() {
     return titleId;
   }
 
+  /**
+   * setTitleId.
+   **/
   public void setTitleId(Integer titleId) {
     this.titleId = titleId;
   }
 
+
+  /**
+   * accessLevel.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite accessLevel(AccessLevel accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
 
-   /**
-   * Get accessLevel
+  /**
+   * Get accessLevel.
    * @return accessLevel
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public AccessLevel getAccessLevel() {
     return accessLevel;
   }
 
+  /**
+   * setAccessLevel.
+   **/
   public void setAccessLevel(AccessLevel accessLevel) {
     this.accessLevel = accessLevel;
   }
 
+
+  /**
+   * permissions.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite permissions(ClassicManagerPermissions permissions) {
     this.permissions = permissions;
     return this;
   }
 
-   /**
-   * Get permissions
+  /**
+   * Get permissions.
    * @return permissions
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public ClassicManagerPermissions getPermissions() {
     return permissions;
   }
 
+  /**
+   * setPermissions.
+   **/
   public void setPermissions(ClassicManagerPermissions permissions) {
     this.permissions = permissions;
   }
 
+
+  /**
+   * offices.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite offices(java.util.List<Integer> offices) {
     this.offices = offices;
     return this;
   }
-
+  
+  /**
+   * addOfficesItem.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite addOfficesItem(Integer officesItem) {
     if (this.offices == null) {
       this.offices = new java.util.ArrayList<Integer>();
@@ -184,24 +259,38 @@ public class ClassicManagerToInvite {
     return this;
   }
 
-   /**
-   * Get offices
+  /**
+   * Get offices.
    * @return offices
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Integer> getOffices() {
     return offices;
   }
 
+  /**
+   * setOffices.
+   **/
   public void setOffices(java.util.List<Integer> offices) {
     this.offices = offices;
   }
 
+
+  /**
+   * regions.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite regions(java.util.List<Integer> regions) {
     this.regions = regions;
     return this;
   }
-
+  
+  /**
+   * addRegionsItem.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite addRegionsItem(Integer regionsItem) {
     if (this.regions == null) {
       this.regions = new java.util.ArrayList<Integer>();
@@ -210,38 +299,55 @@ public class ClassicManagerToInvite {
     return this;
   }
 
-   /**
-   * Get regions
+  /**
+   * Get regions.
    * @return regions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Integer> getRegions() {
     return regions;
   }
 
+  /**
+   * setRegions.
+   **/
   public void setRegions(java.util.List<Integer> regions) {
     this.regions = regions;
   }
 
+
+  /**
+   * eSignPermissionProfileId.
+   *
+   * @return ClassicManagerToInvite
+   **/
   public ClassicManagerToInvite eSignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
     return this;
   }
 
-   /**
-   * Required when the company is tightly bound to an eSign account; otherwise ignored.
+  /**
+   * Required when the company is tightly bound to an eSign account; otherwise ignored..
    * @return eSignPermissionProfileId
-  **/
+   **/
   @ApiModelProperty(value = "Required when the company is tightly bound to an eSign account; otherwise ignored.")
   public String getESignPermissionProfileId() {
     return eSignPermissionProfileId;
   }
 
+  /**
+   * setESignPermissionProfileId.
+   **/
   public void setESignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -263,12 +369,18 @@ public class ClassicManagerToInvite {
         Objects.equals(this.eSignPermissionProfileId, classicManagerToInvite.eSignPermissionProfileId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(firstName, lastName, email, defaultOfficeId, titleId, accessLevel, permissions, offices, regions, eSignPermissionProfileId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

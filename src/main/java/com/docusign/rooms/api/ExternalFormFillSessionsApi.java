@@ -11,30 +11,52 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * ExternalFormFillSessionsApi class.
+ *
+ **/
 public class ExternalFormFillSessionsApi {
   private ApiClient apiClient;
 
+ /**
+  * ExternalFormFillSessionsApi.
+  *
+  **/
   public ExternalFormFillSessionsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * ExternalFormFillSessionsApi.
+  *
+  **/
   public ExternalFormFillSessionsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Creates an external form fill session.
-   * 
-   * @param accountId  (required)
+   * Creates an external form fill session..
+   * Returns a URL for a new external form fill session, based on the &#x60;roomId&#x60; and &#x60;formId&#x60; that you specify in the &#x60;formFillSessionForCreate&#x60; request body.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return ExternalFormFillSession
    * @throws ApiException if fails to make API call

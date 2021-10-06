@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DependsOn
+ * DependsOn.
+ *
  */
 
 public class DependsOn {
@@ -19,25 +20,30 @@ public class DependsOn {
   @JsonProperty("parentApiName")
   private String parentApiName = null;
 
-   /**
-   * Get actionType
+  /**
+   * Get actionType.
    * @return actionType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getActionType() {
     return actionType;
   }
 
-   /**
-   * Get parentApiName
+  /**
+   * Get parentApiName.
    * @return parentApiName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getParentApiName() {
     return parentApiName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -51,12 +57,18 @@ public class DependsOn {
         Objects.equals(this.parentApiName, dependsOn.parentApiName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(actionType, parentApiName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

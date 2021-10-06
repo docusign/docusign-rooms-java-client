@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * OriginsOfLeadsApi class.
+ *
+ **/
 public class OriginsOfLeadsApi {
   private ApiClient apiClient;
 
+ /**
+  * OriginsOfLeadsApi.
+  *
+  **/
   public OriginsOfLeadsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * OriginsOfLeadsApi.
+  *
+  **/
   public OriginsOfLeadsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid origins of leads.
-   * 
+   * Retrieves the list of valid origins of leads..
+   * Returns a list of origins of leads (such as Trulia or Zillow) that you can specify for rooms.
    * @return GlobalOriginsOfLeads
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class OriginsOfLeadsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalTransactionSides
+ * GlobalTransactionSides.
+ *
  */
 
 public class GlobalTransactionSides {
   @JsonProperty("transactionSides")
   private java.util.List<TransactionSide> transactionSides = null;
 
+
+  /**
+   * transactionSides.
+   *
+   * @return GlobalTransactionSides
+   **/
   public GlobalTransactionSides transactionSides(java.util.List<TransactionSide> transactionSides) {
     this.transactionSides = transactionSides;
     return this;
   }
-
+  
+  /**
+   * addTransactionSidesItem.
+   *
+   * @return GlobalTransactionSides
+   **/
   public GlobalTransactionSides addTransactionSidesItem(TransactionSide transactionSidesItem) {
     if (this.transactionSides == null) {
       this.transactionSides = new java.util.ArrayList<TransactionSide>();
@@ -30,20 +42,28 @@ public class GlobalTransactionSides {
     return this;
   }
 
-   /**
-   * Get transactionSides
+  /**
+   * Get transactionSides.
    * @return transactionSides
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TransactionSide> getTransactionSides() {
     return transactionSides;
   }
 
+  /**
+   * setTransactionSides.
+   **/
   public void setTransactionSides(java.util.List<TransactionSide> transactionSides) {
     this.transactionSides = transactionSides;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalTransactionSides {
     return Objects.equals(this.transactionSides, globalTransactionSides.transactionSides);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(transactionSides);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

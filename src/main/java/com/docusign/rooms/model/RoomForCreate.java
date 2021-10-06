@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomForCreate
+ * RoomForCreate.
+ *
  */
 
 public class RoomForCreate {
@@ -35,133 +36,201 @@ public class RoomForCreate {
   @JsonProperty("fieldData")
   private FieldDataForCreate fieldData = null;
 
+
+  /**
+   * name.
+   *
+   * @return RoomForCreate
+   **/
   public RoomForCreate name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * roleId.
+   *
+   * @return RoomForCreate
+   **/
   public RoomForCreate roleId(Integer roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
+  /**
+   * setRoleId.
+   **/
   public void setRoleId(Integer roleId) {
     this.roleId = roleId;
   }
 
+
+  /**
+   * transactionSideId.
+   *
+   * @return RoomForCreate
+   **/
   public RoomForCreate transactionSideId(String transactionSideId) {
     this.transactionSideId = transactionSideId;
     return this;
   }
 
-   /**
-   * Required for a real estate company; otherwise ignored.
+  /**
+   * Required for a real estate company; otherwise ignored..
    * @return transactionSideId
-  **/
+   **/
   @ApiModelProperty(value = "Required for a real estate company; otherwise ignored.")
   public String getTransactionSideId() {
     return transactionSideId;
   }
 
+  /**
+   * setTransactionSideId.
+   **/
   public void setTransactionSideId(String transactionSideId) {
     this.transactionSideId = transactionSideId;
   }
 
+
+  /**
+   * ownerId.
+   *
+   * @return RoomForCreate
+   **/
   public RoomForCreate ownerId(Integer ownerId) {
     this.ownerId = ownerId;
     return this;
   }
 
-   /**
-   * Get ownerId
+  /**
+   * Get ownerId.
    * @return ownerId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOwnerId() {
     return ownerId;
   }
 
+  /**
+   * setOwnerId.
+   **/
   public void setOwnerId(Integer ownerId) {
     this.ownerId = ownerId;
   }
 
+
+  /**
+   * templateId.
+   *
+   * @return RoomForCreate
+   **/
   public RoomForCreate templateId(Integer templateId) {
     this.templateId = templateId;
     return this;
   }
 
-   /**
-   * Get templateId
+  /**
+   * Get templateId.
    * @return templateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTemplateId() {
     return templateId;
   }
 
+  /**
+   * setTemplateId.
+   **/
   public void setTemplateId(Integer templateId) {
     this.templateId = templateId;
   }
 
+
+  /**
+   * officeId.
+   *
+   * @return RoomForCreate
+   **/
   public RoomForCreate officeId(Integer officeId) {
     this.officeId = officeId;
     return this;
   }
 
-   /**
-   * Get officeId
+  /**
+   * Get officeId.
    * @return officeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOfficeId() {
     return officeId;
   }
 
+  /**
+   * setOfficeId.
+   **/
   public void setOfficeId(Integer officeId) {
     this.officeId = officeId;
   }
 
+
+  /**
+   * fieldData.
+   *
+   * @return RoomForCreate
+   **/
   public RoomForCreate fieldData(FieldDataForCreate fieldData) {
     this.fieldData = fieldData;
     return this;
   }
 
-   /**
-   * Get fieldData
+  /**
+   * Get fieldData.
    * @return fieldData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public FieldDataForCreate getFieldData() {
     return fieldData;
   }
 
+  /**
+   * setFieldData.
+   **/
   public void setFieldData(FieldDataForCreate fieldData) {
     this.fieldData = fieldData;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -180,12 +249,18 @@ public class RoomForCreate {
         Objects.equals(this.fieldData, roomForCreate.fieldData);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(name, roleId, transactionSideId, ownerId, templateId, officeId, fieldData);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

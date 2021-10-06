@@ -11,48 +11,81 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * FieldsApi class.
+ *
+ **/
 public class FieldsApi {
   private ApiClient apiClient;
 
+ /**
+  * FieldsApi.
+  *
+  **/
   public FieldsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * FieldsApi.
+  *
+  **/
   public FieldsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
   /// <summary>
-  /// Get details of a specific field set. 
+  /// Get details of a specific field set. Get details of a specific field set.
   /// </summary>
+
+ /**
+  * GetFieldSetOptions Class.
+  *
+  **/
   public class GetFieldSetOptions
   {
   private java.util.List<String> fieldsCustomDataFilters = null;
-  /*
-   *  
-   */
+  
+ /**
+  * setFieldsCustomDataFilters method.
+  */
   public void setFieldsCustomDataFilters(java.util.List<String> fieldsCustomDataFilters) {
     this.fieldsCustomDataFilters = fieldsCustomDataFilters;
   }
 
+ /**
+  * getFieldsCustomDataFilters method.
+  *
+  * @return java.util.List<String>
+  */
   public java.util.List<String> getFieldsCustomDataFilters() {
     return this.fieldsCustomDataFilters;
   }
   }
 
    /**
+   * Get details of a specific field set..
    * Get details of a specific field set.
-   * 
-   * @param accountId  (required)
-   * @param fieldSetId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param fieldSetId The id of the field set. (required)
    * @return FieldSet
    */ 
   public FieldSet getFieldSet(String accountId, java.util.UUID fieldSetId) throws ApiException {
@@ -60,10 +93,10 @@ public class FieldsApi {
   }
 
   /**
+   * Get details of a specific field set..
    * Get details of a specific field set.
-   * 
-   * @param accountId  (required)
-   * @param fieldSetId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param fieldSetId The id of the field set. (required)
    * @param options for modifying the method behavior.
    * @return FieldSet
    * @throws ApiException if fails to make API call
@@ -106,7 +139,7 @@ public class FieldsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * TaskSummary
+ * TaskSummary.
+ *
  */
 
 public class TaskSummary {
@@ -53,241 +54,363 @@ public class TaskSummary {
   @JsonProperty("requiresReview")
   private Boolean requiresReview = null;
 
+
+  /**
+   * taskId.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary taskId(Integer taskId) {
     this.taskId = taskId;
     return this;
   }
 
-   /**
-   * Get taskId
+  /**
+   * Get taskId.
    * @return taskId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTaskId() {
     return taskId;
   }
 
+  /**
+   * setTaskId.
+   **/
   public void setTaskId(Integer taskId) {
     this.taskId = taskId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * requiresApproval.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary requiresApproval(Boolean requiresApproval) {
     this.requiresApproval = requiresApproval;
     return this;
   }
 
-   /**
-   * Get requiresApproval
+  /**
+   * Get requiresApproval.
    * @return requiresApproval
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRequiresApproval() {
     return requiresApproval;
   }
 
+  /**
+   * setRequiresApproval.
+   **/
   public void setRequiresApproval(Boolean requiresApproval) {
     this.requiresApproval = requiresApproval;
   }
 
+
+  /**
+   * dueDateTypeId.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary dueDateTypeId(String dueDateTypeId) {
     this.dueDateTypeId = dueDateTypeId;
     return this;
   }
 
-   /**
-   * Get dueDateTypeId
+  /**
+   * Get dueDateTypeId.
    * @return dueDateTypeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDueDateTypeId() {
     return dueDateTypeId;
   }
 
+  /**
+   * setDueDateTypeId.
+   **/
   public void setDueDateTypeId(String dueDateTypeId) {
     this.dueDateTypeId = dueDateTypeId;
   }
 
+
+  /**
+   * dueDateOffset.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary dueDateOffset(Integer dueDateOffset) {
     this.dueDateOffset = dueDateOffset;
     return this;
   }
 
-   /**
-   * Get dueDateOffset
+  /**
+   * Get dueDateOffset.
    * @return dueDateOffset
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getDueDateOffset() {
     return dueDateOffset;
   }
 
+  /**
+   * setDueDateOffset.
+   **/
   public void setDueDateOffset(Integer dueDateOffset) {
     this.dueDateOffset = dueDateOffset;
   }
 
+
+  /**
+   * fixedDueDate.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary fixedDueDate(DateTime fixedDueDate) {
     this.fixedDueDate = fixedDueDate;
     return this;
   }
 
-   /**
-   * Get fixedDueDate
+  /**
+   * Get fixedDueDate.
    * @return fixedDueDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getFixedDueDate() {
     return fixedDueDate;
   }
 
+  /**
+   * setFixedDueDate.
+   **/
   public void setFixedDueDate(DateTime fixedDueDate) {
     this.fixedDueDate = fixedDueDate;
   }
 
+
+  /**
+   * ownerUserId.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary ownerUserId(Integer ownerUserId) {
     this.ownerUserId = ownerUserId;
     return this;
   }
 
-   /**
-   * Get ownerUserId
+  /**
+   * Get ownerUserId.
    * @return ownerUserId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOwnerUserId() {
     return ownerUserId;
   }
 
+  /**
+   * setOwnerUserId.
+   **/
   public void setOwnerUserId(Integer ownerUserId) {
     this.ownerUserId = ownerUserId;
   }
 
+
+  /**
+   * completionDate.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary completionDate(DateTime completionDate) {
     this.completionDate = completionDate;
     return this;
   }
 
-   /**
-   * Get completionDate
+  /**
+   * Get completionDate.
    * @return completionDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCompletionDate() {
     return completionDate;
   }
 
+  /**
+   * setCompletionDate.
+   **/
   public void setCompletionDate(DateTime completionDate) {
     this.completionDate = completionDate;
   }
 
+
+  /**
+   * approvalDate.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary approvalDate(DateTime approvalDate) {
     this.approvalDate = approvalDate;
     return this;
   }
 
-   /**
-   * Get approvalDate
+  /**
+   * Get approvalDate.
    * @return approvalDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getApprovalDate() {
     return approvalDate;
   }
 
+  /**
+   * setApprovalDate.
+   **/
   public void setApprovalDate(DateTime approvalDate) {
     this.approvalDate = approvalDate;
   }
 
+
+  /**
+   * rejectedDate.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary rejectedDate(DateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
 
-   /**
-   * Get rejectedDate
+  /**
+   * Get rejectedDate.
    * @return rejectedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getRejectedDate() {
     return rejectedDate;
   }
 
+  /**
+   * setRejectedDate.
+   **/
   public void setRejectedDate(DateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary createdDate(DateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(DateTime createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * isDocumentTask.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary isDocumentTask(Boolean isDocumentTask) {
     this.isDocumentTask = isDocumentTask;
     return this;
   }
 
-   /**
-   * Get isDocumentTask
+  /**
+   * Get isDocumentTask.
    * @return isDocumentTask
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsDocumentTask() {
     return isDocumentTask;
   }
 
+  /**
+   * setIsDocumentTask.
+   **/
   public void setIsDocumentTask(Boolean isDocumentTask) {
     this.isDocumentTask = isDocumentTask;
   }
 
+
+  /**
+   * requiresReview.
+   *
+   * @return TaskSummary
+   **/
   public TaskSummary requiresReview(Boolean requiresReview) {
     this.requiresReview = requiresReview;
     return this;
   }
 
-   /**
-   * Get requiresReview
+  /**
+   * Get requiresReview.
    * @return requiresReview
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRequiresReview() {
     return requiresReview;
   }
 
+  /**
+   * setRequiresReview.
+   **/
   public void setRequiresReview(Boolean requiresReview) {
     this.requiresReview = requiresReview;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -312,12 +435,18 @@ public class TaskSummary {
         Objects.equals(this.requiresReview, taskSummary.requiresReview);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(taskId, name, requiresApproval, dueDateTypeId, dueDateOffset, fixedDueDate, ownerUserId, completionDate, approvalDate, rejectedDate, createdDate, isDocumentTask, requiresReview);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

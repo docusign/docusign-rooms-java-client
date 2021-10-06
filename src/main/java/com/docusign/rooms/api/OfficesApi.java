@@ -11,30 +11,52 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * OfficesApi class.
+ *
+ **/
 public class OfficesApi {
   private ApiClient apiClient;
 
+ /**
+  * OfficesApi.
+  *
+  **/
   public OfficesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * OfficesApi.
+  *
+  **/
   public OfficesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
+   * Create an office..
    * Create an office.
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return Office
    * @throws ApiException if fails to make API call
@@ -80,9 +102,9 @@ public class OfficesApi {
       }
 
   /**
-   * Delete an office.
-   * 
-   * @param accountId  (required)
+   * Delete an office..
+   * This method deletes an office from a Rooms account.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param officeId  (required)
    * @throws ApiException if fails to make API call
    */
@@ -122,7 +144,7 @@ public class OfficesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -133,10 +155,10 @@ public class OfficesApi {
   }
 
   /**
+   * Get information about the office with the given officeId..
    * Get information about the office with the given officeId.
-   * 
-   * @param accountId  (required)
-   * @param officeId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param officeId The id of the office. (required)
    * @return Office
    * @throws ApiException if fails to make API call
    */
@@ -176,7 +198,7 @@ public class OfficesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -186,60 +208,89 @@ public class OfficesApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Get all  
+  /// Get all offices. This method returns a list of offices associated with an account.
   /// </summary>
+
+ /**
+  * GetOfficesOptions Class.
+  *
+  **/
   public class GetOfficesOptions
   {
   private Integer count = null;
   private Integer startPosition = null;
   private Boolean onlyAccessible = null;
   private String search = null;
-  /*
-   * Number of offices to include in the response, (Default 100) 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Position in the overall list of offices to begin results. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * When true, the response only includes offices accessible to the calling user. 
-   */
+  
+ /**
+  * setOnlyAccessible method.
+  */
   public void setOnlyAccessible(Boolean onlyAccessible) {
     this.onlyAccessible = onlyAccessible;
   }
 
+ /**
+  * getOnlyAccessible method.
+  *
+  * @return Boolean
+  */
   public Boolean getOnlyAccessible() {
     return this.onlyAccessible;
   }
-  /*
-   * When specified, the response only includes offices whose names includes the specified search string. 
-   */
+  
+ /**
+  * setSearch method.
+  */
   public void setSearch(String search) {
     this.search = search;
   }
 
+ /**
+  * getSearch method.
+  *
+  * @return String
+  */
   public String getSearch() {
     return this.search;
   }
   }
 
    /**
-   * Get all 
-   * 
-   * @param accountId  (required)
+   * Get all offices..
+   * This method returns a list of offices associated with an account.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return OfficeSummaryList
    */ 
   public OfficeSummaryList getOffices(String accountId) throws ApiException {
@@ -247,9 +298,9 @@ public class OfficesApi {
   }
 
   /**
-   * Get all 
-   * 
-   * @param accountId  (required)
+   * Get all offices..
+   * This method returns a list of offices associated with an account.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return OfficeSummaryList
    * @throws ApiException if fails to make API call
@@ -292,7 +343,7 @@ public class OfficesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -303,9 +354,9 @@ public class OfficesApi {
       }
 
   /**
-   * Lists the number of objects of each type that reference the office.
-   * 
-   * @param accountId  (required)
+   * Lists the number of objects of each type that reference the office..
+   * This method returns a list of each type of object and the number of objects of that type referencing the specified office. Note that an office cannot be deleted while existing objects reference it.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param officeId  (required)
    * @return OfficeReferenceCountList
    * @throws ApiException if fails to make API call
@@ -346,7 +397,7 @@ public class OfficesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

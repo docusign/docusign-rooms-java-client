@@ -11,31 +11,53 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * RoomsApi class.
+ *
+ **/
 public class RoomsApi {
   private ApiClient apiClient;
 
+ /**
+  * RoomsApi.
+  *
+  **/
   public RoomsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * RoomsApi.
+  *
+  **/
   public RoomsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Add a document to a 
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Add a document to a room..
+   * Add a document to a room
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @param body  (optional)
    * @return RoomDocument
    * @throws ApiException if fails to make API call
@@ -87,10 +109,10 @@ public class RoomsApi {
       }
 
   /**
-   * Add a document to a room via file contents upload.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Add a document to a room via file contents upload..
+   * This method uploads the contents of file as a room document for the room that you specify.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @param file  (optional)
    * @return RoomDocument
    * @throws ApiException if fails to make API call
@@ -144,9 +166,9 @@ public class RoomsApi {
       }
 
   /**
-   * Adds a DocuSign Form to a room
-   * 
-   * @param accountId  (required)
+   * Adds a DocuSign Form to a room.
+   * Adds a form to a room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId Id of the room to which the DocuSign Form is being added (required)
    * @param body  (optional)
    * @return RoomDocument
@@ -199,9 +221,9 @@ public class RoomsApi {
       }
 
   /**
+   * Creates a new Room.
    * Creates a new Room
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return Room
    * @throws ApiException if fails to make API call
@@ -247,9 +269,9 @@ public class RoomsApi {
       }
 
   /**
+   * Deletes the room having the given room ID..
    * Deletes the room having the given room ID.
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId ID of the room to be deleted. (required)
    * @throws ApiException if fails to make API call
    */
@@ -289,7 +311,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -299,61 +321,90 @@ public class RoomsApi {
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
   /// <summary>
-  /// Returns the roles for which the calling user, based on their role within the room, can assign to invitees. 
+  /// Returns the roles for which the calling user, based on their role within the room, can assign to invitees. This method returns the room-level roles that the current user can assign to the members that they invite to a room.
   /// </summary>
+
+ /**
+  * GetAssignableRolesOptions Class.
+  *
+  **/
   public class GetAssignableRolesOptions
   {
   private String assigneeEmail = null;
   private String filter = null;
   private Integer startPosition = null;
   private Integer count = null;
-  /*
-   * Optional parameter indicating to only return roles (internal/external) assignable to this user. 
-   */
+  
+ /**
+  * setAssigneeEmail method.
+  */
   public void setAssigneeEmail(String assigneeEmail) {
     this.assigneeEmail = assigneeEmail;
   }
 
+ /**
+  * getAssigneeEmail method.
+  *
+  * @return String
+  */
   public String getAssigneeEmail() {
     return this.assigneeEmail;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setFilter method.
+  */
   public void setFilter(String filter) {
     this.filter = filter;
   }
 
+ /**
+  * getFilter method.
+  *
+  * @return String
+  */
   public String getFilter() {
     return this.filter;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
   }
 
    /**
-   * Returns the roles for which the calling user, based on their role within the room, can assign to invitees.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Returns the roles for which the calling user, based on their role within the room, can assign to invitees..
+   * This method returns the room-level roles that the current user can assign to the members that they invite to a room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @return AssignableRoles
    */ 
   public AssignableRoles getAssignableRoles(String accountId, Integer roomId) throws ApiException {
@@ -361,10 +412,10 @@ public class RoomsApi {
   }
 
   /**
-   * Returns the roles for which the calling user, based on their role within the room, can assign to invitees.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Returns the roles for which the calling user, based on their role within the room, can assign to invitees..
+   * This method returns the room-level roles that the current user can assign to the members that they invite to a room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @param options for modifying the method behavior.
    * @return AssignableRoles
    * @throws ApiException if fails to make API call
@@ -413,7 +464,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -423,39 +474,124 @@ public class RoomsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Get documents in the room accessible to the calling user. 
+  /// Get documents in the room accessible to the calling user. This method returns a list of documents that the current user can access for a specific room.
   /// </summary>
+
+ /**
+  * GetDocumentsOptions Class.
+  *
+  **/
   public class GetDocumentsOptions
   {
   private Integer count = null;
   private Integer startPosition = null;
-  /*
-   * Number of documents to return. Defaults to the maximum which is 100. 
-   */
+  private Boolean requireContentForDynamicDocuments = null;
+  private Integer roomFolderId = null;
+  private String nameFilter = null;
+  private Boolean includeArchived = null;
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Position of the first item in the total results. Defaults to 0. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
+  }
+  
+ /**
+  * setRequireContentForDynamicDocuments method.
+  */
+  public void setRequireContentForDynamicDocuments(Boolean requireContentForDynamicDocuments) {
+    this.requireContentForDynamicDocuments = requireContentForDynamicDocuments;
+  }
+
+ /**
+  * getRequireContentForDynamicDocuments method.
+  *
+  * @return Boolean
+  */
+  public Boolean getRequireContentForDynamicDocuments() {
+    return this.requireContentForDynamicDocuments;
+  }
+  
+ /**
+  * setRoomFolderId method.
+  */
+  public void setRoomFolderId(Integer roomFolderId) {
+    this.roomFolderId = roomFolderId;
+  }
+
+ /**
+  * getRoomFolderId method.
+  *
+  * @return Integer
+  */
+  public Integer getRoomFolderId() {
+    return this.roomFolderId;
+  }
+  
+ /**
+  * setNameFilter method.
+  */
+  public void setNameFilter(String nameFilter) {
+    this.nameFilter = nameFilter;
+  }
+
+ /**
+  * getNameFilter method.
+  *
+  * @return String
+  */
+  public String getNameFilter() {
+    return this.nameFilter;
+  }
+  
+ /**
+  * setIncludeArchived method.
+  */
+  public void setIncludeArchived(Boolean includeArchived) {
+    this.includeArchived = includeArchived;
+  }
+
+ /**
+  * getIncludeArchived method.
+  *
+  * @return Boolean
+  */
+  public Boolean getIncludeArchived() {
+    return this.includeArchived;
   }
   }
 
    /**
-   * Get documents in the room accessible to the calling user.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Get documents in the room accessible to the calling user..
+   * This method returns a list of documents that the current user can access for a specific room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @return RoomDocumentList
    */ 
   public RoomDocumentList getDocuments(String accountId, Integer roomId) throws ApiException {
@@ -463,10 +599,10 @@ public class RoomsApi {
   }
 
   /**
-   * Get documents in the room accessible to the calling user.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Get documents in the room accessible to the calling user..
+   * This method returns a list of documents that the current user can access for a specific room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @param options for modifying the method behavior.
    * @return RoomDocumentList
    * @throws ApiException if fails to make API call
@@ -499,6 +635,14 @@ public class RoomsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("startPosition", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("requireContentForDynamicDocuments", options.requireContentForDynamicDocuments));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("roomFolderId", options.roomFolderId));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("nameFilter", options.nameFilter));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("includeArchived", options.includeArchived));
     }
 
     
@@ -511,7 +655,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -521,28 +665,39 @@ public class RoomsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Gets information about the given  
+  /// Gets information about the given room. Returns details about the given room
   /// </summary>
+
+ /**
+  * GetRoomOptions Class.
+  *
+  **/
   public class GetRoomOptions
   {
   private Boolean includeFieldData = null;
-  /*
-   * Indicates if field data (a.k.a., room details) should be included in the response. Defaults to false. 
-   */
+  
+ /**
+  * setIncludeFieldData method.
+  */
   public void setIncludeFieldData(Boolean includeFieldData) {
     this.includeFieldData = includeFieldData;
   }
 
+ /**
+  * getIncludeFieldData method.
+  *
+  * @return Boolean
+  */
   public Boolean getIncludeFieldData() {
     return this.includeFieldData;
   }
   }
 
    /**
-   * Gets information about the given 
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Gets information about the given room..
+   * Returns details about the given room
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @return Room
    */ 
   public Room getRoom(String accountId, Integer roomId) throws ApiException {
@@ -550,10 +705,10 @@ public class RoomsApi {
   }
 
   /**
-   * Gets information about the given 
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Gets information about the given room..
+   * Returns details about the given room
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @param options for modifying the method behavior.
    * @return Room
    * @throws ApiException if fails to make API call
@@ -596,7 +751,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -607,10 +762,10 @@ public class RoomsApi {
       }
 
   /**
-   * Returns the FieldData associated with the provided roomId.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Returns the FieldData associated with the provided roomId..
+   * Returns the field data associated with a room. This is the information that appears on the room&#39;s **Details** tab.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @return FieldData
    * @throws ApiException if fails to make API call
    */
@@ -650,7 +805,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -661,10 +816,10 @@ public class RoomsApi {
       }
 
   /**
-   * Gets the field set associated with the 
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Gets the field set associated with the room..
+   * Returns the field set that a room uses.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @return FieldSet
    * @throws ApiException if fails to make API call
    */
@@ -704,7 +859,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -714,61 +869,90 @@ public class RoomsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Retrieves the list of users in the given  
+  /// Retrieves the list of users in the given room. This method returns a list of users associated with a room.
   /// </summary>
+
+ /**
+  * GetRoomUsersOptions Class.
+  *
+  **/
   public class GetRoomUsersOptions
   {
   private Integer count = null;
   private Integer startPosition = null;
   private String filter = null;
   private String sort = null;
-  /*
-   * Number of room users to return. Defaults to the maximum which is 100. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Position of the first item in the total results. Defaults to 0. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * Returns room users filtered by Name and Email. 
-   */
+  
+ /**
+  * setFilter method.
+  */
   public void setFilter(String filter) {
     this.filter = filter;
   }
 
+ /**
+  * getFilter method.
+  *
+  * @return String
+  */
   public String getFilter() {
     return this.filter;
   }
-  /*
-   * Sorts results. Options are FirstNameAsc, FirstNameDesc, LastNameAsc, LastNameDesc, EmailAsc, EmailDesc. Defaults to LastNameDesc 
-   */
+  
+ /**
+  * setSort method.
+  */
   public void setSort(String sort) {
     this.sort = sort;
   }
 
+ /**
+  * getSort method.
+  *
+  * @return String
+  */
   public String getSort() {
     return this.sort;
   }
   }
 
    /**
-   * Retrieves the list of users in the given 
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Retrieves the list of users in the given room..
+   * This method returns a list of users associated with a room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @return RoomUsersResult
    */ 
   public RoomUsersResult getRoomUsers(String accountId, Integer roomId) throws ApiException {
@@ -776,10 +960,10 @@ public class RoomsApi {
   }
 
   /**
-   * Retrieves the list of users in the given 
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Retrieves the list of users in the given room..
+   * This method returns a list of users associated with a room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @param options for modifying the method behavior.
    * @return RoomUsersResult
    * @throws ApiException if fails to make API call
@@ -828,7 +1012,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -838,8 +1022,13 @@ public class RoomsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Gets rooms available to the calling user. 
+  /// Gets rooms available to the calling user. Gets rooms available to the calling user
   /// </summary>
+
+ /**
+  * GetRoomsOptions Class.
+  *
+  **/
   public class GetRoomsOptions
   {
   private Integer count = null;
@@ -850,92 +1039,140 @@ public class RoomsApi {
   private String fieldDataChangedEndDate = null;
   private String roomClosedStartDate = null;
   private String roomClosedEndDate = null;
-  /*
-   * Number of rooms to return. Defaults to the maximum which is 100. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Position of the first item in the total results. Defaults to 0. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * Status of the rooms to return. Defaults to \&quot;Active\&quot;. 
-   */
+  
+ /**
+  * setRoomStatus method.
+  */
   public void setRoomStatus(String roomStatus) {
     this.roomStatus = roomStatus;
   }
 
+ /**
+  * getRoomStatus method.
+  *
+  * @return String
+  */
   public String getRoomStatus() {
     return this.roomStatus;
   }
-  /*
-   * Only return rooms in this office. 
-   */
+  
+ /**
+  * setOfficeId method.
+  */
   public void setOfficeId(Integer officeId) {
     this.officeId = officeId;
   }
 
+ /**
+  * getOfficeId method.
+  *
+  * @return Integer
+  */
   public Integer getOfficeId() {
     return this.officeId;
   }
-  /*
-   * Fields data changed start datetime in UTC. Valid formats: yyyy-mm-dd hh:mm:ss or yyyy/mm/dd hh:mm:ss -Time is optional and will default to 00:00:00. 
-   */
+  
+ /**
+  * setFieldDataChangedStartDate method.
+  */
   public void setFieldDataChangedStartDate(String fieldDataChangedStartDate) {
     this.fieldDataChangedStartDate = fieldDataChangedStartDate;
   }
 
+ /**
+  * getFieldDataChangedStartDate method.
+  *
+  * @return String
+  */
   public String getFieldDataChangedStartDate() {
     return this.fieldDataChangedStartDate;
   }
-  /*
-   * Fields-data changed end DateTime in UTC. Valid formats: yyyy-mm-dd hh:mm:ss or yyyy/mm/dd hh:mm:ss -Time is optional and will default to 00:00:00. 
-   */
+  
+ /**
+  * setFieldDataChangedEndDate method.
+  */
   public void setFieldDataChangedEndDate(String fieldDataChangedEndDate) {
     this.fieldDataChangedEndDate = fieldDataChangedEndDate;
   }
 
+ /**
+  * getFieldDataChangedEndDate method.
+  *
+  * @return String
+  */
   public String getFieldDataChangedEndDate() {
     return this.fieldDataChangedEndDate;
   }
-  /*
-   * Room closed start datetime in UTC. Valid formats: yyyy-mm-dd hh:mm:ss or yyyy/mm/dd hh:mm:ss -Time is optional and will default to 00:00:00. 
-   */
+  
+ /**
+  * setRoomClosedStartDate method.
+  */
   public void setRoomClosedStartDate(String roomClosedStartDate) {
     this.roomClosedStartDate = roomClosedStartDate;
   }
 
+ /**
+  * getRoomClosedStartDate method.
+  *
+  * @return String
+  */
   public String getRoomClosedStartDate() {
     return this.roomClosedStartDate;
   }
-  /*
-   * Room closed end datetime in UTC. Valid formats: yyyy-mm-dd hh:mm:ss or yyyy/mm/dd hh:mm:ss -Time is optional and will default to 00:00:00. 
-   */
+  
+ /**
+  * setRoomClosedEndDate method.
+  */
   public void setRoomClosedEndDate(String roomClosedEndDate) {
     this.roomClosedEndDate = roomClosedEndDate;
   }
 
+ /**
+  * getRoomClosedEndDate method.
+  *
+  * @return String
+  */
   public String getRoomClosedEndDate() {
     return this.roomClosedEndDate;
   }
   }
 
    /**
-   * Gets rooms available to the calling user.
-   * 
-   * @param accountId  (required)
+   * Gets rooms available to the calling user..
+   * Gets rooms available to the calling user
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return RoomSummaryList
    */ 
   public RoomSummaryList getRooms(String accountId) throws ApiException {
@@ -943,9 +1180,9 @@ public class RoomsApi {
   }
 
   /**
-   * Gets rooms available to the calling user.
-   * 
-   * @param accountId  (required)
+   * Gets rooms available to the calling user..
+   * Gets rooms available to the calling user
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return RoomSummaryList
    * @throws ApiException if fails to make API call
@@ -996,7 +1233,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1007,10 +1244,10 @@ public class RoomsApi {
       }
 
   /**
-   * Invites a user to the room by email address.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * Invites a user to the room by email address..
+   * This method invites an existing or new member to a specific room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @param body  (optional)
    * @return RoomInviteResponse
    * @throws ApiException if fails to make API call
@@ -1062,11 +1299,11 @@ public class RoomsApi {
       }
 
   /**
+   * Updates the specified user&#39;s role and transaction side..
    * Updates the specified user&#39;s role and transaction side.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
-   * @param userId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
+   * @param userId The id of the user to update. (required)
    * @param body  (optional)
    * @return RoomUser
    * @throws ApiException if fails to make API call
@@ -1124,9 +1361,9 @@ public class RoomsApi {
       }
 
   /**
-   * Restores the specified user&#39;s access to the 
-   * 
-   * @param accountId  (required)
+   * Restores the specified user&#39;s access to the room..
+   * Restores the specified user&#39;s access to the room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId The room Id to restore access (required)
    * @param userId The user Id getting restored to the room (required)
    * @throws ApiException if fails to make API call
@@ -1173,7 +1410,7 @@ public class RoomsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1184,9 +1421,9 @@ public class RoomsApi {
   }
 
   /**
-   * Revokes the specified user&#39;s access to the 
-   * 
-   * @param accountId  (required)
+   * Revokes the specified user&#39;s access to the room..
+   * Revokes the specified user&#39;s access to the room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId The room Id to revoke access from (required)
    * @param userId The user Id getting revoked from the room (required)
    * @param body  (optional)
@@ -1245,9 +1482,9 @@ public class RoomsApi {
   }
 
   /**
-   * Update the picture for a 
+   * Update the picture for a room..
    * This endpoint supports the following content types, application/json as JSON PictureForUpdate{\&quot;fileName\&quot;:\&quot;string\&quot;, \&quot;Base64Contents\&quot;:\&quot;string\&quot;}, multipart/formdata and any other streamed binary content type (as long as either query parameter fileName or request header ContentDisposition filename is included).
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId ID of the room the picture is for. (required)
    * @param file  (optional)
    * @return RoomPicture
@@ -1302,10 +1539,10 @@ public class RoomsApi {
       }
 
   /**
+   * Updates room field data..
    * Updates room field data.
-   * 
-   * @param accountId  (required)
-   * @param roomId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The id of the room. (required)
    * @param body  (optional)
    * @return FieldData
    * @throws ApiException if fails to make API call

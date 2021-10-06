@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * OriginOfLead
+ * OriginOfLead.
+ *
  */
 
 public class OriginOfLead {
@@ -19,43 +20,66 @@ public class OriginOfLead {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * originOfLeadId.
+   *
+   * @return OriginOfLead
+   **/
   public OriginOfLead originOfLeadId(String originOfLeadId) {
     this.originOfLeadId = originOfLeadId;
     return this;
   }
 
-   /**
-   * Get originOfLeadId
+  /**
+   * Get originOfLeadId.
    * @return originOfLeadId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOriginOfLeadId() {
     return originOfLeadId;
   }
 
+  /**
+   * setOriginOfLeadId.
+   **/
   public void setOriginOfLeadId(String originOfLeadId) {
     this.originOfLeadId = originOfLeadId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return OriginOfLead
+   **/
   public OriginOfLead name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class OriginOfLead {
         Objects.equals(this.name, originOfLead.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(originOfLeadId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClassicManagerPermissions
+ * ClassicManagerPermissions.
+ *
  */
 
 public class ClassicManagerPermissions {
@@ -52,241 +53,363 @@ public class ClassicManagerPermissions {
   @JsonProperty("autoAccessToCompanyRooms")
   private Boolean autoAccessToCompanyRooms = null;
 
+
+  /**
+   * isVisibleInTransactionRooms.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions isVisibleInTransactionRooms(Boolean isVisibleInTransactionRooms) {
     this.isVisibleInTransactionRooms = isVisibleInTransactionRooms;
     return this;
   }
 
-   /**
-   * Get isVisibleInTransactionRooms
+  /**
+   * Get isVisibleInTransactionRooms.
    * @return isVisibleInTransactionRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsVisibleInTransactionRooms() {
     return isVisibleInTransactionRooms;
   }
 
+  /**
+   * setIsVisibleInTransactionRooms.
+   **/
   public void setIsVisibleInTransactionRooms(Boolean isVisibleInTransactionRooms) {
     this.isVisibleInTransactionRooms = isVisibleInTransactionRooms;
   }
 
+
+  /**
+   * canDeleteCompanyRooms.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions canDeleteCompanyRooms(Boolean canDeleteCompanyRooms) {
     this.canDeleteCompanyRooms = canDeleteCompanyRooms;
     return this;
   }
 
-   /**
-   * Get canDeleteCompanyRooms
+  /**
+   * Get canDeleteCompanyRooms.
    * @return canDeleteCompanyRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanDeleteCompanyRooms() {
     return canDeleteCompanyRooms;
   }
 
+  /**
+   * setCanDeleteCompanyRooms.
+   **/
   public void setCanDeleteCompanyRooms(Boolean canDeleteCompanyRooms) {
     this.canDeleteCompanyRooms = canDeleteCompanyRooms;
   }
 
+
+  /**
+   * canDeleteCompanyDocuments.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions canDeleteCompanyDocuments(Boolean canDeleteCompanyDocuments) {
     this.canDeleteCompanyDocuments = canDeleteCompanyDocuments;
     return this;
   }
 
-   /**
-   * Get canDeleteCompanyDocuments
+  /**
+   * Get canDeleteCompanyDocuments.
    * @return canDeleteCompanyDocuments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanDeleteCompanyDocuments() {
     return canDeleteCompanyDocuments;
   }
 
+  /**
+   * setCanDeleteCompanyDocuments.
+   **/
   public void setCanDeleteCompanyDocuments(Boolean canDeleteCompanyDocuments) {
     this.canDeleteCompanyDocuments = canDeleteCompanyDocuments;
   }
 
+
+  /**
+   * canManageCompanyRooms.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions canManageCompanyRooms(Boolean canManageCompanyRooms) {
     this.canManageCompanyRooms = canManageCompanyRooms;
     return this;
   }
 
-   /**
-   * Get canManageCompanyRooms
+  /**
+   * Get canManageCompanyRooms.
    * @return canManageCompanyRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageCompanyRooms() {
     return canManageCompanyRooms;
   }
 
+  /**
+   * setCanManageCompanyRooms.
+   **/
   public void setCanManageCompanyRooms(Boolean canManageCompanyRooms) {
     this.canManageCompanyRooms = canManageCompanyRooms;
   }
 
+
+  /**
+   * canManageCompanyAccount.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions canManageCompanyAccount(Boolean canManageCompanyAccount) {
     this.canManageCompanyAccount = canManageCompanyAccount;
     return this;
   }
 
-   /**
-   * Get canManageCompanyAccount
+  /**
+   * Get canManageCompanyAccount.
    * @return canManageCompanyAccount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageCompanyAccount() {
     return canManageCompanyAccount;
   }
 
+  /**
+   * setCanManageCompanyAccount.
+   **/
   public void setCanManageCompanyAccount(Boolean canManageCompanyAccount) {
     this.canManageCompanyAccount = canManageCompanyAccount;
   }
 
+
+  /**
+   * canManageCompanySharedLibrary.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions canManageCompanySharedLibrary(Boolean canManageCompanySharedLibrary) {
     this.canManageCompanySharedLibrary = canManageCompanySharedLibrary;
     return this;
   }
 
-   /**
-   * Get canManageCompanySharedLibrary
+  /**
+   * Get canManageCompanySharedLibrary.
    * @return canManageCompanySharedLibrary
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageCompanySharedLibrary() {
     return canManageCompanySharedLibrary;
   }
 
+  /**
+   * setCanManageCompanySharedLibrary.
+   **/
   public void setCanManageCompanySharedLibrary(Boolean canManageCompanySharedLibrary) {
     this.canManageCompanySharedLibrary = canManageCompanySharedLibrary;
   }
 
+
+  /**
+   * canManageCompanyMembers.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions canManageCompanyMembers(Boolean canManageCompanyMembers) {
     this.canManageCompanyMembers = canManageCompanyMembers;
     return this;
   }
 
-   /**
-   * Get canManageCompanyMembers
+  /**
+   * Get canManageCompanyMembers.
    * @return canManageCompanyMembers
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageCompanyMembers() {
     return canManageCompanyMembers;
   }
 
+  /**
+   * setCanManageCompanyMembers.
+   **/
   public void setCanManageCompanyMembers(Boolean canManageCompanyMembers) {
     this.canManageCompanyMembers = canManageCompanyMembers;
   }
 
+
+  /**
+   * canCloseCompanyRooms.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions canCloseCompanyRooms(Boolean canCloseCompanyRooms) {
     this.canCloseCompanyRooms = canCloseCompanyRooms;
     return this;
   }
 
-   /**
-   * Get canCloseCompanyRooms
+  /**
+   * Get canCloseCompanyRooms.
    * @return canCloseCompanyRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanCloseCompanyRooms() {
     return canCloseCompanyRooms;
   }
 
+  /**
+   * setCanCloseCompanyRooms.
+   **/
   public void setCanCloseCompanyRooms(Boolean canCloseCompanyRooms) {
     this.canCloseCompanyRooms = canCloseCompanyRooms;
   }
 
+
+  /**
+   * canApproveCompanyChecklists.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions canApproveCompanyChecklists(Boolean canApproveCompanyChecklists) {
     this.canApproveCompanyChecklists = canApproveCompanyChecklists;
     return this;
   }
 
-   /**
-   * Get canApproveCompanyChecklists
+  /**
+   * Get canApproveCompanyChecklists.
    * @return canApproveCompanyChecklists
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanApproveCompanyChecklists() {
     return canApproveCompanyChecklists;
   }
 
+  /**
+   * setCanApproveCompanyChecklists.
+   **/
   public void setCanApproveCompanyChecklists(Boolean canApproveCompanyChecklists) {
     this.canApproveCompanyChecklists = canApproveCompanyChecklists;
   }
 
+
+  /**
+   * isCompanySystemAdmin.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions isCompanySystemAdmin(Boolean isCompanySystemAdmin) {
     this.isCompanySystemAdmin = isCompanySystemAdmin;
     return this;
   }
 
-   /**
-   * Get isCompanySystemAdmin
+  /**
+   * Get isCompanySystemAdmin.
    * @return isCompanySystemAdmin
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsCompanySystemAdmin() {
     return isCompanySystemAdmin;
   }
 
+  /**
+   * setIsCompanySystemAdmin.
+   **/
   public void setIsCompanySystemAdmin(Boolean isCompanySystemAdmin) {
     this.isCompanySystemAdmin = isCompanySystemAdmin;
   }
 
+
+  /**
+   * isRegionManager.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions isRegionManager(Boolean isRegionManager) {
     this.isRegionManager = isRegionManager;
     return this;
   }
 
-   /**
-   * Get isRegionManager
+  /**
+   * Get isRegionManager.
    * @return isRegionManager
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsRegionManager() {
     return isRegionManager;
   }
 
+  /**
+   * setIsRegionManager.
+   **/
   public void setIsRegionManager(Boolean isRegionManager) {
     this.isRegionManager = isRegionManager;
   }
 
+
+  /**
+   * isOfficeManager.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions isOfficeManager(Boolean isOfficeManager) {
     this.isOfficeManager = isOfficeManager;
     return this;
   }
 
-   /**
-   * Get isOfficeManager
+  /**
+   * Get isOfficeManager.
    * @return isOfficeManager
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsOfficeManager() {
     return isOfficeManager;
   }
 
+  /**
+   * setIsOfficeManager.
+   **/
   public void setIsOfficeManager(Boolean isOfficeManager) {
     this.isOfficeManager = isOfficeManager;
   }
 
+
+  /**
+   * autoAccessToCompanyRooms.
+   *
+   * @return ClassicManagerPermissions
+   **/
   public ClassicManagerPermissions autoAccessToCompanyRooms(Boolean autoAccessToCompanyRooms) {
     this.autoAccessToCompanyRooms = autoAccessToCompanyRooms;
     return this;
   }
 
-   /**
-   * Get autoAccessToCompanyRooms
+  /**
+   * Get autoAccessToCompanyRooms.
    * @return autoAccessToCompanyRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isAutoAccessToCompanyRooms() {
     return autoAccessToCompanyRooms;
   }
 
+  /**
+   * setAutoAccessToCompanyRooms.
+   **/
   public void setAutoAccessToCompanyRooms(Boolean autoAccessToCompanyRooms) {
     this.autoAccessToCompanyRooms = autoAccessToCompanyRooms;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -311,12 +434,18 @@ public class ClassicManagerPermissions {
         Objects.equals(this.autoAccessToCompanyRooms, classicManagerPermissions.autoAccessToCompanyRooms);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(isVisibleInTransactionRooms, canDeleteCompanyRooms, canDeleteCompanyDocuments, canManageCompanyRooms, canManageCompanyAccount, canManageCompanySharedLibrary, canManageCompanyMembers, canCloseCompanyRooms, canApproveCompanyChecklists, isCompanySystemAdmin, isRegionManager, isOfficeManager, autoAccessToCompanyRooms);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FormGroupFormToAssign
+ * FormGroupFormToAssign.
+ *
  */
 
 public class FormGroupFormToAssign {
@@ -19,43 +20,66 @@ public class FormGroupFormToAssign {
   @JsonProperty("isRequired")
   private Boolean isRequired = null;
 
+
+  /**
+   * formId.
+   *
+   * @return FormGroupFormToAssign
+   **/
   public FormGroupFormToAssign formId(java.util.UUID formId) {
     this.formId = formId;
     return this;
   }
 
-   /**
-   * Get formId
+  /**
+   * Get formId.
    * @return formId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public java.util.UUID getFormId() {
     return formId;
   }
 
+  /**
+   * setFormId.
+   **/
   public void setFormId(java.util.UUID formId) {
     this.formId = formId;
   }
 
+
+  /**
+   * isRequired.
+   *
+   * @return FormGroupFormToAssign
+   **/
   public FormGroupFormToAssign isRequired(Boolean isRequired) {
     this.isRequired = isRequired;
     return this;
   }
 
-   /**
-   * Get isRequired
+  /**
+   * Get isRequired.
    * @return isRequired
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsRequired() {
     return isRequired;
   }
 
+  /**
+   * setIsRequired.
+   **/
   public void setIsRequired(Boolean isRequired) {
     this.isRequired = isRequired;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class FormGroupFormToAssign {
         Objects.equals(this.isRequired, formGroupFormToAssign.isRequired);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(formId, isRequired);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

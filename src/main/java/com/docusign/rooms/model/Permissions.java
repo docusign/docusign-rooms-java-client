@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Permissions
+ * Permissions.
+ *
  */
 
 public class Permissions {
@@ -36,9 +37,6 @@ public class Permissions {
 
   @JsonProperty("canExportRoomActivityDetailsPeople")
   private Boolean canExportRoomActivityDetailsPeople = null;
-
-  @JsonProperty("isVisibleInRooms")
-  private Boolean isVisibleInRooms = null;
 
   @JsonProperty("canCopyRoomDetails")
   private Boolean canCopyRoomDetails = null;
@@ -105,6 +103,9 @@ public class Permissions {
 
   @JsonProperty("canShareDocsNotOwned")
   private Boolean canShareDocsNotOwned = null;
+
+  @JsonProperty("canCreateFormTemplates")
+  private Boolean canCreateFormTemplates = null;
 
   @JsonProperty("canAddTasksToAnyTaskLists")
   private Boolean canAddTasksToAnyTaskLists = null;
@@ -196,1105 +197,1659 @@ public class Permissions {
   @JsonProperty("canManageIntegrationSettings")
   private Boolean canManageIntegrationSettings = null;
 
+
+  /**
+   * canAddUsersToRooms.
+   *
+   * @return Permissions
+   **/
   public Permissions canAddUsersToRooms(Boolean canAddUsersToRooms) {
     this.canAddUsersToRooms = canAddUsersToRooms;
     return this;
   }
 
-   /**
-   * Get canAddUsersToRooms
+  /**
+   * Get canAddUsersToRooms.
    * @return canAddUsersToRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAddUsersToRooms() {
     return canAddUsersToRooms;
   }
 
+  /**
+   * setCanAddUsersToRooms.
+   **/
   public void setCanAddUsersToRooms(Boolean canAddUsersToRooms) {
     this.canAddUsersToRooms = canAddUsersToRooms;
   }
 
+
+  /**
+   * canCreateRooms.
+   *
+   * @return Permissions
+   **/
   public Permissions canCreateRooms(Boolean canCreateRooms) {
     this.canCreateRooms = canCreateRooms;
     return this;
   }
 
-   /**
-   * Get canCreateRooms
+  /**
+   * Get canCreateRooms.
    * @return canCreateRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanCreateRooms() {
     return canCreateRooms;
   }
 
+  /**
+   * setCanCreateRooms.
+   **/
   public void setCanCreateRooms(Boolean canCreateRooms) {
     this.canCreateRooms = canCreateRooms;
   }
 
+
+  /**
+   * canSubmitRoomsForReview.
+   *
+   * @return Permissions
+   **/
   public Permissions canSubmitRoomsForReview(Boolean canSubmitRoomsForReview) {
     this.canSubmitRoomsForReview = canSubmitRoomsForReview;
     return this;
   }
 
-   /**
-   * Get canSubmitRoomsForReview
+  /**
+   * Get canSubmitRoomsForReview.
    * @return canSubmitRoomsForReview
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanSubmitRoomsForReview() {
     return canSubmitRoomsForReview;
   }
 
+  /**
+   * setCanSubmitRoomsForReview.
+   **/
   public void setCanSubmitRoomsForReview(Boolean canSubmitRoomsForReview) {
     this.canSubmitRoomsForReview = canSubmitRoomsForReview;
   }
 
+
+  /**
+   * canCloseRooms.
+   *
+   * @return Permissions
+   **/
   public Permissions canCloseRooms(Boolean canCloseRooms) {
     this.canCloseRooms = canCloseRooms;
     return this;
   }
 
-   /**
-   * Get canCloseRooms
+  /**
+   * Get canCloseRooms.
    * @return canCloseRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanCloseRooms() {
     return canCloseRooms;
   }
 
+  /**
+   * setCanCloseRooms.
+   **/
   public void setCanCloseRooms(Boolean canCloseRooms) {
     this.canCloseRooms = canCloseRooms;
   }
 
+
+  /**
+   * canReopenRooms.
+   *
+   * @return Permissions
+   **/
   public Permissions canReopenRooms(Boolean canReopenRooms) {
     this.canReopenRooms = canReopenRooms;
     return this;
   }
 
-   /**
-   * Get canReopenRooms
+  /**
+   * Get canReopenRooms.
    * @return canReopenRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanReopenRooms() {
     return canReopenRooms;
   }
 
+  /**
+   * setCanReopenRooms.
+   **/
   public void setCanReopenRooms(Boolean canReopenRooms) {
     this.canReopenRooms = canReopenRooms;
   }
 
+
+  /**
+   * canDeleteOwnedRooms.
+   *
+   * @return Permissions
+   **/
   public Permissions canDeleteOwnedRooms(Boolean canDeleteOwnedRooms) {
     this.canDeleteOwnedRooms = canDeleteOwnedRooms;
     return this;
   }
 
-   /**
-   * Get canDeleteOwnedRooms
+  /**
+   * Get canDeleteOwnedRooms.
    * @return canDeleteOwnedRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanDeleteOwnedRooms() {
     return canDeleteOwnedRooms;
   }
 
+  /**
+   * setCanDeleteOwnedRooms.
+   **/
   public void setCanDeleteOwnedRooms(Boolean canDeleteOwnedRooms) {
     this.canDeleteOwnedRooms = canDeleteOwnedRooms;
   }
 
+
+  /**
+   * autoAccessToRooms.
+   *
+   * @return Permissions
+   **/
   public Permissions autoAccessToRooms(Boolean autoAccessToRooms) {
     this.autoAccessToRooms = autoAccessToRooms;
     return this;
   }
 
-   /**
-   * Get autoAccessToRooms
+  /**
+   * Get autoAccessToRooms.
    * @return autoAccessToRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isAutoAccessToRooms() {
     return autoAccessToRooms;
   }
 
+  /**
+   * setAutoAccessToRooms.
+   **/
   public void setAutoAccessToRooms(Boolean autoAccessToRooms) {
     this.autoAccessToRooms = autoAccessToRooms;
   }
 
+
+  /**
+   * canExportRoomActivityDetailsPeople.
+   *
+   * @return Permissions
+   **/
   public Permissions canExportRoomActivityDetailsPeople(Boolean canExportRoomActivityDetailsPeople) {
     this.canExportRoomActivityDetailsPeople = canExportRoomActivityDetailsPeople;
     return this;
   }
 
-   /**
-   * Get canExportRoomActivityDetailsPeople
+  /**
+   * Get canExportRoomActivityDetailsPeople.
    * @return canExportRoomActivityDetailsPeople
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanExportRoomActivityDetailsPeople() {
     return canExportRoomActivityDetailsPeople;
   }
 
+  /**
+   * setCanExportRoomActivityDetailsPeople.
+   **/
   public void setCanExportRoomActivityDetailsPeople(Boolean canExportRoomActivityDetailsPeople) {
     this.canExportRoomActivityDetailsPeople = canExportRoomActivityDetailsPeople;
   }
 
-  public Permissions isVisibleInRooms(Boolean isVisibleInRooms) {
-    this.isVisibleInRooms = isVisibleInRooms;
-    return this;
-  }
 
-   /**
-   * Get isVisibleInRooms
-   * @return isVisibleInRooms
-  **/
-  @ApiModelProperty(value = "")
-  public Boolean isIsVisibleInRooms() {
-    return isVisibleInRooms;
-  }
-
-  public void setIsVisibleInRooms(Boolean isVisibleInRooms) {
-    this.isVisibleInRooms = isVisibleInRooms;
-  }
-
+  /**
+   * canCopyRoomDetails.
+   *
+   * @return Permissions
+   **/
   public Permissions canCopyRoomDetails(Boolean canCopyRoomDetails) {
     this.canCopyRoomDetails = canCopyRoomDetails;
     return this;
   }
 
-   /**
-   * Get canCopyRoomDetails
+  /**
+   * Get canCopyRoomDetails.
    * @return canCopyRoomDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanCopyRoomDetails() {
     return canCopyRoomDetails;
   }
 
+  /**
+   * setCanCopyRoomDetails.
+   **/
   public void setCanCopyRoomDetails(Boolean canCopyRoomDetails) {
     this.canCopyRoomDetails = canCopyRoomDetails;
   }
 
+
+  /**
+   * canEditAnyRoomRole.
+   *
+   * @return Permissions
+   **/
   public Permissions canEditAnyRoomRole(Boolean canEditAnyRoomRole) {
     this.canEditAnyRoomRole = canEditAnyRoomRole;
     return this;
   }
 
-   /**
-   * Get canEditAnyRoomRole
+  /**
+   * Get canEditAnyRoomRole.
    * @return canEditAnyRoomRole
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanEditAnyRoomRole() {
     return canEditAnyRoomRole;
   }
 
+  /**
+   * setCanEditAnyRoomRole.
+   **/
   public void setCanEditAnyRoomRole(Boolean canEditAnyRoomRole) {
     this.canEditAnyRoomRole = canEditAnyRoomRole;
   }
 
+
+  /**
+   * canEditInvitedRoomRole.
+   *
+   * @return Permissions
+   **/
   public Permissions canEditInvitedRoomRole(Boolean canEditInvitedRoomRole) {
     this.canEditInvitedRoomRole = canEditInvitedRoomRole;
     return this;
   }
 
-   /**
-   * Get canEditInvitedRoomRole
+  /**
+   * Get canEditInvitedRoomRole.
    * @return canEditInvitedRoomRole
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanEditInvitedRoomRole() {
     return canEditInvitedRoomRole;
   }
 
+  /**
+   * setCanEditInvitedRoomRole.
+   **/
   public void setCanEditInvitedRoomRole(Boolean canEditInvitedRoomRole) {
     this.canEditInvitedRoomRole = canEditInvitedRoomRole;
   }
 
+
+  /**
+   * canEditRoomSide.
+   *
+   * @return Permissions
+   **/
   public Permissions canEditRoomSide(Boolean canEditRoomSide) {
     this.canEditRoomSide = canEditRoomSide;
     return this;
   }
 
-   /**
-   * Get canEditRoomSide
+  /**
+   * Get canEditRoomSide.
    * @return canEditRoomSide
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanEditRoomSide() {
     return canEditRoomSide;
   }
 
+  /**
+   * setCanEditRoomSide.
+   **/
   public void setCanEditRoomSide(Boolean canEditRoomSide) {
     this.canEditRoomSide = canEditRoomSide;
   }
 
+
+  /**
+   * canManageAnyUserRoomAccess.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageAnyUserRoomAccess(Boolean canManageAnyUserRoomAccess) {
     this.canManageAnyUserRoomAccess = canManageAnyUserRoomAccess;
     return this;
   }
 
-   /**
-   * Get canManageAnyUserRoomAccess
+  /**
+   * Get canManageAnyUserRoomAccess.
    * @return canManageAnyUserRoomAccess
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageAnyUserRoomAccess() {
     return canManageAnyUserRoomAccess;
   }
 
+  /**
+   * setCanManageAnyUserRoomAccess.
+   **/
   public void setCanManageAnyUserRoomAccess(Boolean canManageAnyUserRoomAccess) {
     this.canManageAnyUserRoomAccess = canManageAnyUserRoomAccess;
   }
 
+
+  /**
+   * canManageInvitedUserRoomAccess.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageInvitedUserRoomAccess(Boolean canManageInvitedUserRoomAccess) {
     this.canManageInvitedUserRoomAccess = canManageInvitedUserRoomAccess;
     return this;
   }
 
-   /**
-   * Get canManageInvitedUserRoomAccess
+  /**
+   * Get canManageInvitedUserRoomAccess.
    * @return canManageInvitedUserRoomAccess
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageInvitedUserRoomAccess() {
     return canManageInvitedUserRoomAccess;
   }
 
+  /**
+   * setCanManageInvitedUserRoomAccess.
+   **/
   public void setCanManageInvitedUserRoomAccess(Boolean canManageInvitedUserRoomAccess) {
     this.canManageInvitedUserRoomAccess = canManageInvitedUserRoomAccess;
   }
 
+
+  /**
+   * isHiddenInRoom.
+   *
+   * @return Permissions
+   **/
   public Permissions isHiddenInRoom(Boolean isHiddenInRoom) {
     this.isHiddenInRoom = isHiddenInRoom;
     return this;
   }
 
-   /**
-   * Get isHiddenInRoom
+  /**
+   * Get isHiddenInRoom.
    * @return isHiddenInRoom
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsHiddenInRoom() {
     return isHiddenInRoom;
   }
 
+  /**
+   * setIsHiddenInRoom.
+   **/
   public void setIsHiddenInRoom(Boolean isHiddenInRoom) {
     this.isHiddenInRoom = isHiddenInRoom;
   }
 
+
+  /**
+   * canManageRoomOwners.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageRoomOwners(Boolean canManageRoomOwners) {
     this.canManageRoomOwners = canManageRoomOwners;
     return this;
   }
 
-   /**
-   * Get canManageRoomOwners
+  /**
+   * Get canManageRoomOwners.
    * @return canManageRoomOwners
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageRoomOwners() {
     return canManageRoomOwners;
   }
 
+  /**
+   * setCanManageRoomOwners.
+   **/
   public void setCanManageRoomOwners(Boolean canManageRoomOwners) {
     this.canManageRoomOwners = canManageRoomOwners;
   }
 
+
+  /**
+   * canDeleteRooms.
+   *
+   * @return Permissions
+   **/
   public Permissions canDeleteRooms(Boolean canDeleteRooms) {
     this.canDeleteRooms = canDeleteRooms;
     return this;
   }
 
-   /**
-   * Get canDeleteRooms
+  /**
+   * Get canDeleteRooms.
    * @return canDeleteRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanDeleteRooms() {
     return canDeleteRooms;
   }
 
+  /**
+   * setCanDeleteRooms.
+   **/
   public void setCanDeleteRooms(Boolean canDeleteRooms) {
     this.canDeleteRooms = canDeleteRooms;
   }
 
+
+  /**
+   * canConnectToMortgageCadence.
+   *
+   * @return Permissions
+   **/
   public Permissions canConnectToMortgageCadence(Boolean canConnectToMortgageCadence) {
     this.canConnectToMortgageCadence = canConnectToMortgageCadence;
     return this;
   }
 
-   /**
-   * Get canConnectToMortgageCadence
+  /**
+   * Get canConnectToMortgageCadence.
    * @return canConnectToMortgageCadence
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanConnectToMortgageCadence() {
     return canConnectToMortgageCadence;
   }
 
+  /**
+   * setCanConnectToMortgageCadence.
+   **/
   public void setCanConnectToMortgageCadence(Boolean canConnectToMortgageCadence) {
     this.canConnectToMortgageCadence = canConnectToMortgageCadence;
   }
 
+
+  /**
+   * canViewRoomDetails.
+   *
+   * @return Permissions
+   **/
   public Permissions canViewRoomDetails(Boolean canViewRoomDetails) {
     this.canViewRoomDetails = canViewRoomDetails;
     return this;
   }
 
-   /**
-   * Get canViewRoomDetails
+  /**
+   * Get canViewRoomDetails.
    * @return canViewRoomDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanViewRoomDetails() {
     return canViewRoomDetails;
   }
 
+  /**
+   * setCanViewRoomDetails.
+   **/
   public void setCanViewRoomDetails(Boolean canViewRoomDetails) {
     this.canViewRoomDetails = canViewRoomDetails;
   }
 
+
+  /**
+   * canViewAndEditRoomDetails.
+   *
+   * @return Permissions
+   **/
   public Permissions canViewAndEditRoomDetails(Boolean canViewAndEditRoomDetails) {
     this.canViewAndEditRoomDetails = canViewAndEditRoomDetails;
     return this;
   }
 
-   /**
-   * Get canViewAndEditRoomDetails
+  /**
+   * Get canViewAndEditRoomDetails.
    * @return canViewAndEditRoomDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanViewAndEditRoomDetails() {
     return canViewAndEditRoomDetails;
   }
 
+  /**
+   * setCanViewAndEditRoomDetails.
+   **/
   public void setCanViewAndEditRoomDetails(Boolean canViewAndEditRoomDetails) {
     this.canViewAndEditRoomDetails = canViewAndEditRoomDetails;
   }
 
+
+  /**
+   * canSendRoomDetailsToLoneWolf.
+   *
+   * @return Permissions
+   **/
   public Permissions canSendRoomDetailsToLoneWolf(Boolean canSendRoomDetailsToLoneWolf) {
     this.canSendRoomDetailsToLoneWolf = canSendRoomDetailsToLoneWolf;
     return this;
   }
 
-   /**
-   * Get canSendRoomDetailsToLoneWolf
+  /**
+   * Get canSendRoomDetailsToLoneWolf.
    * @return canSendRoomDetailsToLoneWolf
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanSendRoomDetailsToLoneWolf() {
     return canSendRoomDetailsToLoneWolf;
   }
 
+  /**
+   * setCanSendRoomDetailsToLoneWolf.
+   **/
   public void setCanSendRoomDetailsToLoneWolf(Boolean canSendRoomDetailsToLoneWolf) {
     this.canSendRoomDetailsToLoneWolf = canSendRoomDetailsToLoneWolf;
   }
 
+
+  /**
+   * canAddDocuments.
+   *
+   * @return Permissions
+   **/
   public Permissions canAddDocuments(Boolean canAddDocuments) {
     this.canAddDocuments = canAddDocuments;
     return this;
   }
 
-   /**
-   * Get canAddDocuments
+  /**
+   * Get canAddDocuments.
    * @return canAddDocuments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAddDocuments() {
     return canAddDocuments;
   }
 
+  /**
+   * setCanAddDocuments.
+   **/
   public void setCanAddDocuments(Boolean canAddDocuments) {
     this.canAddDocuments = canAddDocuments;
   }
 
+
+  /**
+   * canAddDocumentsFromFormGroups.
+   *
+   * @return Permissions
+   **/
   public Permissions canAddDocumentsFromFormGroups(Boolean canAddDocumentsFromFormGroups) {
     this.canAddDocumentsFromFormGroups = canAddDocumentsFromFormGroups;
     return this;
   }
 
-   /**
-   * Get canAddDocumentsFromFormGroups
+  /**
+   * Get canAddDocumentsFromFormGroups.
    * @return canAddDocumentsFromFormGroups
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAddDocumentsFromFormGroups() {
     return canAddDocumentsFromFormGroups;
   }
 
+  /**
+   * setCanAddDocumentsFromFormGroups.
+   **/
   public void setCanAddDocumentsFromFormGroups(Boolean canAddDocumentsFromFormGroups) {
     this.canAddDocumentsFromFormGroups = canAddDocumentsFromFormGroups;
   }
 
+
+  /**
+   * canAddDocumentsFromFormLibraries.
+   *
+   * @return Permissions
+   **/
   public Permissions canAddDocumentsFromFormLibraries(Boolean canAddDocumentsFromFormLibraries) {
     this.canAddDocumentsFromFormLibraries = canAddDocumentsFromFormLibraries;
     return this;
   }
 
-   /**
-   * Get canAddDocumentsFromFormLibraries
+  /**
+   * Get canAddDocumentsFromFormLibraries.
    * @return canAddDocumentsFromFormLibraries
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAddDocumentsFromFormLibraries() {
     return canAddDocumentsFromFormLibraries;
   }
 
+  /**
+   * setCanAddDocumentsFromFormLibraries.
+   **/
   public void setCanAddDocumentsFromFormLibraries(Boolean canAddDocumentsFromFormLibraries) {
     this.canAddDocumentsFromFormLibraries = canAddDocumentsFromFormLibraries;
   }
 
+
+  /**
+   * documentsViewableByOthersInRoomFromOffice.
+   *
+   * @return Permissions
+   **/
   public Permissions documentsViewableByOthersInRoomFromOffice(Boolean documentsViewableByOthersInRoomFromOffice) {
     this.documentsViewableByOthersInRoomFromOffice = documentsViewableByOthersInRoomFromOffice;
     return this;
   }
 
-   /**
-   * Get documentsViewableByOthersInRoomFromOffice
+  /**
+   * Get documentsViewableByOthersInRoomFromOffice.
    * @return documentsViewableByOthersInRoomFromOffice
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isDocumentsViewableByOthersInRoomFromOffice() {
     return documentsViewableByOthersInRoomFromOffice;
   }
 
+  /**
+   * setDocumentsViewableByOthersInRoomFromOffice.
+   **/
   public void setDocumentsViewableByOthersInRoomFromOffice(Boolean documentsViewableByOthersInRoomFromOffice) {
     this.documentsViewableByOthersInRoomFromOffice = documentsViewableByOthersInRoomFromOffice;
   }
 
+
+  /**
+   * documentsAutoOwnedByPeers.
+   *
+   * @return Permissions
+   **/
   public Permissions documentsAutoOwnedByPeers(Boolean documentsAutoOwnedByPeers) {
     this.documentsAutoOwnedByPeers = documentsAutoOwnedByPeers;
     return this;
   }
 
-   /**
-   * Get documentsAutoOwnedByPeers
+  /**
+   * Get documentsAutoOwnedByPeers.
    * @return documentsAutoOwnedByPeers
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isDocumentsAutoOwnedByPeers() {
     return documentsAutoOwnedByPeers;
   }
 
+  /**
+   * setDocumentsAutoOwnedByPeers.
+   **/
   public void setDocumentsAutoOwnedByPeers(Boolean documentsAutoOwnedByPeers) {
     this.documentsAutoOwnedByPeers = documentsAutoOwnedByPeers;
   }
 
+
+  /**
+   * canDeleteOwnedDocuments.
+   *
+   * @return Permissions
+   **/
   public Permissions canDeleteOwnedDocuments(Boolean canDeleteOwnedDocuments) {
     this.canDeleteOwnedDocuments = canDeleteOwnedDocuments;
     return this;
   }
 
-   /**
-   * Get canDeleteOwnedDocuments
+  /**
+   * Get canDeleteOwnedDocuments.
    * @return canDeleteOwnedDocuments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanDeleteOwnedDocuments() {
     return canDeleteOwnedDocuments;
   }
 
+  /**
+   * setCanDeleteOwnedDocuments.
+   **/
   public void setCanDeleteOwnedDocuments(Boolean canDeleteOwnedDocuments) {
     this.canDeleteOwnedDocuments = canDeleteOwnedDocuments;
   }
 
+
+  /**
+   * canManageSharedDocs.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageSharedDocs(Boolean canManageSharedDocs) {
     this.canManageSharedDocs = canManageSharedDocs;
     return this;
   }
 
-   /**
-   * Get canManageSharedDocs
+  /**
+   * Get canManageSharedDocs.
    * @return canManageSharedDocs
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageSharedDocs() {
     return canManageSharedDocs;
   }
 
+  /**
+   * setCanManageSharedDocs.
+   **/
   public void setCanManageSharedDocs(Boolean canManageSharedDocs) {
     this.canManageSharedDocs = canManageSharedDocs;
   }
 
+
+  /**
+   * canManageFormGroups.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageFormGroups(Boolean canManageFormGroups) {
     this.canManageFormGroups = canManageFormGroups;
     return this;
   }
 
-   /**
-   * Get canManageFormGroups
+  /**
+   * Get canManageFormGroups.
    * @return canManageFormGroups
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageFormGroups() {
     return canManageFormGroups;
   }
 
+  /**
+   * setCanManageFormGroups.
+   **/
   public void setCanManageFormGroups(Boolean canManageFormGroups) {
     this.canManageFormGroups = canManageFormGroups;
   }
 
+
+  /**
+   * canShareDocsNotOwned.
+   *
+   * @return Permissions
+   **/
   public Permissions canShareDocsNotOwned(Boolean canShareDocsNotOwned) {
     this.canShareDocsNotOwned = canShareDocsNotOwned;
     return this;
   }
 
-   /**
-   * Get canShareDocsNotOwned
+  /**
+   * Get canShareDocsNotOwned.
    * @return canShareDocsNotOwned
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanShareDocsNotOwned() {
     return canShareDocsNotOwned;
   }
 
+  /**
+   * setCanShareDocsNotOwned.
+   **/
   public void setCanShareDocsNotOwned(Boolean canShareDocsNotOwned) {
     this.canShareDocsNotOwned = canShareDocsNotOwned;
   }
 
+
+  /**
+   * canCreateFormTemplates.
+   *
+   * @return Permissions
+   **/
+  public Permissions canCreateFormTemplates(Boolean canCreateFormTemplates) {
+    this.canCreateFormTemplates = canCreateFormTemplates;
+    return this;
+  }
+
+  /**
+   * Get canCreateFormTemplates.
+   * @return canCreateFormTemplates
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean isCanCreateFormTemplates() {
+    return canCreateFormTemplates;
+  }
+
+  /**
+   * setCanCreateFormTemplates.
+   **/
+  public void setCanCreateFormTemplates(Boolean canCreateFormTemplates) {
+    this.canCreateFormTemplates = canCreateFormTemplates;
+  }
+
+
+  /**
+   * canAddTasksToAnyTaskLists.
+   *
+   * @return Permissions
+   **/
   public Permissions canAddTasksToAnyTaskLists(Boolean canAddTasksToAnyTaskLists) {
     this.canAddTasksToAnyTaskLists = canAddTasksToAnyTaskLists;
     return this;
   }
 
-   /**
-   * Get canAddTasksToAnyTaskLists
+  /**
+   * Get canAddTasksToAnyTaskLists.
    * @return canAddTasksToAnyTaskLists
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAddTasksToAnyTaskLists() {
     return canAddTasksToAnyTaskLists;
   }
 
+  /**
+   * setCanAddTasksToAnyTaskLists.
+   **/
   public void setCanAddTasksToAnyTaskLists(Boolean canAddTasksToAnyTaskLists) {
     this.canAddTasksToAnyTaskLists = canAddTasksToAnyTaskLists;
   }
 
+
+  /**
+   * canEditEditableTasks.
+   *
+   * @return Permissions
+   **/
   public Permissions canEditEditableTasks(Boolean canEditEditableTasks) {
     this.canEditEditableTasks = canEditEditableTasks;
     return this;
   }
 
-   /**
-   * Get canEditEditableTasks
+  /**
+   * Get canEditEditableTasks.
    * @return canEditEditableTasks
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanEditEditableTasks() {
     return canEditEditableTasks;
   }
 
+  /**
+   * setCanEditEditableTasks.
+   **/
   public void setCanEditEditableTasks(Boolean canEditEditableTasks) {
     this.canEditEditableTasks = canEditEditableTasks;
   }
 
+
+  /**
+   * canEditAnyTasks.
+   *
+   * @return Permissions
+   **/
   public Permissions canEditAnyTasks(Boolean canEditAnyTasks) {
     this.canEditAnyTasks = canEditAnyTasks;
     return this;
   }
 
-   /**
-   * Get canEditAnyTasks
+  /**
+   * Get canEditAnyTasks.
    * @return canEditAnyTasks
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanEditAnyTasks() {
     return canEditAnyTasks;
   }
 
+  /**
+   * setCanEditAnyTasks.
+   **/
   public void setCanEditAnyTasks(Boolean canEditAnyTasks) {
     this.canEditAnyTasks = canEditAnyTasks;
   }
 
+
+  /**
+   * canDeleteDeletableTasks.
+   *
+   * @return Permissions
+   **/
   public Permissions canDeleteDeletableTasks(Boolean canDeleteDeletableTasks) {
     this.canDeleteDeletableTasks = canDeleteDeletableTasks;
     return this;
   }
 
-   /**
-   * Get canDeleteDeletableTasks
+  /**
+   * Get canDeleteDeletableTasks.
    * @return canDeleteDeletableTasks
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanDeleteDeletableTasks() {
     return canDeleteDeletableTasks;
   }
 
+  /**
+   * setCanDeleteDeletableTasks.
+   **/
   public void setCanDeleteDeletableTasks(Boolean canDeleteDeletableTasks) {
     this.canDeleteDeletableTasks = canDeleteDeletableTasks;
   }
 
+
+  /**
+   * canDeleteAnyTasks.
+   *
+   * @return Permissions
+   **/
   public Permissions canDeleteAnyTasks(Boolean canDeleteAnyTasks) {
     this.canDeleteAnyTasks = canDeleteAnyTasks;
     return this;
   }
 
-   /**
-   * Get canDeleteAnyTasks
+  /**
+   * Get canDeleteAnyTasks.
    * @return canDeleteAnyTasks
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanDeleteAnyTasks() {
     return canDeleteAnyTasks;
   }
 
+  /**
+   * setCanDeleteAnyTasks.
+   **/
   public void setCanDeleteAnyTasks(Boolean canDeleteAnyTasks) {
     this.canDeleteAnyTasks = canDeleteAnyTasks;
   }
 
+
+  /**
+   * canApplyTaskList.
+   *
+   * @return Permissions
+   **/
   public Permissions canApplyTaskList(Boolean canApplyTaskList) {
     this.canApplyTaskList = canApplyTaskList;
     return this;
   }
 
-   /**
-   * Get canApplyTaskList
+  /**
+   * Get canApplyTaskList.
    * @return canApplyTaskList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanApplyTaskList() {
     return canApplyTaskList;
   }
 
+  /**
+   * setCanApplyTaskList.
+   **/
   public void setCanApplyTaskList(Boolean canApplyTaskList) {
     this.canApplyTaskList = canApplyTaskList;
   }
 
+
+  /**
+   * canRemoveAnyTaskList.
+   *
+   * @return Permissions
+   **/
   public Permissions canRemoveAnyTaskList(Boolean canRemoveAnyTaskList) {
     this.canRemoveAnyTaskList = canRemoveAnyTaskList;
     return this;
   }
 
-   /**
-   * Get canRemoveAnyTaskList
+  /**
+   * Get canRemoveAnyTaskList.
    * @return canRemoveAnyTaskList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanRemoveAnyTaskList() {
     return canRemoveAnyTaskList;
   }
 
+  /**
+   * setCanRemoveAnyTaskList.
+   **/
   public void setCanRemoveAnyTaskList(Boolean canRemoveAnyTaskList) {
     this.canRemoveAnyTaskList = canRemoveAnyTaskList;
   }
 
+
+  /**
+   * canSubmitTaskList.
+   *
+   * @return Permissions
+   **/
   public Permissions canSubmitTaskList(Boolean canSubmitTaskList) {
     this.canSubmitTaskList = canSubmitTaskList;
     return this;
   }
 
-   /**
-   * Get canSubmitTaskList
+  /**
+   * Get canSubmitTaskList.
    * @return canSubmitTaskList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanSubmitTaskList() {
     return canSubmitTaskList;
   }
 
+  /**
+   * setCanSubmitTaskList.
+   **/
   public void setCanSubmitTaskList(Boolean canSubmitTaskList) {
     this.canSubmitTaskList = canSubmitTaskList;
   }
 
+
+  /**
+   * canAutoSubmitTaskList.
+   *
+   * @return Permissions
+   **/
   public Permissions canAutoSubmitTaskList(Boolean canAutoSubmitTaskList) {
     this.canAutoSubmitTaskList = canAutoSubmitTaskList;
     return this;
   }
 
-   /**
-   * Get canAutoSubmitTaskList
+  /**
+   * Get canAutoSubmitTaskList.
    * @return canAutoSubmitTaskList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAutoSubmitTaskList() {
     return canAutoSubmitTaskList;
   }
 
+  /**
+   * setCanAutoSubmitTaskList.
+   **/
   public void setCanAutoSubmitTaskList(Boolean canAutoSubmitTaskList) {
     this.canAutoSubmitTaskList = canAutoSubmitTaskList;
   }
 
+
+  /**
+   * canReviewTaskList.
+   *
+   * @return Permissions
+   **/
   public Permissions canReviewTaskList(Boolean canReviewTaskList) {
     this.canReviewTaskList = canReviewTaskList;
     return this;
   }
 
-   /**
-   * Get canReviewTaskList
+  /**
+   * Get canReviewTaskList.
    * @return canReviewTaskList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanReviewTaskList() {
     return canReviewTaskList;
   }
 
+  /**
+   * setCanReviewTaskList.
+   **/
   public void setCanReviewTaskList(Boolean canReviewTaskList) {
     this.canReviewTaskList = canReviewTaskList;
   }
 
+
+  /**
+   * canAutoApproveTaskList.
+   *
+   * @return Permissions
+   **/
   public Permissions canAutoApproveTaskList(Boolean canAutoApproveTaskList) {
     this.canAutoApproveTaskList = canAutoApproveTaskList;
     return this;
   }
 
-   /**
-   * Get canAutoApproveTaskList
+  /**
+   * Get canAutoApproveTaskList.
    * @return canAutoApproveTaskList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAutoApproveTaskList() {
     return canAutoApproveTaskList;
   }
 
+  /**
+   * setCanAutoApproveTaskList.
+   **/
   public void setCanAutoApproveTaskList(Boolean canAutoApproveTaskList) {
     this.canAutoApproveTaskList = canAutoApproveTaskList;
   }
 
+
+  /**
+   * canManageTaskTemplatesForAllRegionsAllOffices.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageTaskTemplatesForAllRegionsAllOffices(Boolean canManageTaskTemplatesForAllRegionsAllOffices) {
     this.canManageTaskTemplatesForAllRegionsAllOffices = canManageTaskTemplatesForAllRegionsAllOffices;
     return this;
   }
 
-   /**
-   * Get canManageTaskTemplatesForAllRegionsAllOffices
+  /**
+   * Get canManageTaskTemplatesForAllRegionsAllOffices.
    * @return canManageTaskTemplatesForAllRegionsAllOffices
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageTaskTemplatesForAllRegionsAllOffices() {
     return canManageTaskTemplatesForAllRegionsAllOffices;
   }
 
+  /**
+   * setCanManageTaskTemplatesForAllRegionsAllOffices.
+   **/
   public void setCanManageTaskTemplatesForAllRegionsAllOffices(Boolean canManageTaskTemplatesForAllRegionsAllOffices) {
     this.canManageTaskTemplatesForAllRegionsAllOffices = canManageTaskTemplatesForAllRegionsAllOffices;
   }
 
+
+  /**
+   * canApplyRoomTemplates.
+   *
+   * @return Permissions
+   **/
   public Permissions canApplyRoomTemplates(Boolean canApplyRoomTemplates) {
     this.canApplyRoomTemplates = canApplyRoomTemplates;
     return this;
   }
 
-   /**
-   * Get canApplyRoomTemplates
+  /**
+   * Get canApplyRoomTemplates.
    * @return canApplyRoomTemplates
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanApplyRoomTemplates() {
     return canApplyRoomTemplates;
   }
 
+  /**
+   * setCanApplyRoomTemplates.
+   **/
   public void setCanApplyRoomTemplates(Boolean canApplyRoomTemplates) {
     this.canApplyRoomTemplates = canApplyRoomTemplates;
   }
 
+
+  /**
+   * canAddTasksToRooms.
+   *
+   * @return Permissions
+   **/
   public Permissions canAddTasksToRooms(Boolean canAddTasksToRooms) {
     this.canAddTasksToRooms = canAddTasksToRooms;
     return this;
   }
 
-   /**
-   * Get canAddTasksToRooms
+  /**
+   * Get canAddTasksToRooms.
    * @return canAddTasksToRooms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAddTasksToRooms() {
     return canAddTasksToRooms;
   }
 
+  /**
+   * setCanAddTasksToRooms.
+   **/
   public void setCanAddTasksToRooms(Boolean canAddTasksToRooms) {
     this.canAddTasksToRooms = canAddTasksToRooms;
   }
 
+
+  /**
+   * canReviewAnyTask.
+   *
+   * @return Permissions
+   **/
   public Permissions canReviewAnyTask(Boolean canReviewAnyTask) {
     this.canReviewAnyTask = canReviewAnyTask;
     return this;
   }
 
-   /**
-   * Get canReviewAnyTask
+  /**
+   * Get canReviewAnyTask.
    * @return canReviewAnyTask
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanReviewAnyTask() {
     return canReviewAnyTask;
   }
 
+  /**
+   * setCanReviewAnyTask.
+   **/
   public void setCanReviewAnyTask(Boolean canReviewAnyTask) {
     this.canReviewAnyTask = canReviewAnyTask;
   }
 
+
+  /**
+   * canManageDocsOnAnyTask.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageDocsOnAnyTask(Boolean canManageDocsOnAnyTask) {
     this.canManageDocsOnAnyTask = canManageDocsOnAnyTask;
     return this;
   }
 
-   /**
-   * Get canManageDocsOnAnyTask
+  /**
+   * Get canManageDocsOnAnyTask.
    * @return canManageDocsOnAnyTask
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageDocsOnAnyTask() {
     return canManageDocsOnAnyTask;
   }
 
+  /**
+   * setCanManageDocsOnAnyTask.
+   **/
   public void setCanManageDocsOnAnyTask(Boolean canManageDocsOnAnyTask) {
     this.canManageDocsOnAnyTask = canManageDocsOnAnyTask;
   }
 
+
+  /**
+   * canAddMemberAndSetRoleLowerAccessLevel.
+   *
+   * @return Permissions
+   **/
   public Permissions canAddMemberAndSetRoleLowerAccessLevel(Boolean canAddMemberAndSetRoleLowerAccessLevel) {
     this.canAddMemberAndSetRoleLowerAccessLevel = canAddMemberAndSetRoleLowerAccessLevel;
     return this;
   }
 
-   /**
-   * Get canAddMemberAndSetRoleLowerAccessLevel
+  /**
+   * Get canAddMemberAndSetRoleLowerAccessLevel.
    * @return canAddMemberAndSetRoleLowerAccessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAddMemberAndSetRoleLowerAccessLevel() {
     return canAddMemberAndSetRoleLowerAccessLevel;
   }
 
+  /**
+   * setCanAddMemberAndSetRoleLowerAccessLevel.
+   **/
   public void setCanAddMemberAndSetRoleLowerAccessLevel(Boolean canAddMemberAndSetRoleLowerAccessLevel) {
     this.canAddMemberAndSetRoleLowerAccessLevel = canAddMemberAndSetRoleLowerAccessLevel;
   }
 
+
+  /**
+   * canAddMemberAndSetRoleSameAccessLevel.
+   *
+   * @return Permissions
+   **/
   public Permissions canAddMemberAndSetRoleSameAccessLevel(Boolean canAddMemberAndSetRoleSameAccessLevel) {
     this.canAddMemberAndSetRoleSameAccessLevel = canAddMemberAndSetRoleSameAccessLevel;
     return this;
   }
 
-   /**
-   * Get canAddMemberAndSetRoleSameAccessLevel
+  /**
+   * Get canAddMemberAndSetRoleSameAccessLevel.
    * @return canAddMemberAndSetRoleSameAccessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAddMemberAndSetRoleSameAccessLevel() {
     return canAddMemberAndSetRoleSameAccessLevel;
   }
 
+  /**
+   * setCanAddMemberAndSetRoleSameAccessLevel.
+   **/
   public void setCanAddMemberAndSetRoleSameAccessLevel(Boolean canAddMemberAndSetRoleSameAccessLevel) {
     this.canAddMemberAndSetRoleSameAccessLevel = canAddMemberAndSetRoleSameAccessLevel;
   }
 
+
+  /**
+   * canChangeMemberRoleLowerAccessLevel.
+   *
+   * @return Permissions
+   **/
   public Permissions canChangeMemberRoleLowerAccessLevel(Boolean canChangeMemberRoleLowerAccessLevel) {
     this.canChangeMemberRoleLowerAccessLevel = canChangeMemberRoleLowerAccessLevel;
     return this;
   }
 
-   /**
-   * Get canChangeMemberRoleLowerAccessLevel
+  /**
+   * Get canChangeMemberRoleLowerAccessLevel.
    * @return canChangeMemberRoleLowerAccessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanChangeMemberRoleLowerAccessLevel() {
     return canChangeMemberRoleLowerAccessLevel;
   }
 
+  /**
+   * setCanChangeMemberRoleLowerAccessLevel.
+   **/
   public void setCanChangeMemberRoleLowerAccessLevel(Boolean canChangeMemberRoleLowerAccessLevel) {
     this.canChangeMemberRoleLowerAccessLevel = canChangeMemberRoleLowerAccessLevel;
   }
 
+
+  /**
+   * canChangeMemberRoleSameAccessLevel.
+   *
+   * @return Permissions
+   **/
   public Permissions canChangeMemberRoleSameAccessLevel(Boolean canChangeMemberRoleSameAccessLevel) {
     this.canChangeMemberRoleSameAccessLevel = canChangeMemberRoleSameAccessLevel;
     return this;
   }
 
-   /**
-   * Get canChangeMemberRoleSameAccessLevel
+  /**
+   * Get canChangeMemberRoleSameAccessLevel.
    * @return canChangeMemberRoleSameAccessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanChangeMemberRoleSameAccessLevel() {
     return canChangeMemberRoleSameAccessLevel;
   }
 
+  /**
+   * setCanChangeMemberRoleSameAccessLevel.
+   **/
   public void setCanChangeMemberRoleSameAccessLevel(Boolean canChangeMemberRoleSameAccessLevel) {
     this.canChangeMemberRoleSameAccessLevel = canChangeMemberRoleSameAccessLevel;
   }
 
+
+  /**
+   * canManageMemberLowerAccessLevel.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageMemberLowerAccessLevel(Boolean canManageMemberLowerAccessLevel) {
     this.canManageMemberLowerAccessLevel = canManageMemberLowerAccessLevel;
     return this;
   }
 
-   /**
-   * Get canManageMemberLowerAccessLevel
+  /**
+   * Get canManageMemberLowerAccessLevel.
    * @return canManageMemberLowerAccessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageMemberLowerAccessLevel() {
     return canManageMemberLowerAccessLevel;
   }
 
+  /**
+   * setCanManageMemberLowerAccessLevel.
+   **/
   public void setCanManageMemberLowerAccessLevel(Boolean canManageMemberLowerAccessLevel) {
     this.canManageMemberLowerAccessLevel = canManageMemberLowerAccessLevel;
   }
 
+
+  /**
+   * canManageMemberSameAccessLevel.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageMemberSameAccessLevel(Boolean canManageMemberSameAccessLevel) {
     this.canManageMemberSameAccessLevel = canManageMemberSameAccessLevel;
     return this;
   }
 
-   /**
-   * Get canManageMemberSameAccessLevel
+  /**
+   * Get canManageMemberSameAccessLevel.
    * @return canManageMemberSameAccessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageMemberSameAccessLevel() {
     return canManageMemberSameAccessLevel;
   }
 
+  /**
+   * setCanManageMemberSameAccessLevel.
+   **/
   public void setCanManageMemberSameAccessLevel(Boolean canManageMemberSameAccessLevel) {
     this.canManageMemberSameAccessLevel = canManageMemberSameAccessLevel;
   }
 
+
+  /**
+   * canRemoveCompanyMemberLowerAccessLevel.
+   *
+   * @return Permissions
+   **/
   public Permissions canRemoveCompanyMemberLowerAccessLevel(Boolean canRemoveCompanyMemberLowerAccessLevel) {
     this.canRemoveCompanyMemberLowerAccessLevel = canRemoveCompanyMemberLowerAccessLevel;
     return this;
   }
 
-   /**
-   * Get canRemoveCompanyMemberLowerAccessLevel
+  /**
+   * Get canRemoveCompanyMemberLowerAccessLevel.
    * @return canRemoveCompanyMemberLowerAccessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanRemoveCompanyMemberLowerAccessLevel() {
     return canRemoveCompanyMemberLowerAccessLevel;
   }
 
+  /**
+   * setCanRemoveCompanyMemberLowerAccessLevel.
+   **/
   public void setCanRemoveCompanyMemberLowerAccessLevel(Boolean canRemoveCompanyMemberLowerAccessLevel) {
     this.canRemoveCompanyMemberLowerAccessLevel = canRemoveCompanyMemberLowerAccessLevel;
   }
 
+
+  /**
+   * canRemoveCompanyMemberSameAccessLevel.
+   *
+   * @return Permissions
+   **/
   public Permissions canRemoveCompanyMemberSameAccessLevel(Boolean canRemoveCompanyMemberSameAccessLevel) {
     this.canRemoveCompanyMemberSameAccessLevel = canRemoveCompanyMemberSameAccessLevel;
     return this;
   }
 
-   /**
-   * Get canRemoveCompanyMemberSameAccessLevel
+  /**
+   * Get canRemoveCompanyMemberSameAccessLevel.
    * @return canRemoveCompanyMemberSameAccessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanRemoveCompanyMemberSameAccessLevel() {
     return canRemoveCompanyMemberSameAccessLevel;
   }
 
+  /**
+   * setCanRemoveCompanyMemberSameAccessLevel.
+   **/
   public void setCanRemoveCompanyMemberSameAccessLevel(Boolean canRemoveCompanyMemberSameAccessLevel) {
     this.canRemoveCompanyMemberSameAccessLevel = canRemoveCompanyMemberSameAccessLevel;
   }
 
+
+  /**
+   * canManageAccount.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageAccount(Boolean canManageAccount) {
     this.canManageAccount = canManageAccount;
     return this;
   }
 
-   /**
-   * Get canManageAccount
+  /**
+   * Get canManageAccount.
    * @return canManageAccount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageAccount() {
     return canManageAccount;
   }
 
+  /**
+   * setCanManageAccount.
+   **/
   public void setCanManageAccount(Boolean canManageAccount) {
     this.canManageAccount = canManageAccount;
   }
 
+
+  /**
+   * canManageLogo.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageLogo(Boolean canManageLogo) {
     this.canManageLogo = canManageLogo;
     return this;
   }
 
-   /**
-   * Get canManageLogo
+  /**
+   * Get canManageLogo.
    * @return canManageLogo
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageLogo() {
     return canManageLogo;
   }
 
+  /**
+   * setCanManageLogo.
+   **/
   public void setCanManageLogo(Boolean canManageLogo) {
     this.canManageLogo = canManageLogo;
   }
 
+
+  /**
+   * canManageRolesAndPermissions.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageRolesAndPermissions(Boolean canManageRolesAndPermissions) {
     this.canManageRolesAndPermissions = canManageRolesAndPermissions;
     return this;
   }
 
-   /**
-   * Get canManageRolesAndPermissions
+  /**
+   * Get canManageRolesAndPermissions.
    * @return canManageRolesAndPermissions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageRolesAndPermissions() {
     return canManageRolesAndPermissions;
   }
 
+  /**
+   * setCanManageRolesAndPermissions.
+   **/
   public void setCanManageRolesAndPermissions(Boolean canManageRolesAndPermissions) {
     this.canManageRolesAndPermissions = canManageRolesAndPermissions;
   }
 
+
+  /**
+   * canManageRoomDetails.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageRoomDetails(Boolean canManageRoomDetails) {
     this.canManageRoomDetails = canManageRoomDetails;
     return this;
   }
 
-   /**
-   * Get canManageRoomDetails
+  /**
+   * Get canManageRoomDetails.
    * @return canManageRoomDetails
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageRoomDetails() {
     return canManageRoomDetails;
   }
 
+  /**
+   * setCanManageRoomDetails.
+   **/
   public void setCanManageRoomDetails(Boolean canManageRoomDetails) {
     this.canManageRoomDetails = canManageRoomDetails;
   }
 
+
+  /**
+   * canManageRoomTemplates.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageRoomTemplates(Boolean canManageRoomTemplates) {
     this.canManageRoomTemplates = canManageRoomTemplates;
     return this;
   }
 
-   /**
-   * Get canManageRoomTemplates
+  /**
+   * Get canManageRoomTemplates.
    * @return canManageRoomTemplates
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageRoomTemplates() {
     return canManageRoomTemplates;
   }
 
+  /**
+   * setCanManageRoomTemplates.
+   **/
   public void setCanManageRoomTemplates(Boolean canManageRoomTemplates) {
     this.canManageRoomTemplates = canManageRoomTemplates;
   }
 
+
+  /**
+   * canManageIntegrationSettings.
+   *
+   * @return Permissions
+   **/
   public Permissions canManageIntegrationSettings(Boolean canManageIntegrationSettings) {
     this.canManageIntegrationSettings = canManageIntegrationSettings;
     return this;
   }
 
-   /**
-   * Get canManageIntegrationSettings
+  /**
+   * Get canManageIntegrationSettings.
    * @return canManageIntegrationSettings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanManageIntegrationSettings() {
     return canManageIntegrationSettings;
   }
 
+  /**
+   * setCanManageIntegrationSettings.
+   **/
   public void setCanManageIntegrationSettings(Boolean canManageIntegrationSettings) {
     this.canManageIntegrationSettings = canManageIntegrationSettings;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1312,7 +1867,6 @@ public class Permissions {
         Objects.equals(this.canDeleteOwnedRooms, permissions.canDeleteOwnedRooms) &&
         Objects.equals(this.autoAccessToRooms, permissions.autoAccessToRooms) &&
         Objects.equals(this.canExportRoomActivityDetailsPeople, permissions.canExportRoomActivityDetailsPeople) &&
-        Objects.equals(this.isVisibleInRooms, permissions.isVisibleInRooms) &&
         Objects.equals(this.canCopyRoomDetails, permissions.canCopyRoomDetails) &&
         Objects.equals(this.canEditAnyRoomRole, permissions.canEditAnyRoomRole) &&
         Objects.equals(this.canEditInvitedRoomRole, permissions.canEditInvitedRoomRole) &&
@@ -1335,6 +1889,7 @@ public class Permissions {
         Objects.equals(this.canManageSharedDocs, permissions.canManageSharedDocs) &&
         Objects.equals(this.canManageFormGroups, permissions.canManageFormGroups) &&
         Objects.equals(this.canShareDocsNotOwned, permissions.canShareDocsNotOwned) &&
+        Objects.equals(this.canCreateFormTemplates, permissions.canCreateFormTemplates) &&
         Objects.equals(this.canAddTasksToAnyTaskLists, permissions.canAddTasksToAnyTaskLists) &&
         Objects.equals(this.canEditEditableTasks, permissions.canEditEditableTasks) &&
         Objects.equals(this.canEditAnyTasks, permissions.canEditAnyTasks) &&
@@ -1367,12 +1922,18 @@ public class Permissions {
         Objects.equals(this.canManageIntegrationSettings, permissions.canManageIntegrationSettings);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(canAddUsersToRooms, canCreateRooms, canSubmitRoomsForReview, canCloseRooms, canReopenRooms, canDeleteOwnedRooms, autoAccessToRooms, canExportRoomActivityDetailsPeople, isVisibleInRooms, canCopyRoomDetails, canEditAnyRoomRole, canEditInvitedRoomRole, canEditRoomSide, canManageAnyUserRoomAccess, canManageInvitedUserRoomAccess, isHiddenInRoom, canManageRoomOwners, canDeleteRooms, canConnectToMortgageCadence, canViewRoomDetails, canViewAndEditRoomDetails, canSendRoomDetailsToLoneWolf, canAddDocuments, canAddDocumentsFromFormGroups, canAddDocumentsFromFormLibraries, documentsViewableByOthersInRoomFromOffice, documentsAutoOwnedByPeers, canDeleteOwnedDocuments, canManageSharedDocs, canManageFormGroups, canShareDocsNotOwned, canAddTasksToAnyTaskLists, canEditEditableTasks, canEditAnyTasks, canDeleteDeletableTasks, canDeleteAnyTasks, canApplyTaskList, canRemoveAnyTaskList, canSubmitTaskList, canAutoSubmitTaskList, canReviewTaskList, canAutoApproveTaskList, canManageTaskTemplatesForAllRegionsAllOffices, canApplyRoomTemplates, canAddTasksToRooms, canReviewAnyTask, canManageDocsOnAnyTask, canAddMemberAndSetRoleLowerAccessLevel, canAddMemberAndSetRoleSameAccessLevel, canChangeMemberRoleLowerAccessLevel, canChangeMemberRoleSameAccessLevel, canManageMemberLowerAccessLevel, canManageMemberSameAccessLevel, canRemoveCompanyMemberLowerAccessLevel, canRemoveCompanyMemberSameAccessLevel, canManageAccount, canManageLogo, canManageRolesAndPermissions, canManageRoomDetails, canManageRoomTemplates, canManageIntegrationSettings);
+    return Objects.hash(canAddUsersToRooms, canCreateRooms, canSubmitRoomsForReview, canCloseRooms, canReopenRooms, canDeleteOwnedRooms, autoAccessToRooms, canExportRoomActivityDetailsPeople, canCopyRoomDetails, canEditAnyRoomRole, canEditInvitedRoomRole, canEditRoomSide, canManageAnyUserRoomAccess, canManageInvitedUserRoomAccess, isHiddenInRoom, canManageRoomOwners, canDeleteRooms, canConnectToMortgageCadence, canViewRoomDetails, canViewAndEditRoomDetails, canSendRoomDetailsToLoneWolf, canAddDocuments, canAddDocumentsFromFormGroups, canAddDocumentsFromFormLibraries, documentsViewableByOthersInRoomFromOffice, documentsAutoOwnedByPeers, canDeleteOwnedDocuments, canManageSharedDocs, canManageFormGroups, canShareDocsNotOwned, canCreateFormTemplates, canAddTasksToAnyTaskLists, canEditEditableTasks, canEditAnyTasks, canDeleteDeletableTasks, canDeleteAnyTasks, canApplyTaskList, canRemoveAnyTaskList, canSubmitTaskList, canAutoSubmitTaskList, canReviewTaskList, canAutoApproveTaskList, canManageTaskTemplatesForAllRegionsAllOffices, canApplyRoomTemplates, canAddTasksToRooms, canReviewAnyTask, canManageDocsOnAnyTask, canAddMemberAndSetRoleLowerAccessLevel, canAddMemberAndSetRoleSameAccessLevel, canChangeMemberRoleLowerAccessLevel, canChangeMemberRoleSameAccessLevel, canManageMemberLowerAccessLevel, canManageMemberSameAccessLevel, canRemoveCompanyMemberLowerAccessLevel, canRemoveCompanyMemberSameAccessLevel, canManageAccount, canManageLogo, canManageRolesAndPermissions, canManageRoomDetails, canManageRoomTemplates, canManageIntegrationSettings);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
@@ -1386,7 +1947,6 @@ public class Permissions {
     sb.append("    canDeleteOwnedRooms: ").append(toIndentedString(canDeleteOwnedRooms)).append("\n");
     sb.append("    autoAccessToRooms: ").append(toIndentedString(autoAccessToRooms)).append("\n");
     sb.append("    canExportRoomActivityDetailsPeople: ").append(toIndentedString(canExportRoomActivityDetailsPeople)).append("\n");
-    sb.append("    isVisibleInRooms: ").append(toIndentedString(isVisibleInRooms)).append("\n");
     sb.append("    canCopyRoomDetails: ").append(toIndentedString(canCopyRoomDetails)).append("\n");
     sb.append("    canEditAnyRoomRole: ").append(toIndentedString(canEditAnyRoomRole)).append("\n");
     sb.append("    canEditInvitedRoomRole: ").append(toIndentedString(canEditInvitedRoomRole)).append("\n");
@@ -1409,6 +1969,7 @@ public class Permissions {
     sb.append("    canManageSharedDocs: ").append(toIndentedString(canManageSharedDocs)).append("\n");
     sb.append("    canManageFormGroups: ").append(toIndentedString(canManageFormGroups)).append("\n");
     sb.append("    canShareDocsNotOwned: ").append(toIndentedString(canShareDocsNotOwned)).append("\n");
+    sb.append("    canCreateFormTemplates: ").append(toIndentedString(canCreateFormTemplates)).append("\n");
     sb.append("    canAddTasksToAnyTaskLists: ").append(toIndentedString(canAddTasksToAnyTaskLists)).append("\n");
     sb.append("    canEditEditableTasks: ").append(toIndentedString(canEditEditableTasks)).append("\n");
     sb.append("    canEditAnyTasks: ").append(toIndentedString(canEditAnyTasks)).append("\n");

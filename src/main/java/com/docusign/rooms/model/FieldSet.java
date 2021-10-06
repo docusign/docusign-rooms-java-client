@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FieldSet
+ * FieldSet.
+ *
  */
 
 public class FieldSet {
@@ -23,34 +24,39 @@ public class FieldSet {
   @JsonProperty("fields")
   private java.util.List<Field> fields = null;
 
-   /**
-   * Get fieldSetId
+  /**
+   * Get fieldSetId.
    * @return fieldSetId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getFieldSetId() {
     return fieldSetId;
   }
 
-   /**
-   * Get title
+  /**
+   * Get title.
    * @return title
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTitle() {
     return title;
   }
 
-   /**
-   * Get fields
+  /**
+   * Get fields.
    * @return fields
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Field> getFields() {
     return fields;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -65,12 +71,18 @@ public class FieldSet {
         Objects.equals(this.fields, fieldSet.fields);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(fieldSetId, title, fields);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

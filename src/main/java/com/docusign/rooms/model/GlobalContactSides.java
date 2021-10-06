@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalContactSides
+ * GlobalContactSides.
+ *
  */
 
 public class GlobalContactSides {
   @JsonProperty("contactSides")
   private java.util.List<ContactSide> contactSides = null;
 
+
+  /**
+   * contactSides.
+   *
+   * @return GlobalContactSides
+   **/
   public GlobalContactSides contactSides(java.util.List<ContactSide> contactSides) {
     this.contactSides = contactSides;
     return this;
   }
-
+  
+  /**
+   * addContactSidesItem.
+   *
+   * @return GlobalContactSides
+   **/
   public GlobalContactSides addContactSidesItem(ContactSide contactSidesItem) {
     if (this.contactSides == null) {
       this.contactSides = new java.util.ArrayList<ContactSide>();
@@ -30,20 +42,28 @@ public class GlobalContactSides {
     return this;
   }
 
-   /**
-   * Get contactSides
+  /**
+   * Get contactSides.
    * @return contactSides
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ContactSide> getContactSides() {
     return contactSides;
   }
 
+  /**
+   * setContactSides.
+   **/
   public void setContactSides(java.util.List<ContactSide> contactSides) {
     this.contactSides = contactSides;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalContactSides {
     return Objects.equals(this.contactSides, globalContactSides.contactSides);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(contactSides);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

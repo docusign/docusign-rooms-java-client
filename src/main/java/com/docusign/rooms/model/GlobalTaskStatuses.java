@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalTaskStatuses
+ * GlobalTaskStatuses.
+ *
  */
 
 public class GlobalTaskStatuses {
   @JsonProperty("taskStatuses")
   private java.util.List<TaskStatus> taskStatuses = null;
 
+
+  /**
+   * taskStatuses.
+   *
+   * @return GlobalTaskStatuses
+   **/
   public GlobalTaskStatuses taskStatuses(java.util.List<TaskStatus> taskStatuses) {
     this.taskStatuses = taskStatuses;
     return this;
   }
-
+  
+  /**
+   * addTaskStatusesItem.
+   *
+   * @return GlobalTaskStatuses
+   **/
   public GlobalTaskStatuses addTaskStatusesItem(TaskStatus taskStatusesItem) {
     if (this.taskStatuses == null) {
       this.taskStatuses = new java.util.ArrayList<TaskStatus>();
@@ -30,20 +42,28 @@ public class GlobalTaskStatuses {
     return this;
   }
 
-   /**
-   * Get taskStatuses
+  /**
+   * Get taskStatuses.
    * @return taskStatuses
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TaskStatus> getTaskStatuses() {
     return taskStatuses;
   }
 
+  /**
+   * setTaskStatuses.
+   **/
   public void setTaskStatuses(java.util.List<TaskStatus> taskStatuses) {
     this.taskStatuses = taskStatuses;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalTaskStatuses {
     return Objects.equals(this.taskStatuses, globalTaskStatuses.taskStatuses);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(taskStatuses);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

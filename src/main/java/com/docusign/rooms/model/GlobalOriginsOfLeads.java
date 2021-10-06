@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalOriginsOfLeads
+ * GlobalOriginsOfLeads.
+ *
  */
 
 public class GlobalOriginsOfLeads {
   @JsonProperty("originsOfLeads")
   private java.util.List<OriginOfLead> originsOfLeads = null;
 
+
+  /**
+   * originsOfLeads.
+   *
+   * @return GlobalOriginsOfLeads
+   **/
   public GlobalOriginsOfLeads originsOfLeads(java.util.List<OriginOfLead> originsOfLeads) {
     this.originsOfLeads = originsOfLeads;
     return this;
   }
-
+  
+  /**
+   * addOriginsOfLeadsItem.
+   *
+   * @return GlobalOriginsOfLeads
+   **/
   public GlobalOriginsOfLeads addOriginsOfLeadsItem(OriginOfLead originsOfLeadsItem) {
     if (this.originsOfLeads == null) {
       this.originsOfLeads = new java.util.ArrayList<OriginOfLead>();
@@ -30,20 +42,28 @@ public class GlobalOriginsOfLeads {
     return this;
   }
 
-   /**
-   * Get originsOfLeads
+  /**
+   * Get originsOfLeads.
    * @return originsOfLeads
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<OriginOfLead> getOriginsOfLeads() {
     return originsOfLeads;
   }
 
+  /**
+   * setOriginsOfLeads.
+   **/
   public void setOriginsOfLeads(java.util.List<OriginOfLead> originsOfLeads) {
     this.originsOfLeads = originsOfLeads;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalOriginsOfLeads {
     return Objects.equals(this.originsOfLeads, globalOriginsOfLeads.originsOfLeads);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(originsOfLeads);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

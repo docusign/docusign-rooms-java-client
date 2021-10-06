@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomInvite
+ * RoomInvite.
+ *
  */
 
 public class RoomInvite {
@@ -28,97 +29,147 @@ public class RoomInvite {
   @JsonProperty("transactionSideId")
   private String transactionSideId = null;
 
+
+  /**
+   * email.
+   *
+   * @return RoomInvite
+   **/
   public RoomInvite email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * firstName.
+   *
+   * @return RoomInvite
+   **/
   public RoomInvite firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return RoomInvite
+   **/
   public RoomInvite lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * roleId.
+   *
+   * @return RoomInvite
+   **/
   public RoomInvite roleId(Integer roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
+  /**
+   * setRoleId.
+   **/
   public void setRoleId(Integer roleId) {
     this.roleId = roleId;
   }
 
+
+  /**
+   * transactionSideId.
+   *
+   * @return RoomInvite
+   **/
   public RoomInvite transactionSideId(String transactionSideId) {
     this.transactionSideId = transactionSideId;
     return this;
   }
 
-   /**
-   * Required for a real estate company; otherwise ignored.
+  /**
+   * Required for a real estate company; otherwise ignored..
    * @return transactionSideId
-  **/
+   **/
   @ApiModelProperty(value = "Required for a real estate company; otherwise ignored.")
   public String getTransactionSideId() {
     return transactionSideId;
   }
 
+  /**
+   * setTransactionSideId.
+   **/
   public void setTransactionSideId(String transactionSideId) {
     this.transactionSideId = transactionSideId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -135,12 +186,18 @@ public class RoomInvite {
         Objects.equals(this.transactionSideId, roomInvite.transactionSideId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(email, firstName, lastName, roleId, transactionSideId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

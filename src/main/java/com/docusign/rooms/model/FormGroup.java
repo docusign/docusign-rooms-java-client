@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FormGroup
+ * FormGroup.
+ *
  */
 
 public class FormGroup {
@@ -26,43 +27,48 @@ public class FormGroup {
   @JsonProperty("forms")
   private java.util.List<GroupForm> forms = null;
 
-   /**
-   * Get formGroupId
+  /**
+   * Get formGroupId.
    * @return formGroupId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getFormGroupId() {
     return formGroupId;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-   /**
-   * Get officeIds
+  /**
+   * Get officeIds.
    * @return officeIds
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Integer> getOfficeIds() {
     return officeIds;
   }
 
-   /**
-   * Get forms
+  /**
+   * Get forms.
    * @return forms
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<GroupForm> getForms() {
     return forms;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -78,12 +84,18 @@ public class FormGroup {
         Objects.equals(this.forms, formGroup.forms);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(formGroupId, name, officeIds, forms);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

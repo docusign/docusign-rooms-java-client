@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalFinancingTypes
+ * GlobalFinancingTypes.
+ *
  */
 
 public class GlobalFinancingTypes {
   @JsonProperty("financingTypes")
   private java.util.List<FinancingType> financingTypes = null;
 
+
+  /**
+   * financingTypes.
+   *
+   * @return GlobalFinancingTypes
+   **/
   public GlobalFinancingTypes financingTypes(java.util.List<FinancingType> financingTypes) {
     this.financingTypes = financingTypes;
     return this;
   }
-
+  
+  /**
+   * addFinancingTypesItem.
+   *
+   * @return GlobalFinancingTypes
+   **/
   public GlobalFinancingTypes addFinancingTypesItem(FinancingType financingTypesItem) {
     if (this.financingTypes == null) {
       this.financingTypes = new java.util.ArrayList<FinancingType>();
@@ -30,20 +42,28 @@ public class GlobalFinancingTypes {
     return this;
   }
 
-   /**
-   * Get financingTypes
+  /**
+   * Get financingTypes.
    * @return financingTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<FinancingType> getFinancingTypes() {
     return financingTypes;
   }
 
+  /**
+   * setFinancingTypes.
+   **/
   public void setFinancingTypes(java.util.List<FinancingType> financingTypes) {
     this.financingTypes = financingTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalFinancingTypes {
     return Objects.equals(this.financingTypes, globalFinancingTypes.financingTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(financingTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

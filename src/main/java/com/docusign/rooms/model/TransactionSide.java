@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TransactionSide
+ * TransactionSide.
+ *
  */
 
 public class TransactionSide {
@@ -19,43 +20,66 @@ public class TransactionSide {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * transactionSideId.
+   *
+   * @return TransactionSide
+   **/
   public TransactionSide transactionSideId(String transactionSideId) {
     this.transactionSideId = transactionSideId;
     return this;
   }
 
-   /**
-   * Get transactionSideId
+  /**
+   * Get transactionSideId.
    * @return transactionSideId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTransactionSideId() {
     return transactionSideId;
   }
 
+  /**
+   * setTransactionSideId.
+   **/
   public void setTransactionSideId(String transactionSideId) {
     this.transactionSideId = transactionSideId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return TransactionSide
+   **/
   public TransactionSide name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class TransactionSide {
         Objects.equals(this.name, transactionSide.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(transactionSideId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

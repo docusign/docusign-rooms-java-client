@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomFolder
+ * RoomFolder.
+ *
  */
 
 public class RoomFolder {
@@ -22,61 +23,93 @@ public class RoomFolder {
   @JsonProperty("isDefault")
   private Boolean isDefault = null;
 
+
+  /**
+   * roomFolderId.
+   *
+   * @return RoomFolder
+   **/
   public RoomFolder roomFolderId(Integer roomFolderId) {
     this.roomFolderId = roomFolderId;
     return this;
   }
 
-   /**
-   * Get roomFolderId
+  /**
+   * Get roomFolderId.
    * @return roomFolderId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoomFolderId() {
     return roomFolderId;
   }
 
+  /**
+   * setRoomFolderId.
+   **/
   public void setRoomFolderId(Integer roomFolderId) {
     this.roomFolderId = roomFolderId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return RoomFolder
+   **/
   public RoomFolder name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * isDefault.
+   *
+   * @return RoomFolder
+   **/
   public RoomFolder isDefault(Boolean isDefault) {
     this.isDefault = isDefault;
     return this;
   }
 
-   /**
-   * Get isDefault
+  /**
+   * Get isDefault.
    * @return isDefault
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsDefault() {
     return isDefault;
   }
 
+  /**
+   * setIsDefault.
+   **/
   public void setIsDefault(Boolean isDefault) {
     this.isDefault = isDefault;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -91,12 +124,18 @@ public class RoomFolder {
         Objects.equals(this.isDefault, roomFolder.isDefault);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(roomFolderId, name, isDefault);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalRoomContactTypes
+ * GlobalRoomContactTypes.
+ *
  */
 
 public class GlobalRoomContactTypes {
   @JsonProperty("roomContactTypes")
   private java.util.List<RoomContactType> roomContactTypes = null;
 
+
+  /**
+   * roomContactTypes.
+   *
+   * @return GlobalRoomContactTypes
+   **/
   public GlobalRoomContactTypes roomContactTypes(java.util.List<RoomContactType> roomContactTypes) {
     this.roomContactTypes = roomContactTypes;
     return this;
   }
-
+  
+  /**
+   * addRoomContactTypesItem.
+   *
+   * @return GlobalRoomContactTypes
+   **/
   public GlobalRoomContactTypes addRoomContactTypesItem(RoomContactType roomContactTypesItem) {
     if (this.roomContactTypes == null) {
       this.roomContactTypes = new java.util.ArrayList<RoomContactType>();
@@ -30,20 +42,28 @@ public class GlobalRoomContactTypes {
     return this;
   }
 
-   /**
-   * Get roomContactTypes
+  /**
+   * Get roomContactTypes.
    * @return roomContactTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RoomContactType> getRoomContactTypes() {
     return roomContactTypes;
   }
 
+  /**
+   * setRoomContactTypes.
+   **/
   public void setRoomContactTypes(java.util.List<RoomContactType> roomContactTypes) {
     this.roomContactTypes = roomContactTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalRoomContactTypes {
     return Objects.equals(this.roomContactTypes, globalRoomContactTypes.roomContactTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(roomContactTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

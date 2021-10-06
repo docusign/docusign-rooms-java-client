@@ -11,31 +11,53 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * UsersApi class.
+ *
+ **/
 public class UsersApi {
   private ApiClient apiClient;
 
+ /**
+  * UsersApi.
+  *
+  **/
   public UsersApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * UsersApi.
+  *
+  **/
   public UsersApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
+   * Adds the user to the designated office..
    * Adds the user to the designated office.
-   * 
-   * @param accountId  (required)
-   * @param userId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
    * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
@@ -86,10 +108,10 @@ public class UsersApi {
   }
 
   /**
+   * Adds the user to the designated region..
    * Adds the user to the designated region.
-   * 
-   * @param accountId  (required)
-   * @param userId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
    * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
@@ -140,10 +162,10 @@ public class UsersApi {
   }
 
   /**
+   * Retrieves user information for the user having the given UserId..
    * Retrieves user information for the user having the given UserId.
-   * 
-   * @param accountId  (required)
-   * @param userId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
    * @return User
    * @throws ApiException if fails to make API call
    */
@@ -183,7 +205,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -193,8 +215,13 @@ public class UsersApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Gets a paged-list of  Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
+  /// Gets a paged-list of users. Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
   /// </summary>
+
+ /**
+  * GetUsersOptions Class.
+  *
+  **/
   public class GetUsersOptions
   {
   private String filter = null;
@@ -207,112 +234,172 @@ public class UsersApi {
   private Boolean lockedOnly = null;
   private Integer startPosition = null;
   private Integer count = null;
-  /*
-   * Filters by name and email 
-   */
+  
+ /**
+  * setFilter method.
+  */
   public void setFilter(String filter) {
     this.filter = filter;
   }
 
+ /**
+  * getFilter method.
+  *
+  * @return String
+  */
   public String getFilter() {
     return this.filter;
   }
-  /*
-   * Valid values are &#39;FirstNameAsc&#39;, &#39;FirstNameDesc&#39;, &#39;LastNameAsc&#39;, &#39;LastNameDesc&#39;, &#39;EmailAsc&#39;, &#39;EmailDesc&#39; 
-   */
+  
+ /**
+  * setSort method.
+  */
   public void setSort(String sort) {
     this.sort = sort;
   }
 
+ /**
+  * getSort method.
+  *
+  * @return String
+  */
   public String getSort() {
     return this.sort;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setDefaultOfficeId method.
+  */
   public void setDefaultOfficeId(Integer defaultOfficeId) {
     this.defaultOfficeId = defaultOfficeId;
   }
 
+ /**
+  * getDefaultOfficeId method.
+  *
+  * @return Integer
+  */
   public Integer getDefaultOfficeId() {
     return this.defaultOfficeId;
   }
-  /*
-   * Valid values are &#39;Company&#39;, &#39;Region&#39;, &#39;Office&#39;, &#39;Contributor&#39; 
-   */
+  
+ /**
+  * setAccessLevel method.
+  */
   public void setAccessLevel(String accessLevel) {
     this.accessLevel = accessLevel;
   }
 
+ /**
+  * getAccessLevel method.
+  *
+  * @return String
+  */
   public String getAccessLevel() {
     return this.accessLevel;
   }
-  /*
-   * Only valid for classic companies 
-   */
+  
+ /**
+  * setTitleId method.
+  */
   public void setTitleId(Integer titleId) {
     this.titleId = titleId;
   }
 
+ /**
+  * getTitleId method.
+  *
+  * @return Integer
+  */
   public Integer getTitleId() {
     return this.titleId;
   }
-  /*
-   * Only valid for next gen companies 
-   */
+  
+ /**
+  * setRoleId method.
+  */
   public void setRoleId(Integer roleId) {
     this.roleId = roleId;
   }
 
+ /**
+  * getRoleId method.
+  *
+  * @return Integer
+  */
   public Integer getRoleId() {
     return this.roleId;
   }
-  /*
-   * Valid values are &#39;Active&#39;, &#39;Pending&#39; 
-   */
+  
+ /**
+  * setStatus method.
+  */
   public void setStatus(String status) {
     this.status = status;
   }
 
+ /**
+  * getStatus method.
+  *
+  * @return String
+  */
   public String getStatus() {
     return this.status;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setLockedOnly method.
+  */
   public void setLockedOnly(Boolean lockedOnly) {
     this.lockedOnly = lockedOnly;
   }
 
+ /**
+  * getLockedOnly method.
+  *
+  * @return Boolean
+  */
   public Boolean getLockedOnly() {
     return this.lockedOnly;
   }
-  /*
-   * Defaults to 0 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * Defaults to 100. Must be less than or equal to 100 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
   }
 
    /**
-   * Gets a paged-list of 
+   * Gets a paged-list of users..
    * Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return UserSummaryList
    */ 
   public UserSummaryList getUsers(String accountId) throws ApiException {
@@ -320,9 +407,9 @@ public class UsersApi {
   }
 
   /**
-   * Gets a paged-list of 
+   * Gets a paged-list of users..
    * Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return UserSummaryList
    * @throws ApiException if fails to make API call
@@ -377,7 +464,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -388,9 +475,9 @@ public class UsersApi {
       }
 
   /**
-   * CLASSIC COMPANY ONLY. Send an invitation to join the company as an admin.
-   * 
-   * @param accountId  (required)
+   * CLASSIC COMPANY ONLY. Send an invitation to join the company as an admin..
+   * Invites a new user to join a company account on Rooms Version 5 as an Admin.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
@@ -436,9 +523,9 @@ public class UsersApi {
       }
 
   /**
-   * CLASSIC COMPANY ONLY. Send an invitation to join the company as an agent.
-   * 
-   * @param accountId  (required)
+   * CLASSIC COMPANY ONLY. Send an invitation to join the company as an agent..
+   * Invites a new user to join a company account on Rooms Version 5 as an Agent.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
@@ -484,9 +571,9 @@ public class UsersApi {
       }
 
   /**
-   * CLASSIC COMPANY ONLY. Send an invitation to join the company as a manager.
-   * 
-   * @param accountId  (required)
+   * CLASSIC COMPANY ONLY. Send an invitation to join the company as a manager..
+   * Invites a new user to join a company account on Rooms Version 5 as a Manager.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
@@ -532,9 +619,9 @@ public class UsersApi {
       }
 
   /**
-   * NON-CLASSIC COMPANY ONLY. Send an invitation to the user or non-user having the given email.
-   * 
-   * @param accountId  (required)
+   * NON-CLASSIC COMPANY ONLY. Send an invitation to the user or non-user having the given email..
+   * Invites a new user to join a company account on Rooms Version 6.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call
@@ -580,9 +667,9 @@ public class UsersApi {
       }
 
   /**
+   * Locks the account of the user..
    * Locks the account of the user.
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId User Id of the user attempting to be locked. (required)
    * @param body  (optional)
    * @throws ApiException if fails to make API call
@@ -634,9 +721,9 @@ public class UsersApi {
   }
 
   /**
-   * Reinvites the pending user with the given userId.
-   * 
-   * @param accountId  (required)
+   * Reinvites the pending user with the given userId..
+   * Reinvites an unactivated user to join a company account. You can use this method with either Rooms Version 5 or Rooms Version 6.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId  (required)
    * @throws ApiException if fails to make API call
    */
@@ -676,7 +763,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -687,9 +774,9 @@ public class UsersApi {
   }
 
   /**
-   * Removes a user from the company.
+   * Removes a user from the company..
    * Removes the user. Will fail if the user owns any Rooms.   The rooms will need to be transferred to other agents before removing.
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId Id of the user you wish to remove. (required)
    * @throws ApiException if fails to make API call
    */
@@ -729,7 +816,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -740,10 +827,10 @@ public class UsersApi {
   }
 
   /**
+   * Removes the user from the designated office..
    * Removes the user from the designated office.
-   * 
-   * @param accountId  (required)
-   * @param userId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
    * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
@@ -794,10 +881,10 @@ public class UsersApi {
   }
 
   /**
+   * Removes the user from the designated region..
    * Removes the user from the designated region.
-   * 
-   * @param accountId  (required)
-   * @param userId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
    * @param body  (optional)
    * @throws ApiException if fails to make API call
    */
@@ -848,9 +935,9 @@ public class UsersApi {
   }
 
   /**
+   * Unlocks the account of the user..
    * Unlocks the account of the user.
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId User Id of the user attempting to be unlocked. (required)
    * @throws ApiException if fails to make API call
    */
@@ -890,7 +977,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -901,10 +988,10 @@ public class UsersApi {
   }
 
   /**
+   * Updates user information.
    * Updates user information
-   * 
-   * @param accountId  (required)
-   * @param userId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
    * @param body  (optional)
    * @return User
    * @throws ApiException if fails to make API call

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ClosingStatus
+ * ClosingStatus.
+ *
  */
 
 public class ClosingStatus {
@@ -19,43 +20,66 @@ public class ClosingStatus {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * closingStatusId.
+   *
+   * @return ClosingStatus
+   **/
   public ClosingStatus closingStatusId(String closingStatusId) {
     this.closingStatusId = closingStatusId;
     return this;
   }
 
-   /**
-   * Get closingStatusId
+  /**
+   * Get closingStatusId.
    * @return closingStatusId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getClosingStatusId() {
     return closingStatusId;
   }
 
+  /**
+   * setClosingStatusId.
+   **/
   public void setClosingStatusId(String closingStatusId) {
     this.closingStatusId = closingStatusId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return ClosingStatus
+   **/
   public ClosingStatus name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ClosingStatus {
         Objects.equals(this.name, closingStatus.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(closingStatusId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * OfficeSummary
+ * OfficeSummary.
+ *
  */
 
 public class OfficeSummary {
@@ -50,115 +51,120 @@ public class OfficeSummary {
   @JsonProperty("createdDate")
   private DateTime createdDate = null;
 
-   /**
-   * Get officeId
+  /**
+   * Get officeId.
    * @return officeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOfficeId() {
     return officeId;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-   /**
-   * Get regionId
+  /**
+   * Get regionId.
    * @return regionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRegionId() {
     return regionId;
   }
 
-   /**
-   * Get address1
+  /**
+   * Get address1.
    * @return address1
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAddress1() {
     return address1;
   }
 
-   /**
-   * Get address2
+  /**
+   * Get address2.
    * @return address2
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAddress2() {
     return address2;
   }
 
-   /**
-   * Get city
+  /**
+   * Get city.
    * @return city
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCity() {
     return city;
   }
 
-   /**
-   * Get stateId
+  /**
+   * Get stateId.
    * @return stateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStateId() {
     return stateId;
   }
 
-   /**
-   * Get postalCode
+  /**
+   * Get postalCode.
    * @return postalCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPostalCode() {
     return postalCode;
   }
 
-   /**
-   * Get countryId
+  /**
+   * Get countryId.
    * @return countryId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCountryId() {
     return countryId;
   }
 
-   /**
-   * Get timeZoneId
+  /**
+   * Get timeZoneId.
    * @return timeZoneId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimeZoneId() {
     return timeZoneId;
   }
 
-   /**
-   * Get phone
+  /**
+   * Get phone.
    * @return phone
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -182,12 +188,18 @@ public class OfficeSummary {
         Objects.equals(this.createdDate, officeSummary.createdDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(officeId, name, regionId, address1, address2, city, stateId, postalCode, countryId, timeZoneId, phone, createdDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

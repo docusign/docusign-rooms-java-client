@@ -11,30 +11,52 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * AccountsApi class.
+ *
+ **/
 public class AccountsApi {
   private ApiClient apiClient;
 
+ /**
+  * AccountsApi.
+  *
+  **/
   public AccountsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * AccountsApi.
+  *
+  **/
   public AccountsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Get information about the account.
-   * 
-   * @param accountId  (required)
+   * Get information about the account..
+   * Returns details about a company account.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return AccountSummary
    * @throws ApiException if fails to make API call
    */
@@ -68,7 +90,7 @@ public class AccountsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

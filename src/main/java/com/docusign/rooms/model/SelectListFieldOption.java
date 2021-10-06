@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SelectListFieldOption
+ * SelectListFieldOption.
+ *
  */
 
 public class SelectListFieldOption {
@@ -22,34 +23,39 @@ public class SelectListFieldOption {
   @JsonProperty("order")
   private Integer order = null;
 
-   /**
-   * Get id
+  /**
+   * Get id.
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Object getId() {
     return id;
   }
 
-   /**
-   * Get title
+  /**
+   * Get title.
    * @return title
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTitle() {
     return title;
   }
 
-   /**
-   * Get order
+  /**
+   * Get order.
    * @return order
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOrder() {
     return order;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -64,12 +70,18 @@ public class SelectListFieldOption {
         Objects.equals(this.order, selectListFieldOption.order);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(id, title, order);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

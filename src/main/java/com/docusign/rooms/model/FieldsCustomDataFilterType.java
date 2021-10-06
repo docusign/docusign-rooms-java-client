@@ -34,9 +34,9 @@ public enum FieldsCustomDataFilterType {
   }
 
   @JsonCreator
-  public static FieldsCustomDataFilterType fromValue(String text) {
+  public static FieldsCustomDataFilterType fromValue(String value) {
     for (FieldsCustomDataFilterType b : FieldsCustomDataFilterType.values()) {
-      if (String.valueOf(b.value).equals(text)) {
+      if (b.value.equals(value)) {
         return b;
       }
     }

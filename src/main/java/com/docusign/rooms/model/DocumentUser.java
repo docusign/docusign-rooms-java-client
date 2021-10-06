@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DocumentUser
+ * DocumentUser.
+ *
  */
 
 public class DocumentUser {
@@ -52,241 +53,363 @@ public class DocumentUser {
   @JsonProperty("canViewActivity")
   private Boolean canViewActivity = null;
 
+
+  /**
+   * userId.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser userId(Integer userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * Get userId
+  /**
+   * Get userId.
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(Integer userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * documentId.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser documentId(Integer documentId) {
     this.documentId = documentId;
     return this;
   }
 
-   /**
-   * Get documentId
+  /**
+   * Get documentId.
    * @return documentId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getDocumentId() {
     return documentId;
   }
 
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(Integer documentId) {
     this.documentId = documentId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * hasAccess.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser hasAccess(Boolean hasAccess) {
     this.hasAccess = hasAccess;
     return this;
   }
 
-   /**
-   * Get hasAccess
+  /**
+   * Get hasAccess.
    * @return hasAccess
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isHasAccess() {
     return hasAccess;
   }
 
+  /**
+   * setHasAccess.
+   **/
   public void setHasAccess(Boolean hasAccess) {
     this.hasAccess = hasAccess;
   }
 
+
+  /**
+   * canApproveTask.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canApproveTask(Boolean canApproveTask) {
     this.canApproveTask = canApproveTask;
     return this;
   }
 
-   /**
-   * Get canApproveTask
+  /**
+   * Get canApproveTask.
    * @return canApproveTask
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanApproveTask() {
     return canApproveTask;
   }
 
+  /**
+   * setCanApproveTask.
+   **/
   public void setCanApproveTask(Boolean canApproveTask) {
     this.canApproveTask = canApproveTask;
   }
 
+
+  /**
+   * canAssignToTaskList.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canAssignToTaskList(Boolean canAssignToTaskList) {
     this.canAssignToTaskList = canAssignToTaskList;
     return this;
   }
 
-   /**
-   * Get canAssignToTaskList
+  /**
+   * Get canAssignToTaskList.
    * @return canAssignToTaskList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanAssignToTaskList() {
     return canAssignToTaskList;
   }
 
+  /**
+   * setCanAssignToTaskList.
+   **/
   public void setCanAssignToTaskList(Boolean canAssignToTaskList) {
     this.canAssignToTaskList = canAssignToTaskList;
   }
 
+
+  /**
+   * canCopy.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canCopy(Boolean canCopy) {
     this.canCopy = canCopy;
     return this;
   }
 
-   /**
-   * Get canCopy
+  /**
+   * Get canCopy.
    * @return canCopy
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanCopy() {
     return canCopy;
   }
 
+  /**
+   * setCanCopy.
+   **/
   public void setCanCopy(Boolean canCopy) {
     this.canCopy = canCopy;
   }
 
+
+  /**
+   * canDelete.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canDelete(Boolean canDelete) {
     this.canDelete = canDelete;
     return this;
   }
 
-   /**
-   * Get canDelete
+  /**
+   * Get canDelete.
    * @return canDelete
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanDelete() {
     return canDelete;
   }
 
+  /**
+   * setCanDelete.
+   **/
   public void setCanDelete(Boolean canDelete) {
     this.canDelete = canDelete;
   }
 
+
+  /**
+   * canRemoveFromTaskList.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canRemoveFromTaskList(Boolean canRemoveFromTaskList) {
     this.canRemoveFromTaskList = canRemoveFromTaskList;
     return this;
   }
 
-   /**
-   * Get canRemoveFromTaskList
+  /**
+   * Get canRemoveFromTaskList.
    * @return canRemoveFromTaskList
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanRemoveFromTaskList() {
     return canRemoveFromTaskList;
   }
 
+  /**
+   * setCanRemoveFromTaskList.
+   **/
   public void setCanRemoveFromTaskList(Boolean canRemoveFromTaskList) {
     this.canRemoveFromTaskList = canRemoveFromTaskList;
   }
 
+
+  /**
+   * canRemoveApproval.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canRemoveApproval(Boolean canRemoveApproval) {
     this.canRemoveApproval = canRemoveApproval;
     return this;
   }
 
-   /**
-   * Get canRemoveApproval
+  /**
+   * Get canRemoveApproval.
    * @return canRemoveApproval
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanRemoveApproval() {
     return canRemoveApproval;
   }
 
+  /**
+   * setCanRemoveApproval.
+   **/
   public void setCanRemoveApproval(Boolean canRemoveApproval) {
     this.canRemoveApproval = canRemoveApproval;
   }
 
+
+  /**
+   * canRename.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canRename(Boolean canRename) {
     this.canRename = canRename;
     return this;
   }
 
-   /**
-   * Get canRename
+  /**
+   * Get canRename.
    * @return canRename
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanRename() {
     return canRename;
   }
 
+  /**
+   * setCanRename.
+   **/
   public void setCanRename(Boolean canRename) {
     this.canRename = canRename;
   }
 
+
+  /**
+   * canShare.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canShare(Boolean canShare) {
     this.canShare = canShare;
     return this;
   }
 
-   /**
-   * Get canShare
+  /**
+   * Get canShare.
    * @return canShare
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanShare() {
     return canShare;
   }
 
+  /**
+   * setCanShare.
+   **/
   public void setCanShare(Boolean canShare) {
     this.canShare = canShare;
   }
 
+
+  /**
+   * canViewActivity.
+   *
+   * @return DocumentUser
+   **/
   public DocumentUser canViewActivity(Boolean canViewActivity) {
     this.canViewActivity = canViewActivity;
     return this;
   }
 
-   /**
-   * Get canViewActivity
+  /**
+   * Get canViewActivity.
    * @return canViewActivity
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isCanViewActivity() {
     return canViewActivity;
   }
 
+  /**
+   * setCanViewActivity.
+   **/
   public void setCanViewActivity(Boolean canViewActivity) {
     this.canViewActivity = canViewActivity;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -311,12 +434,18 @@ public class DocumentUser {
         Objects.equals(this.canViewActivity, documentUser.canViewActivity);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(userId, documentId, name, hasAccess, canApproveTask, canAssignToTaskList, canCopy, canDelete, canRemoveFromTaskList, canRemoveApproval, canRename, canShare, canViewActivity);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Currency
+ * Currency.
+ *
  */
 
 public class Currency {
@@ -19,43 +20,66 @@ public class Currency {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * currencyId.
+   *
+   * @return Currency
+   **/
   public Currency currencyId(String currencyId) {
     this.currencyId = currencyId;
     return this;
   }
 
-   /**
-   * Get currencyId
+  /**
+   * Get currencyId.
    * @return currencyId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCurrencyId() {
     return currencyId;
   }
 
+  /**
+   * setCurrencyId.
+   **/
   public void setCurrencyId(String currencyId) {
     this.currencyId = currencyId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Currency
+   **/
   public Currency name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class Currency {
         Objects.equals(this.name, currency.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(currencyId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

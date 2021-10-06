@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * ActivityTypesApi class.
+ *
+ **/
 public class ActivityTypesApi {
   private ApiClient apiClient;
 
+ /**
+  * ActivityTypesApi.
+  *
+  **/
   public ActivityTypesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * ActivityTypesApi.
+  *
+  **/
   public ActivityTypesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
+   * Retrieves the list of valid activity types..
    * Retrieves the list of valid activity types.
-   * 
    * @return GlobalActivityTypes
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class ActivityTypesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalCurrencies
+ * GlobalCurrencies.
+ *
  */
 
 public class GlobalCurrencies {
   @JsonProperty("currencies")
   private java.util.List<Currency> currencies = null;
 
+
+  /**
+   * currencies.
+   *
+   * @return GlobalCurrencies
+   **/
   public GlobalCurrencies currencies(java.util.List<Currency> currencies) {
     this.currencies = currencies;
     return this;
   }
-
+  
+  /**
+   * addCurrenciesItem.
+   *
+   * @return GlobalCurrencies
+   **/
   public GlobalCurrencies addCurrenciesItem(Currency currenciesItem) {
     if (this.currencies == null) {
       this.currencies = new java.util.ArrayList<Currency>();
@@ -30,20 +42,28 @@ public class GlobalCurrencies {
     return this;
   }
 
-   /**
-   * Get currencies
+  /**
+   * Get currencies.
    * @return currencies
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Currency> getCurrencies() {
     return currencies;
   }
 
+  /**
+   * setCurrencies.
+   **/
   public void setCurrencies(java.util.List<Currency> currencies) {
     this.currencies = currencies;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalCurrencies {
     return Objects.equals(this.currencies, globalCurrencies.currencies);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(currencies);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

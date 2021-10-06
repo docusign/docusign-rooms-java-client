@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserSummary
+ * UserSummary.
+ *
  */
 
 public class UserSummary {
@@ -47,115 +48,129 @@ public class UserSummary {
   @JsonProperty("profileImageUrl")
   private String profileImageUrl = null;
 
-   /**
-   * Get userId
+  /**
+   * Get userId.
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFirstName() {
     return firstName;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
-   /**
-   * Get isLockedOut
+  /**
+   * Get isLockedOut.
    * @return isLockedOut
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsLockedOut() {
     return isLockedOut;
   }
 
-   /**
-   * Get status
+  /**
+   * Get status.
    * @return status
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStatus() {
     return status;
   }
 
+
+  /**
+   * accessLevel.
+   *
+   * @return UserSummary
+   **/
   public UserSummary accessLevel(AccessLevel accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
 
-   /**
-   * Get accessLevel
+  /**
+   * Get accessLevel.
    * @return accessLevel
-  **/
+   **/
   @ApiModelProperty(value = "")
   public AccessLevel getAccessLevel() {
     return accessLevel;
   }
 
+  /**
+   * setAccessLevel.
+   **/
   public void setAccessLevel(AccessLevel accessLevel) {
     this.accessLevel = accessLevel;
   }
 
-   /**
-   * Get defaultOfficeId
+  /**
+   * Get defaultOfficeId.
    * @return defaultOfficeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getDefaultOfficeId() {
     return defaultOfficeId;
   }
 
-   /**
-   * Get titleId
+  /**
+   * Get titleId.
    * @return titleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTitleId() {
     return titleId;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
-   /**
-   * Get profileImageUrl
+  /**
+   * Get profileImageUrl.
    * @return profileImageUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getProfileImageUrl() {
     return profileImageUrl;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -178,12 +193,18 @@ public class UserSummary {
         Objects.equals(this.profileImageUrl, userSummary.profileImageUrl);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(userId, email, firstName, lastName, isLockedOut, status, accessLevel, defaultOfficeId, titleId, roleId, profileImageUrl);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

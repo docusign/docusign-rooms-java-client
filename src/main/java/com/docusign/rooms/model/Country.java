@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Country
+ * Country.
+ *
  */
 
 public class Country {
@@ -19,43 +20,66 @@ public class Country {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * countryId.
+   *
+   * @return Country
+   **/
   public Country countryId(String countryId) {
     this.countryId = countryId;
     return this;
   }
 
-   /**
-   * Get countryId
+  /**
+   * Get countryId.
    * @return countryId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCountryId() {
     return countryId;
   }
 
+  /**
+   * setCountryId.
+   **/
   public void setCountryId(String countryId) {
     this.countryId = countryId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Country
+   **/
   public Country name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class Country {
         Objects.equals(this.name, country.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(countryId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

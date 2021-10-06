@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomUsersResult
+ * RoomUsersResult.
+ *
  */
 
 public class RoomUsersResult {
@@ -35,11 +36,22 @@ public class RoomUsersResult {
   @JsonProperty("totalRowCount")
   private Integer totalRowCount = null;
 
+
+  /**
+   * users.
+   *
+   * @return RoomUsersResult
+   **/
   public RoomUsersResult users(java.util.List<RoomUserSummary> users) {
     this.users = users;
     return this;
   }
-
+  
+  /**
+   * addUsersItem.
+   *
+   * @return RoomUsersResult
+   **/
   public RoomUsersResult addUsersItem(RoomUserSummary usersItem) {
     if (this.users == null) {
       this.users = new java.util.ArrayList<RoomUserSummary>();
@@ -48,119 +60,172 @@ public class RoomUsersResult {
     return this;
   }
 
-   /**
-   * Get users
+  /**
+   * Get users.
    * @return users
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RoomUserSummary> getUsers() {
     return users;
   }
 
+  /**
+   * setUsers.
+   **/
   public void setUsers(java.util.List<RoomUserSummary> users) {
     this.users = users;
   }
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return RoomUsersResult
+   **/
   public RoomUsersResult resultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * Get resultSetSize
+  /**
+   * Get resultSetSize.
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return RoomUsersResult
+   **/
   public RoomUsersResult startPosition(Integer startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Get startPosition
+  /**
+   * Get startPosition.
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
-   /**
-   * Get endPosition
+  /**
+   * Get endPosition.
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getEndPosition() {
     return endPosition;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return RoomUsersResult
+   **/
   public RoomUsersResult nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * Get nextUri
+  /**
+   * Get nextUri.
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * priorUri.
+   *
+   * @return RoomUsersResult
+   **/
   public RoomUsersResult priorUri(String priorUri) {
     this.priorUri = priorUri;
     return this;
   }
 
-   /**
-   * Get priorUri
+  /**
+   * Get priorUri.
    * @return priorUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPriorUri() {
     return priorUri;
   }
 
+  /**
+   * setPriorUri.
+   **/
   public void setPriorUri(String priorUri) {
     this.priorUri = priorUri;
   }
 
+
+  /**
+   * totalRowCount.
+   *
+   * @return RoomUsersResult
+   **/
   public RoomUsersResult totalRowCount(Integer totalRowCount) {
     this.totalRowCount = totalRowCount;
     return this;
   }
 
-   /**
-   * Get totalRowCount
+  /**
+   * Get totalRowCount.
    * @return totalRowCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTotalRowCount() {
     return totalRowCount;
   }
 
+  /**
+   * setTotalRowCount.
+   **/
   public void setTotalRowCount(Integer totalRowCount) {
     this.totalRowCount = totalRowCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -179,12 +244,18 @@ public class RoomUsersResult {
         Objects.equals(this.totalRowCount, roomUsersResult.totalRowCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(users, resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

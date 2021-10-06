@@ -7,23 +7,19 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * Gets or Sets AccessLevel
+ * Gets or Sets RolesFilterContextTypes
  */
-public enum AccessLevel {
+public enum RolesFilterContextTypes {
   
-  CONTRIBUTOR("Contributor"),
+  ALLROLES("AllRoles"),
   
-  OFFICE("Office"),
+  ASSIGNABLEROLESBASEDONCOMPANYPERMISSIONS("AssignableRolesBasedOnCompanyPermissions"),
   
-  REGION("Region"),
-  
-  COMPANY("Company"),
-  
-  ADMIN("Admin");
+  ASSIGNABLEROLESBASEDONALLPERMISSIONS("AssignableRolesBasedOnAllPermissions");
 
   private String value;
 
-  AccessLevel(String value) {
+  RolesFilterContextTypes(String value) {
     this.value = value;
   }
 
@@ -38,8 +34,8 @@ public enum AccessLevel {
   }
 
   @JsonCreator
-  public static AccessLevel fromValue(String value) {
-    for (AccessLevel b : AccessLevel.values()) {
+  public static RolesFilterContextTypes fromValue(String value) {
+    for (RolesFilterContextTypes b : RolesFilterContextTypes.values()) {
       if (b.value.equals(value)) {
         return b;
       }

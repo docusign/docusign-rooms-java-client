@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomContactType
+ * RoomContactType.
+ *
  */
 
 public class RoomContactType {
@@ -19,43 +20,66 @@ public class RoomContactType {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * id.
+   *
+   * @return RoomContactType
+   **/
   public RoomContactType id(String id) {
     this.id = id;
     return this;
   }
 
-   /**
-   * Get id
+  /**
+   * Get id.
    * @return id
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
 
+
+  /**
+   * name.
+   *
+   * @return RoomContactType
+   **/
   public RoomContactType name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class RoomContactType {
         Objects.equals(this.name, roomContactType.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(id, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

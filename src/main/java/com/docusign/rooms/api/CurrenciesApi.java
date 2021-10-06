@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * CurrenciesApi class.
+ *
+ **/
 public class CurrenciesApi {
   private ApiClient apiClient;
 
+ /**
+  * CurrenciesApi.
+  *
+  **/
   public CurrenciesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * CurrenciesApi.
+  *
+  **/
   public CurrenciesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid currencies.
-   * 
+   * Retrieves the list of valid currencies..
+   * Returns a list of valid values for the currencies that you can use for listing, offer, and loan amounts.
    * @return GlobalCurrencies
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class CurrenciesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

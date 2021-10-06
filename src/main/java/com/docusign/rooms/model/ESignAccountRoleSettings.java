@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ESignAccountRoleSettings
+ * ESignAccountRoleSettings.
+ *
  */
 
 public class ESignAccountRoleSettings {
   @JsonProperty("allowAccountManagement")
   private Boolean allowAccountManagement = null;
 
+
+  /**
+   * allowAccountManagement.
+   *
+   * @return ESignAccountRoleSettings
+   **/
   public ESignAccountRoleSettings allowAccountManagement(Boolean allowAccountManagement) {
     this.allowAccountManagement = allowAccountManagement;
     return this;
   }
 
-   /**
-   * Get allowAccountManagement
+  /**
+   * Get allowAccountManagement.
    * @return allowAccountManagement
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isAllowAccountManagement() {
     return allowAccountManagement;
   }
 
+  /**
+   * setAllowAccountManagement.
+   **/
   public void setAllowAccountManagement(Boolean allowAccountManagement) {
     this.allowAccountManagement = allowAccountManagement;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class ESignAccountRoleSettings {
     return Objects.equals(this.allowAccountManagement, esignAccountRoleSettings.allowAccountManagement);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(allowAccountManagement);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

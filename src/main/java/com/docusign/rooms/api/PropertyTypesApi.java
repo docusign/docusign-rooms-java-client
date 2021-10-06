@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * PropertyTypesApi class.
+ *
+ **/
 public class PropertyTypesApi {
   private ApiClient apiClient;
 
+ /**
+  * PropertyTypesApi.
+  *
+  **/
   public PropertyTypesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * PropertyTypesApi.
+  *
+  **/
   public PropertyTypesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid property types.
-   * 
+   * Retrieves the list of valid property types..
+   * Returns a list of property types.
    * @return GlobalPropertyTypes
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class PropertyTypesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

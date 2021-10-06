@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * Region
+ * Region.
+ *
  */
 
 public class Region {
@@ -23,61 +24,93 @@ public class Region {
   @JsonProperty("createdDate")
   private DateTime createdDate = null;
 
+
+  /**
+   * regionId.
+   *
+   * @return Region
+   **/
   public Region regionId(Integer regionId) {
     this.regionId = regionId;
     return this;
   }
 
-   /**
-   * Get regionId
+  /**
+   * Get regionId.
    * @return regionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRegionId() {
     return regionId;
   }
 
+  /**
+   * setRegionId.
+   **/
   public void setRegionId(Integer regionId) {
     this.regionId = regionId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Region
+   **/
   public Region name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return Region
+   **/
   public Region createdDate(DateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(DateTime createdDate) {
     this.createdDate = createdDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class Region {
         Objects.equals(this.createdDate, region.createdDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(regionId, name, createdDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

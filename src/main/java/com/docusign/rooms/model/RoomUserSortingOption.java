@@ -40,9 +40,9 @@ public enum RoomUserSortingOption {
   }
 
   @JsonCreator
-  public static RoomUserSortingOption fromValue(String text) {
+  public static RoomUserSortingOption fromValue(String value) {
     for (RoomUserSortingOption b : RoomUserSortingOption.values()) {
-      if (String.valueOf(b.value).equals(text)) {
+      if (b.value.equals(value)) {
         return b;
       }
     }

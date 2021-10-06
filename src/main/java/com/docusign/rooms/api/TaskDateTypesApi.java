@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * TaskDateTypesApi class.
+ *
+ **/
 public class TaskDateTypesApi {
   private ApiClient apiClient;
 
+ /**
+  * TaskDateTypesApi.
+  *
+  **/
   public TaskDateTypesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * TaskDateTypesApi.
+  *
+  **/
   public TaskDateTypesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid task date types.
-   * 
+   * Retrieves the list of valid task date types..
+   * Returns a list of date types that you can use with tasks, such as &#x60;Actual Close Date&#x60; and &#x60;Task Due Date&#x60;
    * @return GlobalTaskDateTypes
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class TaskDateTypesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

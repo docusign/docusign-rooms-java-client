@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TimeZone
+ * TimeZone.
+ *
  */
 
 public class TimeZone {
@@ -19,43 +20,66 @@ public class TimeZone {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * timeZoneId.
+   *
+   * @return TimeZone
+   **/
   public TimeZone timeZoneId(String timeZoneId) {
     this.timeZoneId = timeZoneId;
     return this;
   }
 
-   /**
-   * Get timeZoneId
+  /**
+   * Get timeZoneId.
    * @return timeZoneId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimeZoneId() {
     return timeZoneId;
   }
 
+  /**
+   * setTimeZoneId.
+   **/
   public void setTimeZoneId(String timeZoneId) {
     this.timeZoneId = timeZoneId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return TimeZone
+   **/
   public TimeZone name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class TimeZone {
         Objects.equals(this.name, timeZone.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(timeZoneId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

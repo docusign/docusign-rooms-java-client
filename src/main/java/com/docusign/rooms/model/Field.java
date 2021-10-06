@@ -12,7 +12,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Field
+ * Field.
+ *
  */
 
 public class Field {
@@ -40,97 +41,120 @@ public class Field {
   @JsonProperty("customData")
   private CustomData customData = null;
 
-   /**
-   * Get fieldId
+  /**
+   * Get fieldId.
    * @return fieldId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getFieldId() {
     return fieldId;
   }
 
-   /**
-   * Get fieldDefinitionId
+  /**
+   * Get fieldDefinitionId.
    * @return fieldDefinitionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getFieldDefinitionId() {
     return fieldDefinitionId;
   }
 
-   /**
-   * Get title
+  /**
+   * Get title.
    * @return title
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTitle() {
     return title;
   }
 
-   /**
-   * Get apiName
+  /**
+   * Get apiName.
    * @return apiName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getApiName() {
     return apiName;
   }
 
-   /**
-   * Get type
+  /**
+   * Get type.
    * @return type
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
-   /**
-   * Get fields
+  /**
+   * Get fields.
    * @return fields
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Field> getFields() {
     return fields;
   }
 
+
+  /**
+   * _configuration.
+   *
+   * @return Field
+   **/
   public Field _configuration(FieldConfiguration _configuration) {
     this._configuration = _configuration;
     return this;
   }
 
-   /**
-   * Get _configuration
+  /**
+   * Get _configuration.
    * @return _configuration
-  **/
+   **/
   @ApiModelProperty(value = "")
   public FieldConfiguration getConfiguration() {
     return _configuration;
   }
 
+  /**
+   * setConfiguration.
+   **/
   public void setConfiguration(FieldConfiguration _configuration) {
     this._configuration = _configuration;
   }
 
+
+  /**
+   * customData.
+   *
+   * @return Field
+   **/
   public Field customData(CustomData customData) {
     this.customData = customData;
     return this;
   }
 
-   /**
-   * Get customData
+  /**
+   * Get customData.
    * @return customData
-  **/
+   **/
   @ApiModelProperty(value = "")
   public CustomData getCustomData() {
     return customData;
   }
 
+  /**
+   * setCustomData.
+   **/
   public void setCustomData(CustomData customData) {
     this.customData = customData;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -150,12 +174,18 @@ public class Field {
         Objects.equals(this.customData, field.customData);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(fieldId, fieldDefinitionId, title, apiName, type, fields, _configuration, customData);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

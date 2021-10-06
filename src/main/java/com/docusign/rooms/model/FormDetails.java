@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * FormDetails
+ * FormDetails.
+ *
  */
 
 public class FormDetails {
@@ -38,79 +39,84 @@ public class FormDetails {
   @JsonProperty("numberOfPages")
   private Integer numberOfPages = null;
 
-   /**
-   * Get formId
+  /**
+   * Get formId.
    * @return formId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getFormId() {
     return formId;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
-   /**
-   * Get lastUpdatedDate
+  /**
+   * Get lastUpdatedDate.
    * @return lastUpdatedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getLastUpdatedDate() {
     return lastUpdatedDate;
   }
 
-   /**
-   * Get availableOnDate
+  /**
+   * Get availableOnDate.
    * @return availableOnDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getAvailableOnDate() {
     return availableOnDate;
   }
 
-   /**
-   * Get ownerName
+  /**
+   * Get ownerName.
    * @return ownerName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getOwnerName() {
     return ownerName;
   }
 
-   /**
-   * Get version
+  /**
+   * Get version.
    * @return version
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getVersion() {
     return version;
   }
 
-   /**
-   * Get numberOfPages
+  /**
+   * Get numberOfPages.
    * @return numberOfPages
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getNumberOfPages() {
     return numberOfPages;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -130,12 +136,18 @@ public class FormDetails {
         Objects.equals(this.numberOfPages, formDetails.numberOfPages);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(formId, name, createdDate, lastUpdatedDate, availableOnDate, ownerName, version, numberOfPages);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

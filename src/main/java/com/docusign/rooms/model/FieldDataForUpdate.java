@@ -9,18 +9,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FieldDataForUpdate
+ * FieldDataForUpdate.
+ *
  */
 
 public class FieldDataForUpdate {
   @JsonProperty("data")
   private java.util.Map<String, Object> data = null;
 
+
+  /**
+   * data.
+   *
+   * @return FieldDataForUpdate
+   **/
   public FieldDataForUpdate data(java.util.Map<String, Object> data) {
     this.data = data;
     return this;
   }
 
+  /**
+   * putDataItem.
+   *
+   * @return FieldDataForUpdate
+   **/
   public FieldDataForUpdate putDataItem(String key, Object dataItem) {
     if (this.data == null) {
       this.data = new java.util.HashMap<String, Object>();
@@ -29,20 +41,28 @@ public class FieldDataForUpdate {
     return this;
   }
 
-   /**
-   * Get data
+  /**
+   * Get data.
    * @return data
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.Map<String, Object> getData() {
     return data;
   }
 
+  /**
+   * setData.
+   **/
   public void setData(java.util.Map<String, Object> data) {
     this.data = data;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -55,12 +75,18 @@ public class FieldDataForUpdate {
     return Objects.equals(this.data, fieldDataForUpdate.data);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(data);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

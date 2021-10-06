@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalClosingStatuses
+ * GlobalClosingStatuses.
+ *
  */
 
 public class GlobalClosingStatuses {
   @JsonProperty("closingStatuses")
   private java.util.List<ClosingStatus> closingStatuses = null;
 
+
+  /**
+   * closingStatuses.
+   *
+   * @return GlobalClosingStatuses
+   **/
   public GlobalClosingStatuses closingStatuses(java.util.List<ClosingStatus> closingStatuses) {
     this.closingStatuses = closingStatuses;
     return this;
   }
-
+  
+  /**
+   * addClosingStatusesItem.
+   *
+   * @return GlobalClosingStatuses
+   **/
   public GlobalClosingStatuses addClosingStatusesItem(ClosingStatus closingStatusesItem) {
     if (this.closingStatuses == null) {
       this.closingStatuses = new java.util.ArrayList<ClosingStatus>();
@@ -30,20 +42,28 @@ public class GlobalClosingStatuses {
     return this;
   }
 
-   /**
-   * Get closingStatuses
+  /**
+   * Get closingStatuses.
    * @return closingStatuses
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ClosingStatus> getClosingStatuses() {
     return closingStatuses;
   }
 
+  /**
+   * setClosingStatuses.
+   **/
   public void setClosingStatuses(java.util.List<ClosingStatus> closingStatuses) {
     this.closingStatuses = closingStatuses;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalClosingStatuses {
     return Objects.equals(this.closingStatuses, globalClosingStatuses.closingStatuses);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(closingStatuses);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

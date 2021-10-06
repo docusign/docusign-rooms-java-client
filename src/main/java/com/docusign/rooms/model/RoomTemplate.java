@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomTemplate
+ * RoomTemplate.
+ *
  */
 
 public class RoomTemplate {
@@ -22,34 +23,39 @@ public class RoomTemplate {
   @JsonProperty("taskTemplateCount")
   private Integer taskTemplateCount = null;
 
-   /**
-   * Get roomTemplateId
+  /**
+   * Get roomTemplateId.
    * @return roomTemplateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoomTemplateId() {
     return roomTemplateId;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-   /**
-   * Get taskTemplateCount
+  /**
+   * Get taskTemplateCount.
    * @return taskTemplateCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTaskTemplateCount() {
     return taskTemplateCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -64,12 +70,18 @@ public class RoomTemplate {
         Objects.equals(this.taskTemplateCount, roomTemplate.taskTemplateCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(roomTemplateId, name, taskTemplateCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

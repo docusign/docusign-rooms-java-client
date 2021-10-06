@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ESignPermissionProfile
+ * ESignPermissionProfile.
+ *
  */
 
 public class ESignPermissionProfile {
@@ -23,61 +24,93 @@ public class ESignPermissionProfile {
   @JsonProperty("settings")
   private ESignAccountRoleSettings settings = null;
 
+
+  /**
+   * eSignPermissionProfileId.
+   *
+   * @return ESignPermissionProfile
+   **/
   public ESignPermissionProfile eSignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
     return this;
   }
 
-   /**
-   * Get eSignPermissionProfileId
+  /**
+   * Get eSignPermissionProfileId.
    * @return eSignPermissionProfileId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getESignPermissionProfileId() {
     return eSignPermissionProfileId;
   }
 
+  /**
+   * setESignPermissionProfileId.
+   **/
   public void setESignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return ESignPermissionProfile
+   **/
   public ESignPermissionProfile name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * settings.
+   *
+   * @return ESignPermissionProfile
+   **/
   public ESignPermissionProfile settings(ESignAccountRoleSettings settings) {
     this.settings = settings;
     return this;
   }
 
-   /**
-   * Get settings
+  /**
+   * Get settings.
    * @return settings
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ESignAccountRoleSettings getSettings() {
     return settings;
   }
 
+  /**
+   * setSettings.
+   **/
   public void setSettings(ESignAccountRoleSettings settings) {
     this.settings = settings;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class ESignPermissionProfile {
         Objects.equals(this.settings, esignPermissionProfile.settings);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(eSignPermissionProfileId, name, settings);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

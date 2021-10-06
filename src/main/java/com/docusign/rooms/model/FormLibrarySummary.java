@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FormLibrarySummary
+ * FormLibrarySummary.
+ *
  */
 
 public class FormLibrarySummary {
@@ -22,34 +23,39 @@ public class FormLibrarySummary {
   @JsonProperty("formCount")
   private Integer formCount = null;
 
-   /**
-   * Get formsLibraryId
+  /**
+   * Get formsLibraryId.
    * @return formsLibraryId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getFormsLibraryId() {
     return formsLibraryId;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-   /**
-   * Get formCount
+  /**
+   * Get formCount.
    * @return formCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getFormCount() {
     return formCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -64,12 +70,18 @@ public class FormLibrarySummary {
         Objects.equals(this.formCount, formLibrarySummary.formCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(formsLibraryId, name, formCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * CountriesApi class.
+ *
+ **/
 public class CountriesApi {
   private ApiClient apiClient;
 
+ /**
+  * CountriesApi.
+  *
+  **/
   public CountriesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * CountriesApi.
+  *
+  **/
   public CountriesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid countries.
-   * 
+   * Retrieves the list of valid countries..
+   * Returns a list of countries that the API supports
    * @return GlobalCountries
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class CountriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

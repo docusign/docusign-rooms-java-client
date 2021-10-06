@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalSellerDecisionTypes
+ * GlobalSellerDecisionTypes.
+ *
  */
 
 public class GlobalSellerDecisionTypes {
   @JsonProperty("sellerDecisionTypes")
   private java.util.List<SellerDecisionType> sellerDecisionTypes = null;
 
+
+  /**
+   * sellerDecisionTypes.
+   *
+   * @return GlobalSellerDecisionTypes
+   **/
   public GlobalSellerDecisionTypes sellerDecisionTypes(java.util.List<SellerDecisionType> sellerDecisionTypes) {
     this.sellerDecisionTypes = sellerDecisionTypes;
     return this;
   }
-
+  
+  /**
+   * addSellerDecisionTypesItem.
+   *
+   * @return GlobalSellerDecisionTypes
+   **/
   public GlobalSellerDecisionTypes addSellerDecisionTypesItem(SellerDecisionType sellerDecisionTypesItem) {
     if (this.sellerDecisionTypes == null) {
       this.sellerDecisionTypes = new java.util.ArrayList<SellerDecisionType>();
@@ -30,20 +42,28 @@ public class GlobalSellerDecisionTypes {
     return this;
   }
 
-   /**
-   * Get sellerDecisionTypes
+  /**
+   * Get sellerDecisionTypes.
    * @return sellerDecisionTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SellerDecisionType> getSellerDecisionTypes() {
     return sellerDecisionTypes;
   }
 
+  /**
+   * setSellerDecisionTypes.
+   **/
   public void setSellerDecisionTypes(java.util.List<SellerDecisionType> sellerDecisionTypes) {
     this.sellerDecisionTypes = sellerDecisionTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalSellerDecisionTypes {
     return Objects.equals(this.sellerDecisionTypes, globalSellerDecisionTypes.sellerDecisionTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(sellerDecisionTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * LockedOutDetails
+ * LockedOutDetails.
+ *
  */
 
 public class LockedOutDetails {
   @JsonProperty("reason")
   private String reason = null;
 
+
+  /**
+   * reason.
+   *
+   * @return LockedOutDetails
+   **/
   public LockedOutDetails reason(String reason) {
     this.reason = reason;
     return this;
   }
 
-   /**
-   * Get reason
+  /**
+   * Get reason.
    * @return reason
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getReason() {
     return reason;
   }
 
+  /**
+   * setReason.
+   **/
   public void setReason(String reason) {
     this.reason = reason;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class LockedOutDetails {
     return Objects.equals(this.reason, lockedOutDetails.reason);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(reason);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

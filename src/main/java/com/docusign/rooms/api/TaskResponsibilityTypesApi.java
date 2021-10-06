@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * TaskResponsibilityTypesApi class.
+ *
+ **/
 public class TaskResponsibilityTypesApi {
   private ApiClient apiClient;
 
+ /**
+  * TaskResponsibilityTypesApi.
+  *
+  **/
   public TaskResponsibilityTypesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * TaskResponsibilityTypesApi.
+  *
+  **/
   public TaskResponsibilityTypesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid task responsibility types.
-   * 
+   * Retrieves the list of valid task responsibility types..
+   * Returns a list of responsibility types that you can assign to users when you add them to a task.
    * @return GlobalTaskResponsibilityTypes
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class TaskResponsibilityTypesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

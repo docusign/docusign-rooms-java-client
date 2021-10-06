@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RegionReferenceCountList
+ * RegionReferenceCountList.
+ *
  */
 
 public class RegionReferenceCountList {
   @JsonProperty("referenceCounts")
   private java.util.List<RegionReferenceCount> referenceCounts = null;
 
+
+  /**
+   * referenceCounts.
+   *
+   * @return RegionReferenceCountList
+   **/
   public RegionReferenceCountList referenceCounts(java.util.List<RegionReferenceCount> referenceCounts) {
     this.referenceCounts = referenceCounts;
     return this;
   }
-
+  
+  /**
+   * addReferenceCountsItem.
+   *
+   * @return RegionReferenceCountList
+   **/
   public RegionReferenceCountList addReferenceCountsItem(RegionReferenceCount referenceCountsItem) {
     if (this.referenceCounts == null) {
       this.referenceCounts = new java.util.ArrayList<RegionReferenceCount>();
@@ -30,20 +42,28 @@ public class RegionReferenceCountList {
     return this;
   }
 
-   /**
-   * Get referenceCounts
+  /**
+   * Get referenceCounts.
    * @return referenceCounts
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RegionReferenceCount> getReferenceCounts() {
     return referenceCounts;
   }
 
+  /**
+   * setReferenceCounts.
+   **/
   public void setReferenceCounts(java.util.List<RegionReferenceCount> referenceCounts) {
     this.referenceCounts = referenceCounts;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class RegionReferenceCountList {
     return Objects.equals(this.referenceCounts, regionReferenceCountList.referenceCounts);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(referenceCounts);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

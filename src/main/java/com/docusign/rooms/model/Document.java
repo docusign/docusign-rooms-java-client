@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * Document
+ * Document.
+ *
  */
 
 public class Document {
@@ -44,187 +45,312 @@ public class Document {
   @JsonProperty("base64Contents")
   private String base64Contents = null;
 
+  @JsonProperty("isDynamic")
+  private Boolean isDynamic = null;
+
+
+  /**
+   * documentId.
+   *
+   * @return Document
+   **/
   public Document documentId(Integer documentId) {
     this.documentId = documentId;
     return this;
   }
 
-   /**
-   * Get documentId
+  /**
+   * Get documentId.
    * @return documentId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getDocumentId() {
     return documentId;
   }
 
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(Integer documentId) {
     this.documentId = documentId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Document
+   **/
   public Document name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * roomId.
+   *
+   * @return Document
+   **/
   public Document roomId(Integer roomId) {
     this.roomId = roomId;
     return this;
   }
 
-   /**
-   * Get roomId
+  /**
+   * Get roomId.
    * @return roomId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoomId() {
     return roomId;
   }
 
+  /**
+   * setRoomId.
+   **/
   public void setRoomId(Integer roomId) {
     this.roomId = roomId;
   }
 
+
+  /**
+   * ownerId.
+   *
+   * @return Document
+   **/
   public Document ownerId(Integer ownerId) {
     this.ownerId = ownerId;
     return this;
   }
 
-   /**
-   * Get ownerId
+  /**
+   * Get ownerId.
    * @return ownerId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOwnerId() {
     return ownerId;
   }
 
+  /**
+   * setOwnerId.
+   **/
   public void setOwnerId(Integer ownerId) {
     this.ownerId = ownerId;
   }
 
+
+  /**
+   * size.
+   *
+   * @return Document
+   **/
   public Document size(Long size) {
     this.size = size;
     return this;
   }
 
-   /**
-   * Get size
+  /**
+   * Get size.
    * @return size
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Long getSize() {
     return size;
   }
 
+  /**
+   * setSize.
+   **/
   public void setSize(Long size) {
     this.size = size;
   }
 
+
+  /**
+   * folderId.
+   *
+   * @return Document
+   **/
   public Document folderId(Integer folderId) {
     this.folderId = folderId;
     return this;
   }
 
-   /**
-   * Get folderId
+  /**
+   * Get folderId.
    * @return folderId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getFolderId() {
     return folderId;
   }
 
+  /**
+   * setFolderId.
+   **/
   public void setFolderId(Integer folderId) {
     this.folderId = folderId;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return Document
+   **/
   public Document createdDate(DateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(DateTime createdDate) {
     this.createdDate = createdDate;
   }
 
+
+  /**
+   * isSigned.
+   *
+   * @return Document
+   **/
   public Document isSigned(Boolean isSigned) {
     this.isSigned = isSigned;
     return this;
   }
 
-   /**
-   * Get isSigned
+  /**
+   * Get isSigned.
    * @return isSigned
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsSigned() {
     return isSigned;
   }
 
+  /**
+   * setIsSigned.
+   **/
   public void setIsSigned(Boolean isSigned) {
     this.isSigned = isSigned;
   }
 
+
+  /**
+   * contentType.
+   *
+   * @return Document
+   **/
   public Document contentType(String contentType) {
     this.contentType = contentType;
     return this;
   }
 
-   /**
-   * Get contentType
+  /**
+   * Get contentType.
    * @return contentType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getContentType() {
     return contentType;
   }
 
+  /**
+   * setContentType.
+   **/
   public void setContentType(String contentType) {
     this.contentType = contentType;
   }
 
+
+  /**
+   * base64Contents.
+   *
+   * @return Document
+   **/
   public Document base64Contents(String base64Contents) {
     this.base64Contents = base64Contents;
     return this;
   }
 
-   /**
-   * Get base64Contents
+  /**
+   * Get base64Contents.
    * @return base64Contents
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getBase64Contents() {
     return base64Contents;
   }
 
+  /**
+   * setBase64Contents.
+   **/
   public void setBase64Contents(String base64Contents) {
     this.base64Contents = base64Contents;
   }
 
 
+  /**
+   * isDynamic.
+   *
+   * @return Document
+   **/
+  public Document isDynamic(Boolean isDynamic) {
+    this.isDynamic = isDynamic;
+    return this;
+  }
+
+  /**
+   * Get isDynamic.
+   * @return isDynamic
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean isIsDynamic() {
+    return isDynamic;
+  }
+
+  /**
+   * setIsDynamic.
+   **/
+  public void setIsDynamic(Boolean isDynamic) {
+    this.isDynamic = isDynamic;
+  }
+
+
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -243,15 +369,22 @@ public class Document {
         Objects.equals(this.createdDate, document.createdDate) &&
         Objects.equals(this.isSigned, document.isSigned) &&
         Objects.equals(this.contentType, document.contentType) &&
-        Objects.equals(this.base64Contents, document.base64Contents);
+        Objects.equals(this.base64Contents, document.base64Contents) &&
+        Objects.equals(this.isDynamic, document.isDynamic);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(documentId, name, roomId, ownerId, size, folderId, createdDate, isSigned, contentType, base64Contents);
+    return Objects.hash(documentId, name, roomId, ownerId, size, folderId, createdDate, isSigned, contentType, base64Contents, isDynamic);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
@@ -267,6 +400,7 @@ public class Document {
     sb.append("    isSigned: ").append(toIndentedString(isSigned)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    base64Contents: ").append(toIndentedString(base64Contents)).append("\n");
+    sb.append("    isDynamic: ").append(toIndentedString(isDynamic)).append("\n");
     sb.append("}");
     return sb.toString();
   }

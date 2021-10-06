@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * AccountSummary
+ * AccountSummary.
+ *
  */
 
 public class AccountSummary {
@@ -32,70 +33,84 @@ public class AccountSummary {
   @JsonProperty("requireOfficeLibraryAssignments")
   private Boolean requireOfficeLibraryAssignments = null;
 
-   /**
-   * Get companyId
+  /**
+   * Get companyId.
    * @return companyId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getCompanyId() {
     return companyId;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+
+  /**
+   * companyVersion.
+   *
+   * @return AccountSummary
+   **/
   public AccountSummary companyVersion(ProductVersion companyVersion) {
     this.companyVersion = companyVersion;
     return this;
   }
 
-   /**
-   * Get companyVersion
+  /**
+   * Get companyVersion.
    * @return companyVersion
-  **/
+   **/
   @ApiModelProperty(value = "")
   public ProductVersion getCompanyVersion() {
     return companyVersion;
   }
 
+  /**
+   * setCompanyVersion.
+   **/
   public void setCompanyVersion(ProductVersion companyVersion) {
     this.companyVersion = companyVersion;
   }
 
-   /**
-   * Get docuSignAccountGuid
+  /**
+   * Get docuSignAccountGuid.
    * @return docuSignAccountGuid
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getDocuSignAccountGuid() {
     return docuSignAccountGuid;
   }
 
-   /**
-   * Get defaultFieldSetId
+  /**
+   * Get defaultFieldSetId.
    * @return defaultFieldSetId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getDefaultFieldSetId() {
     return defaultFieldSetId;
   }
 
-   /**
-   * Get requireOfficeLibraryAssignments
+  /**
+   * Get requireOfficeLibraryAssignments.
    * @return requireOfficeLibraryAssignments
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isRequireOfficeLibraryAssignments() {
     return requireOfficeLibraryAssignments;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -113,12 +128,18 @@ public class AccountSummary {
         Objects.equals(this.requireOfficeLibraryAssignments, accountSummary.requireOfficeLibraryAssignments);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(companyId, name, companyVersion, docuSignAccountGuid, defaultFieldSetId, requireOfficeLibraryAssignments);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

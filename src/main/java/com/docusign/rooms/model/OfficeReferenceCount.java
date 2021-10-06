@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * OfficeReferenceCount
+ * OfficeReferenceCount.
+ *
  */
 
 public class OfficeReferenceCount {
@@ -19,34 +20,48 @@ public class OfficeReferenceCount {
   @JsonProperty("referencedCount")
   private Integer referencedCount = null;
 
+
+  /**
+   * referenceType.
+   *
+   * @return OfficeReferenceCount
+   **/
   public OfficeReferenceCount referenceType(String referenceType) {
     this.referenceType = referenceType;
     return this;
   }
 
-   /**
-   * Get referenceType
+  /**
+   * Get referenceType.
    * @return referenceType
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getReferenceType() {
     return referenceType;
   }
 
+  /**
+   * setReferenceType.
+   **/
   public void setReferenceType(String referenceType) {
     this.referenceType = referenceType;
   }
 
-   /**
-   * Get referencedCount
+  /**
+   * Get referencedCount.
    * @return referencedCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getReferencedCount() {
     return referencedCount;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -60,12 +75,18 @@ public class OfficeReferenceCount {
         Objects.equals(this.referencedCount, officeReferenceCount.referencedCount);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(referenceType, referencedCount);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

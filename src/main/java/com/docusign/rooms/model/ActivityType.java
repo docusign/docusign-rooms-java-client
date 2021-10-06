@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ActivityType
+ * ActivityType.
+ *
  */
 
 public class ActivityType {
@@ -19,43 +20,66 @@ public class ActivityType {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * activityTypeId.
+   *
+   * @return ActivityType
+   **/
   public ActivityType activityTypeId(String activityTypeId) {
     this.activityTypeId = activityTypeId;
     return this;
   }
 
-   /**
-   * Get activityTypeId
+  /**
+   * Get activityTypeId.
    * @return activityTypeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getActivityTypeId() {
     return activityTypeId;
   }
 
+  /**
+   * setActivityTypeId.
+   **/
   public void setActivityTypeId(String activityTypeId) {
     this.activityTypeId = activityTypeId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return ActivityType
+   **/
   public ActivityType name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class ActivityType {
         Objects.equals(this.name, activityType.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(activityTypeId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalTimeZones
+ * GlobalTimeZones.
+ *
  */
 
 public class GlobalTimeZones {
   @JsonProperty("timeZones")
   private java.util.List<TimeZone> timeZones = null;
 
+
+  /**
+   * timeZones.
+   *
+   * @return GlobalTimeZones
+   **/
   public GlobalTimeZones timeZones(java.util.List<TimeZone> timeZones) {
     this.timeZones = timeZones;
     return this;
   }
-
+  
+  /**
+   * addTimeZonesItem.
+   *
+   * @return GlobalTimeZones
+   **/
   public GlobalTimeZones addTimeZonesItem(TimeZone timeZonesItem) {
     if (this.timeZones == null) {
       this.timeZones = new java.util.ArrayList<TimeZone>();
@@ -30,20 +42,28 @@ public class GlobalTimeZones {
     return this;
   }
 
-   /**
-   * Get timeZones
+  /**
+   * Get timeZones.
    * @return timeZones
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TimeZone> getTimeZones() {
     return timeZones;
   }
 
+  /**
+   * setTimeZones.
+   **/
   public void setTimeZones(java.util.List<TimeZone> timeZones) {
     this.timeZones = timeZones;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalTimeZones {
     return Objects.equals(this.timeZones, globalTimeZones.timeZones);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(timeZones);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

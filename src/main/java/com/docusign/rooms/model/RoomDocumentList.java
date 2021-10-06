@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomDocumentList
+ * RoomDocumentList.
+ *
  */
 
 public class RoomDocumentList {
@@ -35,110 +36,166 @@ public class RoomDocumentList {
   @JsonProperty("documents")
   private java.util.List<RoomDocument> documents = null;
 
+
+  /**
+   * resultSetSize.
+   *
+   * @return RoomDocumentList
+   **/
   public RoomDocumentList resultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
   }
 
-   /**
-   * Get resultSetSize
+  /**
+   * Get resultSetSize.
    * @return resultSetSize
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
 
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(Integer resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
 
+
+  /**
+   * startPosition.
+   *
+   * @return RoomDocumentList
+   **/
   public RoomDocumentList startPosition(Integer startPosition) {
     this.startPosition = startPosition;
     return this;
   }
 
-   /**
-   * Get startPosition
+  /**
+   * Get startPosition.
    * @return startPosition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getStartPosition() {
     return startPosition;
   }
 
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
-   /**
-   * Get endPosition
+  /**
+   * Get endPosition.
    * @return endPosition
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getEndPosition() {
     return endPosition;
   }
 
+
+  /**
+   * nextUri.
+   *
+   * @return RoomDocumentList
+   **/
   public RoomDocumentList nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
-   /**
-   * Get nextUri
+  /**
+   * Get nextUri.
    * @return nextUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getNextUri() {
     return nextUri;
   }
 
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
 
+
+  /**
+   * priorUri.
+   *
+   * @return RoomDocumentList
+   **/
   public RoomDocumentList priorUri(String priorUri) {
     this.priorUri = priorUri;
     return this;
   }
 
-   /**
-   * Get priorUri
+  /**
+   * Get priorUri.
    * @return priorUri
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPriorUri() {
     return priorUri;
   }
 
+  /**
+   * setPriorUri.
+   **/
   public void setPriorUri(String priorUri) {
     this.priorUri = priorUri;
   }
 
+
+  /**
+   * totalRowCount.
+   *
+   * @return RoomDocumentList
+   **/
   public RoomDocumentList totalRowCount(Integer totalRowCount) {
     this.totalRowCount = totalRowCount;
     return this;
   }
 
-   /**
-   * Get totalRowCount
+  /**
+   * Get totalRowCount.
    * @return totalRowCount
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTotalRowCount() {
     return totalRowCount;
   }
 
+  /**
+   * setTotalRowCount.
+   **/
   public void setTotalRowCount(Integer totalRowCount) {
     this.totalRowCount = totalRowCount;
   }
 
+
+  /**
+   * documents.
+   *
+   * @return RoomDocumentList
+   **/
   public RoomDocumentList documents(java.util.List<RoomDocument> documents) {
     this.documents = documents;
     return this;
   }
-
+  
+  /**
+   * addDocumentsItem.
+   *
+   * @return RoomDocumentList
+   **/
   public RoomDocumentList addDocumentsItem(RoomDocument documentsItem) {
     if (this.documents == null) {
       this.documents = new java.util.ArrayList<RoomDocument>();
@@ -147,20 +204,28 @@ public class RoomDocumentList {
     return this;
   }
 
-   /**
-   * Get documents
+  /**
+   * Get documents.
    * @return documents
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RoomDocument> getDocuments() {
     return documents;
   }
 
+  /**
+   * setDocuments.
+   **/
   public void setDocuments(java.util.List<RoomDocument> documents) {
     this.documents = documents;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -179,12 +244,18 @@ public class RoomDocumentList {
         Objects.equals(this.documents, roomDocumentList.documents);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(resultSetSize, startPosition, endPosition, nextUri, priorUri, totalRowCount, documents);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

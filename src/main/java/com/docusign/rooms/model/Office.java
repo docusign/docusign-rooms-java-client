@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * Office
+ * Office.
+ *
  */
 
 public class Office {
@@ -50,223 +51,336 @@ public class Office {
   @JsonProperty("createdDate")
   private DateTime createdDate = null;
 
+
+  /**
+   * officeId.
+   *
+   * @return Office
+   **/
   public Office officeId(Integer officeId) {
     this.officeId = officeId;
     return this;
   }
 
-   /**
-   * Get officeId
+  /**
+   * Get officeId.
    * @return officeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getOfficeId() {
     return officeId;
   }
 
+  /**
+   * setOfficeId.
+   **/
   public void setOfficeId(Integer officeId) {
     this.officeId = officeId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return Office
+   **/
   public Office name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * regionId.
+   *
+   * @return Office
+   **/
   public Office regionId(Integer regionId) {
     this.regionId = regionId;
     return this;
   }
 
-   /**
-   * Get regionId
+  /**
+   * Get regionId.
    * @return regionId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRegionId() {
     return regionId;
   }
 
+  /**
+   * setRegionId.
+   **/
   public void setRegionId(Integer regionId) {
     this.regionId = regionId;
   }
 
+
+  /**
+   * address1.
+   *
+   * @return Office
+   **/
   public Office address1(String address1) {
     this.address1 = address1;
     return this;
   }
 
-   /**
-   * Get address1
+  /**
+   * Get address1.
    * @return address1
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAddress1() {
     return address1;
   }
 
+  /**
+   * setAddress1.
+   **/
   public void setAddress1(String address1) {
     this.address1 = address1;
   }
 
+
+  /**
+   * address2.
+   *
+   * @return Office
+   **/
   public Office address2(String address2) {
     this.address2 = address2;
     return this;
   }
 
-   /**
-   * Get address2
+  /**
+   * Get address2.
    * @return address2
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getAddress2() {
     return address2;
   }
 
+  /**
+   * setAddress2.
+   **/
   public void setAddress2(String address2) {
     this.address2 = address2;
   }
 
+
+  /**
+   * city.
+   *
+   * @return Office
+   **/
   public Office city(String city) {
     this.city = city;
     return this;
   }
 
-   /**
-   * Get city
+  /**
+   * Get city.
    * @return city
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCity() {
     return city;
   }
 
+  /**
+   * setCity.
+   **/
   public void setCity(String city) {
     this.city = city;
   }
 
+
+  /**
+   * stateId.
+   *
+   * @return Office
+   **/
   public Office stateId(String stateId) {
     this.stateId = stateId;
     return this;
   }
 
-   /**
-   * Get stateId
+  /**
+   * Get stateId.
    * @return stateId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getStateId() {
     return stateId;
   }
 
+  /**
+   * setStateId.
+   **/
   public void setStateId(String stateId) {
     this.stateId = stateId;
   }
 
+
+  /**
+   * postalCode.
+   *
+   * @return Office
+   **/
   public Office postalCode(String postalCode) {
     this.postalCode = postalCode;
     return this;
   }
 
-   /**
-   * Get postalCode
+  /**
+   * Get postalCode.
    * @return postalCode
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPostalCode() {
     return postalCode;
   }
 
+  /**
+   * setPostalCode.
+   **/
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
 
+
+  /**
+   * countryId.
+   *
+   * @return Office
+   **/
   public Office countryId(String countryId) {
     this.countryId = countryId;
     return this;
   }
 
-   /**
-   * Get countryId
+  /**
+   * Get countryId.
    * @return countryId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCountryId() {
     return countryId;
   }
 
+  /**
+   * setCountryId.
+   **/
   public void setCountryId(String countryId) {
     this.countryId = countryId;
   }
 
+
+  /**
+   * timeZoneId.
+   *
+   * @return Office
+   **/
   public Office timeZoneId(String timeZoneId) {
     this.timeZoneId = timeZoneId;
     return this;
   }
 
-   /**
-   * Get timeZoneId
+  /**
+   * Get timeZoneId.
    * @return timeZoneId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTimeZoneId() {
     return timeZoneId;
   }
 
+  /**
+   * setTimeZoneId.
+   **/
   public void setTimeZoneId(String timeZoneId) {
     this.timeZoneId = timeZoneId;
   }
 
+
+  /**
+   * phone.
+   *
+   * @return Office
+   **/
   public Office phone(String phone) {
     this.phone = phone;
     return this;
   }
 
-   /**
-   * Get phone
+  /**
+   * Get phone.
    * @return phone
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
 
+  /**
+   * setPhone.
+   **/
   public void setPhone(String phone) {
     this.phone = phone;
   }
 
+
+  /**
+   * createdDate.
+   *
+   * @return Office
+   **/
   public Office createdDate(DateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
-   * Get createdDate
+  /**
+   * Get createdDate.
    * @return createdDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getCreatedDate() {
     return createdDate;
   }
 
+  /**
+   * setCreatedDate.
+   **/
   public void setCreatedDate(DateTime createdDate) {
     this.createdDate = createdDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -290,12 +404,18 @@ public class Office {
         Objects.equals(this.createdDate, office.createdDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(officeId, name, regionId, address1, address2, city, stateId, postalCode, countryId, timeZoneId, phone, createdDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomUserSummary
+ * RoomUserSummary.
+ *
  */
 
 public class RoomUserSummary {
@@ -40,88 +41,93 @@ public class RoomUserSummary {
   @JsonProperty("roleName")
   private String roleName = null;
 
-   /**
-   * Get userId
+  /**
+   * Get userId.
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFirstName() {
     return firstName;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
-   /**
-   * Get transactionSideId
+  /**
+   * Get transactionSideId.
    * @return transactionSideId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTransactionSideId() {
     return transactionSideId;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
-   /**
-   * Get titleId
+  /**
+   * Get titleId.
    * @return titleId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getTitleId() {
     return titleId;
   }
 
-   /**
-   * Get companyName
+  /**
+   * Get companyName.
    * @return companyName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCompanyName() {
     return companyName;
   }
 
-   /**
-   * Get roleName
+  /**
+   * Get roleName.
    * @return roleName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRoleName() {
     return roleName;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -142,12 +148,18 @@ public class RoomUserSummary {
         Objects.equals(this.roleName, roomUserSummary.roleName);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(userId, email, firstName, lastName, transactionSideId, roleId, titleId, companyName, roleName);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * SpecialCircumstanceTypesApi class.
+ *
+ **/
 public class SpecialCircumstanceTypesApi {
   private ApiClient apiClient;
 
+ /**
+  * SpecialCircumstanceTypesApi.
+  *
+  **/
   public SpecialCircumstanceTypesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * SpecialCircumstanceTypesApi.
+  *
+  **/
   public SpecialCircumstanceTypesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid special circumstance types.
-   * 
+   * Retrieves the list of valid special circumstance types..
+   * Returns a list of special circumstance types
    * @return GlobalSpecialCircumstanceTypes
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class SpecialCircumstanceTypesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

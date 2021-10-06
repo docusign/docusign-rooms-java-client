@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoleForUpdate
+ * RoleForUpdate.
+ *
  */
 
 public class RoleForUpdate {
@@ -23,61 +24,93 @@ public class RoleForUpdate {
   @JsonProperty("permissions")
   private Permissions permissions = null;
 
+
+  /**
+   * name.
+   *
+   * @return RoleForUpdate
+   **/
   public RoleForUpdate name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
+
+  /**
+   * isExternal.
+   *
+   * @return RoleForUpdate
+   **/
   public RoleForUpdate isExternal(Boolean isExternal) {
     this.isExternal = isExternal;
     return this;
   }
 
-   /**
-   * Get isExternal
+  /**
+   * Get isExternal.
    * @return isExternal
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsExternal() {
     return isExternal;
   }
 
+  /**
+   * setIsExternal.
+   **/
   public void setIsExternal(Boolean isExternal) {
     this.isExternal = isExternal;
   }
 
+
+  /**
+   * permissions.
+   *
+   * @return RoleForUpdate
+   **/
   public RoleForUpdate permissions(Permissions permissions) {
     this.permissions = permissions;
     return this;
   }
 
-   /**
-   * Get permissions
+  /**
+   * Get permissions.
    * @return permissions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Permissions getPermissions() {
     return permissions;
   }
 
+  /**
+   * setPermissions.
+   **/
   public void setPermissions(Permissions permissions) {
     this.permissions = permissions;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +125,18 @@ public class RoleForUpdate {
         Objects.equals(this.permissions, roleForUpdate.permissions);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(name, isExternal, permissions);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

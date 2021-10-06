@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * UserToInvite
+ * UserToInvite.
+ *
  */
 
 public class UserToInvite {
@@ -44,119 +45,184 @@ public class UserToInvite {
   @JsonProperty("redirectUrl")
   private String redirectUrl = null;
 
+
+  /**
+   * firstName.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * email.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite email(String email) {
     this.email = email;
     return this;
   }
 
-   /**
-   * Get email
+  /**
+   * Get email.
    * @return email
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getEmail() {
     return email;
   }
 
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
 
+
+  /**
+   * roleId.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite roleId(Integer roleId) {
     this.roleId = roleId;
     return this;
   }
 
-   /**
-   * Get roleId
+  /**
+   * Get roleId.
    * @return roleId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getRoleId() {
     return roleId;
   }
 
+  /**
+   * setRoleId.
+   **/
   public void setRoleId(Integer roleId) {
     this.roleId = roleId;
   }
 
+
+  /**
+   * accessLevel.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite accessLevel(AccessLevel accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
 
-   /**
-   * Get accessLevel
+  /**
+   * Get accessLevel.
    * @return accessLevel
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public AccessLevel getAccessLevel() {
     return accessLevel;
   }
 
+  /**
+   * setAccessLevel.
+   **/
   public void setAccessLevel(AccessLevel accessLevel) {
     this.accessLevel = accessLevel;
   }
 
+
+  /**
+   * defaultOfficeId.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite defaultOfficeId(Integer defaultOfficeId) {
     this.defaultOfficeId = defaultOfficeId;
     return this;
   }
 
-   /**
-   * Get defaultOfficeId
+  /**
+   * Get defaultOfficeId.
    * @return defaultOfficeId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getDefaultOfficeId() {
     return defaultOfficeId;
   }
 
+  /**
+   * setDefaultOfficeId.
+   **/
   public void setDefaultOfficeId(Integer defaultOfficeId) {
     this.defaultOfficeId = defaultOfficeId;
   }
 
+
+  /**
+   * regions.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite regions(java.util.List<Integer> regions) {
     this.regions = regions;
     return this;
   }
-
+  
+  /**
+   * addRegionsItem.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite addRegionsItem(Integer regionsItem) {
     if (this.regions == null) {
       this.regions = new java.util.ArrayList<Integer>();
@@ -165,24 +231,38 @@ public class UserToInvite {
     return this;
   }
 
-   /**
-   * Get regions
+  /**
+   * Get regions.
    * @return regions
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Integer> getRegions() {
     return regions;
   }
 
+  /**
+   * setRegions.
+   **/
   public void setRegions(java.util.List<Integer> regions) {
     this.regions = regions;
   }
 
+
+  /**
+   * offices.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite offices(java.util.List<Integer> offices) {
     this.offices = offices;
     return this;
   }
-
+  
+  /**
+   * addOfficesItem.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite addOfficesItem(Integer officesItem) {
     if (this.offices == null) {
       this.offices = new java.util.ArrayList<Integer>();
@@ -191,56 +271,82 @@ public class UserToInvite {
     return this;
   }
 
-   /**
-   * Get offices
+  /**
+   * Get offices.
    * @return offices
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Integer> getOffices() {
     return offices;
   }
 
+  /**
+   * setOffices.
+   **/
   public void setOffices(java.util.List<Integer> offices) {
     this.offices = offices;
   }
 
+
+  /**
+   * eSignPermissionProfileId.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite eSignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
     return this;
   }
 
-   /**
-   * Get eSignPermissionProfileId
+  /**
+   * Get eSignPermissionProfileId.
    * @return eSignPermissionProfileId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public String getESignPermissionProfileId() {
     return eSignPermissionProfileId;
   }
 
+  /**
+   * setESignPermissionProfileId.
+   **/
   public void setESignPermissionProfileId(String eSignPermissionProfileId) {
     this.eSignPermissionProfileId = eSignPermissionProfileId;
   }
 
+
+  /**
+   * redirectUrl.
+   *
+   * @return UserToInvite
+   **/
   public UserToInvite redirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
     return this;
   }
 
-   /**
-   * Get redirectUrl
+  /**
+   * Get redirectUrl.
    * @return redirectUrl
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getRedirectUrl() {
     return redirectUrl;
   }
 
+  /**
+   * setRedirectUrl.
+   **/
   public void setRedirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -262,12 +368,18 @@ public class UserToInvite {
         Objects.equals(this.redirectUrl, userToInvite.redirectUrl);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(firstName, lastName, email, roleId, accessLevel, defaultOfficeId, regions, offices, eSignPermissionProfileId, redirectUrl);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * CustomData
+ * CustomData.
+ *
  */
 
 public class CustomData {
@@ -19,25 +20,30 @@ public class CustomData {
   @JsonProperty("isRequiredOnSubmit")
   private Boolean isRequiredOnSubmit = null;
 
-   /**
-   * Get isRequiredOnCreate
+  /**
+   * Get isRequiredOnCreate.
    * @return isRequiredOnCreate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsRequiredOnCreate() {
     return isRequiredOnCreate;
   }
 
-   /**
-   * Get isRequiredOnSubmit
+  /**
+   * Get isRequiredOnSubmit.
    * @return isRequiredOnSubmit
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsRequiredOnSubmit() {
     return isRequiredOnSubmit;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -51,12 +57,18 @@ public class CustomData {
         Objects.equals(this.isRequiredOnSubmit, customData.isRequiredOnSubmit);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(isRequiredOnCreate, isRequiredOnSubmit);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

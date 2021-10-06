@@ -11,30 +11,52 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * ESignPermissionProfilesApi class.
+ *
+ **/
 public class ESignPermissionProfilesApi {
   private ApiClient apiClient;
 
+ /**
+  * ESignPermissionProfilesApi.
+  *
+  **/
   public ESignPermissionProfilesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * ESignPermissionProfilesApi.
+  *
+  **/
   public ESignPermissionProfilesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Gets permission profiles from the associated eSign account.
-   * 
-   * @param accountId  (required)
+   * Gets permission profiles from the associated eSign account..
+   * When you create or invite a new member in Rooms, the system creates an eSignature account for the member at the same time. This method returns a list of the eSignature permission profiles that the current user may be able to assign to a new member. The current user may not assign a permission higher than their own permission.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return ESignPermissionProfileList
    * @throws ApiException if fails to make API call
    */
@@ -68,7 +90,7 @@ public class ESignPermissionProfilesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

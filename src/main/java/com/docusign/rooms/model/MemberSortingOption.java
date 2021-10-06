@@ -40,9 +40,9 @@ public enum MemberSortingOption {
   }
 
   @JsonCreator
-  public static MemberSortingOption fromValue(String text) {
+  public static MemberSortingOption fromValue(String value) {
     for (MemberSortingOption b : MemberSortingOption.values()) {
-      if (String.valueOf(b.value).equals(text)) {
+      if (b.value.equals(value)) {
         return b;
       }
     }

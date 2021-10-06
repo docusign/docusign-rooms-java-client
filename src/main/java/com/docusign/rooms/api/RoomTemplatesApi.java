@@ -11,28 +11,55 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * RoomTemplatesApi class.
+ *
+ **/
 public class RoomTemplatesApi {
   private ApiClient apiClient;
 
+ /**
+  * RoomTemplatesApi.
+  *
+  **/
   public RoomTemplatesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * RoomTemplatesApi.
+  *
+  **/
   public RoomTemplatesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
   /// <summary>
-  /// Returns all room templates that the active user has access to 
+  /// Returns all room templates that the active user has access to This method returns a list of room templates that the user can use to create a new room. The response includes company and region-level templates
   /// </summary>
+
+ /**
+  * GetRoomTemplatesOptions Class.
+  *
+  **/
   public class GetRoomTemplatesOptions
   {
   private Integer officeId = null;
@@ -40,62 +67,92 @@ public class RoomTemplatesApi {
   private Boolean onlyEnabled = null;
   private Integer count = null;
   private Integer startPosition = null;
-  /*
-   * Get all room templates you have access to for this office. Response includes Company and Region level  If onlyAssignable is true, and no officeId is provided, user&#39;s default office is assumed. 
-   */
+  
+ /**
+  * setOfficeId method.
+  */
   public void setOfficeId(Integer officeId) {
     this.officeId = officeId;
   }
 
+ /**
+  * getOfficeId method.
+  *
+  * @return Integer
+  */
   public Integer getOfficeId() {
     return this.officeId;
   }
-  /*
-   * Get list of templates you have access to. Default value false. 
-   */
+  
+ /**
+  * setOnlyAssignable method.
+  */
   public void setOnlyAssignable(Boolean onlyAssignable) {
     this.onlyAssignable = onlyAssignable;
   }
 
+ /**
+  * getOnlyAssignable method.
+  *
+  * @return Boolean
+  */
   public Boolean getOnlyAssignable() {
     return this.onlyAssignable;
   }
-  /*
-   * When set to true, only returns room templates that are not disabled. 
-   */
+  
+ /**
+  * setOnlyEnabled method.
+  */
   public void setOnlyEnabled(Boolean onlyEnabled) {
     this.onlyEnabled = onlyEnabled;
   }
 
+ /**
+  * getOnlyEnabled method.
+  *
+  * @return Boolean
+  */
   public Boolean getOnlyEnabled() {
     return this.onlyEnabled;
   }
-  /*
-   * Number of room templates to return. Defaults to the maximum which is 100. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
-  /*
-   * Position of the first item in the total results. Defaults to 0. 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Returns all room templates that the active user has access to
-   * 
-   * @param accountId  (required)
+   * Returns all room templates that the active user has access to.
+   * This method returns a list of room templates that the user can use to create a new room. The response includes company and region-level templates
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return RoomTemplatesSummaryList
    */ 
   public RoomTemplatesSummaryList getRoomTemplates(String accountId) throws ApiException {
@@ -103,9 +160,9 @@ public class RoomTemplatesApi {
   }
 
   /**
-   * Returns all room templates that the active user has access to
-   * 
-   * @param accountId  (required)
+   * Returns all room templates that the active user has access to.
+   * This method returns a list of room templates that the user can use to create a new room. The response includes company and region-level templates
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return RoomTemplatesSummaryList
    * @throws ApiException if fails to make API call
@@ -150,7 +207,7 @@ public class RoomTemplatesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

@@ -9,32 +9,47 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * DesignatedRegion
+ * DesignatedRegion.
+ *
  */
 
 public class DesignatedRegion {
   @JsonProperty("regionId")
   private Integer regionId = null;
 
+
+  /**
+   * regionId.
+   *
+   * @return DesignatedRegion
+   **/
   public DesignatedRegion regionId(Integer regionId) {
     this.regionId = regionId;
     return this;
   }
 
-   /**
-   * Get regionId
+  /**
+   * Get regionId.
    * @return regionId
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   public Integer getRegionId() {
     return regionId;
   }
 
+  /**
+   * setRegionId.
+   **/
   public void setRegionId(Integer regionId) {
     this.regionId = regionId;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -47,12 +62,18 @@ public class DesignatedRegion {
     return Objects.equals(this.regionId, designatedRegion.regionId);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(regionId);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

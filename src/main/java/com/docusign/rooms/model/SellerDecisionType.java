@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SellerDecisionType
+ * SellerDecisionType.
+ *
  */
 
 public class SellerDecisionType {
@@ -19,43 +20,66 @@ public class SellerDecisionType {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * sellerDecisionTypeId.
+   *
+   * @return SellerDecisionType
+   **/
   public SellerDecisionType sellerDecisionTypeId(String sellerDecisionTypeId) {
     this.sellerDecisionTypeId = sellerDecisionTypeId;
     return this;
   }
 
-   /**
-   * Get sellerDecisionTypeId
+  /**
+   * Get sellerDecisionTypeId.
    * @return sellerDecisionTypeId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getSellerDecisionTypeId() {
     return sellerDecisionTypeId;
   }
 
+  /**
+   * setSellerDecisionTypeId.
+   **/
   public void setSellerDecisionTypeId(String sellerDecisionTypeId) {
     this.sellerDecisionTypeId = sellerDecisionTypeId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return SellerDecisionType
+   **/
   public SellerDecisionType name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class SellerDecisionType {
         Objects.equals(this.name, sellerDecisionType.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(sellerDecisionTypeId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

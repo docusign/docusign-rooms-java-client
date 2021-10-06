@@ -10,32 +10,47 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * RoomUserRemovalDetail
+ * RoomUserRemovalDetail.
+ *
  */
 
 public class RoomUserRemovalDetail {
   @JsonProperty("revocationDate")
   private DateTime revocationDate = null;
 
+
+  /**
+   * revocationDate.
+   *
+   * @return RoomUserRemovalDetail
+   **/
   public RoomUserRemovalDetail revocationDate(DateTime revocationDate) {
     this.revocationDate = revocationDate;
     return this;
   }
 
-   /**
-   * Get revocationDate
+  /**
+   * Get revocationDate.
    * @return revocationDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getRevocationDate() {
     return revocationDate;
   }
 
+  /**
+   * setRevocationDate.
+   **/
   public void setRevocationDate(DateTime revocationDate) {
     this.revocationDate = revocationDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -48,12 +63,18 @@ public class RoomUserRemovalDetail {
     return Objects.equals(this.revocationDate, roomUserRemovalDetail.revocationDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(revocationDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

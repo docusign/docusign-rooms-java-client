@@ -11,29 +11,51 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * ClosingStatusesApi class.
+ *
+ **/
 public class ClosingStatusesApi {
   private ApiClient apiClient;
 
+ /**
+  * ClosingStatusesApi.
+  *
+  **/
   public ClosingStatusesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * ClosingStatusesApi.
+  *
+  **/
   public ClosingStatusesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves the list of valid closing statuses.
-   * 
+   * Retrieves the list of valid closing statuses..
+   * Returns a list of closing statuses, or valid reasons for closing a room.
    * @return GlobalClosingStatuses
    * @throws ApiException if fails to make API call
    */
@@ -61,7 +83,7 @@ public class ClosingStatusesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

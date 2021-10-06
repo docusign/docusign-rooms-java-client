@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * TaskStatus
+ * TaskStatus.
+ *
  */
 
 public class TaskStatus {
@@ -19,43 +20,66 @@ public class TaskStatus {
   @JsonProperty("name")
   private String name = null;
 
+
+  /**
+   * taskStatusId.
+   *
+   * @return TaskStatus
+   **/
   public TaskStatus taskStatusId(String taskStatusId) {
     this.taskStatusId = taskStatusId;
     return this;
   }
 
-   /**
-   * Get taskStatusId
+  /**
+   * Get taskStatusId.
    * @return taskStatusId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getTaskStatusId() {
     return taskStatusId;
   }
 
+  /**
+   * setTaskStatusId.
+   **/
   public void setTaskStatusId(String taskStatusId) {
     this.taskStatusId = taskStatusId;
   }
 
+
+  /**
+   * name.
+   *
+   * @return TaskStatus
+   **/
   public TaskStatus name(String name) {
     this.name = name;
     return this;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -69,12 +93,18 @@ public class TaskStatus {
         Objects.equals(this.name, taskStatus.name);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(taskStatusId, name);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

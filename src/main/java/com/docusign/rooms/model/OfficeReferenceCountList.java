@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * OfficeReferenceCountList
+ * OfficeReferenceCountList.
+ *
  */
 
 public class OfficeReferenceCountList {
   @JsonProperty("referencesCounts")
   private java.util.List<OfficeReferenceCount> referencesCounts = null;
 
+
+  /**
+   * referencesCounts.
+   *
+   * @return OfficeReferenceCountList
+   **/
   public OfficeReferenceCountList referencesCounts(java.util.List<OfficeReferenceCount> referencesCounts) {
     this.referencesCounts = referencesCounts;
     return this;
   }
-
+  
+  /**
+   * addReferencesCountsItem.
+   *
+   * @return OfficeReferenceCountList
+   **/
   public OfficeReferenceCountList addReferencesCountsItem(OfficeReferenceCount referencesCountsItem) {
     if (this.referencesCounts == null) {
       this.referencesCounts = new java.util.ArrayList<OfficeReferenceCount>();
@@ -30,20 +42,28 @@ public class OfficeReferenceCountList {
     return this;
   }
 
-   /**
-   * Get referencesCounts
+  /**
+   * Get referencesCounts.
    * @return referencesCounts
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<OfficeReferenceCount> getReferencesCounts() {
     return referencesCounts;
   }
 
+  /**
+   * setReferencesCounts.
+   **/
   public void setReferencesCounts(java.util.List<OfficeReferenceCount> referencesCounts) {
     this.referencesCounts = referencesCounts;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class OfficeReferenceCountList {
     return Objects.equals(this.referencesCounts, officeReferenceCountList.referencesCounts);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(referencesCounts);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

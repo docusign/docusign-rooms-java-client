@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalCountries
+ * GlobalCountries.
+ *
  */
 
 public class GlobalCountries {
   @JsonProperty("countries")
   private java.util.List<Country> countries = null;
 
+
+  /**
+   * countries.
+   *
+   * @return GlobalCountries
+   **/
   public GlobalCountries countries(java.util.List<Country> countries) {
     this.countries = countries;
     return this;
   }
-
+  
+  /**
+   * addCountriesItem.
+   *
+   * @return GlobalCountries
+   **/
   public GlobalCountries addCountriesItem(Country countriesItem) {
     if (this.countries == null) {
       this.countries = new java.util.ArrayList<Country>();
@@ -30,20 +42,28 @@ public class GlobalCountries {
     return this;
   }
 
-   /**
-   * Get countries
+  /**
+   * Get countries.
    * @return countries
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Country> getCountries() {
     return countries;
   }
 
+  /**
+   * setCountries.
+   **/
   public void setCountries(java.util.List<Country> countries) {
     this.countries = countries;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalCountries {
     return Objects.equals(this.countries, globalCountries.countries);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(countries);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalTaskResponsibilityTypes
+ * GlobalTaskResponsibilityTypes.
+ *
  */
 
 public class GlobalTaskResponsibilityTypes {
   @JsonProperty("taskResponsibilityTypes")
   private java.util.List<TaskResponsibilityType> taskResponsibilityTypes = null;
 
+
+  /**
+   * taskResponsibilityTypes.
+   *
+   * @return GlobalTaskResponsibilityTypes
+   **/
   public GlobalTaskResponsibilityTypes taskResponsibilityTypes(java.util.List<TaskResponsibilityType> taskResponsibilityTypes) {
     this.taskResponsibilityTypes = taskResponsibilityTypes;
     return this;
   }
-
+  
+  /**
+   * addTaskResponsibilityTypesItem.
+   *
+   * @return GlobalTaskResponsibilityTypes
+   **/
   public GlobalTaskResponsibilityTypes addTaskResponsibilityTypesItem(TaskResponsibilityType taskResponsibilityTypesItem) {
     if (this.taskResponsibilityTypes == null) {
       this.taskResponsibilityTypes = new java.util.ArrayList<TaskResponsibilityType>();
@@ -30,20 +42,28 @@ public class GlobalTaskResponsibilityTypes {
     return this;
   }
 
-   /**
-   * Get taskResponsibilityTypes
+  /**
+   * Get taskResponsibilityTypes.
    * @return taskResponsibilityTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TaskResponsibilityType> getTaskResponsibilityTypes() {
     return taskResponsibilityTypes;
   }
 
+  /**
+   * setTaskResponsibilityTypes.
+   **/
   public void setTaskResponsibilityTypes(java.util.List<TaskResponsibilityType> taskResponsibilityTypes) {
     this.taskResponsibilityTypes = taskResponsibilityTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalTaskResponsibilityTypes {
     return Objects.equals(this.taskResponsibilityTypes, globalTaskResponsibilityTypes.taskResponsibilityTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(taskResponsibilityTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

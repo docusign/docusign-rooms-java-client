@@ -10,18 +10,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * GlobalTaskDateTypes
+ * GlobalTaskDateTypes.
+ *
  */
 
 public class GlobalTaskDateTypes {
   @JsonProperty("taskDateTypes")
   private java.util.List<TaskDateType> taskDateTypes = null;
 
+
+  /**
+   * taskDateTypes.
+   *
+   * @return GlobalTaskDateTypes
+   **/
   public GlobalTaskDateTypes taskDateTypes(java.util.List<TaskDateType> taskDateTypes) {
     this.taskDateTypes = taskDateTypes;
     return this;
   }
-
+  
+  /**
+   * addTaskDateTypesItem.
+   *
+   * @return GlobalTaskDateTypes
+   **/
   public GlobalTaskDateTypes addTaskDateTypesItem(TaskDateType taskDateTypesItem) {
     if (this.taskDateTypes == null) {
       this.taskDateTypes = new java.util.ArrayList<TaskDateType>();
@@ -30,20 +42,28 @@ public class GlobalTaskDateTypes {
     return this;
   }
 
-   /**
-   * Get taskDateTypes
+  /**
+   * Get taskDateTypes.
    * @return taskDateTypes
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TaskDateType> getTaskDateTypes() {
     return taskDateTypes;
   }
 
+  /**
+   * setTaskDateTypes.
+   **/
   public void setTaskDateTypes(java.util.List<TaskDateType> taskDateTypes) {
     this.taskDateTypes = taskDateTypes;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -56,12 +76,18 @@ public class GlobalTaskDateTypes {
     return Objects.equals(this.taskDateTypes, globalTaskDateTypes.taskDateTypes);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(taskDateTypes);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

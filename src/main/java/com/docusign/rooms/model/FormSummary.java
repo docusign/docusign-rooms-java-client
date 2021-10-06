@@ -10,7 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.joda.time.DateTime;
 
 /**
- * FormSummary
+ * FormSummary.
+ *
  */
 
 public class FormSummary {
@@ -23,34 +24,39 @@ public class FormSummary {
   @JsonProperty("lastUpdatedDate")
   private DateTime lastUpdatedDate = null;
 
-   /**
-   * Get libraryFormId
+  /**
+   * Get libraryFormId.
    * @return libraryFormId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public java.util.UUID getLibraryFormId() {
     return libraryFormId;
   }
 
-   /**
-   * Get name
+  /**
+   * Get name.
    * @return name
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-   /**
-   * Get lastUpdatedDate
+  /**
+   * Get lastUpdatedDate.
    * @return lastUpdatedDate
-  **/
+   **/
   @ApiModelProperty(value = "")
   public DateTime getLastUpdatedDate() {
     return lastUpdatedDate;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -65,12 +71,18 @@ public class FormSummary {
         Objects.equals(this.lastUpdatedDate, formSummary.lastUpdatedDate);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(libraryFormId, name, lastUpdatedDate);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

@@ -11,58 +11,97 @@ import com.docusign.rooms.client.Pair;
 
 
 
+
+/**
+ * TaskListTemplatesApi class.
+ *
+ **/
 public class TaskListTemplatesApi {
   private ApiClient apiClient;
 
+ /**
+  * TaskListTemplatesApi.
+  *
+  **/
   public TaskListTemplatesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * TaskListTemplatesApi.
+  *
+  **/
   public TaskListTemplatesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
   /// <summary>
-  /// Returns all task list templates for the company of the active user. 
+  /// Returns all task list templates for the company of the active user. Returns all task list templates for the company of the active user.
   /// </summary>
+
+ /**
+  * GetTaskListTemplatesOptions Class.
+  *
+  **/
   public class GetTaskListTemplatesOptions
   {
   private Integer startPosition = null;
   private Integer count = null;
-  /*
-   *  
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return Integer
+  */
   public Integer getStartPosition() {
     return this.startPosition;
   }
-  /*
-   *  
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(Integer count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return Integer
+  */
   public Integer getCount() {
     return this.count;
   }
   }
 
    /**
+   * Returns all task list templates for the company of the active user..
    * Returns all task list templates for the company of the active user.
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @return TaskListTemplateList
    */ 
   public TaskListTemplateList getTaskListTemplates(String accountId) throws ApiException {
@@ -70,9 +109,9 @@ public class TaskListTemplatesApi {
   }
 
   /**
+   * Returns all task list templates for the company of the active user..
    * Returns all task list templates for the company of the active user.
-   * 
-   * @param accountId  (required)
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param options for modifying the method behavior.
    * @return TaskListTemplateList
    * @throws ApiException if fails to make API call
@@ -111,7 +150,7 @@ public class TaskListTemplatesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

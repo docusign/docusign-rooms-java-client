@@ -32,9 +32,9 @@ public enum ProductVersion {
   }
 
   @JsonCreator
-  public static ProductVersion fromValue(String text) {
+  public static ProductVersion fromValue(String value) {
     for (ProductVersion b : ProductVersion.values()) {
-      if (String.valueOf(b.value).equals(text)) {
+      if (b.value.equals(value)) {
         return b;
       }
     }

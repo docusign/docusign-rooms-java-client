@@ -9,7 +9,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * RoomDocumentOwner
+ * RoomDocumentOwner.
+ *
  */
 
 public class RoomDocumentOwner {
@@ -28,97 +29,147 @@ public class RoomDocumentOwner {
   @JsonProperty("imageSrc")
   private String imageSrc = null;
 
+
+  /**
+   * userId.
+   *
+   * @return RoomDocumentOwner
+   **/
   public RoomDocumentOwner userId(Integer userId) {
     this.userId = userId;
     return this;
   }
 
-   /**
-   * Get userId
+  /**
+   * Get userId.
    * @return userId
-  **/
+   **/
   @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
 
+  /**
+   * setUserId.
+   **/
   public void setUserId(Integer userId) {
     this.userId = userId;
   }
 
+
+  /**
+   * firstName.
+   *
+   * @return RoomDocumentOwner
+   **/
   public RoomDocumentOwner firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
-   /**
-   * Get firstName
+  /**
+   * Get firstName.
    * @return firstName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getFirstName() {
     return firstName;
   }
 
+  /**
+   * setFirstName.
+   **/
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
 
+
+  /**
+   * lastName.
+   *
+   * @return RoomDocumentOwner
+   **/
   public RoomDocumentOwner lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
-   /**
-   * Get lastName
+  /**
+   * Get lastName.
    * @return lastName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
+  /**
+   * setLastName.
+   **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
 
+
+  /**
+   * companyName.
+   *
+   * @return RoomDocumentOwner
+   **/
   public RoomDocumentOwner companyName(String companyName) {
     this.companyName = companyName;
     return this;
   }
 
-   /**
-   * Get companyName
+  /**
+   * Get companyName.
    * @return companyName
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getCompanyName() {
     return companyName;
   }
 
+  /**
+   * setCompanyName.
+   **/
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
 
+
+  /**
+   * imageSrc.
+   *
+   * @return RoomDocumentOwner
+   **/
   public RoomDocumentOwner imageSrc(String imageSrc) {
     this.imageSrc = imageSrc;
     return this;
   }
 
-   /**
-   * Get imageSrc
+  /**
+   * Get imageSrc.
    * @return imageSrc
-  **/
+   **/
   @ApiModelProperty(value = "")
   public String getImageSrc() {
     return imageSrc;
   }
 
+  /**
+   * setImageSrc.
+   **/
   public void setImageSrc(String imageSrc) {
     this.imageSrc = imageSrc;
   }
 
 
+  /**
+   * Compares objects.
+   *
+   * @return true or false depending on comparison result.
+   */
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -135,12 +186,18 @@ public class RoomDocumentOwner {
         Objects.equals(this.imageSrc, roomDocumentOwner.imageSrc);
   }
 
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(userId, firstName, lastName, companyName, imageSrc);
   }
 
 
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

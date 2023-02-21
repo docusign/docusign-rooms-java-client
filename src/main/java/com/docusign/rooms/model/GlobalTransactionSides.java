@@ -36,7 +36,7 @@ public class GlobalTransactionSides {
    **/
   public GlobalTransactionSides addTransactionSidesItem(TransactionSide transactionSidesItem) {
     if (this.transactionSides == null) {
-      this.transactionSides = new java.util.ArrayList<TransactionSide>();
+      this.transactionSides = new java.util.ArrayList<>();
     }
     this.transactionSides.add(transactionSidesItem);
     return this;

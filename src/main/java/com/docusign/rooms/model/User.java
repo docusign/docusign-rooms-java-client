@@ -2,7 +2,6 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.rooms.model.AccessLevel;
 import com.docusign.rooms.model.ClassicManagerPermissions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -34,8 +33,49 @@ public class User {
   @JsonProperty("status")
   private String status = null;
 
+  /**
+   * Gets or Sets accessLevel
+   */
+  public enum AccessLevelEnum {
+    CONTRIBUTOR("Contributor"),
+    
+    OFFICE("Office"),
+    
+    REGION("Region"),
+    
+    COMPANY("Company"),
+    
+    ADMIN("Admin");
+
+    private String value;
+
+    AccessLevelEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static AccessLevelEnum fromValue(String value) {
+      for (AccessLevelEnum b : AccessLevelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
   @JsonProperty("accessLevel")
-  private AccessLevel accessLevel = null;
+  private AccessLevelEnum accessLevel = null;
 
   @JsonProperty("defaultOfficeId")
   private Integer defaultOfficeId = null;
@@ -226,7 +266,7 @@ public class User {
    *
    * @return User
    **/
-  public User accessLevel(AccessLevel accessLevel) {
+  public User accessLevel(AccessLevelEnum accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
@@ -236,14 +276,14 @@ public class User {
    * @return accessLevel
    **/
   @ApiModelProperty(value = "")
-  public AccessLevel getAccessLevel() {
+  public AccessLevelEnum getAccessLevel() {
     return accessLevel;
   }
 
   /**
    * setAccessLevel.
    **/
-  public void setAccessLevel(AccessLevel accessLevel) {
+  public void setAccessLevel(AccessLevelEnum accessLevel) {
     this.accessLevel = accessLevel;
   }
 
@@ -373,7 +413,7 @@ public class User {
    **/
   public User addOfficesItem(Integer officesItem) {
     if (this.offices == null) {
-      this.offices = new java.util.ArrayList<Integer>();
+      this.offices = new java.util.ArrayList<>();
     }
     this.offices.add(officesItem);
     return this;
@@ -413,7 +453,7 @@ public class User {
    **/
   public User addRegionsItem(Integer regionsItem) {
     if (this.regions == null) {
-      this.regions = new java.util.ArrayList<Integer>();
+      this.regions = new java.util.ArrayList<>();
     }
     this.regions.add(regionsItem);
     return this;

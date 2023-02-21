@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -61,6 +62,18 @@ public class AccountsApi {
    * @throws ApiException if fails to make API call
    */
   public AccountSummary getAccountInformation(String accountId) throws ApiException {
+    ApiResponse<AccountSummary> localVarResponse = getAccountInformationWithHttpInfo(accountId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Get information about the account.
+   * Returns details about a company account.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @return AccountSummary
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<AccountSummary > getAccountInformationWithHttpInfo(String accountId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -85,7 +98,7 @@ public class AccountsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -95,8 +108,9 @@ public class AccountsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<AccountSummary> localVarReturnType = new GenericType<AccountSummary>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    AccountSummary localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<AccountSummary>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

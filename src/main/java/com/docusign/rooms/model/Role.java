@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
+import java.time.OffsetDateTime;
 
 /**
  * Role.
@@ -32,7 +32,7 @@ public class Role {
   private Boolean isExternal = null;
 
   @JsonProperty("createdDate")
-  private DateTime createdDate = null;
+  private OffsetDateTime createdDate = null;
 
   @JsonProperty("isAssigned")
   private Boolean isAssigned = null;
@@ -181,7 +181,7 @@ public class Role {
    *
    * @return Role
    **/
-  public Role createdDate(DateTime createdDate) {
+  public Role createdDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -191,14 +191,14 @@ public class Role {
    * @return createdDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getCreatedDate() {
+  public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(DateTime createdDate) {
+  public void setCreatedDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
   }
 

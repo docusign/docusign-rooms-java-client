@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -58,11 +59,25 @@ public class TaskListsApi {
    * Applies a task list to a room, based on the &#x60;taskTemplateId&#x60; that you specify in the &#x60;taskList&#x60; request body.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roomId Room ID. (required)
-   * @param body  (optional)
+   * @param body Details for task list creation (optional)
    * @return TaskList
    * @throws ApiException if fails to make API call
    */
   public TaskList createTaskList(String accountId, Integer roomId, TaskListForCreate body) throws ApiException {
+    ApiResponse<TaskList> localVarResponse = createTaskListWithHttpInfo(accountId, roomId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Add a task list to a room based on a task list template.
+   * Applies a task list to a room, based on the &#x60;taskTemplateId&#x60; that you specify in the &#x60;taskList&#x60; request body.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId Room ID. (required)
+   * @param body Details for task list creation (optional)
+   * @return TaskList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<TaskList > createTaskListWithHttpInfo(String accountId, Integer roomId, TaskListForCreate body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -93,7 +108,7 @@ public class TaskListsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -103,10 +118,11 @@ public class TaskListsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<TaskList> localVarReturnType = new GenericType<TaskList>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    TaskList localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<TaskList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Deletes a task list. If there are attached documents they will remain in the associated room..
@@ -116,6 +132,17 @@ public class TaskListsApi {
    * @throws ApiException if fails to make API call
    */
   public void deleteTaskList(String accountId, Integer taskListId) throws ApiException {
+    deleteTaskListWithHttpInfo(accountId, taskListId);
+  }
+
+  /**
+   * Deletes a task list. If there are attached documents they will remain in the associated room.
+   * Deletes the specified task list from a room. If there are attached documents, they will remain in the associated room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param taskListId Task List ID (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> deleteTaskListWithHttpInfo(String accountId, Integer taskListId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -146,7 +173,7 @@ public class TaskListsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -156,9 +183,9 @@ public class TaskListsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -170,6 +197,19 @@ public class TaskListsApi {
    * @throws ApiException if fails to make API call
    */
   public TaskListSummaryList getTaskLists(String accountId, Integer roomId) throws ApiException {
+    ApiResponse<TaskListSummaryList> localVarResponse = getTaskListsWithHttpInfo(accountId, roomId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Returns the summary for all viewable task lists in a room.
+   * Returns the task lists associated with a room.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId Room ID (required)
+   * @return TaskListSummaryList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<TaskListSummaryList > getTaskListsWithHttpInfo(String accountId, Integer roomId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -200,7 +240,7 @@ public class TaskListsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -210,8 +250,9 @@ public class TaskListsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<TaskListSummaryList> localVarReturnType = new GenericType<TaskListSummaryList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    TaskListSummaryList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<TaskListSummaryList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

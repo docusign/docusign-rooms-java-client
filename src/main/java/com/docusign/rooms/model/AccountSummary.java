@@ -2,7 +2,6 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.rooms.model.ProductVersion;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -21,8 +20,43 @@ public class AccountSummary {
   @JsonProperty("name")
   private String name = null;
 
+  /**
+   * Gets or Sets companyVersion
+   */
+  public enum CompanyVersionEnum {
+    V5("v5"),
+    
+    V6("v6");
+
+    private String value;
+
+    CompanyVersionEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static CompanyVersionEnum fromValue(String value) {
+      for (CompanyVersionEnum b : CompanyVersionEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
   @JsonProperty("companyVersion")
-  private ProductVersion companyVersion = null;
+  private CompanyVersionEnum companyVersion = null;
 
   @JsonProperty("docuSignAccountGuid")
   private String docuSignAccountGuid = null;
@@ -57,7 +91,7 @@ public class AccountSummary {
    *
    * @return AccountSummary
    **/
-  public AccountSummary companyVersion(ProductVersion companyVersion) {
+  public AccountSummary companyVersion(CompanyVersionEnum companyVersion) {
     this.companyVersion = companyVersion;
     return this;
   }
@@ -67,14 +101,14 @@ public class AccountSummary {
    * @return companyVersion
    **/
   @ApiModelProperty(value = "")
-  public ProductVersion getCompanyVersion() {
+  public CompanyVersionEnum getCompanyVersion() {
     return companyVersion;
   }
 
   /**
    * setCompanyVersion.
    **/
-  public void setCompanyVersion(ProductVersion companyVersion) {
+  public void setCompanyVersion(CompanyVersionEnum companyVersion) {
     this.companyVersion = companyVersion;
   }
 

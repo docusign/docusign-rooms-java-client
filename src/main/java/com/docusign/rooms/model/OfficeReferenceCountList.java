@@ -36,7 +36,7 @@ public class OfficeReferenceCountList {
    **/
   public OfficeReferenceCountList addReferencesCountsItem(OfficeReferenceCount referencesCountsItem) {
     if (this.referencesCounts == null) {
-      this.referencesCounts = new java.util.ArrayList<OfficeReferenceCount>();
+      this.referencesCounts = new java.util.ArrayList<>();
     }
     this.referencesCounts.add(referencesCountsItem);
     return this;

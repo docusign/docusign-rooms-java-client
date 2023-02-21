@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -60,6 +61,17 @@ public class CurrenciesApi {
    * @throws ApiException if fails to make API call
    */
   public GlobalCurrencies getCurrencies() throws ApiException {
+    ApiResponse<GlobalCurrencies> localVarResponse = getCurrenciesWithHttpInfo();
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Retrieves the list of valid currencies.
+   * Returns a list of valid values for the currencies that you can use for listing, offer, and loan amounts.
+   * @return GlobalCurrencies
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<GlobalCurrencies > getCurrenciesWithHttpInfo() throws ApiException {
     Object localVarPostBody = "{}";
     
     // create path and map variables
@@ -78,7 +90,7 @@ public class CurrenciesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -88,8 +100,9 @@ public class CurrenciesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<GlobalCurrencies> localVarReturnType = new GenericType<GlobalCurrencies>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GlobalCurrencies localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<GlobalCurrencies>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

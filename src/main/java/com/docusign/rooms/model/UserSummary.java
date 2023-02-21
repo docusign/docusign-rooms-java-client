@@ -2,7 +2,6 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.rooms.model.AccessLevel;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -33,8 +32,49 @@ public class UserSummary {
   @JsonProperty("status")
   private String status = null;
 
+  /**
+   * Gets or Sets accessLevel
+   */
+  public enum AccessLevelEnum {
+    CONTRIBUTOR("Contributor"),
+    
+    OFFICE("Office"),
+    
+    REGION("Region"),
+    
+    COMPANY("Company"),
+    
+    ADMIN("Admin");
+
+    private String value;
+
+    AccessLevelEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static AccessLevelEnum fromValue(String value) {
+      for (AccessLevelEnum b : AccessLevelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
   @JsonProperty("accessLevel")
-  private AccessLevel accessLevel = null;
+  private AccessLevelEnum accessLevel = null;
 
   @JsonProperty("defaultOfficeId")
   private Integer defaultOfficeId = null;
@@ -108,7 +148,7 @@ public class UserSummary {
    *
    * @return UserSummary
    **/
-  public UserSummary accessLevel(AccessLevel accessLevel) {
+  public UserSummary accessLevel(AccessLevelEnum accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
@@ -118,14 +158,14 @@ public class UserSummary {
    * @return accessLevel
    **/
   @ApiModelProperty(value = "")
-  public AccessLevel getAccessLevel() {
+  public AccessLevelEnum getAccessLevel() {
     return accessLevel;
   }
 
   /**
    * setAccessLevel.
    **/
-  public void setAccessLevel(AccessLevel accessLevel) {
+  public void setAccessLevel(AccessLevelEnum accessLevel) {
     this.accessLevel = accessLevel;
   }
 

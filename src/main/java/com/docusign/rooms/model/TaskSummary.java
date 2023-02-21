@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
+import java.time.OffsetDateTime;
 
 /**
  * TaskSummary.
@@ -31,22 +31,22 @@ public class TaskSummary {
   private Integer dueDateOffset = null;
 
   @JsonProperty("fixedDueDate")
-  private DateTime fixedDueDate = null;
+  private OffsetDateTime fixedDueDate = null;
 
   @JsonProperty("ownerUserId")
   private Integer ownerUserId = null;
 
   @JsonProperty("completionDate")
-  private DateTime completionDate = null;
+  private OffsetDateTime completionDate = null;
 
   @JsonProperty("approvalDate")
-  private DateTime approvalDate = null;
+  private OffsetDateTime approvalDate = null;
 
   @JsonProperty("rejectedDate")
-  private DateTime rejectedDate = null;
+  private OffsetDateTime rejectedDate = null;
 
   @JsonProperty("createdDate")
-  private DateTime createdDate = null;
+  private OffsetDateTime createdDate = null;
 
   @JsonProperty("isDocumentTask")
   private Boolean isDocumentTask = null;
@@ -195,7 +195,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary fixedDueDate(DateTime fixedDueDate) {
+  public TaskSummary fixedDueDate(OffsetDateTime fixedDueDate) {
     this.fixedDueDate = fixedDueDate;
     return this;
   }
@@ -205,14 +205,14 @@ public class TaskSummary {
    * @return fixedDueDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getFixedDueDate() {
+  public OffsetDateTime getFixedDueDate() {
     return fixedDueDate;
   }
 
   /**
    * setFixedDueDate.
    **/
-  public void setFixedDueDate(DateTime fixedDueDate) {
+  public void setFixedDueDate(OffsetDateTime fixedDueDate) {
     this.fixedDueDate = fixedDueDate;
   }
 
@@ -249,7 +249,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary completionDate(DateTime completionDate) {
+  public TaskSummary completionDate(OffsetDateTime completionDate) {
     this.completionDate = completionDate;
     return this;
   }
@@ -259,14 +259,14 @@ public class TaskSummary {
    * @return completionDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getCompletionDate() {
+  public OffsetDateTime getCompletionDate() {
     return completionDate;
   }
 
   /**
    * setCompletionDate.
    **/
-  public void setCompletionDate(DateTime completionDate) {
+  public void setCompletionDate(OffsetDateTime completionDate) {
     this.completionDate = completionDate;
   }
 
@@ -276,7 +276,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary approvalDate(DateTime approvalDate) {
+  public TaskSummary approvalDate(OffsetDateTime approvalDate) {
     this.approvalDate = approvalDate;
     return this;
   }
@@ -286,14 +286,14 @@ public class TaskSummary {
    * @return approvalDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getApprovalDate() {
+  public OffsetDateTime getApprovalDate() {
     return approvalDate;
   }
 
   /**
    * setApprovalDate.
    **/
-  public void setApprovalDate(DateTime approvalDate) {
+  public void setApprovalDate(OffsetDateTime approvalDate) {
     this.approvalDate = approvalDate;
   }
 
@@ -303,7 +303,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary rejectedDate(DateTime rejectedDate) {
+  public TaskSummary rejectedDate(OffsetDateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
@@ -313,14 +313,14 @@ public class TaskSummary {
    * @return rejectedDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getRejectedDate() {
+  public OffsetDateTime getRejectedDate() {
     return rejectedDate;
   }
 
   /**
    * setRejectedDate.
    **/
-  public void setRejectedDate(DateTime rejectedDate) {
+  public void setRejectedDate(OffsetDateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
@@ -330,7 +330,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary createdDate(DateTime createdDate) {
+  public TaskSummary createdDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -340,14 +340,14 @@ public class TaskSummary {
    * @return createdDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getCreatedDate() {
+  public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(DateTime createdDate) {
+  public void setCreatedDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
   }
 

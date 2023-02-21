@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -60,6 +61,17 @@ public class CountriesApi {
    * @throws ApiException if fails to make API call
    */
   public GlobalCountries getCountries() throws ApiException {
+    ApiResponse<GlobalCountries> localVarResponse = getCountriesWithHttpInfo();
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Retrieves the list of valid countries.
+   * Returns a list of countries that the API supports
+   * @return GlobalCountries
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<GlobalCountries > getCountriesWithHttpInfo() throws ApiException {
     Object localVarPostBody = "{}";
     
     // create path and map variables
@@ -78,7 +90,7 @@ public class CountriesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -88,8 +100,9 @@ public class CountriesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<GlobalCountries> localVarReturnType = new GenericType<GlobalCountries>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GlobalCountries localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<GlobalCountries>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

@@ -36,7 +36,7 @@ public class GlobalClosingStatuses {
    **/
   public GlobalClosingStatuses addClosingStatusesItem(ClosingStatus closingStatusesItem) {
     if (this.closingStatuses == null) {
-      this.closingStatuses = new java.util.ArrayList<ClosingStatus>();
+      this.closingStatuses = new java.util.ArrayList<>();
     }
     this.closingStatuses.add(closingStatusesItem);
     return this;

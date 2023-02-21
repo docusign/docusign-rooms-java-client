@@ -20,6 +20,9 @@ public class ApiError {
   @JsonProperty("message")
   private String message = null;
 
+  @JsonProperty("referenceId")
+  private String referenceId = null;
+
 
   /**
    * errorCode.
@@ -76,6 +79,33 @@ public class ApiError {
 
 
   /**
+   * referenceId.
+   *
+   * @return ApiError
+   **/
+  public ApiError referenceId(String referenceId) {
+    this.referenceId = referenceId;
+    return this;
+  }
+
+  /**
+   * Get referenceId.
+   * @return referenceId
+   **/
+  @ApiModelProperty(value = "")
+  public String getReferenceId() {
+    return referenceId;
+  }
+
+  /**
+   * setReferenceId.
+   **/
+  public void setReferenceId(String referenceId) {
+    this.referenceId = referenceId;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -90,7 +120,8 @@ public class ApiError {
     }
     ApiError apiError = (ApiError) o;
     return Objects.equals(this.errorCode, apiError.errorCode) &&
-        Objects.equals(this.message, apiError.message);
+        Objects.equals(this.message, apiError.message) &&
+        Objects.equals(this.referenceId, apiError.referenceId);
   }
 
   /**
@@ -98,7 +129,7 @@ public class ApiError {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(errorCode, message);
+    return Objects.hash(errorCode, message, referenceId);
   }
 
 
@@ -112,6 +143,7 @@ public class ApiError {
     
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    referenceId: ").append(toIndentedString(referenceId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

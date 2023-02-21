@@ -36,7 +36,7 @@ public class GlobalActivityTypes {
    **/
   public GlobalActivityTypes addActivityTypesItem(ActivityType activityTypesItem) {
     if (this.activityTypes == null) {
-      this.activityTypes = new java.util.ArrayList<ActivityType>();
+      this.activityTypes = new java.util.ArrayList<>();
     }
     this.activityTypes.add(activityTypesItem);
     return this;

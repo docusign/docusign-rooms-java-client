@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -55,13 +56,26 @@ public class ExternalFormFillSessionsApi {
 
   /**
    * Creates an external form fill session..
-   * Returns a URL for a new external form fill session, based on the &#x60;roomId&#x60; and &#x60;formId&#x60; that you specify in the &#x60;formFillSessionForCreate&#x60; request body.
+   * Returns a URL for a new external form fill session, based on the &#x60;roomId&#x60; and &#x60;formId&#x60; or &#x60;formIds&#x60; that you specify in the &#x60;formFillSessionForCreate&#x60; request body.  User may supply up to 10 &#x60;formIds&#x60;. Eventually, &#x60;formId&#x60; will be deprecated.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param body  (optional)
+   * @param body Request body that accepts the &#x60;roomId&#x60; and &#x60;formId&#x60; or &#x60;formIds&#x60; that you specify in the &#x60;formFillSessionForCreate&#x60; request body. User may supply up to 10 &#x60;formIds&#x60;. Eventually, &#x60;formId&#x60; will be deprecated (optional)
    * @return ExternalFormFillSession
    * @throws ApiException if fails to make API call
    */
   public ExternalFormFillSession createExternalFormFillSession(String accountId, ExternalFormFillSessionForCreate body) throws ApiException {
+    ApiResponse<ExternalFormFillSession> localVarResponse = createExternalFormFillSessionWithHttpInfo(accountId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates an external form fill session.
+   * Returns a URL for a new external form fill session, based on the &#x60;roomId&#x60; and &#x60;formId&#x60; or &#x60;formIds&#x60; that you specify in the &#x60;formFillSessionForCreate&#x60; request body.  User may supply up to 10 &#x60;formIds&#x60;. Eventually, &#x60;formId&#x60; will be deprecated.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param body Request body that accepts the &#x60;roomId&#x60; and &#x60;formId&#x60; or &#x60;formIds&#x60; that you specify in the &#x60;formFillSessionForCreate&#x60; request body. User may supply up to 10 &#x60;formIds&#x60;. Eventually, &#x60;formId&#x60; will be deprecated (optional)
+   * @return ExternalFormFillSession
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ExternalFormFillSession > createExternalFormFillSessionWithHttpInfo(String accountId, ExternalFormFillSessionForCreate body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -86,18 +100,19 @@ public class ExternalFormFillSessionsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ExternalFormFillSession> localVarReturnType = new GenericType<ExternalFormFillSession>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ExternalFormFillSession localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ExternalFormFillSession>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

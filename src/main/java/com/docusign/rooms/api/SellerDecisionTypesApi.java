@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -60,6 +61,17 @@ public class SellerDecisionTypesApi {
    * @throws ApiException if fails to make API call
    */
   public GlobalSellerDecisionTypes getSellerDecisionTypes() throws ApiException {
+    ApiResponse<GlobalSellerDecisionTypes> localVarResponse = getSellerDecisionTypesWithHttpInfo();
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Retrieves the list of valid seller decision types.
+   * Returns a list of valid seller decision types.
+   * @return GlobalSellerDecisionTypes
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<GlobalSellerDecisionTypes > getSellerDecisionTypesWithHttpInfo() throws ApiException {
     Object localVarPostBody = "{}";
     
     // create path and map variables
@@ -78,7 +90,7 @@ public class SellerDecisionTypesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -88,8 +100,9 @@ public class SellerDecisionTypesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<GlobalSellerDecisionTypes> localVarReturnType = new GenericType<GlobalSellerDecisionTypes>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GlobalSellerDecisionTypes localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<GlobalSellerDecisionTypes>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

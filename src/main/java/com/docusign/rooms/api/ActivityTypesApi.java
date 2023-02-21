@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -55,11 +56,22 @@ public class ActivityTypesApi {
 
   /**
    * Retrieves the list of valid activity types..
-   * Retrieves the list of valid activity types.
+   * Returns the list of valid activity types.
    * @return GlobalActivityTypes
    * @throws ApiException if fails to make API call
    */
   public GlobalActivityTypes getActivityTypes() throws ApiException {
+    ApiResponse<GlobalActivityTypes> localVarResponse = getActivityTypesWithHttpInfo();
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Retrieves the list of valid activity types.
+   * Returns the list of valid activity types.
+   * @return GlobalActivityTypes
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<GlobalActivityTypes > getActivityTypesWithHttpInfo() throws ApiException {
     Object localVarPostBody = "{}";
     
     // create path and map variables
@@ -78,7 +90,7 @@ public class ActivityTypesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -88,8 +100,9 @@ public class ActivityTypesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<GlobalActivityTypes> localVarReturnType = new GenericType<GlobalActivityTypes>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GlobalActivityTypes localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<GlobalActivityTypes>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

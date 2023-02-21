@@ -54,7 +54,7 @@ public class RoomTemplatesSummaryList {
    **/
   public RoomTemplatesSummaryList addRoomTemplatesItem(RoomTemplate roomTemplatesItem) {
     if (this.roomTemplates == null) {
-      this.roomTemplates = new java.util.ArrayList<RoomTemplate>();
+      this.roomTemplates = new java.util.ArrayList<>();
     }
     this.roomTemplates.add(roomTemplatesItem);
     return this;

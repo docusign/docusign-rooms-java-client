@@ -54,7 +54,7 @@ public class RoleSummaryList {
    **/
   public RoleSummaryList addRolesItem(RoleSummary rolesItem) {
     if (this.roles == null) {
-      this.roles = new java.util.ArrayList<RoleSummary>();
+      this.roles = new java.util.ArrayList<>();
     }
     this.roles.add(rolesItem);
     return this;

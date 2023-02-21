@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
+import java.time.OffsetDateTime;
 
 /**
  * RoomUserRemovalDetail.
@@ -16,7 +16,7 @@ import org.joda.time.DateTime;
 
 public class RoomUserRemovalDetail {
   @JsonProperty("revocationDate")
-  private DateTime revocationDate = null;
+  private OffsetDateTime revocationDate = null;
 
 
   /**
@@ -24,7 +24,7 @@ public class RoomUserRemovalDetail {
    *
    * @return RoomUserRemovalDetail
    **/
-  public RoomUserRemovalDetail revocationDate(DateTime revocationDate) {
+  public RoomUserRemovalDetail revocationDate(OffsetDateTime revocationDate) {
     this.revocationDate = revocationDate;
     return this;
   }
@@ -34,14 +34,14 @@ public class RoomUserRemovalDetail {
    * @return revocationDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getRevocationDate() {
+  public OffsetDateTime getRevocationDate() {
     return revocationDate;
   }
 
   /**
    * setRevocationDate.
    **/
-  public void setRevocationDate(DateTime revocationDate) {
+  public void setRevocationDate(OffsetDateTime revocationDate) {
     this.revocationDate = revocationDate;
   }
 

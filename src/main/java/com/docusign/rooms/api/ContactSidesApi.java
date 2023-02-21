@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -60,6 +61,17 @@ public class ContactSidesApi {
    * @throws ApiException if fails to make API call
    */
   public GlobalContactSides getContactSides() throws ApiException {
+    ApiResponse<GlobalContactSides> localVarResponse = getContactSidesWithHttpInfo();
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Retrieves the list of valid contact sides.
+   * Returns a list of valid contact sides.
+   * @return GlobalContactSides
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<GlobalContactSides > getContactSidesWithHttpInfo() throws ApiException {
     Object localVarPostBody = "{}";
     
     // create path and map variables
@@ -78,7 +90,7 @@ public class ContactSidesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -88,8 +100,9 @@ public class ContactSidesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<GlobalContactSides> localVarReturnType = new GenericType<GlobalContactSides>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GlobalContactSides localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<GlobalContactSides>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

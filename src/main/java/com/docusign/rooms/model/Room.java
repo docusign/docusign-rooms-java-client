@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
+import java.time.OffsetDateTime;
 
 /**
  * Room.
@@ -29,25 +29,31 @@ public class Room {
   private Integer officeId = null;
 
   @JsonProperty("createdDate")
-  private DateTime createdDate = null;
+  private OffsetDateTime createdDate = null;
 
   @JsonProperty("submittedForReviewDate")
-  private DateTime submittedForReviewDate = null;
+  private OffsetDateTime submittedForReviewDate = null;
 
   @JsonProperty("closedDate")
-  private DateTime closedDate = null;
+  private OffsetDateTime closedDate = null;
 
   @JsonProperty("rejectedDate")
-  private DateTime rejectedDate = null;
+  private OffsetDateTime rejectedDate = null;
 
   @JsonProperty("createdByUserId")
   private Integer createdByUserId = null;
+
+  @JsonProperty("roomOwnerIds")
+  private java.util.List<Integer> roomOwnerIds = null;
 
   @JsonProperty("rejectedByUserId")
   private Integer rejectedByUserId = null;
 
   @JsonProperty("closedStatusId")
   private String closedStatusId = null;
+
+  @JsonProperty("fieldDataLastUpdatedDate")
+  private OffsetDateTime fieldDataLastUpdatedDate = null;
 
   @JsonProperty("fieldData")
   private FieldData fieldData = null;
@@ -166,7 +172,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room createdDate(DateTime createdDate) {
+  public Room createdDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -176,14 +182,14 @@ public class Room {
    * @return createdDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getCreatedDate() {
+  public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(DateTime createdDate) {
+  public void setCreatedDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
   }
 
@@ -193,7 +199,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room submittedForReviewDate(DateTime submittedForReviewDate) {
+  public Room submittedForReviewDate(OffsetDateTime submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
     return this;
   }
@@ -203,14 +209,14 @@ public class Room {
    * @return submittedForReviewDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getSubmittedForReviewDate() {
+  public OffsetDateTime getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
   /**
    * setSubmittedForReviewDate.
    **/
-  public void setSubmittedForReviewDate(DateTime submittedForReviewDate) {
+  public void setSubmittedForReviewDate(OffsetDateTime submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
   }
 
@@ -220,7 +226,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room closedDate(DateTime closedDate) {
+  public Room closedDate(OffsetDateTime closedDate) {
     this.closedDate = closedDate;
     return this;
   }
@@ -230,14 +236,14 @@ public class Room {
    * @return closedDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getClosedDate() {
+  public OffsetDateTime getClosedDate() {
     return closedDate;
   }
 
   /**
    * setClosedDate.
    **/
-  public void setClosedDate(DateTime closedDate) {
+  public void setClosedDate(OffsetDateTime closedDate) {
     this.closedDate = closedDate;
   }
 
@@ -247,7 +253,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room rejectedDate(DateTime rejectedDate) {
+  public Room rejectedDate(OffsetDateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
@@ -257,14 +263,14 @@ public class Room {
    * @return rejectedDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getRejectedDate() {
+  public OffsetDateTime getRejectedDate() {
     return rejectedDate;
   }
 
   /**
    * setRejectedDate.
    **/
-  public void setRejectedDate(DateTime rejectedDate) {
+  public void setRejectedDate(OffsetDateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
@@ -293,6 +299,46 @@ public class Room {
    **/
   public void setCreatedByUserId(Integer createdByUserId) {
     this.createdByUserId = createdByUserId;
+  }
+
+
+  /**
+   * roomOwnerIds.
+   *
+   * @return Room
+   **/
+  public Room roomOwnerIds(java.util.List<Integer> roomOwnerIds) {
+    this.roomOwnerIds = roomOwnerIds;
+    return this;
+  }
+  
+  /**
+   * addRoomOwnerIdsItem.
+   *
+   * @return Room
+   **/
+  public Room addRoomOwnerIdsItem(Integer roomOwnerIdsItem) {
+    if (this.roomOwnerIds == null) {
+      this.roomOwnerIds = new java.util.ArrayList<>();
+    }
+    this.roomOwnerIds.add(roomOwnerIdsItem);
+    return this;
+  }
+
+  /**
+   * Get roomOwnerIds.
+   * @return roomOwnerIds
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<Integer> getRoomOwnerIds() {
+    return roomOwnerIds;
+  }
+
+  /**
+   * setRoomOwnerIds.
+   **/
+  public void setRoomOwnerIds(java.util.List<Integer> roomOwnerIds) {
+    this.roomOwnerIds = roomOwnerIds;
   }
 
 
@@ -351,6 +397,33 @@ public class Room {
 
 
   /**
+   * fieldDataLastUpdatedDate.
+   *
+   * @return Room
+   **/
+  public Room fieldDataLastUpdatedDate(OffsetDateTime fieldDataLastUpdatedDate) {
+    this.fieldDataLastUpdatedDate = fieldDataLastUpdatedDate;
+    return this;
+  }
+
+  /**
+   * Get fieldDataLastUpdatedDate.
+   * @return fieldDataLastUpdatedDate
+   **/
+  @ApiModelProperty(value = "")
+  public OffsetDateTime getFieldDataLastUpdatedDate() {
+    return fieldDataLastUpdatedDate;
+  }
+
+  /**
+   * setFieldDataLastUpdatedDate.
+   **/
+  public void setFieldDataLastUpdatedDate(OffsetDateTime fieldDataLastUpdatedDate) {
+    this.fieldDataLastUpdatedDate = fieldDataLastUpdatedDate;
+  }
+
+
+  /**
    * fieldData.
    *
    * @return Room
@@ -400,8 +473,10 @@ public class Room {
         Objects.equals(this.closedDate, room.closedDate) &&
         Objects.equals(this.rejectedDate, room.rejectedDate) &&
         Objects.equals(this.createdByUserId, room.createdByUserId) &&
+        Objects.equals(this.roomOwnerIds, room.roomOwnerIds) &&
         Objects.equals(this.rejectedByUserId, room.rejectedByUserId) &&
         Objects.equals(this.closedStatusId, room.closedStatusId) &&
+        Objects.equals(this.fieldDataLastUpdatedDate, room.fieldDataLastUpdatedDate) &&
         Objects.equals(this.fieldData, room.fieldData);
   }
 
@@ -410,7 +485,7 @@ public class Room {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(roomId, companyId, name, officeId, createdDate, submittedForReviewDate, closedDate, rejectedDate, createdByUserId, rejectedByUserId, closedStatusId, fieldData);
+    return Objects.hash(roomId, companyId, name, officeId, createdDate, submittedForReviewDate, closedDate, rejectedDate, createdByUserId, roomOwnerIds, rejectedByUserId, closedStatusId, fieldDataLastUpdatedDate, fieldData);
   }
 
 
@@ -431,8 +506,10 @@ public class Room {
     sb.append("    closedDate: ").append(toIndentedString(closedDate)).append("\n");
     sb.append("    rejectedDate: ").append(toIndentedString(rejectedDate)).append("\n");
     sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
+    sb.append("    roomOwnerIds: ").append(toIndentedString(roomOwnerIds)).append("\n");
     sb.append("    rejectedByUserId: ").append(toIndentedString(rejectedByUserId)).append("\n");
     sb.append("    closedStatusId: ").append(toIndentedString(closedStatusId)).append("\n");
+    sb.append("    fieldDataLastUpdatedDate: ").append(toIndentedString(fieldDataLastUpdatedDate)).append("\n");
     sb.append("    fieldData: ").append(toIndentedString(fieldData)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -36,7 +36,7 @@ public class TaskListSummaryList {
    **/
   public TaskListSummaryList addTaskListSummariesItem(TaskListSummary taskListSummariesItem) {
     if (this.taskListSummaries == null) {
-      this.taskListSummaries = new java.util.ArrayList<TaskListSummary>();
+      this.taskListSummaries = new java.util.ArrayList<>();
     }
     this.taskListSummaries.add(taskListSummariesItem);
     return this;

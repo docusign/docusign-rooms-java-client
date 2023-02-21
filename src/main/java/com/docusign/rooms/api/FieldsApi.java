@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -102,6 +103,20 @@ public class FieldsApi {
    * @throws ApiException if fails to make API call
    */
   public FieldSet getFieldSet(String accountId, java.util.UUID fieldSetId, FieldsApi.GetFieldSetOptions options) throws ApiException {
+    ApiResponse<FieldSet> localVarResponse = getFieldSetWithHttpInfo(accountId, fieldSetId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Get details of a specific field set.
+   * Get details of a specific field set.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param fieldSetId The id of the field set. (required)
+   * @param options for modifying the method behavior.
+   * @return FieldSet
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FieldSet > getFieldSetWithHttpInfo(String accountId, java.util.UUID fieldSetId, FieldsApi.GetFieldSetOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -134,7 +149,7 @@ public class FieldsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -144,8 +159,9 @@ public class FieldsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FieldSet> localVarReturnType = new GenericType<FieldSet>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FieldSet localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FieldSet>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

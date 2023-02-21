@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
+import java.time.OffsetDateTime;
 
 /**
  * TaskList.
@@ -26,16 +26,16 @@ public class TaskList {
   private Integer taskListTemplateId = null;
 
   @JsonProperty("submittedForReviewDate")
-  private DateTime submittedForReviewDate = null;
+  private OffsetDateTime submittedForReviewDate = null;
 
   @JsonProperty("approvalDate")
-  private DateTime approvalDate = null;
+  private OffsetDateTime approvalDate = null;
 
   @JsonProperty("rejectedDate")
-  private DateTime rejectedDate = null;
+  private OffsetDateTime rejectedDate = null;
 
   @JsonProperty("createdDate")
-  private DateTime createdDate = null;
+  private OffsetDateTime createdDate = null;
 
   @JsonProperty("approvedByUserId")
   private Integer approvedByUserId = null;
@@ -136,7 +136,7 @@ public class TaskList {
    *
    * @return TaskList
    **/
-  public TaskList submittedForReviewDate(DateTime submittedForReviewDate) {
+  public TaskList submittedForReviewDate(OffsetDateTime submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
     return this;
   }
@@ -146,14 +146,14 @@ public class TaskList {
    * @return submittedForReviewDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getSubmittedForReviewDate() {
+  public OffsetDateTime getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
   /**
    * setSubmittedForReviewDate.
    **/
-  public void setSubmittedForReviewDate(DateTime submittedForReviewDate) {
+  public void setSubmittedForReviewDate(OffsetDateTime submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
   }
 
@@ -163,7 +163,7 @@ public class TaskList {
    *
    * @return TaskList
    **/
-  public TaskList approvalDate(DateTime approvalDate) {
+  public TaskList approvalDate(OffsetDateTime approvalDate) {
     this.approvalDate = approvalDate;
     return this;
   }
@@ -173,14 +173,14 @@ public class TaskList {
    * @return approvalDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getApprovalDate() {
+  public OffsetDateTime getApprovalDate() {
     return approvalDate;
   }
 
   /**
    * setApprovalDate.
    **/
-  public void setApprovalDate(DateTime approvalDate) {
+  public void setApprovalDate(OffsetDateTime approvalDate) {
     this.approvalDate = approvalDate;
   }
 
@@ -190,7 +190,7 @@ public class TaskList {
    *
    * @return TaskList
    **/
-  public TaskList rejectedDate(DateTime rejectedDate) {
+  public TaskList rejectedDate(OffsetDateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
@@ -200,14 +200,14 @@ public class TaskList {
    * @return rejectedDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getRejectedDate() {
+  public OffsetDateTime getRejectedDate() {
     return rejectedDate;
   }
 
   /**
    * setRejectedDate.
    **/
-  public void setRejectedDate(DateTime rejectedDate) {
+  public void setRejectedDate(OffsetDateTime rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
@@ -217,7 +217,7 @@ public class TaskList {
    *
    * @return TaskList
    **/
-  public TaskList createdDate(DateTime createdDate) {
+  public TaskList createdDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -227,14 +227,14 @@ public class TaskList {
    * @return createdDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getCreatedDate() {
+  public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(DateTime createdDate) {
+  public void setCreatedDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
   }
 
@@ -337,7 +337,7 @@ public class TaskList {
    **/
   public TaskList addTasksItem(TaskSummary tasksItem) {
     if (this.tasks == null) {
-      this.tasks = new java.util.ArrayList<TaskSummary>();
+      this.tasks = new java.util.ArrayList<>();
     }
     this.tasks.add(tasksItem);
     return this;

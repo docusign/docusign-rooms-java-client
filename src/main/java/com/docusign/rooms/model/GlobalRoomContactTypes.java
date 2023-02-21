@@ -36,7 +36,7 @@ public class GlobalRoomContactTypes {
    **/
   public GlobalRoomContactTypes addRoomContactTypesItem(RoomContactType roomContactTypesItem) {
     if (this.roomContactTypes == null) {
-      this.roomContactTypes = new java.util.ArrayList<RoomContactType>();
+      this.roomContactTypes = new java.util.ArrayList<>();
     }
     this.roomContactTypes.add(roomContactTypesItem);
     return this;

@@ -36,7 +36,7 @@ public class GlobalContactSides {
    **/
   public GlobalContactSides addContactSidesItem(ContactSide contactSidesItem) {
     if (this.contactSides == null) {
-      this.contactSides = new java.util.ArrayList<ContactSide>();
+      this.contactSides = new java.util.ArrayList<>();
     }
     this.contactSides.add(contactSidesItem);
     return this;

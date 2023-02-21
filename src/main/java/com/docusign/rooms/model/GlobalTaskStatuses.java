@@ -36,7 +36,7 @@ public class GlobalTaskStatuses {
    **/
   public GlobalTaskStatuses addTaskStatusesItem(TaskStatus taskStatusesItem) {
     if (this.taskStatuses == null) {
-      this.taskStatuses = new java.util.ArrayList<TaskStatus>();
+      this.taskStatuses = new java.util.ArrayList<>();
     }
     this.taskStatuses.add(taskStatusesItem);
     return this;

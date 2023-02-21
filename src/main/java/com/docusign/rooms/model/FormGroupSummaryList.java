@@ -54,7 +54,7 @@ public class FormGroupSummaryList {
    **/
   public FormGroupSummaryList addFormGroupsItem(FormGroupSummary formGroupsItem) {
     if (this.formGroups == null) {
-      this.formGroups = new java.util.ArrayList<FormGroupSummary>();
+      this.formGroups = new java.util.ArrayList<>();
     }
     this.formGroups.add(formGroupsItem);
     return this;

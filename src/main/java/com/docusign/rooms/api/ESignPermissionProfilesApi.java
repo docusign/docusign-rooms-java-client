@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -61,6 +62,18 @@ public class ESignPermissionProfilesApi {
    * @throws ApiException if fails to make API call
    */
   public ESignPermissionProfileList getESignPermissionProfiles(String accountId) throws ApiException {
+    ApiResponse<ESignPermissionProfileList> localVarResponse = getESignPermissionProfilesWithHttpInfo(accountId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets permission profiles from the associated eSign account.
+   * When you create or invite a new member in Rooms, the system creates an eSignature account for the member at the same time. This method returns a list of the eSignature permission profiles that the current user may be able to assign to a new member. The current user may not assign a permission higher than their own permission.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @return ESignPermissionProfileList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ESignPermissionProfileList > getESignPermissionProfilesWithHttpInfo(String accountId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -85,7 +98,7 @@ public class ESignPermissionProfilesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -95,8 +108,9 @@ public class ESignPermissionProfilesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<ESignPermissionProfileList> localVarReturnType = new GenericType<ESignPermissionProfileList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    ESignPermissionProfileList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ESignPermissionProfileList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
+import java.time.OffsetDateTime;
 
 /**
  * TaskListSummary.
@@ -25,16 +25,16 @@ public class TaskListSummary {
   private Integer taskListTemplateId = null;
 
   @JsonProperty("submittedForReviewDate")
-  private DateTime submittedForReviewDate = null;
+  private OffsetDateTime submittedForReviewDate = null;
 
   @JsonProperty("approvalDate")
-  private DateTime approvalDate = null;
+  private OffsetDateTime approvalDate = null;
 
   @JsonProperty("rejectedDate")
-  private DateTime rejectedDate = null;
+  private OffsetDateTime rejectedDate = null;
 
   @JsonProperty("createdDate")
-  private DateTime createdDate = null;
+  private OffsetDateTime createdDate = null;
 
   @JsonProperty("approvedByUserId")
   private Integer approvedByUserId = null;
@@ -77,7 +77,7 @@ public class TaskListSummary {
    * @return submittedForReviewDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getSubmittedForReviewDate() {
+  public OffsetDateTime getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
@@ -86,7 +86,7 @@ public class TaskListSummary {
    * @return approvalDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getApprovalDate() {
+  public OffsetDateTime getApprovalDate() {
     return approvalDate;
   }
 
@@ -95,7 +95,7 @@ public class TaskListSummary {
    * @return rejectedDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getRejectedDate() {
+  public OffsetDateTime getRejectedDate() {
     return rejectedDate;
   }
 
@@ -104,7 +104,7 @@ public class TaskListSummary {
    * @return createdDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getCreatedDate() {
+  public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 

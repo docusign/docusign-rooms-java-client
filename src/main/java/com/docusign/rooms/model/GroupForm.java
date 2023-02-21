@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
+import java.time.OffsetDateTime;
 
 /**
  * GroupForm.
@@ -25,7 +25,10 @@ public class GroupForm {
   private Boolean isRequired = null;
 
   @JsonProperty("lastUpdatedDate")
-  private DateTime lastUpdatedDate = null;
+  private OffsetDateTime lastUpdatedDate = null;
+
+  @JsonProperty("viewingUserHasAccess")
+  private Boolean viewingUserHasAccess = null;
 
   /**
    * Get formId.
@@ -59,8 +62,17 @@ public class GroupForm {
    * @return lastUpdatedDate
    **/
   @ApiModelProperty(value = "")
-  public DateTime getLastUpdatedDate() {
+  public OffsetDateTime getLastUpdatedDate() {
     return lastUpdatedDate;
+  }
+
+  /**
+   * Get viewingUserHasAccess.
+   * @return viewingUserHasAccess
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean isViewingUserHasAccess() {
+    return viewingUserHasAccess;
   }
 
 
@@ -81,7 +93,8 @@ public class GroupForm {
     return Objects.equals(this.formId, groupForm.formId) &&
         Objects.equals(this.name, groupForm.name) &&
         Objects.equals(this.isRequired, groupForm.isRequired) &&
-        Objects.equals(this.lastUpdatedDate, groupForm.lastUpdatedDate);
+        Objects.equals(this.lastUpdatedDate, groupForm.lastUpdatedDate) &&
+        Objects.equals(this.viewingUserHasAccess, groupForm.viewingUserHasAccess);
   }
 
   /**
@@ -89,7 +102,7 @@ public class GroupForm {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(formId, name, isRequired, lastUpdatedDate);
+    return Objects.hash(formId, name, isRequired, lastUpdatedDate, viewingUserHasAccess);
   }
 
 
@@ -105,6 +118,7 @@ public class GroupForm {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    isRequired: ").append(toIndentedString(isRequired)).append("\n");
     sb.append("    lastUpdatedDate: ").append(toIndentedString(lastUpdatedDate)).append("\n");
+    sb.append("    viewingUserHasAccess: ").append(toIndentedString(viewingUserHasAccess)).append("\n");
     sb.append("}");
     return sb.toString();
   }

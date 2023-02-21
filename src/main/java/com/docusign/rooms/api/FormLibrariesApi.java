@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -117,6 +118,19 @@ public class FormLibrariesApi {
    * @throws ApiException if fails to make API call
    */
   public FormLibrarySummaryList getFormLibraries(String accountId, FormLibrariesApi.GetFormLibrariesOptions options) throws ApiException {
+    ApiResponse<FormLibrarySummaryList> localVarResponse = getFormLibrariesWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets a paged list of forms libraries.
+   * Returns a list of form libraries to which the current user has access.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param options for modifying the method behavior.
+   * @return FormLibrarySummaryList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FormLibrarySummaryList > getFormLibrariesWithHttpInfo(String accountId, FormLibrariesApi.GetFormLibrariesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -145,7 +159,7 @@ public class FormLibrariesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -155,10 +169,11 @@ public class FormLibrariesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FormLibrarySummaryList> localVarReturnType = new GenericType<FormLibrarySummaryList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FormLibrarySummaryList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FormLibrarySummaryList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Gets a paged list of forms in a forms library. Returns a list of forms  to which the current user has access in the specified form library.
   /// </summary>
@@ -226,6 +241,20 @@ public class FormLibrariesApi {
    * @throws ApiException if fails to make API call
    */
   public FormSummaryList getFormLibraryForms(String accountId, java.util.UUID formLibraryId, FormLibrariesApi.GetFormLibraryFormsOptions options) throws ApiException {
+    ApiResponse<FormSummaryList> localVarResponse = getFormLibraryFormsWithHttpInfo(accountId, formLibraryId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets a paged list of forms in a forms library.
+   * Returns a list of forms  to which the current user has access in the specified form library.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formLibraryId Library Id (required)
+   * @param options for modifying the method behavior.
+   * @return FormSummaryList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FormSummaryList > getFormLibraryFormsWithHttpInfo(String accountId, java.util.UUID formLibraryId, FormLibrariesApi.GetFormLibraryFormsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -260,7 +289,7 @@ public class FormLibrariesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -270,8 +299,9 @@ public class FormLibrariesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FormSummaryList> localVarReturnType = new GenericType<FormSummaryList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FormSummaryList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FormSummaryList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

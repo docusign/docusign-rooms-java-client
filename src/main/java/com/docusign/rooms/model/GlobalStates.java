@@ -36,7 +36,7 @@ public class GlobalStates {
    **/
   public GlobalStates addStatesItem(State statesItem) {
     if (this.states == null) {
-      this.states = new java.util.ArrayList<State>();
+      this.states = new java.util.ArrayList<>();
     }
     this.states.add(statesItem);
     return this;

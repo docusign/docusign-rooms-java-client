@@ -54,7 +54,7 @@ public class FormSummaryList {
    **/
   public FormSummaryList addFormsItem(FormSummary formsItem) {
     if (this.forms == null) {
-      this.forms = new java.util.ArrayList<FormSummary>();
+      this.forms = new java.util.ArrayList<>();
     }
     this.forms.add(formsItem);
     return this;

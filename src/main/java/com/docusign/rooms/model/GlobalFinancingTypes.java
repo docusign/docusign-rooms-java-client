@@ -36,7 +36,7 @@ public class GlobalFinancingTypes {
    **/
   public GlobalFinancingTypes addFinancingTypesItem(FinancingType financingTypesItem) {
     if (this.financingTypes == null) {
-      this.financingTypes = new java.util.ArrayList<FinancingType>();
+      this.financingTypes = new java.util.ArrayList<>();
     }
     this.financingTypes.add(financingTypesItem);
     return this;

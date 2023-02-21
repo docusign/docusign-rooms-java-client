@@ -36,7 +36,7 @@ public class GlobalTaskDateTypes {
    **/
   public GlobalTaskDateTypes addTaskDateTypesItem(TaskDateType taskDateTypesItem) {
     if (this.taskDateTypes == null) {
-      this.taskDateTypes = new java.util.ArrayList<TaskDateType>();
+      this.taskDateTypes = new java.util.ArrayList<>();
     }
     this.taskDateTypes.add(taskDateTypesItem);
     return this;

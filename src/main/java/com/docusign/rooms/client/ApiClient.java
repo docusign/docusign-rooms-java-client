@@ -41,6 +41,7 @@ import org.glassfish.jersey.logging.LoggingFeature;
 import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
+import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.Map.Entry;
@@ -92,9 +93,10 @@ public class ApiClient {
     httpClient = buildHttpClient(debugging);
 
     this.dateFormat = new RFC3339DateFormat();
+    String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/1.2.0-RC1/java");
+    setUserAgent("/SDK/1.3.0/Java/");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1634,11 +1636,16 @@ public class ApiClient {
     }
     performAdditionalClientConfiguration(clientConfig);
 
-    // Force TLS v1.2
+    // Check for required TLS v1.2
     try {
-    	System.setProperty("https.protocols", "TLSv1.2");
+        String[] supportedProtocols = SSLContext.getDefault().createSSLEngine().getEnabledProtocols();
+        if (!Arrays.asList(supportedProtocols).contains("TLSv1.2")) {
+            throw new SecurityException("Docusign Java SDK requires TLSv1.2 Protocol");
+        }
     } catch (SecurityException se) {
-        System.err.println("failed to set https.protocols property");
+        System.err.println(se.getMessage());
+    } catch (NoSuchAlgorithmException nsae) {
+        System.err.println(nsae.getMessage());
     }
 
     // Setup the SSLContext object to use for HTTPS connections to the API

@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -119,6 +120,20 @@ public class RoomFoldersApi {
    * @throws ApiException if fails to make API call
    */
   public RoomFolderList getRoomFolders(String accountId, Integer roomId, RoomFoldersApi.GetRoomFoldersOptions options) throws ApiException {
+    ApiResponse<RoomFolderList> localVarResponse = getRoomFoldersWithHttpInfo(accountId, roomId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets room folders accessible to the calling user.
+   * Gets a list of room folders in the specified room that are accessible to the current user.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roomId The room id from which to retrieve folders. (required)
+   * @param options for modifying the method behavior.
+   * @return RoomFolderList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<RoomFolderList > getRoomFoldersWithHttpInfo(String accountId, Integer roomId, RoomFoldersApi.GetRoomFoldersOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -153,7 +168,7 @@ public class RoomFoldersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -163,8 +178,9 @@ public class RoomFoldersApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<RoomFolderList> localVarReturnType = new GenericType<RoomFolderList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    RoomFolderList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<RoomFolderList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -57,11 +58,24 @@ public class RolesApi {
    * Creates a role..
    * Creates a new company role in Rooms
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param body  (optional)
+   * @param body Name and permission details of the role to be created (optional)
    * @return Role
    * @throws ApiException if fails to make API call
    */
   public Role createRole(String accountId, RoleForCreate body) throws ApiException {
+    ApiResponse<Role> localVarResponse = createRoleWithHttpInfo(accountId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates a role.
+   * Creates a new company role in Rooms
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param body Name and permission details of the role to be created (optional)
+   * @return Role
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Role > createRoleWithHttpInfo(String accountId, RoleForCreate body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -86,20 +100,21 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<Role> localVarReturnType = new GenericType<Role>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    Role localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<Role>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Deletes the role with the given roleId..
@@ -109,6 +124,17 @@ public class RolesApi {
    * @throws ApiException if fails to make API call
    */
   public void deleteRole(String accountId, Integer roleId) throws ApiException {
+    deleteRoleWithHttpInfo(accountId, roleId);
+  }
+
+  /**
+   * Deletes the role with the given roleId.
+   * Deletes a role from a company account in Rooms
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roleId The id of the role. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> deleteRoleWithHttpInfo(String accountId, Integer roleId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -139,7 +165,7 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -149,9 +175,9 @@ public class RolesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
   /// <summary>
   /// Get information about the role with the given roleId. Get information about the role with the given roleId.
@@ -203,6 +229,20 @@ public class RolesApi {
    * @throws ApiException if fails to make API call
    */
   public Role getRole(String accountId, Integer roleId, RolesApi.GetRoleOptions options) throws ApiException {
+    ApiResponse<Role> localVarResponse = getRoleWithHttpInfo(accountId, roleId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Get information about the role with the given roleId.
+   * Get information about the role with the given roleId.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roleId The id of the role. (required)
+   * @param options for modifying the method behavior.
+   * @return Role
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Role > getRoleWithHttpInfo(String accountId, Integer roleId, RolesApi.GetRoleOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -235,7 +275,7 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -245,10 +285,11 @@ public class RolesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<Role> localVarReturnType = new GenericType<Role>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    Role localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<Role>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Gets a paged-list of roles in your company Returns a list of roles associated with a company account
   /// </summary>
@@ -260,7 +301,7 @@ public class RolesApi {
   public class GetRolesOptions
   {
   private Boolean onlyAssignable = null;
-  private String filterContext = null;
+  private Object filterContext = null;
   private String filter = null;
   private Integer startPosition = null;
   private Integer count = null;
@@ -284,16 +325,16 @@ public class RolesApi {
  /**
   * setFilterContext method.
   */
-  public void setFilterContext(String filterContext) {
+  public void setFilterContext(Object filterContext) {
     this.filterContext = filterContext;
   }
 
  /**
   * getFilterContext method.
   *
-  * @return String
+  * @return Object
   */
-  public String getFilterContext() {
+  public Object getFilterContext() {
     return this.filterContext;
   }
   
@@ -365,6 +406,19 @@ public class RolesApi {
    * @throws ApiException if fails to make API call
    */
   public RoleSummaryList getRoles(String accountId, RolesApi.GetRolesOptions options) throws ApiException {
+    ApiResponse<RoleSummaryList> localVarResponse = getRolesWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets a paged-list of roles in your company
+   * Returns a list of roles associated with a company account
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param options for modifying the method behavior.
+   * @return RoleSummaryList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<RoleSummaryList > getRolesWithHttpInfo(String accountId, RolesApi.GetRolesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -399,7 +453,7 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -409,21 +463,36 @@ public class RolesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<RoleSummaryList> localVarReturnType = new GenericType<RoleSummaryList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    RoleSummaryList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<RoleSummaryList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Updates the role with the given roleId..
    * Updates the role with the given roleId.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param roleId The id of the role. (required)
-   * @param body  (optional)
+   * @param body Name and permission details of the role to be updated (optional)
    * @return Role
    * @throws ApiException if fails to make API call
    */
   public Role updateRole(String accountId, Integer roleId, RoleForUpdate body) throws ApiException {
+    ApiResponse<Role> localVarResponse = updateRoleWithHttpInfo(accountId, roleId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates the role with the given roleId.
+   * Updates the role with the given roleId.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param roleId The id of the role. (required)
+   * @param body Name and permission details of the role to be updated (optional)
+   * @return Role
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Role > updateRoleWithHttpInfo(String accountId, Integer roleId, RoleForUpdate body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -454,18 +523,19 @@ public class RolesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<Role> localVarReturnType = new GenericType<Role>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    Role localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<Role>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

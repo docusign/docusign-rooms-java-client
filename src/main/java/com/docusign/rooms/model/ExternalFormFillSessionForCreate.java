@@ -20,6 +20,9 @@ public class ExternalFormFillSessionForCreate {
   @JsonProperty("roomId")
   private Integer roomId = null;
 
+  @JsonProperty("formIds")
+  private java.util.List<java.util.UUID> formIds = null;
+
   @JsonProperty("xFrameAllowedUrl")
   private String xFrameAllowedUrl = null;
 
@@ -38,7 +41,7 @@ public class ExternalFormFillSessionForCreate {
    * Get formId.
    * @return formId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(value = "")
   public String getFormId() {
     return formId;
   }
@@ -75,6 +78,46 @@ public class ExternalFormFillSessionForCreate {
    **/
   public void setRoomId(Integer roomId) {
     this.roomId = roomId;
+  }
+
+
+  /**
+   * formIds.
+   *
+   * @return ExternalFormFillSessionForCreate
+   **/
+  public ExternalFormFillSessionForCreate formIds(java.util.List<java.util.UUID> formIds) {
+    this.formIds = formIds;
+    return this;
+  }
+  
+  /**
+   * addFormIdsItem.
+   *
+   * @return ExternalFormFillSessionForCreate
+   **/
+  public ExternalFormFillSessionForCreate addFormIdsItem(java.util.UUID formIdsItem) {
+    if (this.formIds == null) {
+      this.formIds = new java.util.ArrayList<>();
+    }
+    this.formIds.add(formIdsItem);
+    return this;
+  }
+
+  /**
+   * Get formIds.
+   * @return formIds
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<java.util.UUID> getFormIds() {
+    return formIds;
+  }
+
+  /**
+   * setFormIds.
+   **/
+  public void setFormIds(java.util.List<java.util.UUID> formIds) {
+    this.formIds = formIds;
   }
 
 
@@ -121,6 +164,7 @@ public class ExternalFormFillSessionForCreate {
     ExternalFormFillSessionForCreate externalFormFillSessionForCreate = (ExternalFormFillSessionForCreate) o;
     return Objects.equals(this.formId, externalFormFillSessionForCreate.formId) &&
         Objects.equals(this.roomId, externalFormFillSessionForCreate.roomId) &&
+        Objects.equals(this.formIds, externalFormFillSessionForCreate.formIds) &&
         Objects.equals(this.xFrameAllowedUrl, externalFormFillSessionForCreate.xFrameAllowedUrl);
   }
 
@@ -129,7 +173,7 @@ public class ExternalFormFillSessionForCreate {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(formId, roomId, xFrameAllowedUrl);
+    return Objects.hash(formId, roomId, formIds, xFrameAllowedUrl);
   }
 
 
@@ -143,6 +187,7 @@ public class ExternalFormFillSessionForCreate {
     
     sb.append("    formId: ").append(toIndentedString(formId)).append("\n");
     sb.append("    roomId: ").append(toIndentedString(roomId)).append("\n");
+    sb.append("    formIds: ").append(toIndentedString(formIds)).append("\n");
     sb.append("    xFrameAllowedUrl: ").append(toIndentedString(xFrameAllowedUrl)).append("\n");
     sb.append("}");
     return sb.toString();

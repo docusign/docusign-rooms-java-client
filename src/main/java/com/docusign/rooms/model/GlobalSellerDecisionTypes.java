@@ -36,7 +36,7 @@ public class GlobalSellerDecisionTypes {
    **/
   public GlobalSellerDecisionTypes addSellerDecisionTypesItem(SellerDecisionType sellerDecisionTypesItem) {
     if (this.sellerDecisionTypes == null) {
-      this.sellerDecisionTypes = new java.util.ArrayList<SellerDecisionType>();
+      this.sellerDecisionTypes = new java.util.ArrayList<>();
     }
     this.sellerDecisionTypes.add(sellerDecisionTypesItem);
     return this;

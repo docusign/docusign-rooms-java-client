@@ -35,7 +35,7 @@ public class FieldDataForUpdate {
    **/
   public FieldDataForUpdate putDataItem(String key, Object dataItem) {
     if (this.data == null) {
-      this.data = new java.util.HashMap<String, Object>();
+      this.data = new java.util.HashMap<>();
     }
     this.data.put(key, dataItem);
     return this;

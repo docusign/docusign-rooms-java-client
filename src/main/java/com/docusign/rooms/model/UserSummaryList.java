@@ -54,7 +54,7 @@ public class UserSummaryList {
    **/
   public UserSummaryList addUserSummariesItem(UserSummary userSummariesItem) {
     if (this.userSummaries == null) {
-      this.userSummaries = new java.util.ArrayList<UserSummary>();
+      this.userSummaries = new java.util.ArrayList<>();
     }
     this.userSummaries.add(userSummariesItem);
     return this;

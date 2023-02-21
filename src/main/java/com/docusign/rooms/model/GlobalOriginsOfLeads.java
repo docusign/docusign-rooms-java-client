@@ -36,7 +36,7 @@ public class GlobalOriginsOfLeads {
    **/
   public GlobalOriginsOfLeads addOriginsOfLeadsItem(OriginOfLead originsOfLeadsItem) {
     if (this.originsOfLeads == null) {
-      this.originsOfLeads = new java.util.ArrayList<OriginOfLead>();
+      this.originsOfLeads = new java.util.ArrayList<>();
     }
     this.originsOfLeads.add(originsOfLeadsItem);
     return this;

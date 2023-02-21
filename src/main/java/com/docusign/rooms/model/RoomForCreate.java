@@ -36,6 +36,44 @@ public class RoomForCreate {
   @JsonProperty("fieldData")
   private FieldDataForCreate fieldData = null;
 
+  /**
+   * Gets or Sets listingSource
+   */
+  public enum ListingSourceEnum {
+    PUBLICRECORDS("PublicRecords"),
+    
+    MLS("MLS");
+
+    private String value;
+
+    ListingSourceEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static ListingSourceEnum fromValue(String value) {
+      for (ListingSourceEnum b : ListingSourceEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
+  @JsonProperty("listingSource")
+  private ListingSourceEnum listingSource = null;
+
 
   /**
    * name.
@@ -227,6 +265,33 @@ public class RoomForCreate {
 
 
   /**
+   * listingSource.
+   *
+   * @return RoomForCreate
+   **/
+  public RoomForCreate listingSource(ListingSourceEnum listingSource) {
+    this.listingSource = listingSource;
+    return this;
+  }
+
+  /**
+   * Get listingSource.
+   * @return listingSource
+   **/
+  @ApiModelProperty(value = "")
+  public ListingSourceEnum getListingSource() {
+    return listingSource;
+  }
+
+  /**
+   * setListingSource.
+   **/
+  public void setListingSource(ListingSourceEnum listingSource) {
+    this.listingSource = listingSource;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -246,7 +311,8 @@ public class RoomForCreate {
         Objects.equals(this.ownerId, roomForCreate.ownerId) &&
         Objects.equals(this.templateId, roomForCreate.templateId) &&
         Objects.equals(this.officeId, roomForCreate.officeId) &&
-        Objects.equals(this.fieldData, roomForCreate.fieldData);
+        Objects.equals(this.fieldData, roomForCreate.fieldData) &&
+        Objects.equals(this.listingSource, roomForCreate.listingSource);
   }
 
   /**
@@ -254,7 +320,7 @@ public class RoomForCreate {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(name, roleId, transactionSideId, ownerId, templateId, officeId, fieldData);
+    return Objects.hash(name, roleId, transactionSideId, ownerId, templateId, officeId, fieldData, listingSource);
   }
 
 
@@ -273,6 +339,7 @@ public class RoomForCreate {
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("    officeId: ").append(toIndentedString(officeId)).append("\n");
     sb.append("    fieldData: ").append(toIndentedString(fieldData)).append("\n");
+    sb.append("    listingSource: ").append(toIndentedString(listingSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

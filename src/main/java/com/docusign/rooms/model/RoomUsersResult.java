@@ -54,7 +54,7 @@ public class RoomUsersResult {
    **/
   public RoomUsersResult addUsersItem(RoomUserSummary usersItem) {
     if (this.users == null) {
-      this.users = new java.util.ArrayList<RoomUserSummary>();
+      this.users = new java.util.ArrayList<>();
     }
     this.users.add(usersItem);
     return this;

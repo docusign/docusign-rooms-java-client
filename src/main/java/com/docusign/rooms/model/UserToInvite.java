@@ -2,7 +2,6 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.rooms.model.AccessLevel;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -27,8 +26,49 @@ public class UserToInvite {
   @JsonProperty("roleId")
   private Integer roleId = null;
 
+  /**
+   * Gets or Sets accessLevel
+   */
+  public enum AccessLevelEnum {
+    CONTRIBUTOR("Contributor"),
+    
+    OFFICE("Office"),
+    
+    REGION("Region"),
+    
+    COMPANY("Company"),
+    
+    ADMIN("Admin");
+
+    private String value;
+
+    AccessLevelEnum(String value) {
+      this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    @JsonCreator
+    public static AccessLevelEnum fromValue(String value) {
+      for (AccessLevelEnum b : AccessLevelEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+  }
+
   @JsonProperty("accessLevel")
-  private AccessLevel accessLevel = null;
+  private AccessLevelEnum accessLevel = null;
 
   @JsonProperty("defaultOfficeId")
   private Integer defaultOfficeId = null;
@@ -38,6 +78,9 @@ public class UserToInvite {
 
   @JsonProperty("offices")
   private java.util.List<Integer> offices = null;
+
+  @JsonProperty("subscribeToRoomsActivityNotifications")
+  private Boolean subscribeToRoomsActivityNotifications = true;
 
   @JsonProperty("eSignPermissionProfileId")
   private String eSignPermissionProfileId = null;
@@ -159,7 +202,7 @@ public class UserToInvite {
    *
    * @return UserToInvite
    **/
-  public UserToInvite accessLevel(AccessLevel accessLevel) {
+  public UserToInvite accessLevel(AccessLevelEnum accessLevel) {
     this.accessLevel = accessLevel;
     return this;
   }
@@ -169,14 +212,14 @@ public class UserToInvite {
    * @return accessLevel
    **/
   @ApiModelProperty(required = true, value = "")
-  public AccessLevel getAccessLevel() {
+  public AccessLevelEnum getAccessLevel() {
     return accessLevel;
   }
 
   /**
    * setAccessLevel.
    **/
-  public void setAccessLevel(AccessLevel accessLevel) {
+  public void setAccessLevel(AccessLevelEnum accessLevel) {
     this.accessLevel = accessLevel;
   }
 
@@ -225,7 +268,7 @@ public class UserToInvite {
    **/
   public UserToInvite addRegionsItem(Integer regionsItem) {
     if (this.regions == null) {
-      this.regions = new java.util.ArrayList<Integer>();
+      this.regions = new java.util.ArrayList<>();
     }
     this.regions.add(regionsItem);
     return this;
@@ -265,7 +308,7 @@ public class UserToInvite {
    **/
   public UserToInvite addOfficesItem(Integer officesItem) {
     if (this.offices == null) {
-      this.offices = new java.util.ArrayList<Integer>();
+      this.offices = new java.util.ArrayList<>();
     }
     this.offices.add(officesItem);
     return this;
@@ -285,6 +328,33 @@ public class UserToInvite {
    **/
   public void setOffices(java.util.List<Integer> offices) {
     this.offices = offices;
+  }
+
+
+  /**
+   * subscribeToRoomsActivityNotifications.
+   *
+   * @return UserToInvite
+   **/
+  public UserToInvite subscribeToRoomsActivityNotifications(Boolean subscribeToRoomsActivityNotifications) {
+    this.subscribeToRoomsActivityNotifications = subscribeToRoomsActivityNotifications;
+    return this;
+  }
+
+  /**
+   * Get subscribeToRoomsActivityNotifications.
+   * @return subscribeToRoomsActivityNotifications
+   **/
+  @ApiModelProperty(value = "")
+  public Boolean isSubscribeToRoomsActivityNotifications() {
+    return subscribeToRoomsActivityNotifications;
+  }
+
+  /**
+   * setSubscribeToRoomsActivityNotifications.
+   **/
+  public void setSubscribeToRoomsActivityNotifications(Boolean subscribeToRoomsActivityNotifications) {
+    this.subscribeToRoomsActivityNotifications = subscribeToRoomsActivityNotifications;
   }
 
 
@@ -364,6 +434,7 @@ public class UserToInvite {
         Objects.equals(this.defaultOfficeId, userToInvite.defaultOfficeId) &&
         Objects.equals(this.regions, userToInvite.regions) &&
         Objects.equals(this.offices, userToInvite.offices) &&
+        Objects.equals(this.subscribeToRoomsActivityNotifications, userToInvite.subscribeToRoomsActivityNotifications) &&
         Objects.equals(this.eSignPermissionProfileId, userToInvite.eSignPermissionProfileId) &&
         Objects.equals(this.redirectUrl, userToInvite.redirectUrl);
   }
@@ -373,7 +444,7 @@ public class UserToInvite {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, lastName, email, roleId, accessLevel, defaultOfficeId, regions, offices, eSignPermissionProfileId, redirectUrl);
+    return Objects.hash(firstName, lastName, email, roleId, accessLevel, defaultOfficeId, regions, offices, subscribeToRoomsActivityNotifications, eSignPermissionProfileId, redirectUrl);
   }
 
 
@@ -393,6 +464,7 @@ public class UserToInvite {
     sb.append("    defaultOfficeId: ").append(toIndentedString(defaultOfficeId)).append("\n");
     sb.append("    regions: ").append(toIndentedString(regions)).append("\n");
     sb.append("    offices: ").append(toIndentedString(offices)).append("\n");
+    sb.append("    subscribeToRoomsActivityNotifications: ").append(toIndentedString(subscribeToRoomsActivityNotifications)).append("\n");
     sb.append("    eSignPermissionProfileId: ").append(toIndentedString(eSignPermissionProfileId)).append("\n");
     sb.append("    redirectUrl: ").append(toIndentedString(redirectUrl)).append("\n");
     sb.append("}");

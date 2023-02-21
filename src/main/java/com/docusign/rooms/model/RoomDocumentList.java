@@ -198,7 +198,7 @@ public class RoomDocumentList {
    **/
   public RoomDocumentList addDocumentsItem(RoomDocument documentsItem) {
     if (this.documents == null) {
-      this.documents = new java.util.ArrayList<RoomDocument>();
+      this.documents = new java.util.ArrayList<>();
     }
     this.documents.add(documentsItem);
     return this;

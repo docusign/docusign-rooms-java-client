@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -57,11 +58,24 @@ public class RegionsApi {
    * Creates a new region for a company.
    * Creates a new region for a company
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param body  (optional)
+   * @param body The information required to create a new region for the caller&#39;s company (optional)
    * @return Region
    * @throws ApiException if fails to make API call
    */
   public Region createRegion(String accountId, Region body) throws ApiException {
+    ApiResponse<Region> localVarResponse = createRegionWithHttpInfo(accountId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates a new region for a company
+   * Creates a new region for a company
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param body The information required to create a new region for the caller&#39;s company (optional)
+   * @return Region
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Region > createRegionWithHttpInfo(String accountId, Region body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -86,20 +100,21 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<Region> localVarReturnType = new GenericType<Region>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    Region localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<Region>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Delete a region..
@@ -109,6 +124,17 @@ public class RegionsApi {
    * @throws ApiException if fails to make API call
    */
   public void deleteRegion(String accountId, Integer regionId) throws ApiException {
+    deleteRegionWithHttpInfo(accountId, regionId);
+  }
+
+  /**
+   * Delete a region.
+   * Delete a region.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param regionId Id of the desired region (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> deleteRegionWithHttpInfo(String accountId, Integer regionId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -139,7 +165,7 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -149,9 +175,9 @@ public class RegionsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -163,6 +189,19 @@ public class RegionsApi {
    * @throws ApiException if fails to make API call
    */
   public Region getRegion(String accountId, Integer regionId) throws ApiException {
+    ApiResponse<Region> localVarResponse = getRegionWithHttpInfo(accountId, regionId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Get information about the region with the given regionId
+   * Get information about the region with the given regionId
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param regionId Id of the desired region (required)
+   * @return Region
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Region > getRegionWithHttpInfo(String accountId, Integer regionId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -193,7 +232,7 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -203,10 +242,11 @@ public class RegionsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<Region> localVarReturnType = new GenericType<Region>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    Region localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<Region>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Get region reference counts..
@@ -217,6 +257,19 @@ public class RegionsApi {
    * @throws ApiException if fails to make API call
    */
   public RegionReferenceCountList getRegionReferenceCounts(String accountId, Integer regionId) throws ApiException {
+    ApiResponse<RegionReferenceCountList> localVarResponse = getRegionReferenceCountsWithHttpInfo(accountId, regionId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Get region reference counts.
+   * This method returns a list of each type of object and the number of objects of that type referencing the specified region.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param regionId Id of the desired region (required)
+   * @return RegionReferenceCountList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<RegionReferenceCountList > getRegionReferenceCountsWithHttpInfo(String accountId, Integer regionId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -247,7 +300,7 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -257,10 +310,11 @@ public class RegionsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<RegionReferenceCountList> localVarReturnType = new GenericType<RegionReferenceCountList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    RegionReferenceCountList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<RegionReferenceCountList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Get account regions. Returns a list of regions that are associated with a Rooms account.
   /// </summary>
@@ -343,6 +397,19 @@ public class RegionsApi {
    * @throws ApiException if fails to make API call
    */
   public RegionSummaryList getRegions(String accountId, RegionsApi.GetRegionsOptions options) throws ApiException {
+    ApiResponse<RegionSummaryList> localVarResponse = getRegionsWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Get account regions.
+   * Returns a list of regions that are associated with a Rooms account.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param options for modifying the method behavior.
+   * @return RegionSummaryList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<RegionSummaryList > getRegionsWithHttpInfo(String accountId, RegionsApi.GetRegionsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -373,7 +440,7 @@ public class RegionsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -383,8 +450,9 @@ public class RegionsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<RegionSummaryList> localVarReturnType = new GenericType<RegionSummaryList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    RegionSummaryList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<RegionSummaryList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

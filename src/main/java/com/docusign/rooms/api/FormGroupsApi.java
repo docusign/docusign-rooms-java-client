@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -58,11 +59,25 @@ public class FormGroupsApi {
    * Assigns the form specified in the &#x60;formId&#x60; property of the request to the form group &#x60;formGroupId&#x60;.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param formGroupId The ID of the form group. (required)
-   * @param body  (optional)
+   * @param body Assigns the form specified in the &#x60;formId&#x60; property of the request to the form group &#x60;formGroupId&#x60;. (optional)
    * @return FormGroupFormToAssign
    * @throws ApiException if fails to make API call
    */
   public FormGroupFormToAssign assignFormGroupForm(String accountId, java.util.UUID formGroupId, FormGroupFormToAssign body) throws ApiException {
+    ApiResponse<FormGroupFormToAssign> localVarResponse = assignFormGroupFormWithHttpInfo(accountId, formGroupId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Assigns a form to a form group.
+   * Assigns the form specified in the &#x60;formId&#x60; property of the request to the form group &#x60;formGroupId&#x60;.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @param body Assigns the form specified in the &#x60;formId&#x60; property of the request to the form group &#x60;formGroupId&#x60;. (optional)
+   * @return FormGroupFormToAssign
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FormGroupFormToAssign > assignFormGroupFormWithHttpInfo(String accountId, java.util.UUID formGroupId, FormGroupFormToAssign body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -93,30 +108,44 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FormGroupFormToAssign> localVarReturnType = new GenericType<FormGroupFormToAssign>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FormGroupFormToAssign localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FormGroupFormToAssign>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Creates a form group..
    * Creates a new form group with the name given in the &#x60;name&#x60; property of the request body.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param body  (optional)
+   * @param body Required input of name for the form group (optional)
    * @return FormGroup
    * @throws ApiException if fails to make API call
    */
   public FormGroup createFormGroup(String accountId, FormGroupForCreate body) throws ApiException {
+    ApiResponse<FormGroup> localVarResponse = createFormGroupWithHttpInfo(accountId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates a form group.
+   * Creates a new form group with the name given in the &#x60;name&#x60; property of the request body.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param body Required input of name for the form group (optional)
+   * @return FormGroup
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FormGroup > createFormGroupWithHttpInfo(String accountId, FormGroupForCreate body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -141,20 +170,21 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FormGroup> localVarReturnType = new GenericType<FormGroup>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FormGroup localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FormGroup>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Deletes a form group..
@@ -164,6 +194,17 @@ public class FormGroupsApi {
    * @throws ApiException if fails to make API call
    */
   public void deleteFormGroup(String accountId, java.util.UUID formGroupId) throws ApiException {
+    deleteFormGroupWithHttpInfo(accountId, formGroupId);
+  }
+
+  /**
+   * Deletes a form group.
+   * Deletes the specified form group.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> deleteFormGroupWithHttpInfo(String accountId, java.util.UUID formGroupId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -194,7 +235,7 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -204,9 +245,9 @@ public class FormGroupsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -218,6 +259,19 @@ public class FormGroupsApi {
    * @throws ApiException if fails to make API call
    */
   public FormGroup getFormGroup(String accountId, java.util.UUID formGroupId) throws ApiException {
+    ApiResponse<FormGroup> localVarResponse = getFormGroupWithHttpInfo(accountId, formGroupId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets a form group.
+   * Get the specified form group.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @return FormGroup
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FormGroup > getFormGroupWithHttpInfo(String accountId, java.util.UUID formGroupId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -248,7 +302,7 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -258,10 +312,11 @@ public class FormGroupsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FormGroup> localVarReturnType = new GenericType<FormGroup>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FormGroup localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FormGroup>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Get account Form Groups. Returns the company form groups to which the current user has access.
   /// </summary>
@@ -327,6 +382,19 @@ public class FormGroupsApi {
    * @throws ApiException if fails to make API call
    */
   public FormGroupSummaryList getFormGroups(String accountId, FormGroupsApi.GetFormGroupsOptions options) throws ApiException {
+    ApiResponse<FormGroupSummaryList> localVarResponse = getFormGroupsWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Get account Form Groups.
+   * Returns the company form groups to which the current user has access.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param options for modifying the method behavior.
+   * @return FormGroupSummaryList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FormGroupSummaryList > getFormGroupsWithHttpInfo(String accountId, FormGroupsApi.GetFormGroupsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -355,7 +423,7 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -365,10 +433,11 @@ public class FormGroupsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FormGroupSummaryList> localVarReturnType = new GenericType<FormGroupSummaryList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FormGroupSummaryList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FormGroupSummaryList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Assign office to a form group so the specified office has access to the form group..
@@ -379,6 +448,18 @@ public class FormGroupsApi {
    * @throws ApiException if fails to make API call
    */
   public void grantOfficeAccessToFormGroup(String accountId, java.util.UUID formGroupId, Integer officeId) throws ApiException {
+    grantOfficeAccessToFormGroupWithHttpInfo(accountId, formGroupId, officeId);
+  }
+
+  /**
+   * Assign office to a form group so the specified office has access to the form group.
+   * \&quot;Grants the office &#x60;officeId&#x60; access to the form group &#x60;formGroupId&#x60;.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @param officeId The id of the office. This is the id that the system generated when you created the office. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> grantOfficeAccessToFormGroupWithHttpInfo(String accountId, java.util.UUID formGroupId, Integer officeId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -415,7 +496,7 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -425,9 +506,9 @@ public class FormGroupsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -439,6 +520,18 @@ public class FormGroupsApi {
    * @throws ApiException if fails to make API call
    */
   public void removeFormGroupForm(String accountId, java.util.UUID formGroupId, java.util.UUID formId) throws ApiException {
+    removeFormGroupFormWithHttpInfo(accountId, formGroupId, formId);
+  }
+
+  /**
+   * Removes a form from a form group.
+   * Removes the form &#x60;formId&#x60; from the form group &#x60;formGroupId&#x60;.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @param formId The id of the form. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> removeFormGroupFormWithHttpInfo(String accountId, java.util.UUID formGroupId, java.util.UUID formId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -475,7 +568,7 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -485,9 +578,9 @@ public class FormGroupsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -495,11 +588,25 @@ public class FormGroupsApi {
    * Renames the specified form group with the name given in the &#x60;name&#x60; property of the request.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param formGroupId The ID of the form group. (required)
-   * @param body  (optional)
+   * @param body Required input of name for the form group (optional)
    * @return FormGroup
    * @throws ApiException if fails to make API call
    */
   public FormGroup renameFormGroup(String accountId, java.util.UUID formGroupId, FormGroupForUpdate body) throws ApiException {
+    ApiResponse<FormGroup> localVarResponse = renameFormGroupWithHttpInfo(accountId, formGroupId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Renames a form group.
+   * Renames the specified form group with the name given in the &#x60;name&#x60; property of the request.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @param body Required input of name for the form group (optional)
+   * @return FormGroup
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FormGroup > renameFormGroupWithHttpInfo(String accountId, java.util.UUID formGroupId, FormGroupForUpdate body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -530,20 +637,21 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FormGroup> localVarReturnType = new GenericType<FormGroup>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FormGroup localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FormGroup>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Remove office to a form group so the specified office doesn&#39;t have access to the form group..
@@ -554,6 +662,18 @@ public class FormGroupsApi {
    * @throws ApiException if fails to make API call
    */
   public void revokeOfficeAccessFromFormGroup(String accountId, java.util.UUID formGroupId, Integer officeId) throws ApiException {
+    revokeOfficeAccessFromFormGroupWithHttpInfo(accountId, formGroupId, officeId);
+  }
+
+  /**
+   * Remove office to a form group so the specified office doesn&#39;t have access to the form group.
+   * Revoke access to the form group &#x60;formGroupId&#x60; from the office &#x60;officeId&#x60;.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formGroupId The ID of the form group. (required)
+   * @param officeId The id of the office. This is the id that the system generated when you created the office. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> revokeOfficeAccessFromFormGroupWithHttpInfo(String accountId, java.util.UUID formGroupId, Integer officeId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -590,7 +710,7 @@ public class FormGroupsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -600,8 +720,8 @@ public class FormGroupsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 }

@@ -36,7 +36,7 @@ public class RegionReferenceCountList {
    **/
   public RegionReferenceCountList addReferenceCountsItem(RegionReferenceCount referenceCountsItem) {
     if (this.referenceCounts == null) {
-      this.referenceCounts = new java.util.ArrayList<RegionReferenceCount>();
+      this.referenceCounts = new java.util.ArrayList<>();
     }
     this.referenceCounts.add(referenceCountsItem);
     return this;

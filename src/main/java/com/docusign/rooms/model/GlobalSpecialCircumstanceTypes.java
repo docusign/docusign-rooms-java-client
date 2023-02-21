@@ -36,7 +36,7 @@ public class GlobalSpecialCircumstanceTypes {
    **/
   public GlobalSpecialCircumstanceTypes addSpecialCircumstanceTypesItem(SpecialCircumstanceType specialCircumstanceTypesItem) {
     if (this.specialCircumstanceTypes == null) {
-      this.specialCircumstanceTypes = new java.util.ArrayList<SpecialCircumstanceType>();
+      this.specialCircumstanceTypes = new java.util.ArrayList<>();
     }
     this.specialCircumstanceTypes.add(specialCircumstanceTypesItem);
     return this;

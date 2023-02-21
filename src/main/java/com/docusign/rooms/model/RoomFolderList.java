@@ -54,7 +54,7 @@ public class RoomFolderList {
    **/
   public RoomFolderList addFoldersItem(RoomFolder foldersItem) {
     if (this.folders == null) {
-      this.folders = new java.util.ArrayList<RoomFolder>();
+      this.folders = new java.util.ArrayList<>();
     }
     this.folders.add(foldersItem);
     return this;

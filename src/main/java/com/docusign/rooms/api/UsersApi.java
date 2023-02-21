@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -58,10 +59,22 @@ public class UsersApi {
    * Adds the user to the designated office.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId The id of the user. (required)
-   * @param body  (optional)
+   * @param body Details of the office that the user will be added to (optional)
    * @throws ApiException if fails to make API call
    */
   public void addUserToOffice(String accountId, Integer userId, DesignatedOffice body) throws ApiException {
+    addUserToOfficeWithHttpInfo(accountId, userId, body);
+  }
+
+  /**
+   * Adds the user to the designated office.
+   * Adds the user to the designated office.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
+   * @param body Details of the office that the user will be added to (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> addUserToOfficeWithHttpInfo(String accountId, Integer userId, DesignatedOffice body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -92,19 +105,19 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -112,10 +125,22 @@ public class UsersApi {
    * Adds the user to the designated region.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId The id of the user. (required)
-   * @param body  (optional)
+   * @param body Region that given user will be added to (optional)
    * @throws ApiException if fails to make API call
    */
   public void addUserToRegion(String accountId, Integer userId, DesignatedRegion body) throws ApiException {
+    addUserToRegionWithHttpInfo(accountId, userId, body);
+  }
+
+  /**
+   * Adds the user to the designated region.
+   * Adds the user to the designated region.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
+   * @param body Region that given user will be added to (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> addUserToRegionWithHttpInfo(String accountId, Integer userId, DesignatedRegion body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -146,19 +171,19 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -170,6 +195,19 @@ public class UsersApi {
    * @throws ApiException if fails to make API call
    */
   public User getUser(String accountId, Integer userId) throws ApiException {
+    ApiResponse<User> localVarResponse = getUserWithHttpInfo(accountId, userId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Retrieves user information for the user having the given UserId.
+   * Retrieves user information for the user having the given UserId.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
+   * @return User
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<User > getUserWithHttpInfo(String accountId, Integer userId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -200,7 +238,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -210,10 +248,11 @@ public class UsersApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<User> localVarReturnType = new GenericType<User>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    User localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<User>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
   /// <summary>
   /// Gets a paged-list of users. Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
   /// </summary>
@@ -225,12 +264,12 @@ public class UsersApi {
   public class GetUsersOptions
   {
   private String filter = null;
-  private String sort = null;
+  private Object sort = null;
   private Integer defaultOfficeId = null;
-  private String accessLevel = null;
+  private Object accessLevel = null;
   private Integer titleId = null;
   private Integer roleId = null;
-  private String status = null;
+  private Object status = null;
   private Boolean lockedOnly = null;
   private Integer startPosition = null;
   private Integer count = null;
@@ -254,16 +293,16 @@ public class UsersApi {
  /**
   * setSort method.
   */
-  public void setSort(String sort) {
+  public void setSort(Object sort) {
     this.sort = sort;
   }
 
  /**
   * getSort method.
   *
-  * @return String
+  * @return Object
   */
-  public String getSort() {
+  public Object getSort() {
     return this.sort;
   }
   
@@ -286,16 +325,16 @@ public class UsersApi {
  /**
   * setAccessLevel method.
   */
-  public void setAccessLevel(String accessLevel) {
+  public void setAccessLevel(Object accessLevel) {
     this.accessLevel = accessLevel;
   }
 
  /**
   * getAccessLevel method.
   *
-  * @return String
+  * @return Object
   */
-  public String getAccessLevel() {
+  public Object getAccessLevel() {
     return this.accessLevel;
   }
   
@@ -334,16 +373,16 @@ public class UsersApi {
  /**
   * setStatus method.
   */
-  public void setStatus(String status) {
+  public void setStatus(Object status) {
     this.status = status;
   }
 
  /**
   * getStatus method.
   *
-  * @return String
+  * @return Object
   */
-  public String getStatus() {
+  public Object getStatus() {
     return this.status;
   }
   
@@ -415,6 +454,19 @@ public class UsersApi {
    * @throws ApiException if fails to make API call
    */
   public UserSummaryList getUsers(String accountId, UsersApi.GetUsersOptions options) throws ApiException {
+    ApiResponse<UserSummaryList> localVarResponse = getUsersWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets a paged-list of users.
+   * Retrieves a paged-list of Company Users in the User&#39;s company using the given filter and sort parameters.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param options for modifying the method behavior.
+   * @return UserSummaryList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserSummaryList > getUsersWithHttpInfo(String accountId, UsersApi.GetUsersOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -459,7 +511,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -469,164 +521,34 @@ public class UsersApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<UserSummaryList> localVarReturnType = new GenericType<UserSummaryList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * CLASSIC COMPANY ONLY. Send an invitation to join the company as an admin..
-   * Invites a new user to join a company account on Rooms Version 5 as an Admin.
-   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param body  (optional)
-   * @return User
-   * @throws ApiException if fails to make API call
-   */
-  public User inviteClassicAdmin(String accountId, ClassicAdminToInvite body) throws ApiException {
-    Object localVarPostBody = body;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling inviteClassicAdmin");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/invite_classic_admin"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<User> localVarReturnType = new GenericType<User>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * CLASSIC COMPANY ONLY. Send an invitation to join the company as an agent..
-   * Invites a new user to join a company account on Rooms Version 5 as an Agent.
-   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param body  (optional)
-   * @return User
-   * @throws ApiException if fails to make API call
-   */
-  public User inviteClassicAgent(String accountId, ClassicAgentToInvite body) throws ApiException {
-    Object localVarPostBody = body;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling inviteClassicAgent");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/invite_classic_agent"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<User> localVarReturnType = new GenericType<User>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * CLASSIC COMPANY ONLY. Send an invitation to join the company as a manager..
-   * Invites a new user to join a company account on Rooms Version 5 as a Manager.
-   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param body  (optional)
-   * @return User
-   * @throws ApiException if fails to make API call
-   */
-  public User inviteClassicManager(String accountId, ClassicManagerToInvite body) throws ApiException {
-    Object localVarPostBody = body;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling inviteClassicManager");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2/accounts/{accountId}/users/invite_classic_manager"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<User> localVarReturnType = new GenericType<User>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    UserSummaryList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserSummaryList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * NON-CLASSIC COMPANY ONLY. Send an invitation to the user or non-user having the given email..
    * Invites a new user to join a company account on Rooms Version 6.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param body  (optional)
+   * @param body Invitee information (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
   public User inviteUser(String accountId, UserToInvite body) throws ApiException {
+    ApiResponse<User> localVarResponse = inviteUserWithHttpInfo(accountId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * NON-CLASSIC COMPANY ONLY. Send an invitation to the user or non-user having the given email.
+   * Invites a new user to join a company account on Rooms Version 6.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param body Invitee information (optional)
+   * @return User
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<User > inviteUserWithHttpInfo(String accountId, UserToInvite body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -651,7 +573,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -661,20 +583,33 @@ public class UsersApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<User> localVarReturnType = new GenericType<User>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    User localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<User>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Locks the account of the user..
    * Locks the account of the user.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId User Id of the user attempting to be locked. (required)
-   * @param body  (optional)
+   * @param body Details containing the reason the user is being locked out (optional)
    * @throws ApiException if fails to make API call
    */
   public void lockUser(String accountId, Integer userId, LockedOutDetails body) throws ApiException {
+    lockUserWithHttpInfo(accountId, userId, body);
+  }
+
+  /**
+   * Locks the account of the user.
+   * Locks the account of the user.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId User Id of the user attempting to be locked. (required)
+   * @param body Details containing the reason the user is being locked out (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> lockUserWithHttpInfo(String accountId, Integer userId, LockedOutDetails body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -705,7 +640,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -715,19 +650,30 @@ public class UsersApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
    * Reinvites the pending user with the given userId..
    * Reinvites an unactivated user to join a company account. You can use this method with either Rooms Version 5 or Rooms Version 6.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
-   * @param userId  (required)
+   * @param userId ID of the user to be invited (required)
    * @throws ApiException if fails to make API call
    */
   public void reinviteUser(String accountId, Integer userId) throws ApiException {
+    reinviteUserWithHttpInfo(accountId, userId);
+  }
+
+  /**
+   * Reinvites the pending user with the given userId.
+   * Reinvites an unactivated user to join a company account. You can use this method with either Rooms Version 5 or Rooms Version 6.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId ID of the user to be invited (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> reinviteUserWithHttpInfo(String accountId, Integer userId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -758,7 +704,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -768,9 +714,9 @@ public class UsersApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -781,6 +727,17 @@ public class UsersApi {
    * @throws ApiException if fails to make API call
    */
   public void removeUser(String accountId, Integer userId) throws ApiException {
+    removeUserWithHttpInfo(accountId, userId);
+  }
+
+  /**
+   * Removes a user from the company.
+   * Removes the user. Will fail if the user owns any Rooms.   The rooms will need to be transferred to other agents before removing.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId Id of the user you wish to remove. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> removeUserWithHttpInfo(String accountId, Integer userId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -811,7 +768,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -821,9 +778,9 @@ public class UsersApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -831,10 +788,22 @@ public class UsersApi {
    * Removes the user from the designated office.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId The id of the user. (required)
-   * @param body  (optional)
+   * @param body Details of the office that the user will be removed from (optional)
    * @throws ApiException if fails to make API call
    */
   public void removeUserFromOffice(String accountId, Integer userId, DesignatedOffice body) throws ApiException {
+    removeUserFromOfficeWithHttpInfo(accountId, userId, body);
+  }
+
+  /**
+   * Removes the user from the designated office.
+   * Removes the user from the designated office.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
+   * @param body Details of the office that the user will be removed from (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> removeUserFromOfficeWithHttpInfo(String accountId, Integer userId, DesignatedOffice body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -865,19 +834,19 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -885,10 +854,22 @@ public class UsersApi {
    * Removes the user from the designated region.
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId The id of the user. (required)
-   * @param body  (optional)
+   * @param body Region that given user will be removed from (optional)
    * @throws ApiException if fails to make API call
    */
   public void removeUserFromRegion(String accountId, Integer userId, DesignatedRegion body) throws ApiException {
+    removeUserFromRegionWithHttpInfo(accountId, userId, body);
+  }
+
+  /**
+   * Removes the user from the designated region.
+   * Removes the user from the designated region.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
+   * @param body Region that given user will be removed from (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> removeUserFromRegionWithHttpInfo(String accountId, Integer userId, DesignatedRegion body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -919,19 +900,19 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -942,6 +923,17 @@ public class UsersApi {
    * @throws ApiException if fails to make API call
    */
   public void unlockUser(String accountId, Integer userId) throws ApiException {
+    unlockUserWithHttpInfo(accountId, userId);
+  }
+
+  /**
+   * Unlocks the account of the user.
+   * Unlocks the account of the user.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId User Id of the user attempting to be unlocked. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> unlockUserWithHttpInfo(String accountId, Integer userId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -972,7 +964,7 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -982,9 +974,9 @@ public class UsersApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
+    
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
 
   /**
@@ -992,11 +984,25 @@ public class UsersApi {
    * Updates user information
    * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
    * @param userId The id of the user. (required)
-   * @param body  (optional)
+   * @param body Request body to update the user (optional)
    * @return User
    * @throws ApiException if fails to make API call
    */
   public User updateUser(String accountId, Integer userId, UserForUpdate body) throws ApiException {
+    ApiResponse<User> localVarResponse = updateUserWithHttpInfo(accountId, userId, body);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates user information
+   * Updates user information
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param userId The id of the user. (required)
+   * @param body Request body to update the user (optional)
+   * @return User
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<User > updateUserWithHttpInfo(String accountId, Integer userId, UserForUpdate body) throws ApiException {
     Object localVarPostBody = body;
     
     // verify the required parameter 'accountId' is set
@@ -1027,18 +1033,19 @@ public class UsersApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json-patch+json", "application/json", "text/json", "application/_*+json"
+      "application/json-patch+json", "application/json", "text/json", "application/_*+json", "application/xml", "text/xml", "application/_*+xml"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<User> localVarReturnType = new GenericType<User>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    User localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<User>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

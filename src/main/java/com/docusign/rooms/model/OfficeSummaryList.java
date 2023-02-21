@@ -54,7 +54,7 @@ public class OfficeSummaryList {
    **/
   public OfficeSummaryList addOfficeSummariesItem(OfficeSummary officeSummariesItem) {
     if (this.officeSummaries == null) {
-      this.officeSummaries = new java.util.ArrayList<OfficeSummary>();
+      this.officeSummaries = new java.util.ArrayList<>();
     }
     this.officeSummaries.add(officeSummariesItem);
     return this;

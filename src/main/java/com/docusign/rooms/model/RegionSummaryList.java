@@ -54,7 +54,7 @@ public class RegionSummaryList {
    **/
   public RegionSummaryList addRegionSummariesItem(RegionSummary regionSummariesItem) {
     if (this.regionSummaries == null) {
-      this.regionSummaries = new java.util.ArrayList<RegionSummary>();
+      this.regionSummaries = new java.util.ArrayList<>();
     }
     this.regionSummaries.add(regionSummariesItem);
     return this;

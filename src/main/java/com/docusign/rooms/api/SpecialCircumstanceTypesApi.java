@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -60,6 +61,17 @@ public class SpecialCircumstanceTypesApi {
    * @throws ApiException if fails to make API call
    */
   public GlobalSpecialCircumstanceTypes getSpecialCircumstanceTypes() throws ApiException {
+    ApiResponse<GlobalSpecialCircumstanceTypes> localVarResponse = getSpecialCircumstanceTypesWithHttpInfo();
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Retrieves the list of valid special circumstance types.
+   * Returns a list of special circumstance types
+   * @return GlobalSpecialCircumstanceTypes
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<GlobalSpecialCircumstanceTypes > getSpecialCircumstanceTypesWithHttpInfo() throws ApiException {
     Object localVarPostBody = "{}";
     
     // create path and map variables
@@ -78,7 +90,7 @@ public class SpecialCircumstanceTypesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -88,8 +100,9 @@ public class SpecialCircumstanceTypesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<GlobalSpecialCircumstanceTypes> localVarReturnType = new GenericType<GlobalSpecialCircumstanceTypes>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GlobalSpecialCircumstanceTypes localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<GlobalSpecialCircumstanceTypes>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

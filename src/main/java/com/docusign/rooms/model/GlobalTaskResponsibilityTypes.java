@@ -36,7 +36,7 @@ public class GlobalTaskResponsibilityTypes {
    **/
   public GlobalTaskResponsibilityTypes addTaskResponsibilityTypesItem(TaskResponsibilityType taskResponsibilityTypesItem) {
     if (this.taskResponsibilityTypes == null) {
-      this.taskResponsibilityTypes = new java.util.ArrayList<TaskResponsibilityType>();
+      this.taskResponsibilityTypes = new java.util.ArrayList<>();
     }
     this.taskResponsibilityTypes.add(taskResponsibilityTypesItem);
     return this;

@@ -36,7 +36,7 @@ public class GlobalPropertyTypes {
    **/
   public GlobalPropertyTypes addPropertyTypesItem(PropertyType propertyTypesItem) {
     if (this.propertyTypes == null) {
-      this.propertyTypes = new java.util.ArrayList<PropertyType>();
+      this.propertyTypes = new java.util.ArrayList<>();
     }
     this.propertyTypes.add(propertyTypesItem);
     return this;

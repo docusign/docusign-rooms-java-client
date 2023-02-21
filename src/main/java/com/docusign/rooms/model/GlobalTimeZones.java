@@ -36,7 +36,7 @@ public class GlobalTimeZones {
    **/
   public GlobalTimeZones addTimeZonesItem(TimeZone timeZonesItem) {
     if (this.timeZones == null) {
-      this.timeZones = new java.util.ArrayList<TimeZone>();
+      this.timeZones = new java.util.ArrayList<>();
     }
     this.timeZones.add(timeZonesItem);
     return this;

@@ -54,7 +54,7 @@ public class RoomSummaryList {
    **/
   public RoomSummaryList addRoomsItem(RoomSummary roomsItem) {
     if (this.rooms == null) {
-      this.rooms = new java.util.ArrayList<RoomSummary>();
+      this.rooms = new java.util.ArrayList<>();
     }
     this.rooms.add(roomsItem);
     return this;

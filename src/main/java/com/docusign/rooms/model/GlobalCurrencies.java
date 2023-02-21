@@ -36,7 +36,7 @@ public class GlobalCurrencies {
    **/
   public GlobalCurrencies addCurrenciesItem(Currency currenciesItem) {
     if (this.currencies == null) {
-      this.currencies = new java.util.ArrayList<Currency>();
+      this.currencies = new java.util.ArrayList<>();
     }
     this.currencies.add(currenciesItem);
     return this;

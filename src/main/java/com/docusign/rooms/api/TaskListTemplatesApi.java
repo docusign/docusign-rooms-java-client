@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -117,6 +118,19 @@ public class TaskListTemplatesApi {
    * @throws ApiException if fails to make API call
    */
   public TaskListTemplateList getTaskListTemplates(String accountId, TaskListTemplatesApi.GetTaskListTemplatesOptions options) throws ApiException {
+    ApiResponse<TaskListTemplateList> localVarResponse = getTaskListTemplatesWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Returns all task list templates for the company of the active user.
+   * Returns all task list templates for the company of the active user.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param options for modifying the method behavior.
+   * @return TaskListTemplateList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<TaskListTemplateList > getTaskListTemplatesWithHttpInfo(String accountId, TaskListTemplatesApi.GetTaskListTemplatesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -145,7 +159,7 @@ public class TaskListTemplatesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -155,8 +169,9 @@ public class TaskListTemplatesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<TaskListTemplateList> localVarReturnType = new GenericType<TaskListTemplateList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    TaskListTemplateList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<TaskListTemplateList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -168,6 +169,19 @@ public class RoomTemplatesApi {
    * @throws ApiException if fails to make API call
    */
   public RoomTemplatesSummaryList getRoomTemplates(String accountId, RoomTemplatesApi.GetRoomTemplatesOptions options) throws ApiException {
+    ApiResponse<RoomTemplatesSummaryList> localVarResponse = getRoomTemplatesWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Returns all room templates that the active user has access to
+   * This method returns a list of room templates that the user can use to create a new room. The response includes company and region-level templates
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param options for modifying the method behavior.
+   * @return RoomTemplatesSummaryList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<RoomTemplatesSummaryList > getRoomTemplatesWithHttpInfo(String accountId, RoomTemplatesApi.GetRoomTemplatesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -202,7 +216,7 @@ public class RoomTemplatesApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -212,8 +226,9 @@ public class RoomTemplatesApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<RoomTemplatesSummaryList> localVarReturnType = new GenericType<RoomTemplatesSummaryList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    RoomTemplatesSummaryList localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<RoomTemplatesSummaryList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

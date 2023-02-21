@@ -54,7 +54,7 @@ public class TaskListTemplateList {
    **/
   public TaskListTemplateList addTaskListTemplatesItem(TaskListTemplate taskListTemplatesItem) {
     if (this.taskListTemplates == null) {
-      this.taskListTemplates = new java.util.ArrayList<TaskListTemplate>();
+      this.taskListTemplates = new java.util.ArrayList<>();
     }
     this.taskListTemplates.add(taskListTemplatesItem);
     return this;

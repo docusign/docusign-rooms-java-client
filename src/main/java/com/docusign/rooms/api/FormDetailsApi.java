@@ -8,6 +8,7 @@ import com.docusign.rooms.client.ApiClient;
 import com.docusign.rooms.client.Configuration;
 import com.docusign.rooms.model.*;
 import com.docusign.rooms.client.Pair;
+import com.docusign.rooms.client.ApiResponse;
 
 
 
@@ -62,6 +63,19 @@ public class FormDetailsApi {
    * @throws ApiException if fails to make API call
    */
   public FormDetails getFormDetails(String accountId, java.util.UUID formId) throws ApiException {
+    ApiResponse<FormDetails> localVarResponse = getFormDetailsWithHttpInfo(accountId, formId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets form based on Id.
+   * Returns details about a specific form, such as the date it was created and last updated, the number of pages, the form owner, and other information.
+   * @param accountId (Required) The globally unique identifier (GUID) for the account. (required)
+   * @param formId Form ID (required)
+   * @return FormDetails
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<FormDetails > getFormDetailsWithHttpInfo(String accountId, java.util.UUID formId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -92,7 +106,7 @@ public class FormDetailsApi {
     
 
     final String[] localVarAccepts = {
-      "text/plain", "application/json", "text/json"
+      "text/plain", "application/json", "text/json", "application/xml", "text/xml"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
@@ -102,8 +116,9 @@ public class FormDetailsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
+    
     GenericType<FormDetails> localVarReturnType = new GenericType<FormDetails>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    FormDetails localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<FormDetails>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }

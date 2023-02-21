@@ -36,7 +36,7 @@ public class GlobalCountries {
    **/
   public GlobalCountries addCountriesItem(Country countriesItem) {
     if (this.countries == null) {
-      this.countries = new java.util.ArrayList<Country>();
+      this.countries = new java.util.ArrayList<>();
     }
     this.countries.add(countriesItem);
     return this;

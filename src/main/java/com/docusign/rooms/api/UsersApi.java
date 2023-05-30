@@ -1,7 +1,7 @@
 
 package com.docusign.rooms.api;
 
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.GenericType;
 
 import com.docusign.rooms.client.ApiException;
 import com.docusign.rooms.client.ApiClient;
@@ -264,9 +264,9 @@ public class UsersApi {
   public class GetUsersOptions
   {
   private String filter = null;
-  private Object sort = null;
+  private String sort = null;
   private Integer defaultOfficeId = null;
-  private Object accessLevel = null;
+  private String accessLevel = null;
   private Integer titleId = null;
   private Integer roleId = null;
   private Object status = null;
@@ -293,16 +293,16 @@ public class UsersApi {
  /**
   * setSort method.
   */
-  public void setSort(Object sort) {
+  public void setSort(String sort) {
     this.sort = sort;
   }
 
  /**
   * getSort method.
   *
-  * @return Object
+  * @return String
   */
-  public Object getSort() {
+  public String getSort() {
     return this.sort;
   }
   
@@ -325,16 +325,16 @@ public class UsersApi {
  /**
   * setAccessLevel method.
   */
-  public void setAccessLevel(Object accessLevel) {
+  public void setAccessLevel(String accessLevel) {
     this.accessLevel = accessLevel;
   }
 
  /**
   * getAccessLevel method.
   *
-  * @return Object
+  * @return String
   */
-  public Object getAccessLevel() {
+  public String getAccessLevel() {
     return this.accessLevel;
   }
   

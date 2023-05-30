@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountSummary.
@@ -71,7 +70,7 @@ public class AccountSummary {
    * Get companyId.
    * @return companyId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getCompanyId() {
     return companyId;
   }
@@ -80,7 +79,7 @@ public class AccountSummary {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -100,7 +99,7 @@ public class AccountSummary {
    * Get companyVersion.
    * @return companyVersion
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public CompanyVersionEnum getCompanyVersion() {
     return companyVersion;
   }
@@ -116,7 +115,7 @@ public class AccountSummary {
    * Get docuSignAccountGuid.
    * @return docuSignAccountGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocuSignAccountGuid() {
     return docuSignAccountGuid;
   }
@@ -125,7 +124,7 @@ public class AccountSummary {
    * Get defaultFieldSetId.
    * @return defaultFieldSetId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.UUID getDefaultFieldSetId() {
     return defaultFieldSetId;
   }
@@ -134,7 +133,7 @@ public class AccountSummary {
    * Get requireOfficeLibraryAssignments.
    * @return requireOfficeLibraryAssignments
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRequireOfficeLibraryAssignments() {
     return requireOfficeLibraryAssignments;
   }

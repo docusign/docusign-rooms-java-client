@@ -1,6 +1,11 @@
 # DocuSign Rooms Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v1.4.0] - Rooms API v2-1.1.1 - 2023-05-30
+### Changed
+- Jakarta Support enabled
+- Updated the SDK release version.
+
 ## [v1.3.0] - Rooms API v2-1.1.0 - 2023-01-30
 ### Changed
 - Added support for version v2-1.1.0 of the DocuSign Rooms API.

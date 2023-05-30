@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClassicManagerPermissions.
@@ -68,7 +67,7 @@ public class ClassicManagerPermissions {
    * Get isVisibleInTransactionRooms.
    * @return isVisibleInTransactionRooms
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsVisibleInTransactionRooms() {
     return isVisibleInTransactionRooms;
   }
@@ -95,7 +94,7 @@ public class ClassicManagerPermissions {
    * Get canDeleteCompanyRooms.
    * @return canDeleteCompanyRooms
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanDeleteCompanyRooms() {
     return canDeleteCompanyRooms;
   }
@@ -122,7 +121,7 @@ public class ClassicManagerPermissions {
    * Get canDeleteCompanyDocuments.
    * @return canDeleteCompanyDocuments
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanDeleteCompanyDocuments() {
     return canDeleteCompanyDocuments;
   }
@@ -149,7 +148,7 @@ public class ClassicManagerPermissions {
    * Get canManageCompanyRooms.
    * @return canManageCompanyRooms
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageCompanyRooms() {
     return canManageCompanyRooms;
   }
@@ -176,7 +175,7 @@ public class ClassicManagerPermissions {
    * Get canManageCompanyAccount.
    * @return canManageCompanyAccount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageCompanyAccount() {
     return canManageCompanyAccount;
   }
@@ -203,7 +202,7 @@ public class ClassicManagerPermissions {
    * Get canManageCompanySharedLibrary.
    * @return canManageCompanySharedLibrary
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageCompanySharedLibrary() {
     return canManageCompanySharedLibrary;
   }
@@ -230,7 +229,7 @@ public class ClassicManagerPermissions {
    * Get canManageCompanyMembers.
    * @return canManageCompanyMembers
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageCompanyMembers() {
     return canManageCompanyMembers;
   }
@@ -257,7 +256,7 @@ public class ClassicManagerPermissions {
    * Get canCloseCompanyRooms.
    * @return canCloseCompanyRooms
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanCloseCompanyRooms() {
     return canCloseCompanyRooms;
   }
@@ -284,7 +283,7 @@ public class ClassicManagerPermissions {
    * Get canApproveCompanyChecklists.
    * @return canApproveCompanyChecklists
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanApproveCompanyChecklists() {
     return canApproveCompanyChecklists;
   }
@@ -311,7 +310,7 @@ public class ClassicManagerPermissions {
    * Get isCompanySystemAdmin.
    * @return isCompanySystemAdmin
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsCompanySystemAdmin() {
     return isCompanySystemAdmin;
   }
@@ -338,7 +337,7 @@ public class ClassicManagerPermissions {
    * Get isRegionManager.
    * @return isRegionManager
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsRegionManager() {
     return isRegionManager;
   }
@@ -365,7 +364,7 @@ public class ClassicManagerPermissions {
    * Get isOfficeManager.
    * @return isOfficeManager
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsOfficeManager() {
     return isOfficeManager;
   }
@@ -392,7 +391,7 @@ public class ClassicManagerPermissions {
    * Get autoAccessToCompanyRooms.
    * @return autoAccessToCompanyRooms
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isAutoAccessToCompanyRooms() {
     return autoAccessToCompanyRooms;
   }

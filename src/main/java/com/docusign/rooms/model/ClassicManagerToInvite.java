@@ -7,8 +7,7 @@ import com.docusign.rooms.model.ClassicManagerPermissions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClassicManagerToInvite.
@@ -61,7 +60,7 @@ public class ClassicManagerToInvite {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -88,7 +87,7 @@ public class ClassicManagerToInvite {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getLastName() {
     return lastName;
   }
@@ -115,7 +114,7 @@ public class ClassicManagerToInvite {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getEmail() {
     return email;
   }
@@ -142,7 +141,7 @@ public class ClassicManagerToInvite {
    * Get defaultOfficeId.
    * @return defaultOfficeId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public Integer getDefaultOfficeId() {
     return defaultOfficeId;
   }
@@ -169,7 +168,7 @@ public class ClassicManagerToInvite {
    * Get titleId.
    * @return titleId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public Integer getTitleId() {
     return titleId;
   }
@@ -196,7 +195,7 @@ public class ClassicManagerToInvite {
    * Get accessLevel.
    * @return accessLevel
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public AccessLevel getAccessLevel() {
     return accessLevel;
   }
@@ -223,7 +222,7 @@ public class ClassicManagerToInvite {
    * Get permissions.
    * @return permissions
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public ClassicManagerPermissions getPermissions() {
     return permissions;
   }
@@ -263,7 +262,7 @@ public class ClassicManagerToInvite {
    * Get offices.
    * @return offices
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getOffices() {
     return offices;
   }
@@ -303,7 +302,7 @@ public class ClassicManagerToInvite {
    * Get regions.
    * @return regions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getRegions() {
     return regions;
   }
@@ -330,7 +329,7 @@ public class ClassicManagerToInvite {
    * Required when the company is tightly bound to an eSign account; otherwise ignored..
    * @return eSignPermissionProfileId
    **/
-  @ApiModelProperty(value = "Required when the company is tightly bound to an eSign account; otherwise ignored.")
+  @Schema(description = "Required when the company is tightly bound to an eSign account; otherwise ignored.")
   public String getESignPermissionProfileId() {
     return eSignPermissionProfileId;
   }

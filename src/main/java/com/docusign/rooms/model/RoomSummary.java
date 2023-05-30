@@ -5,9 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.joda.time.DateTime;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.time.OffsetDateTime;
 
 /**
  * RoomSummary.
@@ -25,16 +24,16 @@ public class RoomSummary {
   private Integer officeId = null;
 
   @JsonProperty("createdDate")
-  private DateTime createdDate = null;
+  private OffsetDateTime createdDate = null;
 
   @JsonProperty("submittedForReviewDate")
-  private DateTime submittedForReviewDate = null;
+  private OffsetDateTime submittedForReviewDate = null;
 
   @JsonProperty("closedDate")
-  private DateTime closedDate = null;
+  private OffsetDateTime closedDate = null;
 
   @JsonProperty("rejectedDate")
-  private DateTime rejectedDate = null;
+  private OffsetDateTime rejectedDate = null;
 
   @JsonProperty("createdByUserId")
   private Integer createdByUserId = null;
@@ -46,13 +45,13 @@ public class RoomSummary {
   private String closedStatusId = null;
 
   @JsonProperty("fieldDataLastUpdatedDate")
-  private DateTime fieldDataLastUpdatedDate = null;
+  private OffsetDateTime fieldDataLastUpdatedDate = null;
 
   /**
    * Get roomId.
    * @return roomId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoomId() {
     return roomId;
   }
@@ -61,7 +60,7 @@ public class RoomSummary {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -70,7 +69,7 @@ public class RoomSummary {
    * Get officeId.
    * @return officeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOfficeId() {
     return officeId;
   }
@@ -79,8 +78,8 @@ public class RoomSummary {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
-  public DateTime getCreatedDate() {
+  @Schema(description = "")
+  public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 
@@ -88,8 +87,8 @@ public class RoomSummary {
    * Get submittedForReviewDate.
    * @return submittedForReviewDate
    **/
-  @ApiModelProperty(value = "")
-  public DateTime getSubmittedForReviewDate() {
+  @Schema(description = "")
+  public OffsetDateTime getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
@@ -97,8 +96,8 @@ public class RoomSummary {
    * Get closedDate.
    * @return closedDate
    **/
-  @ApiModelProperty(value = "")
-  public DateTime getClosedDate() {
+  @Schema(description = "")
+  public OffsetDateTime getClosedDate() {
     return closedDate;
   }
 
@@ -106,8 +105,8 @@ public class RoomSummary {
    * Get rejectedDate.
    * @return rejectedDate
    **/
-  @ApiModelProperty(value = "")
-  public DateTime getRejectedDate() {
+  @Schema(description = "")
+  public OffsetDateTime getRejectedDate() {
     return rejectedDate;
   }
 
@@ -115,7 +114,7 @@ public class RoomSummary {
    * Get createdByUserId.
    * @return createdByUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getCreatedByUserId() {
     return createdByUserId;
   }
@@ -124,7 +123,7 @@ public class RoomSummary {
    * Get rejectedByUserId.
    * @return rejectedByUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRejectedByUserId() {
     return rejectedByUserId;
   }
@@ -133,7 +132,7 @@ public class RoomSummary {
    * Get closedStatusId.
    * @return closedStatusId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getClosedStatusId() {
     return closedStatusId;
   }
@@ -142,8 +141,8 @@ public class RoomSummary {
    * Get fieldDataLastUpdatedDate.
    * @return fieldDataLastUpdatedDate
    **/
-  @ApiModelProperty(value = "")
-  public DateTime getFieldDataLastUpdatedDate() {
+  @Schema(description = "")
+  public OffsetDateTime getFieldDataLastUpdatedDate() {
     return fieldDataLastUpdatedDate;
   }
 

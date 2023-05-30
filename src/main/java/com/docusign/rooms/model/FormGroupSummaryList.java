@@ -6,8 +6,7 @@ import com.docusign.rooms.model.FormGroupSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FormGroupSummaryList.
@@ -64,7 +63,7 @@ public class FormGroupSummaryList {
    * Get formGroups.
    * @return formGroups
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<FormGroupSummary> getFormGroups() {
     return formGroups;
   }
@@ -91,7 +90,7 @@ public class FormGroupSummaryList {
    * Get resultSetSize.
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
@@ -118,7 +117,7 @@ public class FormGroupSummaryList {
    * Get startPosition.
    * @return startPosition
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getStartPosition() {
     return startPosition;
   }
@@ -134,7 +133,7 @@ public class FormGroupSummaryList {
    * Get endPosition.
    * @return endPosition
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getEndPosition() {
     return endPosition;
   }
@@ -154,7 +153,7 @@ public class FormGroupSummaryList {
    * Get nextUri.
    * @return nextUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNextUri() {
     return nextUri;
   }
@@ -181,7 +180,7 @@ public class FormGroupSummaryList {
    * Get priorUri.
    * @return priorUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPriorUri() {
     return priorUri;
   }
@@ -208,7 +207,7 @@ public class FormGroupSummaryList {
    * Get totalRowCount.
    * @return totalRowCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTotalRowCount() {
     return totalRowCount;
   }

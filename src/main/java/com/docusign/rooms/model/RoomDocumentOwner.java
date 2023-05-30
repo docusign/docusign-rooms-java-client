@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomDocumentOwner.
@@ -44,7 +43,7 @@ public class RoomDocumentOwner {
    * Get userId.
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getUserId() {
     return userId;
   }
@@ -71,7 +70,7 @@ public class RoomDocumentOwner {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -98,7 +97,7 @@ public class RoomDocumentOwner {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastName() {
     return lastName;
   }
@@ -125,7 +124,7 @@ public class RoomDocumentOwner {
    * Get companyName.
    * @return companyName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompanyName() {
     return companyName;
   }
@@ -152,7 +151,7 @@ public class RoomDocumentOwner {
    * Get imageSrc.
    * @return imageSrc
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getImageSrc() {
     return imageSrc;
   }

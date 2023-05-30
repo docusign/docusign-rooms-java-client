@@ -6,8 +6,7 @@ import com.docusign.rooms.model.ESignPermissionProfile;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ESignPermissionProfileList.
@@ -22,7 +21,7 @@ public class ESignPermissionProfileList {
    * Get permissionProfiles.
    * @return permissionProfiles
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ESignPermissionProfile> getPermissionProfiles() {
     return permissionProfiles;
   }

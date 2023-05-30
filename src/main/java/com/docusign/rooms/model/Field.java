@@ -8,8 +8,7 @@ import com.docusign.rooms.model.FieldConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Field.
@@ -45,7 +44,7 @@ public class Field {
    * Get fieldId.
    * @return fieldId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.UUID getFieldId() {
     return fieldId;
   }
@@ -54,7 +53,7 @@ public class Field {
    * Get fieldDefinitionId.
    * @return fieldDefinitionId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.UUID getFieldDefinitionId() {
     return fieldDefinitionId;
   }
@@ -63,7 +62,7 @@ public class Field {
    * Get title.
    * @return title
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTitle() {
     return title;
   }
@@ -72,7 +71,7 @@ public class Field {
    * Get apiName.
    * @return apiName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getApiName() {
     return apiName;
   }
@@ -81,7 +80,7 @@ public class Field {
    * Get type.
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -90,7 +89,7 @@ public class Field {
    * Get fields.
    * @return fields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Field> getFields() {
     return fields;
   }
@@ -110,7 +109,7 @@ public class Field {
    * Get _configuration.
    * @return _configuration
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public FieldConfiguration getConfiguration() {
     return _configuration;
   }
@@ -137,7 +136,7 @@ public class Field {
    * Get customData.
    * @return customData
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public CustomData getCustomData() {
     return customData;
   }

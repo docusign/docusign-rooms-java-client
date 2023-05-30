@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomFolder.
@@ -38,7 +37,7 @@ public class RoomFolder {
    * Get roomFolderId.
    * @return roomFolderId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoomFolderId() {
     return roomFolderId;
   }
@@ -65,7 +64,7 @@ public class RoomFolder {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -92,7 +91,7 @@ public class RoomFolder {
    * Get isDefault.
    * @return isDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsDefault() {
     return isDefault;
   }

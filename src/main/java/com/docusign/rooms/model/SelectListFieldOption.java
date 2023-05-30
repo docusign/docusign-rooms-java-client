@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SelectListFieldOption.
@@ -27,7 +26,7 @@ public class SelectListFieldOption {
    * Get id.
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Object getId() {
     return id;
   }
@@ -36,7 +35,7 @@ public class SelectListFieldOption {
    * Get title.
    * @return title
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTitle() {
     return title;
   }
@@ -45,7 +44,7 @@ public class SelectListFieldOption {
    * Get order.
    * @return order
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOrder() {
     return order;
   }

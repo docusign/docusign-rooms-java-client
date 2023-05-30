@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DependsOn.
@@ -24,7 +23,7 @@ public class DependsOn {
    * Get actionType.
    * @return actionType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getActionType() {
     return actionType;
   }
@@ -33,7 +32,7 @@ public class DependsOn {
    * Get parentApiName.
    * @return parentApiName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getParentApiName() {
     return parentApiName;
   }

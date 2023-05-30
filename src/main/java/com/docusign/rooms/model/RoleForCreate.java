@@ -6,8 +6,7 @@ import com.docusign.rooms.model.Permissions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoleForCreate.
@@ -39,7 +38,7 @@ public class RoleForCreate {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -66,7 +65,7 @@ public class RoleForCreate {
    * Get isExternal.
    * @return isExternal
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsExternal() {
     return isExternal;
   }
@@ -93,7 +92,7 @@ public class RoleForCreate {
    * Get permissions.
    * @return permissions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Permissions getPermissions() {
     return permissions;
   }

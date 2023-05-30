@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * EnvelopeForCreate.
@@ -35,7 +34,7 @@ public class EnvelopeForCreate {
    * Get envelopeName.
    * @return envelopeName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeName() {
     return envelopeName;
   }
@@ -75,7 +74,7 @@ public class EnvelopeForCreate {
    * Get documentIds.
    * @return documentIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getDocumentIds() {
     return documentIds;
   }

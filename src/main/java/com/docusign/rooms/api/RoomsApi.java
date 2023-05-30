@@ -1,7 +1,7 @@
 
 package com.docusign.rooms.api;
 
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.GenericType;
 
 import com.docusign.rooms.client.ApiException;
 import com.docusign.rooms.client.ApiClient;
@@ -1025,7 +1025,7 @@ public class RoomsApi {
   private Integer count = null;
   private Integer startPosition = null;
   private String filter = null;
-  private Object sort = null;
+  private String sort = null;
   
  /**
   * setCount method.
@@ -1078,16 +1078,16 @@ public class RoomsApi {
  /**
   * setSort method.
   */
-  public void setSort(Object sort) {
+  public void setSort(String sort) {
     this.sort = sort;
   }
 
  /**
   * getSort method.
   *
-  * @return Object
+  * @return String
   */
-  public Object getSort() {
+  public String getSort() {
     return this.sort;
   }
   }
@@ -1192,7 +1192,7 @@ public class RoomsApi {
   {
   private Integer count = null;
   private Integer startPosition = null;
-  private Object roomStatus = null;
+  private String roomStatus = null;
   private Integer officeId = null;
   private String fieldDataChangedStartDate = null;
   private String fieldDataChangedEndDate = null;
@@ -1234,16 +1234,16 @@ public class RoomsApi {
  /**
   * setRoomStatus method.
   */
-  public void setRoomStatus(Object roomStatus) {
+  public void setRoomStatus(String roomStatus) {
     this.roomStatus = roomStatus;
   }
 
  /**
   * getRoomStatus method.
   *
-  * @return Object
+  * @return String
   */
-  public Object getRoomStatus() {
+  public String getRoomStatus() {
     return this.roomStatus;
   }
   

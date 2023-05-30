@@ -6,8 +6,7 @@ import com.docusign.rooms.model.ClassicManagerPermissions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * User.
@@ -113,7 +112,7 @@ public class User {
    * Get userId.
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getUserId() {
     return userId;
   }
@@ -140,7 +139,7 @@ public class User {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -167,7 +166,7 @@ public class User {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -194,7 +193,7 @@ public class User {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastName() {
     return lastName;
   }
@@ -221,7 +220,7 @@ public class User {
    * Get isLockedOut.
    * @return isLockedOut
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsLockedOut() {
     return isLockedOut;
   }
@@ -248,7 +247,7 @@ public class User {
    * Get status.
    * @return status
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatus() {
     return status;
   }
@@ -275,7 +274,7 @@ public class User {
    * Get accessLevel.
    * @return accessLevel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public AccessLevelEnum getAccessLevel() {
     return accessLevel;
   }
@@ -302,7 +301,7 @@ public class User {
    * Get defaultOfficeId.
    * @return defaultOfficeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDefaultOfficeId() {
     return defaultOfficeId;
   }
@@ -329,7 +328,7 @@ public class User {
    * Get titleId.
    * @return titleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTitleId() {
     return titleId;
   }
@@ -356,7 +355,7 @@ public class User {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -383,7 +382,7 @@ public class User {
    * Get profileImageUrl.
    * @return profileImageUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProfileImageUrl() {
     return profileImageUrl;
   }
@@ -423,7 +422,7 @@ public class User {
    * Get offices.
    * @return offices
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getOffices() {
     return offices;
   }
@@ -463,7 +462,7 @@ public class User {
    * Get regions.
    * @return regions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getRegions() {
     return regions;
   }
@@ -490,7 +489,7 @@ public class User {
    * Get permissions.
    * @return permissions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ClassicManagerPermissions getPermissions() {
     return permissions;
   }

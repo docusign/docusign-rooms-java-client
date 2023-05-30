@@ -6,8 +6,7 @@ import com.docusign.rooms.model.RoomDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomDocumentList.
@@ -51,7 +50,7 @@ public class RoomDocumentList {
    * Get resultSetSize.
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
@@ -78,7 +77,7 @@ public class RoomDocumentList {
    * Get startPosition.
    * @return startPosition
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getStartPosition() {
     return startPosition;
   }
@@ -94,7 +93,7 @@ public class RoomDocumentList {
    * Get endPosition.
    * @return endPosition
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getEndPosition() {
     return endPosition;
   }
@@ -114,7 +113,7 @@ public class RoomDocumentList {
    * Get nextUri.
    * @return nextUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNextUri() {
     return nextUri;
   }
@@ -141,7 +140,7 @@ public class RoomDocumentList {
    * Get priorUri.
    * @return priorUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPriorUri() {
     return priorUri;
   }
@@ -168,7 +167,7 @@ public class RoomDocumentList {
    * Get totalRowCount.
    * @return totalRowCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTotalRowCount() {
     return totalRowCount;
   }
@@ -208,7 +207,7 @@ public class RoomDocumentList {
    * Get documents.
    * @return documents
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RoomDocument> getDocuments() {
     return documents;
   }

@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * UserToInvite.
@@ -103,7 +102,7 @@ public class UserToInvite {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -130,7 +129,7 @@ public class UserToInvite {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getLastName() {
     return lastName;
   }
@@ -157,7 +156,7 @@ public class UserToInvite {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getEmail() {
     return email;
   }
@@ -184,7 +183,7 @@ public class UserToInvite {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -211,7 +210,7 @@ public class UserToInvite {
    * Get accessLevel.
    * @return accessLevel
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public AccessLevelEnum getAccessLevel() {
     return accessLevel;
   }
@@ -238,7 +237,7 @@ public class UserToInvite {
    * Get defaultOfficeId.
    * @return defaultOfficeId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public Integer getDefaultOfficeId() {
     return defaultOfficeId;
   }
@@ -278,7 +277,7 @@ public class UserToInvite {
    * Get regions.
    * @return regions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getRegions() {
     return regions;
   }
@@ -318,7 +317,7 @@ public class UserToInvite {
    * Get offices.
    * @return offices
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getOffices() {
     return offices;
   }
@@ -345,7 +344,7 @@ public class UserToInvite {
    * Get subscribeToRoomsActivityNotifications.
    * @return subscribeToRoomsActivityNotifications
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isSubscribeToRoomsActivityNotifications() {
     return subscribeToRoomsActivityNotifications;
   }
@@ -372,7 +371,7 @@ public class UserToInvite {
    * Get eSignPermissionProfileId.
    * @return eSignPermissionProfileId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getESignPermissionProfileId() {
     return eSignPermissionProfileId;
   }
@@ -399,7 +398,7 @@ public class UserToInvite {
    * Get redirectUrl.
    * @return redirectUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRedirectUrl() {
     return redirectUrl;
   }

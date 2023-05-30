@@ -6,8 +6,7 @@ import com.docusign.rooms.model.TaskListSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TaskListSummaryList.
@@ -46,7 +45,7 @@ public class TaskListSummaryList {
    * Get taskListSummaries.
    * @return taskListSummaries
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<TaskListSummary> getTaskListSummaries() {
     return taskListSummaries;
   }

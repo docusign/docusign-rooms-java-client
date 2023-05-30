@@ -7,8 +7,7 @@ import com.docusign.rooms.model.SelectListFieldOption;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FieldConfiguration.
@@ -47,7 +46,7 @@ public class FieldConfiguration {
    * Get maxValue.
    * @return maxValue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Double getMaxValue() {
     return maxValue;
   }
@@ -56,7 +55,7 @@ public class FieldConfiguration {
    * Get minValue.
    * @return minValue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Double getMinValue() {
     return minValue;
   }
@@ -65,7 +64,7 @@ public class FieldConfiguration {
    * Get multipleOf.
    * @return multipleOf
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Double getMultipleOf() {
     return multipleOf;
   }
@@ -74,7 +73,7 @@ public class FieldConfiguration {
    * Get maxLength.
    * @return maxLength
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getMaxLength() {
     return maxLength;
   }
@@ -83,7 +82,7 @@ public class FieldConfiguration {
    * Get minLength.
    * @return minLength
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getMinLength() {
     return minLength;
   }
@@ -92,7 +91,7 @@ public class FieldConfiguration {
    * Get pattern.
    * @return pattern
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPattern() {
     return pattern;
   }
@@ -101,7 +100,7 @@ public class FieldConfiguration {
    * Get isPublisher.
    * @return isPublisher
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsPublisher() {
     return isPublisher;
   }
@@ -110,7 +109,7 @@ public class FieldConfiguration {
    * Get dependsOn.
    * @return dependsOn
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DependsOn> getDependsOn() {
     return dependsOn;
   }
@@ -119,7 +118,7 @@ public class FieldConfiguration {
    * Get options.
    * @return options
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SelectListFieldOption> getOptions() {
     return options;
   }

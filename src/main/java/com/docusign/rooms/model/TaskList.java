@@ -6,8 +6,7 @@ import com.docusign.rooms.model.TaskSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -64,7 +63,7 @@ public class TaskList {
    * Get taskListId.
    * @return taskListId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTaskListId() {
     return taskListId;
   }
@@ -91,7 +90,7 @@ public class TaskList {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -118,7 +117,7 @@ public class TaskList {
    * Get taskListTemplateId.
    * @return taskListTemplateId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTaskListTemplateId() {
     return taskListTemplateId;
   }
@@ -145,7 +144,7 @@ public class TaskList {
    * Get submittedForReviewDate.
    * @return submittedForReviewDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
@@ -172,7 +171,7 @@ public class TaskList {
    * Get approvalDate.
    * @return approvalDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getApprovalDate() {
     return approvalDate;
   }
@@ -199,7 +198,7 @@ public class TaskList {
    * Get rejectedDate.
    * @return rejectedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getRejectedDate() {
     return rejectedDate;
   }
@@ -226,7 +225,7 @@ public class TaskList {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
@@ -253,7 +252,7 @@ public class TaskList {
    * Get approvedByUserId.
    * @return approvedByUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getApprovedByUserId() {
     return approvedByUserId;
   }
@@ -280,7 +279,7 @@ public class TaskList {
    * Get rejectedByUserId.
    * @return rejectedByUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRejectedByUserId() {
     return rejectedByUserId;
   }
@@ -307,7 +306,7 @@ public class TaskList {
    * Get comment.
    * @return comment
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getComment() {
     return comment;
   }
@@ -347,7 +346,7 @@ public class TaskList {
    * Get tasks.
    * @return tasks
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<TaskSummary> getTasks() {
     return tasks;
   }

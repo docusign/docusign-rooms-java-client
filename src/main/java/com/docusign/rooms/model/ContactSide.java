@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ContactSide.
@@ -35,7 +34,7 @@ public class ContactSide {
    * Get contactSideId.
    * @return contactSideId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContactSideId() {
     return contactSideId;
   }
@@ -62,7 +61,7 @@ public class ContactSide {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }

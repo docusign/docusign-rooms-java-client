@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -31,7 +30,7 @@ public class FormSummary {
    * Get libraryFormId.
    * @return libraryFormId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.UUID getLibraryFormId() {
     return libraryFormId;
   }
@@ -40,7 +39,7 @@ public class FormSummary {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -49,7 +48,7 @@ public class FormSummary {
    * Get lastUpdatedDate.
    * @return lastUpdatedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getLastUpdatedDate() {
     return lastUpdatedDate;
   }
@@ -58,7 +57,7 @@ public class FormSummary {
    * Get viewingUserHasAccess.
    * @return viewingUserHasAccess
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isViewingUserHasAccess() {
     return viewingUserHasAccess;
   }

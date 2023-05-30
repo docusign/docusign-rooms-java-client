@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomUserForUpdate.
@@ -35,7 +34,7 @@ public class RoomUserForUpdate {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -62,7 +61,7 @@ public class RoomUserForUpdate {
    * Get transactionSideId.
    * @return transactionSideId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTransactionSideId() {
     return transactionSideId;
   }

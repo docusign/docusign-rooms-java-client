@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -34,7 +33,7 @@ public class FormProviderAssociationSummary {
    * Get associationId.
    * @return associationId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAssociationId() {
     return associationId;
   }
@@ -43,7 +42,7 @@ public class FormProviderAssociationSummary {
    * Get providerId.
    * @return providerId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProviderId() {
     return providerId;
   }
@@ -52,7 +51,7 @@ public class FormProviderAssociationSummary {
    * Get lastUpdateDate.
    * @return lastUpdateDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getLastUpdateDate() {
     return lastUpdateDate;
   }
@@ -61,7 +60,7 @@ public class FormProviderAssociationSummary {
    * Get formProviderAssociationGuid.
    * @return formProviderAssociationGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.UUID getFormProviderAssociationGuid() {
     return formProviderAssociationGuid;
   }
@@ -70,7 +69,7 @@ public class FormProviderAssociationSummary {
    * Get formProviderAssociationName.
    * @return formProviderAssociationName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormProviderAssociationName() {
     return formProviderAssociationName;
   }

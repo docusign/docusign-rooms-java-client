@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocumentUser.
@@ -68,7 +67,7 @@ public class DocumentUser {
    * Get userId.
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getUserId() {
     return userId;
   }
@@ -95,7 +94,7 @@ public class DocumentUser {
    * Get documentId.
    * @return documentId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDocumentId() {
     return documentId;
   }
@@ -122,7 +121,7 @@ public class DocumentUser {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -149,7 +148,7 @@ public class DocumentUser {
    * Get hasAccess.
    * @return hasAccess
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isHasAccess() {
     return hasAccess;
   }
@@ -176,7 +175,7 @@ public class DocumentUser {
    * Get canApproveTask.
    * @return canApproveTask
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanApproveTask() {
     return canApproveTask;
   }
@@ -203,7 +202,7 @@ public class DocumentUser {
    * Get canAssignToTaskList.
    * @return canAssignToTaskList
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAssignToTaskList() {
     return canAssignToTaskList;
   }
@@ -230,7 +229,7 @@ public class DocumentUser {
    * Get canCopy.
    * @return canCopy
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanCopy() {
     return canCopy;
   }
@@ -257,7 +256,7 @@ public class DocumentUser {
    * Get canDelete.
    * @return canDelete
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanDelete() {
     return canDelete;
   }
@@ -284,7 +283,7 @@ public class DocumentUser {
    * Get canRemoveFromTaskList.
    * @return canRemoveFromTaskList
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanRemoveFromTaskList() {
     return canRemoveFromTaskList;
   }
@@ -311,7 +310,7 @@ public class DocumentUser {
    * Get canRemoveApproval.
    * @return canRemoveApproval
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanRemoveApproval() {
     return canRemoveApproval;
   }
@@ -338,7 +337,7 @@ public class DocumentUser {
    * Get canRename.
    * @return canRename
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanRename() {
     return canRename;
   }
@@ -365,7 +364,7 @@ public class DocumentUser {
    * Get canShare.
    * @return canShare
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanShare() {
     return canShare;
   }
@@ -392,7 +391,7 @@ public class DocumentUser {
    * Get canViewActivity.
    * @return canViewActivity
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanViewActivity() {
     return canViewActivity;
   }

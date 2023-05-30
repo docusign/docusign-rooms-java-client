@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomTemplate.
@@ -27,7 +26,7 @@ public class RoomTemplate {
    * Get roomTemplateId.
    * @return roomTemplateId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoomTemplateId() {
     return roomTemplateId;
   }
@@ -36,7 +35,7 @@ public class RoomTemplate {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -45,7 +44,7 @@ public class RoomTemplate {
    * Get taskTemplateCount.
    * @return taskTemplateCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTaskTemplateCount() {
     return taskTemplateCount;
   }

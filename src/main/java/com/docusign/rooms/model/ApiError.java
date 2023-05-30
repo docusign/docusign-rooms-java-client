@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ApiError.
@@ -38,7 +37,7 @@ public class ApiError {
    * Get errorCode.
    * @return errorCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getErrorCode() {
     return errorCode;
   }
@@ -65,7 +64,7 @@ public class ApiError {
    * Get message.
    * @return message
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMessage() {
     return message;
   }
@@ -92,7 +91,7 @@ public class ApiError {
    * Get referenceId.
    * @return referenceId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReferenceId() {
     return referenceId;
   }

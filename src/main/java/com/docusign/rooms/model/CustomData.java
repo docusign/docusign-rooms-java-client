@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * CustomData.
@@ -24,7 +23,7 @@ public class CustomData {
    * Get isRequiredOnCreate.
    * @return isRequiredOnCreate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsRequiredOnCreate() {
     return isRequiredOnCreate;
   }
@@ -33,7 +32,7 @@ public class CustomData {
    * Get isRequiredOnSubmit.
    * @return isRequiredOnSubmit
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsRequiredOnSubmit() {
     return isRequiredOnSubmit;
   }

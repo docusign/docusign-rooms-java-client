@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -34,7 +33,7 @@ public class GroupForm {
    * Get formId.
    * @return formId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.UUID getFormId() {
     return formId;
   }
@@ -43,7 +42,7 @@ public class GroupForm {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -52,7 +51,7 @@ public class GroupForm {
    * Get isRequired.
    * @return isRequired
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsRequired() {
     return isRequired;
   }
@@ -61,7 +60,7 @@ public class GroupForm {
    * Get lastUpdatedDate.
    * @return lastUpdatedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getLastUpdatedDate() {
     return lastUpdatedDate;
   }
@@ -70,7 +69,7 @@ public class GroupForm {
    * Get viewingUserHasAccess.
    * @return viewingUserHasAccess
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isViewingUserHasAccess() {
     return viewingUserHasAccess;
   }

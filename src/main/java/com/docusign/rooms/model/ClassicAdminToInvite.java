@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClassicAdminToInvite.
@@ -38,7 +37,7 @@ public class ClassicAdminToInvite {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -65,7 +64,7 @@ public class ClassicAdminToInvite {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getLastName() {
     return lastName;
   }
@@ -92,7 +91,7 @@ public class ClassicAdminToInvite {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getEmail() {
     return email;
   }

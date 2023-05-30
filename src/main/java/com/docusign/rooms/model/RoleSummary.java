@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -48,7 +47,7 @@ public class RoleSummary {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -75,7 +74,7 @@ public class RoleSummary {
    * Get legacyRoleId.
    * @return legacyRoleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLegacyRoleId() {
     return legacyRoleId;
   }
@@ -102,7 +101,7 @@ public class RoleSummary {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -129,7 +128,7 @@ public class RoleSummary {
    * Get isDefaultForAdmin.
    * @return isDefaultForAdmin
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsDefaultForAdmin() {
     return isDefaultForAdmin;
   }
@@ -156,7 +155,7 @@ public class RoleSummary {
    * Get isExternal.
    * @return isExternal
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsExternal() {
     return isExternal;
   }
@@ -183,7 +182,7 @@ public class RoleSummary {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }

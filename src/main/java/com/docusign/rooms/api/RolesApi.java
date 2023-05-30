@@ -1,7 +1,7 @@
 
 package com.docusign.rooms.api;
 
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.GenericType;
 
 import com.docusign.rooms.client.ApiException;
 import com.docusign.rooms.client.ApiClient;
@@ -301,7 +301,7 @@ public class RolesApi {
   public class GetRolesOptions
   {
   private Boolean onlyAssignable = null;
-  private Object filterContext = null;
+  private String filterContext = null;
   private String filter = null;
   private Integer startPosition = null;
   private Integer count = null;
@@ -325,16 +325,16 @@ public class RolesApi {
  /**
   * setFilterContext method.
   */
-  public void setFilterContext(Object filterContext) {
+  public void setFilterContext(String filterContext) {
     this.filterContext = filterContext;
   }
 
  /**
   * getFilterContext method.
   *
-  * @return Object
+  * @return String
   */
-  public Object getFilterContext() {
+  public String getFilterContext() {
     return this.filterContext;
   }
   

@@ -6,8 +6,7 @@ import com.docusign.rooms.model.FormSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FormSummaryList.
@@ -64,7 +63,7 @@ public class FormSummaryList {
    * Get forms.
    * @return forms
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<FormSummary> getForms() {
     return forms;
   }
@@ -91,7 +90,7 @@ public class FormSummaryList {
    * Get resultSetSize.
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
@@ -118,7 +117,7 @@ public class FormSummaryList {
    * Get startPosition.
    * @return startPosition
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getStartPosition() {
     return startPosition;
   }
@@ -134,7 +133,7 @@ public class FormSummaryList {
    * Get endPosition.
    * @return endPosition
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getEndPosition() {
     return endPosition;
   }
@@ -154,7 +153,7 @@ public class FormSummaryList {
    * Get nextUri.
    * @return nextUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNextUri() {
     return nextUri;
   }
@@ -181,7 +180,7 @@ public class FormSummaryList {
    * Get priorUri.
    * @return priorUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPriorUri() {
     return priorUri;
   }
@@ -208,7 +207,7 @@ public class FormSummaryList {
    * Get totalRowCount.
    * @return totalRowCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTotalRowCount() {
     return totalRowCount;
   }

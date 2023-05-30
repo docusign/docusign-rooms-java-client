@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -63,7 +62,7 @@ public class Document {
    * Get documentId.
    * @return documentId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDocumentId() {
     return documentId;
   }
@@ -90,7 +89,7 @@ public class Document {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getName() {
     return name;
   }
@@ -117,7 +116,7 @@ public class Document {
    * Get roomId.
    * @return roomId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoomId() {
     return roomId;
   }
@@ -144,7 +143,7 @@ public class Document {
    * Get ownerId.
    * @return ownerId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOwnerId() {
     return ownerId;
   }
@@ -171,7 +170,7 @@ public class Document {
    * Get size.
    * @return size
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Long getSize() {
     return size;
   }
@@ -198,7 +197,7 @@ public class Document {
    * Get folderId.
    * @return folderId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getFolderId() {
     return folderId;
   }
@@ -225,7 +224,7 @@ public class Document {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
@@ -252,7 +251,7 @@ public class Document {
    * Get isSigned.
    * @return isSigned
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsSigned() {
     return isSigned;
   }
@@ -279,7 +278,7 @@ public class Document {
    * Get contentType.
    * @return contentType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContentType() {
     return contentType;
   }
@@ -306,7 +305,7 @@ public class Document {
    * Get base64Contents.
    * @return base64Contents
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getBase64Contents() {
     return base64Contents;
   }
@@ -333,7 +332,7 @@ public class Document {
    * Get isDynamic.
    * @return isDynamic
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsDynamic() {
     return isDynamic;
   }

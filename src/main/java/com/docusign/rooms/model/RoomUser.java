@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomUser.
@@ -53,7 +52,7 @@ public class RoomUser {
    * Get userId.
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getUserId() {
     return userId;
   }
@@ -80,7 +79,7 @@ public class RoomUser {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -107,7 +106,7 @@ public class RoomUser {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -134,7 +133,7 @@ public class RoomUser {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastName() {
     return lastName;
   }
@@ -161,7 +160,7 @@ public class RoomUser {
    * Get transactionSideId.
    * @return transactionSideId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTransactionSideId() {
     return transactionSideId;
   }
@@ -188,7 +187,7 @@ public class RoomUser {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -215,7 +214,7 @@ public class RoomUser {
    * Get isRevoked.
    * @return isRevoked
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsRevoked() {
     return isRevoked;
   }
@@ -242,7 +241,7 @@ public class RoomUser {
    * Get invitedByUserId.
    * @return invitedByUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getInvitedByUserId() {
     return invitedByUserId;
   }

@@ -6,8 +6,7 @@ import com.docusign.rooms.model.FieldData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -73,7 +72,7 @@ public class Room {
    * Get roomId.
    * @return roomId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoomId() {
     return roomId;
   }
@@ -100,7 +99,7 @@ public class Room {
    * Get companyId.
    * @return companyId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getCompanyId() {
     return companyId;
   }
@@ -127,7 +126,7 @@ public class Room {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -154,7 +153,7 @@ public class Room {
    * Get officeId.
    * @return officeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOfficeId() {
     return officeId;
   }
@@ -181,7 +180,7 @@ public class Room {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
@@ -208,7 +207,7 @@ public class Room {
    * Get submittedForReviewDate.
    * @return submittedForReviewDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
@@ -235,7 +234,7 @@ public class Room {
    * Get closedDate.
    * @return closedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getClosedDate() {
     return closedDate;
   }
@@ -262,7 +261,7 @@ public class Room {
    * Get rejectedDate.
    * @return rejectedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getRejectedDate() {
     return rejectedDate;
   }
@@ -289,7 +288,7 @@ public class Room {
    * Get createdByUserId.
    * @return createdByUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getCreatedByUserId() {
     return createdByUserId;
   }
@@ -329,7 +328,7 @@ public class Room {
    * Get roomOwnerIds.
    * @return roomOwnerIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getRoomOwnerIds() {
     return roomOwnerIds;
   }
@@ -356,7 +355,7 @@ public class Room {
    * Get rejectedByUserId.
    * @return rejectedByUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRejectedByUserId() {
     return rejectedByUserId;
   }
@@ -383,7 +382,7 @@ public class Room {
    * Get closedStatusId.
    * @return closedStatusId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getClosedStatusId() {
     return closedStatusId;
   }
@@ -410,7 +409,7 @@ public class Room {
    * Get fieldDataLastUpdatedDate.
    * @return fieldDataLastUpdatedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getFieldDataLastUpdatedDate() {
     return fieldDataLastUpdatedDate;
   }
@@ -437,7 +436,7 @@ public class Room {
    * Get fieldData.
    * @return fieldData
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public FieldData getFieldData() {
     return fieldData;
   }

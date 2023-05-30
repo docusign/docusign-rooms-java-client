@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * OfficeForCreate.
@@ -59,7 +58,7 @@ public class OfficeForCreate {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getName() {
     return name;
   }
@@ -86,7 +85,7 @@ public class OfficeForCreate {
    * Get regionId.
    * @return regionId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRegionId() {
     return regionId;
   }
@@ -113,7 +112,7 @@ public class OfficeForCreate {
    * Get address1.
    * @return address1
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAddress1() {
     return address1;
   }
@@ -140,7 +139,7 @@ public class OfficeForCreate {
    * Get address2.
    * @return address2
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAddress2() {
     return address2;
   }
@@ -167,7 +166,7 @@ public class OfficeForCreate {
    * Get city.
    * @return city
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCity() {
     return city;
   }
@@ -194,7 +193,7 @@ public class OfficeForCreate {
    * Get stateId.
    * @return stateId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStateId() {
     return stateId;
   }
@@ -221,7 +220,7 @@ public class OfficeForCreate {
    * Get postalCode.
    * @return postalCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPostalCode() {
     return postalCode;
   }
@@ -248,7 +247,7 @@ public class OfficeForCreate {
    * Get countryId.
    * @return countryId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCountryId() {
     return countryId;
   }
@@ -275,7 +274,7 @@ public class OfficeForCreate {
    * Get timeZoneId.
    * @return timeZoneId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeZoneId() {
     return timeZoneId;
   }
@@ -302,7 +301,7 @@ public class OfficeForCreate {
    * Get phone.
    * @return phone
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhone() {
     return phone;
   }

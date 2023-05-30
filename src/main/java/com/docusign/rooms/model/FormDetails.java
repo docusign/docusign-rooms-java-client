@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -43,7 +42,7 @@ public class FormDetails {
    * Get formId.
    * @return formId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.UUID getFormId() {
     return formId;
   }
@@ -52,7 +51,7 @@ public class FormDetails {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -61,7 +60,7 @@ public class FormDetails {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
@@ -70,7 +69,7 @@ public class FormDetails {
    * Get lastUpdatedDate.
    * @return lastUpdatedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getLastUpdatedDate() {
     return lastUpdatedDate;
   }
@@ -79,7 +78,7 @@ public class FormDetails {
    * Get availableOnDate.
    * @return availableOnDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getAvailableOnDate() {
     return availableOnDate;
   }
@@ -88,7 +87,7 @@ public class FormDetails {
    * Get ownerName.
    * @return ownerName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOwnerName() {
     return ownerName;
   }
@@ -97,7 +96,7 @@ public class FormDetails {
    * Get version.
    * @return version
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVersion() {
     return version;
   }
@@ -106,7 +105,7 @@ public class FormDetails {
    * Get numberOfPages.
    * @return numberOfPages
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getNumberOfPages() {
     return numberOfPages;
   }

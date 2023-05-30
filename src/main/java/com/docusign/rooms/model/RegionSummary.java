@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -39,7 +38,7 @@ public class RegionSummary {
    * Get regionId.
    * @return regionId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRegionId() {
     return regionId;
   }
@@ -66,7 +65,7 @@ public class RegionSummary {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -93,7 +92,7 @@ public class RegionSummary {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }

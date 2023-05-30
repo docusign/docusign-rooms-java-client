@@ -1,7 +1,7 @@
 
 package com.docusign.rooms.api;
 
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.GenericType;
 
 import com.docusign.rooms.client.ApiException;
 import com.docusign.rooms.client.ApiClient;

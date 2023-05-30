@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ClassicAgentToInvite.
@@ -47,7 +46,7 @@ public class ClassicAgentToInvite {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -74,7 +73,7 @@ public class ClassicAgentToInvite {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getLastName() {
     return lastName;
   }
@@ -101,7 +100,7 @@ public class ClassicAgentToInvite {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getEmail() {
     return email;
   }
@@ -128,7 +127,7 @@ public class ClassicAgentToInvite {
    * Get officeId.
    * @return officeId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public Integer getOfficeId() {
     return officeId;
   }
@@ -155,7 +154,7 @@ public class ClassicAgentToInvite {
    * Get companyTypeId.
    * @return companyTypeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompanyTypeId() {
     return companyTypeId;
   }
@@ -182,7 +181,7 @@ public class ClassicAgentToInvite {
    * Required when the company is tightly bound to an eSign account; otherwise ignored..
    * @return eSignPermissionProfileId
    **/
-  @ApiModelProperty(value = "Required when the company is tightly bound to an eSign account; otherwise ignored.")
+  @Schema(description = "Required when the company is tightly bound to an eSign account; otherwise ignored.")
   public String getESignPermissionProfileId() {
     return eSignPermissionProfileId;
   }

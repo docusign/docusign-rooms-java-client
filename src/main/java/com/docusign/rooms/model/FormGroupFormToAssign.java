@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FormGroupFormToAssign.
@@ -35,7 +34,7 @@ public class FormGroupFormToAssign {
    * Get formId.
    * @return formId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public java.util.UUID getFormId() {
     return formId;
   }
@@ -62,7 +61,7 @@ public class FormGroupFormToAssign {
    * Get isRequired.
    * @return isRequired
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsRequired() {
     return isRequired;
   }

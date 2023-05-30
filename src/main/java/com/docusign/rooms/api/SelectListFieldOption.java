@@ -2,52 +2,52 @@ package com.docusign.rooms.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.rooms.model.Field;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
- * FieldSet.
+ * SelectListFieldOption.
  *
  */
 
-public class FieldSet {
-  @JsonProperty("fieldSetId")
-  private java.util.UUID fieldSetId = null;
+public class SelectListFieldOption {
+  @JsonProperty("id")
+  private String id = null;
 
   @JsonProperty("title")
   private String title = null;
 
-  @JsonProperty("fields")
-  private java.util.List<Field> fields = null;
+  @JsonProperty("order")
+  private Integer order = null;
 
   /**
-   * Get fieldSetId.
-   * @return fieldSetId
+   * Get id.
+   * @return id
    **/
-  @Schema(description = "")
-  public java.util.UUID getFieldSetId() {
-    return fieldSetId;
+  @ApiModelProperty(value = "")
+  public String getId() {
+    return id;
   }
 
   /**
    * Get title.
    * @return title
    **/
-  @Schema(description = "")
+  @ApiModelProperty(value = "")
   public String getTitle() {
     return title;
   }
 
   /**
-   * Get fields.
-   * @return fields
+   * Get order.
+   * @return order
    **/
-  @Schema(description = "")
-  public java.util.List<Field> getFields() {
-    return fields;
+  @ApiModelProperty(value = "")
+  public Integer getOrder() {
+    return order;
   }
 
 
@@ -64,10 +64,10 @@ public class FieldSet {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FieldSet fieldSet = (FieldSet) o;
-    return Objects.equals(this.fieldSetId, fieldSet.fieldSetId) &&
-        Objects.equals(this.title, fieldSet.title) &&
-        Objects.equals(this.fields, fieldSet.fields);
+    SelectListFieldOption selectListFieldOption = (SelectListFieldOption) o;
+    return Objects.equals(this.id, selectListFieldOption.id) &&
+        Objects.equals(this.title, selectListFieldOption.title) &&
+        Objects.equals(this.order, selectListFieldOption.order);
   }
 
   /**
@@ -75,7 +75,7 @@ public class FieldSet {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(fieldSetId, title, fields);
+    return Objects.hash(id, title, order);
   }
 
 
@@ -85,11 +85,11 @@ public class FieldSet {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class FieldSet {\n");
+    sb.append("class SelectListFieldOption {\n");
     
-    sb.append("    fieldSetId: ").append(toIndentedString(fieldSetId)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
-    sb.append("    fields: ").append(toIndentedString(fields)).append("\n");
+    sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("}");
     return sb.toString();
   }

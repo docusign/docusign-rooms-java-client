@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ExternalFormFillSessionForCreate.
@@ -41,7 +40,7 @@ public class ExternalFormFillSessionForCreate {
    * Get formId.
    * @return formId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormId() {
     return formId;
   }
@@ -68,7 +67,7 @@ public class ExternalFormFillSessionForCreate {
    * Get roomId.
    * @return roomId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public Integer getRoomId() {
     return roomId;
   }
@@ -108,7 +107,7 @@ public class ExternalFormFillSessionForCreate {
    * Get formIds.
    * @return formIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<java.util.UUID> getFormIds() {
     return formIds;
   }
@@ -135,7 +134,7 @@ public class ExternalFormFillSessionForCreate {
    * Get xFrameAllowedUrl.
    * @return xFrameAllowedUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getXFrameAllowedUrl() {
     return xFrameAllowedUrl;
   }

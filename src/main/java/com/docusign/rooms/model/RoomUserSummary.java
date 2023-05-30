@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomUserSummary.
@@ -45,7 +44,7 @@ public class RoomUserSummary {
    * Get userId.
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getUserId() {
     return userId;
   }
@@ -54,7 +53,7 @@ public class RoomUserSummary {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -63,7 +62,7 @@ public class RoomUserSummary {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -72,7 +71,7 @@ public class RoomUserSummary {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastName() {
     return lastName;
   }
@@ -81,7 +80,7 @@ public class RoomUserSummary {
    * Get transactionSideId.
    * @return transactionSideId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTransactionSideId() {
     return transactionSideId;
   }
@@ -90,7 +89,7 @@ public class RoomUserSummary {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -99,7 +98,7 @@ public class RoomUserSummary {
    * Get titleId.
    * @return titleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTitleId() {
     return titleId;
   }
@@ -108,7 +107,7 @@ public class RoomUserSummary {
    * Get companyName.
    * @return companyName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompanyName() {
     return companyName;
   }
@@ -117,7 +116,7 @@ public class RoomUserSummary {
    * Get roleName.
    * @return roleName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRoleName() {
     return roleName;
   }

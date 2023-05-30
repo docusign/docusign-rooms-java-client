@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomInviteResponse.
@@ -39,7 +38,7 @@ public class RoomInviteResponse {
    * Get userId.
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getUserId() {
     return userId;
   }
@@ -48,7 +47,7 @@ public class RoomInviteResponse {
    * Get roomId.
    * @return roomId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoomId() {
     return roomId;
   }
@@ -57,7 +56,7 @@ public class RoomInviteResponse {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -66,7 +65,7 @@ public class RoomInviteResponse {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -75,7 +74,7 @@ public class RoomInviteResponse {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastName() {
     return lastName;
   }
@@ -84,7 +83,7 @@ public class RoomInviteResponse {
    * Get transactionSideId.
    * @return transactionSideId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTransactionSideId() {
     return transactionSideId;
   }
@@ -93,7 +92,7 @@ public class RoomInviteResponse {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoleId() {
     return roleId;
   }

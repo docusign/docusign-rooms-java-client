@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -69,7 +68,7 @@ public class TaskSummary {
    * Get taskId.
    * @return taskId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTaskId() {
     return taskId;
   }
@@ -96,7 +95,7 @@ public class TaskSummary {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -123,7 +122,7 @@ public class TaskSummary {
    * Get requiresApproval.
    * @return requiresApproval
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRequiresApproval() {
     return requiresApproval;
   }
@@ -150,7 +149,7 @@ public class TaskSummary {
    * Get dueDateTypeId.
    * @return dueDateTypeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDueDateTypeId() {
     return dueDateTypeId;
   }
@@ -177,7 +176,7 @@ public class TaskSummary {
    * Get dueDateOffset.
    * @return dueDateOffset
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDueDateOffset() {
     return dueDateOffset;
   }
@@ -204,7 +203,7 @@ public class TaskSummary {
    * Get fixedDueDate.
    * @return fixedDueDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getFixedDueDate() {
     return fixedDueDate;
   }
@@ -231,7 +230,7 @@ public class TaskSummary {
    * Get ownerUserId.
    * @return ownerUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOwnerUserId() {
     return ownerUserId;
   }
@@ -258,7 +257,7 @@ public class TaskSummary {
    * Get completionDate.
    * @return completionDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCompletionDate() {
     return completionDate;
   }
@@ -285,7 +284,7 @@ public class TaskSummary {
    * Get approvalDate.
    * @return approvalDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getApprovalDate() {
     return approvalDate;
   }
@@ -312,7 +311,7 @@ public class TaskSummary {
    * Get rejectedDate.
    * @return rejectedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getRejectedDate() {
     return rejectedDate;
   }
@@ -339,7 +338,7 @@ public class TaskSummary {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
@@ -366,7 +365,7 @@ public class TaskSummary {
    * Get isDocumentTask.
    * @return isDocumentTask
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsDocumentTask() {
     return isDocumentTask;
   }
@@ -393,7 +392,7 @@ public class TaskSummary {
    * Get requiresReview.
    * @return requiresReview
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRequiresReview() {
     return requiresReview;
   }

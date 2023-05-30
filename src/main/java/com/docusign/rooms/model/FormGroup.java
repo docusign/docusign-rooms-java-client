@@ -6,8 +6,7 @@ import com.docusign.rooms.model.GroupForm;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FormGroup.
@@ -31,7 +30,7 @@ public class FormGroup {
    * Get formGroupId.
    * @return formGroupId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.UUID getFormGroupId() {
     return formGroupId;
   }
@@ -40,7 +39,7 @@ public class FormGroup {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -49,7 +48,7 @@ public class FormGroup {
    * Get officeIds.
    * @return officeIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Integer> getOfficeIds() {
     return officeIds;
   }
@@ -58,7 +57,7 @@ public class FormGroup {
    * Get forms.
    * @return forms
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<GroupForm> getForms() {
     return forms;
   }

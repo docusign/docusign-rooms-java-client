@@ -6,8 +6,7 @@ import com.docusign.rooms.model.Permissions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -55,7 +54,7 @@ public class Role {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -82,7 +81,7 @@ public class Role {
    * Get legacyRoleId.
    * @return legacyRoleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLegacyRoleId() {
     return legacyRoleId;
   }
@@ -109,7 +108,7 @@ public class Role {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -136,7 +135,7 @@ public class Role {
    * Get isDefaultForAdmin.
    * @return isDefaultForAdmin
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsDefaultForAdmin() {
     return isDefaultForAdmin;
   }
@@ -163,7 +162,7 @@ public class Role {
    * Get isExternal.
    * @return isExternal
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsExternal() {
     return isExternal;
   }
@@ -190,7 +189,7 @@ public class Role {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
@@ -217,7 +216,7 @@ public class Role {
    * Get isAssigned.
    * @return isAssigned
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsAssigned() {
     return isAssigned;
   }
@@ -244,7 +243,7 @@ public class Role {
    * Get permissions.
    * @return permissions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Permissions getPermissions() {
     return permissions;
   }

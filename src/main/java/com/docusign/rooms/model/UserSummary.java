@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * UserSummary.
@@ -92,7 +91,7 @@ public class UserSummary {
    * Get userId.
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getUserId() {
     return userId;
   }
@@ -101,7 +100,7 @@ public class UserSummary {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -110,7 +109,7 @@ public class UserSummary {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -119,7 +118,7 @@ public class UserSummary {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastName() {
     return lastName;
   }
@@ -128,7 +127,7 @@ public class UserSummary {
    * Get isLockedOut.
    * @return isLockedOut
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsLockedOut() {
     return isLockedOut;
   }
@@ -137,7 +136,7 @@ public class UserSummary {
    * Get status.
    * @return status
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatus() {
     return status;
   }
@@ -157,7 +156,7 @@ public class UserSummary {
    * Get accessLevel.
    * @return accessLevel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public AccessLevelEnum getAccessLevel() {
     return accessLevel;
   }
@@ -173,7 +172,7 @@ public class UserSummary {
    * Get defaultOfficeId.
    * @return defaultOfficeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDefaultOfficeId() {
     return defaultOfficeId;
   }
@@ -182,7 +181,7 @@ public class UserSummary {
    * Get titleId.
    * @return titleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTitleId() {
     return titleId;
   }
@@ -191,7 +190,7 @@ public class UserSummary {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -200,7 +199,7 @@ public class UserSummary {
    * Get profileImageUrl.
    * @return profileImageUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProfileImageUrl() {
     return profileImageUrl;
   }

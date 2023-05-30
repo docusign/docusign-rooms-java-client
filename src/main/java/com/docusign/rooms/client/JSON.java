@@ -2,12 +2,10 @@ package com.docusign.rooms.client;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
-import com.fasterxml.jackson.datatype.joda.JodaModule;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import java.text.DateFormat;
 
-import javax.ws.rs.ext.ContextResolver;
+import jakarta.ws.rs.ext.ContextResolver;
 
 
 
@@ -25,7 +23,6 @@ public class JSON implements ContextResolver<ObjectMapper> {
   **/
   public JSON() {
     mapper = new ObjectMapper();
-    mapper.registerModules(new JavaTimeModule(), new JodaModule());
     mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     mapper.configure(DeserializationFeature.FAIL_ON_INVALID_SUBTYPE, false);

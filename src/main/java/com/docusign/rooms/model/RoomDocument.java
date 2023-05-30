@@ -6,8 +6,7 @@ import com.docusign.rooms.model.RoomDocumentOwner;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -67,7 +66,7 @@ public class RoomDocument {
    * Get documentId.
    * @return documentId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDocumentId() {
     return documentId;
   }
@@ -94,7 +93,7 @@ public class RoomDocument {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -121,7 +120,7 @@ public class RoomDocument {
    * Get ownerId.
    * @return ownerId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOwnerId() {
     return ownerId;
   }
@@ -148,7 +147,7 @@ public class RoomDocument {
    * Get size.
    * @return size
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Long getSize() {
     return size;
   }
@@ -175,7 +174,7 @@ public class RoomDocument {
    * Get folderId.
    * @return folderId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getFolderId() {
     return folderId;
   }
@@ -202,7 +201,7 @@ public class RoomDocument {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
@@ -229,7 +228,7 @@ public class RoomDocument {
    * Get isSigned.
    * @return isSigned
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsSigned() {
     return isSigned;
   }
@@ -256,7 +255,7 @@ public class RoomDocument {
    * Get docuSignFormId.
    * @return docuSignFormId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocuSignFormId() {
     return docuSignFormId;
   }
@@ -283,7 +282,7 @@ public class RoomDocument {
    * Get isArchived.
    * @return isArchived
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsArchived() {
     return isArchived;
   }
@@ -310,7 +309,7 @@ public class RoomDocument {
    * Get isVirtual.
    * @return isVirtual
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsVirtual() {
     return isVirtual;
   }
@@ -337,7 +336,7 @@ public class RoomDocument {
    * Get isDynamic.
    * @return isDynamic
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsDynamic() {
     return isDynamic;
   }
@@ -364,7 +363,7 @@ public class RoomDocument {
    * Get owner.
    * @return owner
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public RoomDocumentOwner getOwner() {
     return owner;
   }

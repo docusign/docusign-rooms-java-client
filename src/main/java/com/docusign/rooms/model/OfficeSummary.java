@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.OffsetDateTime;
 
 /**
@@ -55,7 +54,7 @@ public class OfficeSummary {
    * Get officeId.
    * @return officeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOfficeId() {
     return officeId;
   }
@@ -64,7 +63,7 @@ public class OfficeSummary {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -73,7 +72,7 @@ public class OfficeSummary {
    * Get regionId.
    * @return regionId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getRegionId() {
     return regionId;
   }
@@ -82,7 +81,7 @@ public class OfficeSummary {
    * Get address1.
    * @return address1
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAddress1() {
     return address1;
   }
@@ -91,7 +90,7 @@ public class OfficeSummary {
    * Get address2.
    * @return address2
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAddress2() {
     return address2;
   }
@@ -100,7 +99,7 @@ public class OfficeSummary {
    * Get city.
    * @return city
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCity() {
     return city;
   }
@@ -109,7 +108,7 @@ public class OfficeSummary {
    * Get stateId.
    * @return stateId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStateId() {
     return stateId;
   }
@@ -118,7 +117,7 @@ public class OfficeSummary {
    * Get postalCode.
    * @return postalCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPostalCode() {
     return postalCode;
   }
@@ -127,7 +126,7 @@ public class OfficeSummary {
    * Get countryId.
    * @return countryId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCountryId() {
     return countryId;
   }
@@ -136,7 +135,7 @@ public class OfficeSummary {
    * Get timeZoneId.
    * @return timeZoneId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeZoneId() {
     return timeZoneId;
   }
@@ -145,7 +144,7 @@ public class OfficeSummary {
    * Get phone.
    * @return phone
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhone() {
     return phone;
   }
@@ -154,7 +153,7 @@ public class OfficeSummary {
    * Get createdDate.
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }

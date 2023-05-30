@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FormGroupSummary.
@@ -27,7 +26,7 @@ public class FormGroupSummary {
    * Get formGroupId.
    * @return formGroupId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormGroupId() {
     return formGroupId;
   }
@@ -36,7 +35,7 @@ public class FormGroupSummary {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -45,7 +44,7 @@ public class FormGroupSummary {
    * Get formCount.
    * @return formCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getFormCount() {
     return formCount;
   }

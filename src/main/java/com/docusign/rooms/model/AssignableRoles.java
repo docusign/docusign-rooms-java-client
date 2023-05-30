@@ -6,8 +6,7 @@ import com.docusign.rooms.model.RoleSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AssignableRoles.
@@ -54,7 +53,7 @@ public class AssignableRoles {
    * Get currentRoleId.
    * @return currentRoleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getCurrentRoleId() {
     return currentRoleId;
   }
@@ -94,7 +93,7 @@ public class AssignableRoles {
    * Get roles.
    * @return roles
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RoleSummary> getRoles() {
     return roles;
   }
@@ -121,7 +120,7 @@ public class AssignableRoles {
    * Get resultSetSize.
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getResultSetSize() {
     return resultSetSize;
   }
@@ -148,7 +147,7 @@ public class AssignableRoles {
    * Get startPosition.
    * @return startPosition
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getStartPosition() {
     return startPosition;
   }
@@ -164,7 +163,7 @@ public class AssignableRoles {
    * Get endPosition.
    * @return endPosition
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getEndPosition() {
     return endPosition;
   }
@@ -184,7 +183,7 @@ public class AssignableRoles {
    * Get nextUri.
    * @return nextUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNextUri() {
     return nextUri;
   }
@@ -211,7 +210,7 @@ public class AssignableRoles {
    * Get priorUri.
    * @return priorUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPriorUri() {
     return priorUri;
   }
@@ -238,7 +237,7 @@ public class AssignableRoles {
    * Get totalRowCount.
    * @return totalRowCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTotalRowCount() {
     return totalRowCount;
   }

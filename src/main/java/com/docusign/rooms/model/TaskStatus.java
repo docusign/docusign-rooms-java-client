@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TaskStatus.
@@ -35,7 +34,7 @@ public class TaskStatus {
    * Get taskStatusId.
    * @return taskStatusId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTaskStatusId() {
     return taskStatusId;
   }
@@ -62,7 +61,7 @@ public class TaskStatus {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }

@@ -6,8 +6,7 @@ import com.docusign.rooms.model.State;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * GlobalStates.
@@ -46,7 +45,7 @@ public class GlobalStates {
    * Get states.
    * @return states
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<State> getStates() {
     return states;
   }

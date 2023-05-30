@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * OfficeReferenceCount.
@@ -35,7 +34,7 @@ public class OfficeReferenceCount {
    * Get referenceType.
    * @return referenceType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReferenceType() {
     return referenceType;
   }
@@ -51,7 +50,7 @@ public class OfficeReferenceCount {
    * Get referencedCount.
    * @return referencedCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getReferencedCount() {
     return referencedCount;
   }

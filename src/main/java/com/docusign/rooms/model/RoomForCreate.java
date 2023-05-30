@@ -6,8 +6,7 @@ import com.docusign.rooms.model.FieldDataForCreate;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomForCreate.
@@ -89,7 +88,7 @@ public class RoomForCreate {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getName() {
     return name;
   }
@@ -116,7 +115,7 @@ public class RoomForCreate {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -143,7 +142,7 @@ public class RoomForCreate {
    * Required for a real estate company; otherwise ignored..
    * @return transactionSideId
    **/
-  @ApiModelProperty(value = "Required for a real estate company; otherwise ignored.")
+  @Schema(description = "Required for a real estate company; otherwise ignored.")
   public String getTransactionSideId() {
     return transactionSideId;
   }
@@ -170,7 +169,7 @@ public class RoomForCreate {
    * Get ownerId.
    * @return ownerId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOwnerId() {
     return ownerId;
   }
@@ -197,7 +196,7 @@ public class RoomForCreate {
    * Get templateId.
    * @return templateId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTemplateId() {
     return templateId;
   }
@@ -224,7 +223,7 @@ public class RoomForCreate {
    * Get officeId.
    * @return officeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getOfficeId() {
     return officeId;
   }
@@ -251,7 +250,7 @@ public class RoomForCreate {
    * Get fieldData.
    * @return fieldData
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public FieldDataForCreate getFieldData() {
     return fieldData;
   }
@@ -278,7 +277,7 @@ public class RoomForCreate {
    * Get listingSource.
    * @return listingSource
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ListingSourceEnum getListingSource() {
     return listingSource;
   }

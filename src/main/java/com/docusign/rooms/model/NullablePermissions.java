@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * NullablePermissions
@@ -184,7 +183,7 @@ public class NullablePermissions {
    * Get canAddUsersToRooms
    * @return canAddUsersToRooms
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAddUsersToRooms() {
     return canAddUsersToRooms;
   }
@@ -202,7 +201,7 @@ public class NullablePermissions {
    * Get canCreateRooms
    * @return canCreateRooms
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanCreateRooms() {
     return canCreateRooms;
   }
@@ -220,7 +219,7 @@ public class NullablePermissions {
    * Get canSubmitRoomsForReview
    * @return canSubmitRoomsForReview
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanSubmitRoomsForReview() {
     return canSubmitRoomsForReview;
   }
@@ -238,7 +237,7 @@ public class NullablePermissions {
    * Get canCloseRooms
    * @return canCloseRooms
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanCloseRooms() {
     return canCloseRooms;
   }
@@ -256,7 +255,7 @@ public class NullablePermissions {
    * Get canReopenRooms
    * @return canReopenRooms
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanReopenRooms() {
     return canReopenRooms;
   }
@@ -274,7 +273,7 @@ public class NullablePermissions {
    * Get canDeleteOwnedRooms
    * @return canDeleteOwnedRooms
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanDeleteOwnedRooms() {
     return canDeleteOwnedRooms;
   }
@@ -292,7 +291,7 @@ public class NullablePermissions {
    * Get autoAccessToRooms
    * @return autoAccessToRooms
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isAutoAccessToRooms() {
     return autoAccessToRooms;
   }
@@ -310,7 +309,7 @@ public class NullablePermissions {
    * Get canExportRoomActivityDetailsPeople
    * @return canExportRoomActivityDetailsPeople
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanExportRoomActivityDetailsPeople() {
     return canExportRoomActivityDetailsPeople;
   }
@@ -328,7 +327,7 @@ public class NullablePermissions {
    * Get isVisibleInRooms
    * @return isVisibleInRooms
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsVisibleInRooms() {
     return isVisibleInRooms;
   }
@@ -346,7 +345,7 @@ public class NullablePermissions {
    * Get canCopyRoomDetails
    * @return canCopyRoomDetails
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanCopyRoomDetails() {
     return canCopyRoomDetails;
   }
@@ -364,7 +363,7 @@ public class NullablePermissions {
    * Get canEditAnyRoomRole
    * @return canEditAnyRoomRole
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanEditAnyRoomRole() {
     return canEditAnyRoomRole;
   }
@@ -382,7 +381,7 @@ public class NullablePermissions {
    * Get canEditInvitedRoomRole
    * @return canEditInvitedRoomRole
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanEditInvitedRoomRole() {
     return canEditInvitedRoomRole;
   }
@@ -400,7 +399,7 @@ public class NullablePermissions {
    * Get canManageAnyUserRoomAccess
    * @return canManageAnyUserRoomAccess
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageAnyUserRoomAccess() {
     return canManageAnyUserRoomAccess;
   }
@@ -418,7 +417,7 @@ public class NullablePermissions {
    * Get canManageInvitedUserRoomAccess
    * @return canManageInvitedUserRoomAccess
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageInvitedUserRoomAccess() {
     return canManageInvitedUserRoomAccess;
   }
@@ -436,7 +435,7 @@ public class NullablePermissions {
    * Get canViewRoomDetails
    * @return canViewRoomDetails
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanViewRoomDetails() {
     return canViewRoomDetails;
   }
@@ -454,7 +453,7 @@ public class NullablePermissions {
    * Get canViewAndEditRoomDetails
    * @return canViewAndEditRoomDetails
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanViewAndEditRoomDetails() {
     return canViewAndEditRoomDetails;
   }
@@ -472,7 +471,7 @@ public class NullablePermissions {
    * Get canSendRoomDetailsToLoneWolf
    * @return canSendRoomDetailsToLoneWolf
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanSendRoomDetailsToLoneWolf() {
     return canSendRoomDetailsToLoneWolf;
   }
@@ -490,7 +489,7 @@ public class NullablePermissions {
    * Get canAddDocuments
    * @return canAddDocuments
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAddDocuments() {
     return canAddDocuments;
   }
@@ -508,7 +507,7 @@ public class NullablePermissions {
    * Get canAddDocumentsFromFormGroups
    * @return canAddDocumentsFromFormGroups
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAddDocumentsFromFormGroups() {
     return canAddDocumentsFromFormGroups;
   }
@@ -526,7 +525,7 @@ public class NullablePermissions {
    * Get canAddDocumentsFromFormLibraries
    * @return canAddDocumentsFromFormLibraries
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAddDocumentsFromFormLibraries() {
     return canAddDocumentsFromFormLibraries;
   }
@@ -544,7 +543,7 @@ public class NullablePermissions {
    * Get documentsViewableByOthersInRoomFromOffice
    * @return documentsViewableByOthersInRoomFromOffice
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isDocumentsViewableByOthersInRoomFromOffice() {
     return documentsViewableByOthersInRoomFromOffice;
   }
@@ -562,7 +561,7 @@ public class NullablePermissions {
    * Get documentsAutoOwnedByPeers
    * @return documentsAutoOwnedByPeers
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isDocumentsAutoOwnedByPeers() {
     return documentsAutoOwnedByPeers;
   }
@@ -580,7 +579,7 @@ public class NullablePermissions {
    * Get canDeleteOwnedDocuments
    * @return canDeleteOwnedDocuments
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanDeleteOwnedDocuments() {
     return canDeleteOwnedDocuments;
   }
@@ -598,7 +597,7 @@ public class NullablePermissions {
    * Get canManageSharedDocs
    * @return canManageSharedDocs
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageSharedDocs() {
     return canManageSharedDocs;
   }
@@ -616,7 +615,7 @@ public class NullablePermissions {
    * Get canManageFormGroups
    * @return canManageFormGroups
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageFormGroups() {
     return canManageFormGroups;
   }
@@ -634,7 +633,7 @@ public class NullablePermissions {
    * Get canShareDocsNotOwned
    * @return canShareDocsNotOwned
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanShareDocsNotOwned() {
     return canShareDocsNotOwned;
   }
@@ -652,7 +651,7 @@ public class NullablePermissions {
    * Get canAddTasksToAnyTaskLists
    * @return canAddTasksToAnyTaskLists
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAddTasksToAnyTaskLists() {
     return canAddTasksToAnyTaskLists;
   }
@@ -670,7 +669,7 @@ public class NullablePermissions {
    * Get canEditEditableTasks
    * @return canEditEditableTasks
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanEditEditableTasks() {
     return canEditEditableTasks;
   }
@@ -688,7 +687,7 @@ public class NullablePermissions {
    * Get canEditAnyTasks
    * @return canEditAnyTasks
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanEditAnyTasks() {
     return canEditAnyTasks;
   }
@@ -706,7 +705,7 @@ public class NullablePermissions {
    * Get canDeleteDeletableTasks
    * @return canDeleteDeletableTasks
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanDeleteDeletableTasks() {
     return canDeleteDeletableTasks;
   }
@@ -724,7 +723,7 @@ public class NullablePermissions {
    * Get canDeleteAnyTasks
    * @return canDeleteAnyTasks
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanDeleteAnyTasks() {
     return canDeleteAnyTasks;
   }
@@ -742,7 +741,7 @@ public class NullablePermissions {
    * Get canApplyTaskList
    * @return canApplyTaskList
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanApplyTaskList() {
     return canApplyTaskList;
   }
@@ -760,7 +759,7 @@ public class NullablePermissions {
    * Get canRemoveAnyTaskList
    * @return canRemoveAnyTaskList
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanRemoveAnyTaskList() {
     return canRemoveAnyTaskList;
   }
@@ -778,7 +777,7 @@ public class NullablePermissions {
    * Get canSubmitTaskList
    * @return canSubmitTaskList
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanSubmitTaskList() {
     return canSubmitTaskList;
   }
@@ -796,7 +795,7 @@ public class NullablePermissions {
    * Get canAutoSubmitTaskList
    * @return canAutoSubmitTaskList
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAutoSubmitTaskList() {
     return canAutoSubmitTaskList;
   }
@@ -814,7 +813,7 @@ public class NullablePermissions {
    * Get canReviewTaskList
    * @return canReviewTaskList
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanReviewTaskList() {
     return canReviewTaskList;
   }
@@ -832,7 +831,7 @@ public class NullablePermissions {
    * Get canAutoApproveTaskList
    * @return canAutoApproveTaskList
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAutoApproveTaskList() {
     return canAutoApproveTaskList;
   }
@@ -850,7 +849,7 @@ public class NullablePermissions {
    * Get canManageTaskTemplatesForAllRegionsAllOffices
    * @return canManageTaskTemplatesForAllRegionsAllOffices
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageTaskTemplatesForAllRegionsAllOffices() {
     return canManageTaskTemplatesForAllRegionsAllOffices;
   }
@@ -868,7 +867,7 @@ public class NullablePermissions {
    * Get canApplyRoomTemplates
    * @return canApplyRoomTemplates
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanApplyRoomTemplates() {
     return canApplyRoomTemplates;
   }
@@ -886,7 +885,7 @@ public class NullablePermissions {
    * Get canAddTasksToRooms
    * @return canAddTasksToRooms
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAddTasksToRooms() {
     return canAddTasksToRooms;
   }
@@ -904,7 +903,7 @@ public class NullablePermissions {
    * Get canCreateAndManagePackages
    * @return canCreateAndManagePackages
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanCreateAndManagePackages() {
     return canCreateAndManagePackages;
   }
@@ -922,7 +921,7 @@ public class NullablePermissions {
    * Get canAddMemberAndSetRoleLowerAccessLevel
    * @return canAddMemberAndSetRoleLowerAccessLevel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAddMemberAndSetRoleLowerAccessLevel() {
     return canAddMemberAndSetRoleLowerAccessLevel;
   }
@@ -940,7 +939,7 @@ public class NullablePermissions {
    * Get canAddMemberAndSetRoleSameAccessLevel
    * @return canAddMemberAndSetRoleSameAccessLevel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanAddMemberAndSetRoleSameAccessLevel() {
     return canAddMemberAndSetRoleSameAccessLevel;
   }
@@ -958,7 +957,7 @@ public class NullablePermissions {
    * Get canChangeMemberRoleLowerAccessLevel
    * @return canChangeMemberRoleLowerAccessLevel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanChangeMemberRoleLowerAccessLevel() {
     return canChangeMemberRoleLowerAccessLevel;
   }
@@ -976,7 +975,7 @@ public class NullablePermissions {
    * Get canChangeMemberRoleSameAccessLevel
    * @return canChangeMemberRoleSameAccessLevel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanChangeMemberRoleSameAccessLevel() {
     return canChangeMemberRoleSameAccessLevel;
   }
@@ -994,7 +993,7 @@ public class NullablePermissions {
    * Get canManageMemberLowerAccessLevel
    * @return canManageMemberLowerAccessLevel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageMemberLowerAccessLevel() {
     return canManageMemberLowerAccessLevel;
   }
@@ -1012,7 +1011,7 @@ public class NullablePermissions {
    * Get canManageMemberSameAccessLevel
    * @return canManageMemberSameAccessLevel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageMemberSameAccessLevel() {
     return canManageMemberSameAccessLevel;
   }
@@ -1030,7 +1029,7 @@ public class NullablePermissions {
    * Get canRemoveCompanyMemberLowerAccessLevel
    * @return canRemoveCompanyMemberLowerAccessLevel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanRemoveCompanyMemberLowerAccessLevel() {
     return canRemoveCompanyMemberLowerAccessLevel;
   }
@@ -1048,7 +1047,7 @@ public class NullablePermissions {
    * Get canRemoveCompanyMemberSameAccessLevel
    * @return canRemoveCompanyMemberSameAccessLevel
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanRemoveCompanyMemberSameAccessLevel() {
     return canRemoveCompanyMemberSameAccessLevel;
   }
@@ -1066,7 +1065,7 @@ public class NullablePermissions {
    * Get canManageAccount
    * @return canManageAccount
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageAccount() {
     return canManageAccount;
   }
@@ -1084,7 +1083,7 @@ public class NullablePermissions {
    * Get canManageLogo
    * @return canManageLogo
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageLogo() {
     return canManageLogo;
   }
@@ -1102,7 +1101,7 @@ public class NullablePermissions {
    * Get canManageRoomDetails
    * @return canManageRoomDetails
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageRoomDetails() {
     return canManageRoomDetails;
   }
@@ -1120,7 +1119,7 @@ public class NullablePermissions {
    * Get canManageRoomTemplates
    * @return canManageRoomTemplates
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageRoomTemplates() {
     return canManageRoomTemplates;
   }
@@ -1138,7 +1137,7 @@ public class NullablePermissions {
    * Get canManageIntegrationSettings
    * @return canManageIntegrationSettings
   **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanManageIntegrationSettings() {
     return canManageIntegrationSettings;
   }

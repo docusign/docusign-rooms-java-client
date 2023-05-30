@@ -5,8 +5,7 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RoomInvite.
@@ -44,7 +43,7 @@ public class RoomInvite {
    * Get email.
    * @return email
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getEmail() {
     return email;
   }
@@ -71,7 +70,7 @@ public class RoomInvite {
    * Get firstName.
    * @return firstName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getFirstName() {
     return firstName;
   }
@@ -98,7 +97,7 @@ public class RoomInvite {
    * Get lastName.
    * @return lastName
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public String getLastName() {
     return lastName;
   }
@@ -125,7 +124,7 @@ public class RoomInvite {
    * Get roleId.
    * @return roleId
    **/
-  @ApiModelProperty(required = true, value = "")
+  @Schema(required = true, description = "")
   public Integer getRoleId() {
     return roleId;
   }
@@ -152,7 +151,7 @@ public class RoomInvite {
    * Required for a real estate company; otherwise ignored..
    * @return transactionSideId
    **/
-  @ApiModelProperty(value = "Required for a real estate company; otherwise ignored.")
+  @Schema(description = "Required for a real estate company; otherwise ignored.")
   public String getTransactionSideId() {
     return transactionSideId;
   }

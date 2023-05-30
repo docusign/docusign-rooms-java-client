@@ -6,8 +6,7 @@ import com.docusign.rooms.model.ESignAccountRoleSettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ESignPermissionProfile.
@@ -39,7 +38,7 @@ public class ESignPermissionProfile {
    * Get eSignPermissionProfileId.
    * @return eSignPermissionProfileId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getESignPermissionProfileId() {
     return eSignPermissionProfileId;
   }
@@ -66,7 +65,7 @@ public class ESignPermissionProfile {
    * Get name.
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -93,7 +92,7 @@ public class ESignPermissionProfile {
    * Get settings.
    * @return settings
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ESignAccountRoleSettings getSettings() {
     return settings;
   }

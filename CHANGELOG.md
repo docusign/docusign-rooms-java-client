@@ -1,6 +1,12 @@
 # DocuSign Rooms Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v1.4.1] - Rooms API v2-1.1.1 - 2023-05-31
+### Changed
+- Jakarta Support enabled
+- Updated the SDK release version.
+- Fixed Compilation Error Related to io.swagger.v3.oas.annotations.media.Schema;
+
 ## [v1.4.0] - Rooms API v2-1.1.1 - 2023-05-30
 ### Changed
 - Jakarta Support enabled

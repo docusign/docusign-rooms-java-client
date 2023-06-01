@@ -5,7 +5,7 @@
     <artifactId>docusign-rooms-java</artifactId>
     <packaging>jar</packaging>
     <name>docusign-rooms-java</name>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <url>https://developers.docusign.com</url>
     <description>The official DocuSign Rooms Java client provides libraries for Java application integration with DocuSign Rooms for real estate and mortgage workflows. It is recommended that you use this version of the library for new development.</description>
 

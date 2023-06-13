@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * TaskListSummary.
@@ -24,16 +24,16 @@ public class TaskListSummary {
   private Integer taskListTemplateId = null;
 
   @JsonProperty("submittedForReviewDate")
-  private OffsetDateTime submittedForReviewDate = null;
+  private String submittedForReviewDate = null;
 
   @JsonProperty("approvalDate")
-  private OffsetDateTime approvalDate = null;
+  private String approvalDate = null;
 
   @JsonProperty("rejectedDate")
-  private OffsetDateTime rejectedDate = null;
+  private String rejectedDate = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
   @JsonProperty("approvedByUserId")
   private Integer approvedByUserId = null;
@@ -76,7 +76,7 @@ public class TaskListSummary {
    * @return submittedForReviewDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getSubmittedForReviewDate() {
+  public String getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
@@ -85,7 +85,7 @@ public class TaskListSummary {
    * @return approvalDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getApprovalDate() {
+  public String getApprovalDate() {
     return approvalDate;
   }
 
@@ -94,7 +94,7 @@ public class TaskListSummary {
    * @return rejectedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getRejectedDate() {
+  public String getRejectedDate() {
     return rejectedDate;
   }
 
@@ -103,7 +103,7 @@ public class TaskListSummary {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 

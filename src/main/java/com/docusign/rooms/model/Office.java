@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * Office.
@@ -48,7 +48,7 @@ public class Office {
   private String phone = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
 
   /**
@@ -353,7 +353,7 @@ public class Office {
    *
    * @return Office
    **/
-  public Office createdDate(OffsetDateTime createdDate) {
+  public Office createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -363,14 +363,14 @@ public class Office {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(OffsetDateTime createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 

@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * Room.
@@ -28,16 +28,16 @@ public class Room {
   private Integer officeId = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
   @JsonProperty("submittedForReviewDate")
-  private OffsetDateTime submittedForReviewDate = null;
+  private String submittedForReviewDate = null;
 
   @JsonProperty("closedDate")
-  private OffsetDateTime closedDate = null;
+  private String closedDate = null;
 
   @JsonProperty("rejectedDate")
-  private OffsetDateTime rejectedDate = null;
+  private String rejectedDate = null;
 
   @JsonProperty("createdByUserId")
   private Integer createdByUserId = null;
@@ -52,7 +52,7 @@ public class Room {
   private String closedStatusId = null;
 
   @JsonProperty("fieldDataLastUpdatedDate")
-  private OffsetDateTime fieldDataLastUpdatedDate = null;
+  private String fieldDataLastUpdatedDate = null;
 
   @JsonProperty("fieldData")
   private FieldData fieldData = null;
@@ -171,7 +171,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room createdDate(OffsetDateTime createdDate) {
+  public Room createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -181,14 +181,14 @@ public class Room {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(OffsetDateTime createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
@@ -198,7 +198,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room submittedForReviewDate(OffsetDateTime submittedForReviewDate) {
+  public Room submittedForReviewDate(String submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
     return this;
   }
@@ -208,14 +208,14 @@ public class Room {
    * @return submittedForReviewDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getSubmittedForReviewDate() {
+  public String getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
   /**
    * setSubmittedForReviewDate.
    **/
-  public void setSubmittedForReviewDate(OffsetDateTime submittedForReviewDate) {
+  public void setSubmittedForReviewDate(String submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
   }
 
@@ -225,7 +225,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room closedDate(OffsetDateTime closedDate) {
+  public Room closedDate(String closedDate) {
     this.closedDate = closedDate;
     return this;
   }
@@ -235,14 +235,14 @@ public class Room {
    * @return closedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getClosedDate() {
+  public String getClosedDate() {
     return closedDate;
   }
 
   /**
    * setClosedDate.
    **/
-  public void setClosedDate(OffsetDateTime closedDate) {
+  public void setClosedDate(String closedDate) {
     this.closedDate = closedDate;
   }
 
@@ -252,7 +252,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room rejectedDate(OffsetDateTime rejectedDate) {
+  public Room rejectedDate(String rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
@@ -262,14 +262,14 @@ public class Room {
    * @return rejectedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getRejectedDate() {
+  public String getRejectedDate() {
     return rejectedDate;
   }
 
   /**
    * setRejectedDate.
    **/
-  public void setRejectedDate(OffsetDateTime rejectedDate) {
+  public void setRejectedDate(String rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
@@ -400,7 +400,7 @@ public class Room {
    *
    * @return Room
    **/
-  public Room fieldDataLastUpdatedDate(OffsetDateTime fieldDataLastUpdatedDate) {
+  public Room fieldDataLastUpdatedDate(String fieldDataLastUpdatedDate) {
     this.fieldDataLastUpdatedDate = fieldDataLastUpdatedDate;
     return this;
   }
@@ -410,14 +410,14 @@ public class Room {
    * @return fieldDataLastUpdatedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getFieldDataLastUpdatedDate() {
+  public String getFieldDataLastUpdatedDate() {
     return fieldDataLastUpdatedDate;
   }
 
   /**
    * setFieldDataLastUpdatedDate.
    **/
-  public void setFieldDataLastUpdatedDate(OffsetDateTime fieldDataLastUpdatedDate) {
+  public void setFieldDataLastUpdatedDate(String fieldDataLastUpdatedDate) {
     this.fieldDataLastUpdatedDate = fieldDataLastUpdatedDate;
   }
 

@@ -1,6 +1,11 @@
 # DocuSign Rooms Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v1.4.3] - Rooms API v2-1.1.1 - 2023-06-13
+### Changed
+- Updated the SDK release version.
+- Fixed DateTimeOffset mismatch, causing issues with JSON serialization in dateCreated methods
+
 ## [v1.4.2] - Rooms API v2-1.1.1 - 2023-05-31
 ### Changed
 - Jakarta Support enabled

@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * FormProviderAssociationSummary.
@@ -21,7 +21,7 @@ public class FormProviderAssociationSummary {
   private String providerId = null;
 
   @JsonProperty("lastUpdateDate")
-  private OffsetDateTime lastUpdateDate = null;
+  private String lastUpdateDate = null;
 
   @JsonProperty("formProviderAssociationGuid")
   private java.util.UUID formProviderAssociationGuid = null;
@@ -52,7 +52,7 @@ public class FormProviderAssociationSummary {
    * @return lastUpdateDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getLastUpdateDate() {
+  public String getLastUpdateDate() {
     return lastUpdateDate;
   }
 

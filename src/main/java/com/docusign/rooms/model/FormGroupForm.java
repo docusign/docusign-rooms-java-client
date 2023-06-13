@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * FormGroupForm.
@@ -24,7 +24,7 @@ public class FormGroupForm {
   private Boolean isRequired = null;
 
   @JsonProperty("lastUpdatedDate")
-  private OffsetDateTime lastUpdatedDate = null;
+  private String lastUpdatedDate = null;
 
 
   /**
@@ -113,7 +113,7 @@ public class FormGroupForm {
    *
    * @return FormGroupForm
    **/
-  public FormGroupForm lastUpdatedDate(OffsetDateTime lastUpdatedDate) {
+  public FormGroupForm lastUpdatedDate(String lastUpdatedDate) {
     this.lastUpdatedDate = lastUpdatedDate;
     return this;
   }
@@ -123,14 +123,14 @@ public class FormGroupForm {
    * @return lastUpdatedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getLastUpdatedDate() {
+  public String getLastUpdatedDate() {
     return lastUpdatedDate;
   }
 
   /**
    * setLastUpdatedDate.
    **/
-  public void setLastUpdatedDate(OffsetDateTime lastUpdatedDate) {
+  public void setLastUpdatedDate(String lastUpdatedDate) {
     this.lastUpdatedDate = lastUpdatedDate;
   }
 

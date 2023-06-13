@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * TaskSummary.
@@ -30,22 +30,22 @@ public class TaskSummary {
   private Integer dueDateOffset = null;
 
   @JsonProperty("fixedDueDate")
-  private OffsetDateTime fixedDueDate = null;
+  private String fixedDueDate = null;
 
   @JsonProperty("ownerUserId")
   private Integer ownerUserId = null;
 
   @JsonProperty("completionDate")
-  private OffsetDateTime completionDate = null;
+  private String completionDate = null;
 
   @JsonProperty("approvalDate")
-  private OffsetDateTime approvalDate = null;
+  private String approvalDate = null;
 
   @JsonProperty("rejectedDate")
-  private OffsetDateTime rejectedDate = null;
+  private String rejectedDate = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
   @JsonProperty("isDocumentTask")
   private Boolean isDocumentTask = null;
@@ -194,7 +194,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary fixedDueDate(OffsetDateTime fixedDueDate) {
+  public TaskSummary fixedDueDate(String fixedDueDate) {
     this.fixedDueDate = fixedDueDate;
     return this;
   }
@@ -204,14 +204,14 @@ public class TaskSummary {
    * @return fixedDueDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getFixedDueDate() {
+  public String getFixedDueDate() {
     return fixedDueDate;
   }
 
   /**
    * setFixedDueDate.
    **/
-  public void setFixedDueDate(OffsetDateTime fixedDueDate) {
+  public void setFixedDueDate(String fixedDueDate) {
     this.fixedDueDate = fixedDueDate;
   }
 
@@ -248,7 +248,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary completionDate(OffsetDateTime completionDate) {
+  public TaskSummary completionDate(String completionDate) {
     this.completionDate = completionDate;
     return this;
   }
@@ -258,14 +258,14 @@ public class TaskSummary {
    * @return completionDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCompletionDate() {
+  public String getCompletionDate() {
     return completionDate;
   }
 
   /**
    * setCompletionDate.
    **/
-  public void setCompletionDate(OffsetDateTime completionDate) {
+  public void setCompletionDate(String completionDate) {
     this.completionDate = completionDate;
   }
 
@@ -275,7 +275,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary approvalDate(OffsetDateTime approvalDate) {
+  public TaskSummary approvalDate(String approvalDate) {
     this.approvalDate = approvalDate;
     return this;
   }
@@ -285,14 +285,14 @@ public class TaskSummary {
    * @return approvalDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getApprovalDate() {
+  public String getApprovalDate() {
     return approvalDate;
   }
 
   /**
    * setApprovalDate.
    **/
-  public void setApprovalDate(OffsetDateTime approvalDate) {
+  public void setApprovalDate(String approvalDate) {
     this.approvalDate = approvalDate;
   }
 
@@ -302,7 +302,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary rejectedDate(OffsetDateTime rejectedDate) {
+  public TaskSummary rejectedDate(String rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
@@ -312,14 +312,14 @@ public class TaskSummary {
    * @return rejectedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getRejectedDate() {
+  public String getRejectedDate() {
     return rejectedDate;
   }
 
   /**
    * setRejectedDate.
    **/
-  public void setRejectedDate(OffsetDateTime rejectedDate) {
+  public void setRejectedDate(String rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
@@ -329,7 +329,7 @@ public class TaskSummary {
    *
    * @return TaskSummary
    **/
-  public TaskSummary createdDate(OffsetDateTime createdDate) {
+  public TaskSummary createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -339,14 +339,14 @@ public class TaskSummary {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(OffsetDateTime createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 

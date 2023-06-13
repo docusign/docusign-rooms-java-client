@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * FormSummary.
@@ -21,7 +21,7 @@ public class FormSummary {
   private String name = null;
 
   @JsonProperty("lastUpdatedDate")
-  private OffsetDateTime lastUpdatedDate = null;
+  private String lastUpdatedDate = null;
 
   @JsonProperty("viewingUserHasAccess")
   private Boolean viewingUserHasAccess = null;
@@ -49,7 +49,7 @@ public class FormSummary {
    * @return lastUpdatedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getLastUpdatedDate() {
+  public String getLastUpdatedDate() {
     return lastUpdatedDate;
   }
 

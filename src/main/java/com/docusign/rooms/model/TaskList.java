@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * TaskList.
@@ -25,16 +25,16 @@ public class TaskList {
   private Integer taskListTemplateId = null;
 
   @JsonProperty("submittedForReviewDate")
-  private OffsetDateTime submittedForReviewDate = null;
+  private String submittedForReviewDate = null;
 
   @JsonProperty("approvalDate")
-  private OffsetDateTime approvalDate = null;
+  private String approvalDate = null;
 
   @JsonProperty("rejectedDate")
-  private OffsetDateTime rejectedDate = null;
+  private String rejectedDate = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
   @JsonProperty("approvedByUserId")
   private Integer approvedByUserId = null;
@@ -135,7 +135,7 @@ public class TaskList {
    *
    * @return TaskList
    **/
-  public TaskList submittedForReviewDate(OffsetDateTime submittedForReviewDate) {
+  public TaskList submittedForReviewDate(String submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
     return this;
   }
@@ -145,14 +145,14 @@ public class TaskList {
    * @return submittedForReviewDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getSubmittedForReviewDate() {
+  public String getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
   /**
    * setSubmittedForReviewDate.
    **/
-  public void setSubmittedForReviewDate(OffsetDateTime submittedForReviewDate) {
+  public void setSubmittedForReviewDate(String submittedForReviewDate) {
     this.submittedForReviewDate = submittedForReviewDate;
   }
 
@@ -162,7 +162,7 @@ public class TaskList {
    *
    * @return TaskList
    **/
-  public TaskList approvalDate(OffsetDateTime approvalDate) {
+  public TaskList approvalDate(String approvalDate) {
     this.approvalDate = approvalDate;
     return this;
   }
@@ -172,14 +172,14 @@ public class TaskList {
    * @return approvalDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getApprovalDate() {
+  public String getApprovalDate() {
     return approvalDate;
   }
 
   /**
    * setApprovalDate.
    **/
-  public void setApprovalDate(OffsetDateTime approvalDate) {
+  public void setApprovalDate(String approvalDate) {
     this.approvalDate = approvalDate;
   }
 
@@ -189,7 +189,7 @@ public class TaskList {
    *
    * @return TaskList
    **/
-  public TaskList rejectedDate(OffsetDateTime rejectedDate) {
+  public TaskList rejectedDate(String rejectedDate) {
     this.rejectedDate = rejectedDate;
     return this;
   }
@@ -199,14 +199,14 @@ public class TaskList {
    * @return rejectedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getRejectedDate() {
+  public String getRejectedDate() {
     return rejectedDate;
   }
 
   /**
    * setRejectedDate.
    **/
-  public void setRejectedDate(OffsetDateTime rejectedDate) {
+  public void setRejectedDate(String rejectedDate) {
     this.rejectedDate = rejectedDate;
   }
 
@@ -216,7 +216,7 @@ public class TaskList {
    *
    * @return TaskList
    **/
-  public TaskList createdDate(OffsetDateTime createdDate) {
+  public TaskList createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -226,14 +226,14 @@ public class TaskList {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(OffsetDateTime createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 

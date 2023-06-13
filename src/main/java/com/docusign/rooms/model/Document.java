@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * Document.
@@ -33,7 +33,7 @@ public class Document {
   private Integer folderId = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
   @JsonProperty("isSigned")
   private Boolean isSigned = null;
@@ -215,7 +215,7 @@ public class Document {
    *
    * @return Document
    **/
-  public Document createdDate(OffsetDateTime createdDate) {
+  public Document createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -225,14 +225,14 @@ public class Document {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(OffsetDateTime createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 

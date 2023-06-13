@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * RoomDocument.
@@ -31,7 +31,7 @@ public class RoomDocument {
   private Integer folderId = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
   @JsonProperty("isSigned")
   private Boolean isSigned = null;
@@ -192,7 +192,7 @@ public class RoomDocument {
    *
    * @return RoomDocument
    **/
-  public RoomDocument createdDate(OffsetDateTime createdDate) {
+  public RoomDocument createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -202,14 +202,14 @@ public class RoomDocument {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(OffsetDateTime createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 

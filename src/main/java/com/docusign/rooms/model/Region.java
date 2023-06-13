@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * Region.
@@ -21,7 +21,7 @@ public class Region {
   private String name = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
 
   /**
@@ -83,7 +83,7 @@ public class Region {
    *
    * @return Region
    **/
-  public Region createdDate(OffsetDateTime createdDate) {
+  public Region createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
   }
@@ -93,14 +93,14 @@ public class Region {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
   /**
    * setCreatedDate.
    **/
-  public void setCreatedDate(OffsetDateTime createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 

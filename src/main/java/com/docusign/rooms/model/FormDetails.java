@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * FormDetails.
@@ -21,13 +21,13 @@ public class FormDetails {
   private String name = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
   @JsonProperty("lastUpdatedDate")
-  private OffsetDateTime lastUpdatedDate = null;
+  private String lastUpdatedDate = null;
 
   @JsonProperty("availableOnDate")
-  private OffsetDateTime availableOnDate = null;
+  private String availableOnDate = null;
 
   @JsonProperty("ownerName")
   private String ownerName = null;
@@ -61,7 +61,7 @@ public class FormDetails {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
@@ -70,7 +70,7 @@ public class FormDetails {
    * @return lastUpdatedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getLastUpdatedDate() {
+  public String getLastUpdatedDate() {
     return lastUpdatedDate;
   }
 
@@ -79,7 +79,7 @@ public class FormDetails {
    * @return availableOnDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getAvailableOnDate() {
+  public String getAvailableOnDate() {
     return availableOnDate;
   }
 

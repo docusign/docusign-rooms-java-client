@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * RoomUserRemovalDetail.
@@ -15,7 +15,7 @@ import java.time.OffsetDateTime;
 
 public class RoomUserRemovalDetail {
   @JsonProperty("revocationDate")
-  private OffsetDateTime revocationDate = null;
+  private String revocationDate = null;
 
 
   /**
@@ -23,7 +23,7 @@ public class RoomUserRemovalDetail {
    *
    * @return RoomUserRemovalDetail
    **/
-  public RoomUserRemovalDetail revocationDate(OffsetDateTime revocationDate) {
+  public RoomUserRemovalDetail revocationDate(String revocationDate) {
     this.revocationDate = revocationDate;
     return this;
   }
@@ -33,14 +33,14 @@ public class RoomUserRemovalDetail {
    * @return revocationDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getRevocationDate() {
+  public String getRevocationDate() {
     return revocationDate;
   }
 
   /**
    * setRevocationDate.
    **/
-  public void setRevocationDate(OffsetDateTime revocationDate) {
+  public void setRevocationDate(String revocationDate) {
     this.revocationDate = revocationDate;
   }
 

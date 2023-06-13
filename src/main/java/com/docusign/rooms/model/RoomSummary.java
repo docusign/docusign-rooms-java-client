@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import java.time.OffsetDateTime;
+
 
 /**
  * RoomSummary.
@@ -24,16 +24,16 @@ public class RoomSummary {
   private Integer officeId = null;
 
   @JsonProperty("createdDate")
-  private OffsetDateTime createdDate = null;
+  private String createdDate = null;
 
   @JsonProperty("submittedForReviewDate")
-  private OffsetDateTime submittedForReviewDate = null;
+  private String submittedForReviewDate = null;
 
   @JsonProperty("closedDate")
-  private OffsetDateTime closedDate = null;
+  private String closedDate = null;
 
   @JsonProperty("rejectedDate")
-  private OffsetDateTime rejectedDate = null;
+  private String rejectedDate = null;
 
   @JsonProperty("createdByUserId")
   private Integer createdByUserId = null;
@@ -45,7 +45,7 @@ public class RoomSummary {
   private String closedStatusId = null;
 
   @JsonProperty("fieldDataLastUpdatedDate")
-  private OffsetDateTime fieldDataLastUpdatedDate = null;
+  private String fieldDataLastUpdatedDate = null;
 
   /**
    * Get roomId.
@@ -79,7 +79,7 @@ public class RoomSummary {
    * @return createdDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
@@ -88,7 +88,7 @@ public class RoomSummary {
    * @return submittedForReviewDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getSubmittedForReviewDate() {
+  public String getSubmittedForReviewDate() {
     return submittedForReviewDate;
   }
 
@@ -97,7 +97,7 @@ public class RoomSummary {
    * @return closedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getClosedDate() {
+  public String getClosedDate() {
     return closedDate;
   }
 
@@ -106,7 +106,7 @@ public class RoomSummary {
    * @return rejectedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getRejectedDate() {
+  public String getRejectedDate() {
     return rejectedDate;
   }
 
@@ -142,7 +142,7 @@ public class RoomSummary {
    * @return fieldDataLastUpdatedDate
    **/
   @Schema(description = "")
-  public OffsetDateTime getFieldDataLastUpdatedDate() {
+  public String getFieldDataLastUpdatedDate() {
     return fieldDataLastUpdatedDate;
   }
 
